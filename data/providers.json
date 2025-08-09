@@ -1,0 +1,49 @@
+{
+  "providers": [
+    {
+      "id": 1,
+      "name": "Denver Aesthetics & Lips",
+      "city": "Denver",
+      "address": "123 Cherry Creek Dr, Denver, CO 80206",
+      "phone": "(303) 555-0123",
+      "website": "https://denveraesthetics.com",
+      "services": ["Juvederm", "Restylane", "RHA Fillers"],
+      "priceRange": "$600-900",
+      "rating": 4.9,
+      "reviews": 234,
+      "specialties": ["Natural Enhancement", "Lip Augmentation"],
+      "boardCertified": true,
+      "coordinates": [39.7392, -104.9903]
+    },
+    {
+      "id": 2,
+      "name": "Boulder Beauty Clinic",
+      "city": "Boulder",
+      "address": "456 Pearl St, Boulder, CO 80302",
+      "phone": "(303) 555-0456",
+      "website": "https://boulderbeauty.com",
+      "services": ["Juvederm", "Restylane"],
+      "priceRange": "$550-800",
+      "rating": 4.7,
+      "reviews": 156,
+      "specialties": ["Natural Look", "Lip Repair"],
+      "boardCertified": true,
+      "coordinates": [40.0150, -105.2705]
+    },
+    {
+      "id": 3,
+      "name": "Springs Cosmetic Center",
+      "city": "Colorado Springs",
+      "address": "789 Academy Blvd, Colorado Springs, CO 80909",
+      "phone": "(719) 555-0789",
+      "website": "https://springscosmetic.com",
+      "services": ["Juvederm", "RHA Fillers", "Restylane"],
+      "priceRange": "$500-750",
+      "rating": 4.8,
+      "reviews": 203,
+      "specialties": ["Volume Enhancement", "Lip Symmetry"],
+      "boardCertified": true,
+      "coordinates": [38.8339, -104.8214]
+    }
+  ]
+}
