@@ -75,7 +75,23 @@ export default function Home() {
             </a>
           </div>
         </div>
-
+        <section className="featured-section">
+  <div className="container">
+    <h2>See Real Results</h2>
+    <p>Browse 500+ before and after photos from verified Colorado providers</p>
+    <a href="/before-after" className="cta-button">
+      📸 View Before & After Gallery
+    </a>
+  </div>
+</section>
+// In pages/pricing.js, add this section
+<div className="gallery-cta">
+  <h3>See Real Results at These Prices</h3>
+  <p>View before and after photos from treatments in your price range</p>
+  <a href="/before-after" className="btn-secondary">
+    📸 View Results Gallery
+  </a>
+</div>
         <div>
           <h2>All Providers ({filteredProviders.length})</h2>
           {filteredProviders.map(provider => (

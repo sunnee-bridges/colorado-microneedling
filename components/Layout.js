@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function Layout({ children, title = "Lip Fillers Colorado" }) {
   return (
@@ -20,9 +21,11 @@ export default function Layout({ children, title = "Lip Fillers Colorado" }) {
             💋 Colorado Lip Fillers Directory
           </h1>
           <nav>
-            <a href="/" style={{ marginRight: '20px', color: 'white', textDecoration: 'none' }}>Home</a>
-            <a href="/treatments" style={{ marginRight: '20px', color: 'white', textDecoration: 'none' }}>Treatments</a>
-            <a href="/about" style={{ color: 'white', textDecoration: 'none' }}>About</a>
+             <Link href="/">Home</Link>
+  <Link href="/before-after">Before & After</Link> 
+  <Link href="/pricing">Pricing</Link>
+  <Link href="/about">About</Link>
+  <Link href="/lipfillerfaq">Lip Filler FAQ</Link>
           </nav>
         </div>
       </header>
