@@ -2,79 +2,18 @@
   "providers": [
     {
       "id": 1,
-      "name": "Premier Skin Clinic",
-      "city": "Fort Collins",
-      "address": "Northern Colorado, Fort Collins, CO 80525",
-      "phone": "(970) 484-3700",
-      "website": "https://premierskinclinic.com",
-      "services": ["Botox", "Dermal Fillers", "Restylane", "HALO Laser", "Forever Young Club"],
-      "priceRange": "$550-800",
-      "rating": 4.9,
-      "reviews": 247,
-      "specialties": ["Natural-looking results", "Advanced techniques", "State-of-the-art equipment"],
-      "boardCertified": true,
-      "coordinates": [40.5853, -105.0844],
-      "pricing": {
-        "juvederm": "$650-800",
-        "restylane": "$550-750",
-        "consultation": "Free consultations available"
-      },
-      "promotions": {
-        "newPatient": "Forever Young Club membership $129/month",
-        "parking": "Free parking available"
-      },
-      "features": [
-        "Northern Colorado's most advanced med spa",
-        "Forever Young Club membership",
-        "HALO laser treatments",
-        "Natural-looking results specialty",
-        "State-of-the-art technology"
-      ],
-      "isVerified": true,
-      "isPremium": true,
-      "listingTier": "premium",
-      "monthlyFee": 299,
-      "leadCost": 45,
-      "description": "Northern Colorado's most advanced medical skin spa, specializing in natural-looking results without the 'frozen face' appearance. Winner of multiple client satisfaction awards with state-of-the-art technology.",
-      "operatingHours": {
-        "monday": "9:00 AM - 6:00 PM",
-        "tuesday": "9:00 AM - 6:00 PM",
-        "wednesday": "9:00 AM - 6:00 PM",
-        "thursday": "9:00 AM - 6:00 PM",
-        "friday": "9:00 AM - 5:00 PM",
-        "saturday": "10:00 AM - 4:00 PM",
-        "sunday": "Closed"
-      },
-      "paymentOptions": ["Cash", "Credit Cards", "Financing Available", "Membership Plans"],
-      "seoKeywords": [
-        "lip fillers fort collins",
-        "premier skin clinic",
-        "fort collins dermal fillers",
-        "natural lip enhancement fort collins"
-      ]
-    },
-    {
-      "id": 2,
       "name": "Xanadu Med Spa",
       "city": "Fort Collins",
-      "address": "Fort Collins, CO 80525",
-      "phone": "(970) 278-0900",
+      "address": "2105 Bighorn Dr Ste 104, Fort Collins, CO 80525",
+      "phone": "(970) 482-1889",
       "website": "https://www.xanadumedspa.com",
-      "services": ["Dermal Fillers", "Juvederm Ultra Plus", "Revanessa Versa", "Body Contouring", "Laser Treatments"],
-      "priceRange": "$575-825",
-      "rating": 4.8,
-      "reviews": 189,
+      "services": ["Dermal Fillers", "Juvederm Ultra Plus", "Revanessa Versa", "Juvederma Voluma", "Juvederm Volbella XC"],
+      "rating": 4.7,
+      "reviews": 537,
       "specialties": ["Largest selection of treatments", "Luxury med spa experience", "Award-winning"],
       "boardCertified": true,
       "coordinates": [40.5853, -105.0844],
-      "pricing": {
-        "juvederm": "$700-825",
-        "restylane": "$575-775",
-        "consultation": "Free consultations available"
-      },
       "promotions": {
-        "newPatient": "Complimentary consultation",
-        "parking": "Free parking available",
         "financing": "Cherry and CareCredit financing"
       },
       "features": [
@@ -88,16 +27,15 @@
       "isPremium": false,
       "listingTier": "standard",
       "monthlyFee": 199,
-      "leadCost": 35,
       "description": "Winner of 'Best Luxury Med Spa' three years running. Offers the largest selection of treatments in Fort Collins with state-of-the-art equipment and luxury atmosphere.",
       "operatingHours": {
-        "monday": "9:00 AM - 7:00 PM",
-        "tuesday": "9:00 AM - 7:00 PM",
-        "wednesday": "9:00 AM - 7:00 PM",
-        "thursday": "9:00 AM - 7:00 PM",
+        "monday": "9:00 AM - 6:00 PM",
+        "tuesday": "9:00 AM - 8:00 PM",
+        "wednesday": "9:00 AM - 8:00 PM",
+        "thursday": "9:00 AM - 8:00 PM",
         "friday": "9:00 AM - 6:00 PM",
-        "saturday": "9:00 AM - 5:00 PM",
-        "sunday": "11:00 AM - 4:00 PM"
+        "saturday": "9:00 AM - 4:00 PM",
+        "sunday": "Closed"
       },
       "paymentOptions": ["Cash", "Credit Cards", "Cherry Financing", "CareCredit"],
       "seoKeywords": [
@@ -108,49 +46,46 @@
       ]
     },
     {
-      "id": 3,
+      "id": 2,
       "name": "The Luxe Room Fort Collins",
       "city": "Fort Collins",
-      "address": "Fort Collins, CO 80525",
-      "phone": "(970) 555-0103",
+      "address": "3491 E Harmony Rd Suite 220, Fort Collins, CO 80528",
+      "phone": "(303) 222-9546",
       "website": "https://www.luxeroomcosmetic.com",
-      "services": ["Restylane Kysse", "Juvederm", "Botox", "Dysport", "HydraFacials"],
-      "priceRange": "$550-795",
-      "rating": 4.9,
-      "reviews": 312,
+      "services": ["Restylane Kysse", "Juvederm", "Restylane Refyne", "Juvederm Vollure"],
+      "priceRange": "$599-969",
+      "rating": 5.0,
+      "reviews": 232,
       "specialties": ["#1 Restylane Kysse account in Colorado", "Natural-looking lips", "Advanced techniques"],
       "boardCertified": true,
       "coordinates": [40.5853, -105.0844],
       "pricing": {
-        "juvederm": "$550-795",
-        "restylane": "$550-795",
+        "juvederm": "$599-969",
+        "restylane": "$599-969",
         "consultation": "Free consultations always"
       },
       "promotions": {
-        "newPatient": "Free consultation and parking",
-        "parking": "Free on-site parking",
+        "newPatient": "Free consultation",
         "specials": "Monthly Botox and filler specials"
       },
       "features": [
         "#1 Restylane Kysse account in Colorado",
         "Multi-location injectable specialists",
         "Proprietary injection techniques",
-        "Free consultations and parking",
         "Monthly treatment specials"
       ],
       "isVerified": true,
       "isPremium": true,
       "listingTier": "premium",
-      "monthlyFee": 349,
-      "leadCost": 50,
+      "monthlyFee": 299,
       "description": "#1 account for Restylane Kysse in all of Colorado. Multi-location injectable specialists with proprietary techniques for natural, 'no one will know' results.",
       "operatingHours": {
-        "monday": "9:00 AM - 6:00 PM",
-        "tuesday": "9:00 AM - 6:00 PM",
-        "wednesday": "9:00 AM - 6:00 PM",
-        "thursday": "9:00 AM - 7:00 PM",
+        "monday": "9:00 AM - 5:00 PM",
+        "tuesday": "9:00 AM - 5:00 PM",
+        "wednesday": "9:00 AM - 5:00 PM",
+        "thursday": "9:00 AM - 8:00 PM",
         "friday": "9:00 AM - 5:00 PM",
-        "saturday": "9:00 AM - 4:00 PM",
+        "saturday": "9:00 AM - 1:00 PM",
         "sunday": "Closed"
       },
       "paymentOptions": ["Cash", "Credit Cards", "Financing Available"],
@@ -162,16 +97,16 @@
       ]
     },
     {
-      "id": 4,
+      "id": 3,
       "name": "Boho Studios Medical Spa",
       "city": "Fort Collins",
-      "address": "Old Town Fort Collins, CO 80524",
-      "phone": "(970) 568-7342",
+      "address": "217 Jefferson St, Fort Collins, CO 80524",
+      "phone": "(970) 412-8820",
       "website": "https://www.bohostudios.org",
-      "services": ["Dermal Fillers", "PDO Threads", "Biostimulators", "Morpheus8", "Botox"],
+      "services": ["Dermal Fillers", "PRF", "Hyperdilute Radiesse", "Sculptra"],
       "priceRange": "$575-825",
-      "rating": 4.8,
-      "reviews": 145,
+      "rating": 5.0,
+      "reviews": 103,
       "specialties": ["Natural approach", "14 years experience", "Boho elegance"],
       "boardCertified": true,
       "coordinates": [40.5853, -105.0844],
@@ -195,15 +130,14 @@
       "isPremium": false,
       "listingTier": "standard",
       "monthlyFee": 199,
-      "leadCost": 35,
       "description": "Nestled in Old Town Fort Collins, offering beautifully natural approach to medical aesthetics. 14 years of experience with cutting-edge techniques and boho elegance atmosphere.",
       "operatingHours": {
         "monday": "9:00 AM - 6:00 PM",
         "tuesday": "9:00 AM - 6:00 PM",
         "wednesday": "9:00 AM - 6:00 PM",
         "thursday": "9:00 AM - 6:00 PM",
-        "friday": "9:00 AM - 5:00 PM",
-        "saturday": "10:00 AM - 4:00 PM",
+        "friday": "9:00 AM - 6:00 PM",
+        "saturday": "Closed",
         "sunday": "Closed"
       },
       "paymentOptions": ["Cash", "Credit Cards", "Financing Options"],
@@ -215,27 +149,25 @@
       ]
     },
     {
-      "id": 5,
+      "id": 4,
       "name": "Rinnova Skin & Body",
       "city": "Boulder",
-      "address": "Boulder, CO 80303",
-      "phone": "(303) 444-0664",
+      "address": "2600 30th St Suite 100 Boulder, CO 80301",
+      "phone": "(303) 900-4904",
       "website": "https://www.rinnovaskinandbody.com",
-      "services": ["Juvéderm", "Restylane", "Versa", "RHA", "BBL", "Halo", "Moxi"],
-      "priceRange": "$600-850",
-      "rating": 4.8,
-      "reviews": 156,
+      "services": ["Juvéderm", "Restylane", "Versa", "Evolysse"],
+      "rating": 4.9,
+      "reviews": 349,
       "specialties": ["MD/PhD director", "Natural cosmetic dermatology", "State-of-the-art treatments"],
       "boardCertified": true,
       "coordinates": [40.0150, -105.2705],
       "pricing": {
-        "juvederm": "$700-850",
-        "restylane": "$600-800",
+        "juvederm": "$650-900",
+        "restylane": "$650-900",
         "consultation": "Free consultation available"
       },
       "promotions": {
-        "newPatient": "Complimentary consultation",
-        "parking": "Free parking available"
+        "newPatient": "Complimentary consultation"
       },
       "features": [
         "Led by Todd Becker, MD, PhD",
@@ -248,15 +180,14 @@
       "isPremium": true,
       "listingTier": "premium",
       "monthlyFee": 299,
-      "leadCost": 45,
       "description": "Led by Todd Becker, MD, PhD. Offers safe, natural cosmetic dermatology with latest BBL, Halo, Moxi treatments. Focus on triggering natural healing processes.",
       "operatingHours": {
-        "monday": "8:00 AM - 5:00 PM",
-        "tuesday": "8:00 AM - 5:00 PM",
-        "wednesday": "8:00 AM - 5:00 PM",
-        "thursday": "8:00 AM - 5:00 PM",
-        "friday": "8:00 AM - 4:00 PM",
-        "saturday": "By appointment",
+        "monday": "Closed",
+        "tuesday": "9:00 AM - 5:00 PM",
+        "wednesday": "9:00 AM - 5:00 PM",
+        "thursday": "9:00 AM - 5:00 PM",
+        "friday": "9:00 AM - 5:00 PM",
+        "saturday": "Closed",
         "sunday": "Closed"
       },
       "paymentOptions": ["Cash", "Credit Cards", "Financing Options"],
@@ -268,80 +199,24 @@
       ]
     },
     {
-      "id": 6,
-      "name": "VIO Med Spa Boulder",
-      "city": "Boulder",
-      "address": "Boulder, CO 80301",
-      "phone": "(303) 955-3223",
-      "website": "https://www.viomedspa.com/locations/boulder",
-      "services": ["Dermal Fillers", "Juvederm", "Restylane", "CoolSculpting", "Morpheus8"],
-      "priceRange": "$575-795",
-      "rating": 4.7,
-      "reviews": 203,
-      "specialties": ["Nationally recognized", "High-quality treatments", "All-inclusive med spa"],
-      "boardCertified": true,
-      "coordinates": [40.0150, -105.2705],
-      "pricing": {
-        "juvederm": "$650-795",
-        "restylane": "$575-750",
-        "consultation": "Free consultation available"
-      },
-      "promotions": {
-        "newPatient": "Free consultation and assessment",
-        "parking": "Convenient parking available"
-      },
-      "features": [
-        "Nationally recognized med spa",
-        "All-inclusive treatment approach",
-        "High-quality, top-rated services",
-        "Non-invasive facial and body procedures",
-        "Confidence-building focus"
-      ],
-      "isVerified": true,
-      "isPremium": false,
-      "listingTier": "standard",
-      "monthlyFee": 199,
-      "leadCost": 35,
-      "description": "Nationally recognized, all-inclusive, high-quality med spa. Destination for non-invasive facial treatments with focus on confidence building and natural beauty enhancement.",
-      "operatingHours": {
-        "monday": "9:00 AM - 7:00 PM",
-        "tuesday": "9:00 AM - 7:00 PM",
-        "wednesday": "9:00 AM - 7:00 PM",
-        "thursday": "9:00 AM - 7:00 PM",
-        "friday": "9:00 AM - 6:00 PM",
-        "saturday": "9:00 AM - 5:00 PM",
-        "sunday": "10:00 AM - 4:00 PM"
-      },
-      "paymentOptions": ["Cash", "Credit Cards", "CareCredit", "Financing Plans"],
-      "seoKeywords": [
-        "vio med spa boulder",
-        "nationally recognized med spa boulder",
-        "boulder dermal fillers",
-        "high quality med spa colorado"
-      ]
-    },
-    {
-      "id": 7,
+      "id": 5,
       "name": "RESTOR Medical Spa Boulder",
       "city": "Boulder",
-      "address": "Boulder, CO 80301",
-      "phone": "(720) 515-9495",
+      "address": "2088 Broadway, Boulder, CO 80302",
+      "phone": "(720) 524-8429",
       "website": "https://www.restormedicalspa.com/about/locations/boulder",
-      "services": ["Hyaluronic Acid Fillers", "Lip Enhancement", "Sculptra", "Laser Treatments"],
-      "priceRange": "$550-750",
+      "services": ["Hyaluronic Acid Fillers", "Lip Enhancement", "Restylane Kysse", "Revance RHA"],
+      "priceRange": "$650-900",
       "rating": 4.8,
       "reviews": 167,
       "specialties": ["Personalized treatment plans", "Advanced technology", "Natural results"],
       "boardCertified": true,
       "coordinates": [40.0150, -105.2705],
       "pricing": {
-        "juvederm": "$650-750",
-        "restylane": "$550-700",
-        "consultation": "Complimentary consultation"
+        "juvederm": "$650-900",
+        "restylane": "$650-900"
       },
       "promotions": {
-        "newPatient": "Free consultation and assessment",
-        "parking": "Free parking available",
         "community": "RESTOR Gives Back program"
       },
       "features": [
@@ -358,12 +233,12 @@
       "leadCost": 35,
       "description": "Dedicated to elevating natural beauty with personalized medical-grade treatments. Focus on natural, subtle enhancement with one syringe or less for refined results.",
       "operatingHours": {
-        "monday": "9:00 AM - 6:00 PM",
-        "tuesday": "9:00 AM - 6:00 PM",
-        "wednesday": "9:00 AM - 6:00 PM",
-        "thursday": "9:00 AM - 7:00 PM",
-        "friday": "9:00 AM - 5:00 PM",
-        "saturday": "9:00 AM - 4:00 PM",
+        "monday": "Closed",
+        "tuesday": "10:00 AM - 6:00 PM",
+        "wednesday": "10:00 AM - 7:00 PM",
+        "thursday": "10:00 AM - 6:00 PM",
+        "friday": "10:00 AM - 6:00 PM",
+        "saturday": "Closed",
         "sunday": "Closed"
       },
       "paymentOptions": ["Cash", "Credit Cards", "Financing Available"],
@@ -375,32 +250,28 @@
       ]
     },
     {
-      "id": 8,
+      "id": 6,
       "name": "Happy Clinic Boulder",
       "city": "Boulder",
-      "address": "Boulder, CO 80301",
-      "phone": "(303) 442-3434",
+      "address": "413 Summit Boulevard, Suite 104 Broomfield, Colorado 80021",
+      "phone": "(720) 538-8888",
       "website": "https://www.happyclinicboulder.com",
-      "services": ["Restylane", "Juvederm", "Botox", "IPL", "Laser Hair Removal"],
-      "priceRange": "$525-725",
-      "rating": 4.6,
-      "reviews": 112,
-      "specialties": ["Affordable treatments", "Botox as low as $9/unit", "Expert care"],
+      "services": ["Restylane", "Juvederm", "Voluma", "Contour"],
+      "priceRange": "$525-950",
+      "rating": 4.9,
+      "reviews": 32,
+      "specialties": ["Affordable treatments"],
       "boardCertified": true,
       "coordinates": [40.0150, -105.2705],
       "pricing": {
-        "juvederm": "$575-725",
-        "restylane": "$525-675",
+        "juvederm": "$750-950",
+        "restylane": "$525-562",
         "consultation": "Consultation available"
       },
-      "promotions": {
-        "newPatient": "Special pricing for new clients",
-        "parking": "Convenient Boulder parking",
-        "botox": "Botox as low as $9/unit"
-      },
+      "promotions": {},
       "features": [
         "Affordable non-surgical treatments",
-        "Competitive Botox pricing",
+        "Competitive filler pricing",
         "Experienced Dr. Monroe",
         "Comprehensive aesthetic services",
         "Quality without high costs"
@@ -409,47 +280,44 @@
       "isPremium": false,
       "listingTier": "standard",
       "monthlyFee": 199,
-      "leadCost": 35,
       "description": "Specializes in affordable non-surgical aesthetic treatments including dermal fillers. Known for competitive pricing including Botox as low as $9/unit without compromising quality.",
       "operatingHours": {
-        "monday": "9:00 AM - 6:00 PM",
-        "tuesday": "9:00 AM - 6:00 PM",
-        "wednesday": "9:00 AM - 6:00 PM",
-        "thursday": "9:00 AM - 6:00 PM",
-        "friday": "9:00 AM - 5:00 PM",
-        "saturday": "10:00 AM - 4:00 PM",
+        "monday": "8:00 AM - 4:00 PM",
+        "tuesday": "Closed",
+        "wednesday": "8:00 AM - 4:00 PM",
+        "thursday": "Closed",
+        "friday": "8:00 AM - 4:00 PM",
+        "saturday": "Closed",
         "sunday": "Closed"
       },
       "paymentOptions": ["Cash", "Credit Cards", "Special Pricing Plans"],
       "seoKeywords": [
         "happy clinic boulder",
         "affordable fillers boulder",
-        "botox $9 unit boulder",
         "competitive pricing boulder"
       ]
     },
     {
-      "id": 9,
+      "id": 7,
       "name": "Blush & Grey MedSpa",
       "city": "Colorado Springs",
-      "address": "1715 N. Weber Street, Suite 360, Colorado Springs, CO 80907",
-      "phone": "(719) 634-8888",
+      "address": "1715 N Weber St #360, Colorado Springs, CO 80907",
+      "phone": "(719) 728-2878",
       "website": "https://www.blushandgreymedspa.com",
-      "services": ["Restylane", "Juvéderm", "Dysport", "GentleMax Pro Laser"],
-      "priceRange": "$575-825",
-      "rating": 4.9,
-      "reviews": 198,
+      "services": ["Restylane", "Juvéderm", "Restylane Defyne", "Volbella", "Voluma"],
+      "priceRange": "$650-900",
+      "rating": 5.0,
+      "reviews": 77,
       "specialties": ["Science-based treatments", "Education-focused", "Natural appearance"],
       "boardCertified": true,
       "coordinates": [38.8339, -104.8214],
       "pricing": {
-        "juvederm": "$675-825",
-        "restylane": "$575-775",
+        "juvederm": "$$$",
+        "restylane": "$$$",
         "consultation": "Free educational consultation"
       },
       "promotions": {
-        "newPatient": "Educational consultation included",
-        "parking": "Free parking available"
+        "newPatient": "Educational consultation included"
       },
       "features": [
         "Founded on education-first approach",
@@ -462,15 +330,14 @@
       "isPremium": true,
       "listingTier": "premium",
       "monthlyFee": 299,
-      "leadCost": 45,
       "description": "Founded on education-first approach. Science-based treatments with experienced providers specializing in natural, beautiful results using FDA-approved fillers and advanced technology.",
       "operatingHours": {
-        "monday": "9:00 AM - 6:00 PM",
-        "tuesday": "9:00 AM - 6:00 PM",
-        "wednesday": "9:00 AM - 6:00 PM",
-        "thursday": "9:00 AM - 6:00 PM",
-        "friday": "9:00 AM - 5:00 PM",
-        "saturday": "10:00 AM - 4:00 PM",
+        "monday": "10:00 AM - 4:00 PM",
+        "tuesday": "10:00 AM - 4:00 PM",
+        "wednesday": "10:00 AM - 4:00 PM",
+        "thursday": "Closed",
+        "friday": "10:00 AM - 3:00 PM",
+        "saturday": "Closed",
         "sunday": "Closed"
       },
       "paymentOptions": ["Cash", "Credit Cards", "Financing Available"],
@@ -482,27 +349,24 @@
       ]
     },
     {
-      "id": 10,
+      "id": 8,
       "name": "Fountain of Youth Medi Spa",
       "city": "Colorado Springs",
-      "address": "Colorado Springs, CO 80907",
-      "phone": "(719) 555-0108",
+      "address": "13550 Northgate Estates Dr. Suite 100 Colorado Springs, CO 80921",
+      "phone": "(719) 229-1014",
       "website": "https://www.fountainofyouthskincarebytina.com",
-      "services": ["Restylane", "Juvederm", "Botox", "Microneedling", "Hydrafacials"],
-      "priceRange": "$550-750",
+      "services": ["Revanesse"],
+      "priceRange": "$375-550",
       "rating": 4.7,
-      "reviews": 142,
+      "reviews": 106,
       "specialties": ["Family-owned since 2008", "Experienced RN injectors", "Personalized plans"],
       "boardCertified": true,
       "coordinates": [38.8339, -104.8214],
       "pricing": {
-        "juvederm": "$625-750",
-        "restylane": "$550-700",
-        "consultation": "Free consultation available"
+        "Revanesse": "$375-550"
       },
       "promotions": {
-        "newPatient": "Personalized treatment consultation",
-        "parking": "Free parking available"
+        "newPatient": "Personalized treatment consultation"
       },
       "features": [
         "Family-owned and operated since 2008",
@@ -515,15 +379,14 @@
       "isPremium": false,
       "listingTier": "standard",
       "monthlyFee": 199,
-      "leadCost": 35,
       "description": "Family-owned and operated since 2008. Experienced RN injectors and estheticians providing personalized treatment plans for rejuvenated confidence and wellness.",
       "operatingHours": {
-        "monday": "9:00 AM - 6:00 PM",
-        "tuesday": "9:00 AM - 6:00 PM",
-        "wednesday": "9:00 AM - 6:00 PM",
-        "thursday": "9:00 AM - 6:00 PM",
-        "friday": "9:00 AM - 5:00 PM",
-        "saturday": "9:00 AM - 4:00 PM",
+        "monday": "10:00 AM - 5:30 PM",
+        "tuesday": "10:00 AM - 6:30 PM",
+        "wednesday": "10:00 AM - 5:30 PM",
+        "thursday": "10:00 AM - 6:30 PM",
+        "friday": "10:00 AM - 5:00 PM",
+        "saturday": "Closed",
         "sunday": "Closed"
       },
       "paymentOptions": ["Cash", "Credit Cards", "Payment Plans"],
@@ -535,27 +398,26 @@
       ]
     },
     {
-      "id": 11,
-      "name": "Premier MediSpa Colorado Springs",
+      "id": 9,
+      "name": "Premier MediSpa",
       "city": "Colorado Springs",
-      "address": "Colorado Springs, CO 80906",
-      "phone": "(719) 597-6422",
+      "address": "3920 north union, suite 250 Colorado Springs, CO 80907",
+      "phone": "(719) 599-7768",
       "website": "https://premedspa.com",
-      "services": ["Restylane", "Juvederm Ultra", "Belotero", "Botox"],
-      "priceRange": "$525-725",
-      "rating": 4.6,
-      "reviews": 89,
+      "services": ["Restylane", "Juvederm Ultra", "Restylane Silk", "Radiesse", "Juvederm Vollure", "Restylane Kysse"],
+      "priceRange": "$$$",
+      "rating": 4.7,
+      "reviews": 183,
       "specialties": ["20 years experience", "Gradual treatment approach", "Natural lip enhancement"],
       "boardCertified": true,
       "coordinates": [38.8339, -104.8214],
       "pricing": {
-        "juvederm": "$600-725",
-        "restylane": "$525-675",
+        "juvederm": "$$$",
+        "restylane": "$$$",
         "consultation": "Consultation available"
       },
       "promotions": {
-        "newPatient": "Gradual treatment approach consultation",
-        "parking": "Convenient parking"
+        "newPatient": "Gradual treatment approach consultation"
       },
       "features": [
         "Celebrating 20 years in Colorado Springs",
@@ -568,15 +430,14 @@
       "isPremium": false,
       "listingTier": "standard",
       "monthlyFee": 199,
-      "leadCost": 35,
       "description": "Celebrating 20 years in Colorado Springs. Uses gradual treatment approach for smoother, more natural lips with less bruising and swelling under Dr. Gregory Bland's oversight.",
       "operatingHours": {
         "monday": "9:00 AM - 5:00 PM",
         "tuesday": "9:00 AM - 5:00 PM",
         "wednesday": "9:00 AM - 5:00 PM",
         "thursday": "9:00 AM - 5:00 PM",
-        "friday": "9:00 AM - 4:00 PM",
-        "saturday": "By appointment",
+        "friday": "9:00 AM - 5:00 PM",
+        "saturday": "Closed",
         "sunday": "Closed"
       },
       "paymentOptions": ["Cash", "Credit Cards"],
@@ -588,28 +449,26 @@
       ]
     },
     {
-      "id": 12,
+      "id": 10,
       "name": "Refine Aesthetics",
       "city": "Colorado Springs",
-      "address": "Colorado Springs, CO 80906",
+      "address": "5225 N Academy Blvd Suite 302, Colorado Springs, CO 80918",
       "phone": "(719) 888-0292",
       "website": "https://www.refineaestheticsllc.com",
-      "services": ["Botox", "Dermal Fillers", "Lip Enhancement", "Cheek Fillers"],
-      "priceRange": "$550-775",
+      "services": ["Dermal Fillers", "Lip Enhancement", "Juvederm", "Kybella", "Restylane"],
+      "priceRange": "$$$",
       "rating": 4.9,
-      "reviews": 203,
+      "reviews": 222,
       "specialties": ["Customized treatments", "Professional service", "Natural results"],
       "boardCertified": true,
       "coordinates": [38.8339, -104.8214],
       "pricing": {
-        "juvederm": "$625-775",
-        "restylane": "$550-700",
+        "juvederm": "$200",
+        "restylane": "$200",
         "consultation": "Detailed consultation available"
       },
       "promotions": {
-        "newPatient": "Customized treatment consultation",
-        "parking": "Free parking available",
-        "followup": "Next-day follow-up emails"
+        "newPatient": "consultation available"
       },
       "features": [
         "Led by experienced injector Judy",
@@ -622,15 +481,14 @@
       "isPremium": false,
       "listingTier": "standard",
       "monthlyFee": 199,
-      "leadCost": 35,
       "description": "Led by Judy, known for customized treatments and making clients feel comfortable. Specializes in natural-looking lip enhancement and facial rejuvenation with outstanding reviews.",
       "operatingHours": {
         "monday": "9:00 AM - 6:00 PM",
         "tuesday": "9:00 AM - 6:00 PM",
         "wednesday": "9:00 AM - 6:00 PM",
         "thursday": "9:00 AM - 6:00 PM",
-        "friday": "9:00 AM - 5:00 PM",
-        "saturday": "9:00 AM - 4:00 PM",
+        "friday": "9:00 AM - 6:00 PM",
+        "saturday": "10:00 AM - 3:00 PM",
         "sunday": "Closed"
       },
       "paymentOptions": ["Cash", "Credit Cards", "Payment Plans"],
@@ -642,27 +500,26 @@
       ]
     },
     {
-      "id": 13,
+      "id": 11,
       "name": "Aurora Medical Spa",
       "city": "Aurora",
-      "address": "Aurora, CO 80014",
-      "phone": "(303) 743-4020",
+      "address": "7160 N Academy Blvd, Colorado Springs, CO 80920",
+      "phone": "(720) 500-9626",
       "website": "https://www.auroramedicalspa.com",
-      "services": ["Restylane", "Juvéderm", "Sculptra", "Body Sculpting", "Skin Rejuvenation"],
+      "services": ["Restylane", "Juvéderm", "Sculptra", "RHA Fillers", "Skin Rejuvenation"],
       "priceRange": "$550-800",
-      "rating": 4.8,
-      "reviews": 234,
+      "rating": 5.0,
+      "reviews": 134,
       "specialties": ["Customized care plans", "Advanced technology", "Multiple locations"],
       "boardCertified": true,
       "coordinates": [39.7294, -104.8319],
       "pricing": {
-        "juvederm": "$650-800",
-        "restylane": "$550-750",
+        "juvederm": "$$$",
+        "restylane": "$$$",
         "consultation": "$100 OFF first treatment"
       },
       "promotions": {
         "newPatient": "$100 OFF first scheduled treatment",
-        "parking": "Free parking available",
         "membership": "Skin Care Club membership"
       },
       "features": [
@@ -670,22 +527,21 @@
         "Customized care plans",
         "Advanced aesthetic technology",
         "Skin Care Club membership",
-        "Body sculpting and skin rejuvenation"
+        "Skin rejuvenation"
       ],
       "isVerified": true,
       "isPremium": true,
       "listingTier": "premium",
       "monthlyFee": 299,
-      "leadCost": 45,
       "description": "Offers advanced skin rejuvenation and body sculpting. Focuses on customized care plans for unique aesthetic goals with minimal downtime and multiple convenient locations.",
       "operatingHours": {
-        "monday": "9:00 AM - 7:00 PM",
-        "tuesday": "9:00 AM - 7:00 PM",
-        "wednesday": "9:00 AM - 7:00 PM",
-        "thursday": "9:00 AM - 7:00 PM",
-        "friday": "9:00 AM - 6:00 PM",
-        "saturday": "9:00 AM - 5:00 PM",
-        "sunday": "10:00 AM - 4:00 PM"
+        "monday": "8:30 AM - 7:00 PM",
+        "tuesday": "8:30 AM - 7:00 PM",
+        "wednesday": "8:30 AM - 7:00 PM",
+        "thursday": "8:30 AM - 7:00 PM",
+        "friday": "8:30 AM - 5:00 PM",
+        "saturday": "9:00 AM - 2:00 PM",
+        "sunday": "Closed"
       },
       "paymentOptions": ["Cash", "Credit Cards", "Financing Available", "Membership Plans"],
       "seoKeywords": [
@@ -696,80 +552,25 @@
       ]
     },
     {
-      "id": 14,
-      "name": "Sculpted MD Aurora",
-      "city": "Aurora",
-      "address": "Aurora, CO 80014",
-      "phone": "(303) 955-2323",
-      "website": "https://www.sculptedmd.com/colorado/aurora",
-      "services": ["Juvéderm", "Restylane", "Belotero", "Radiesse", "Botox"],
-      "priceRange": "$500-750",
-      "rating": 4.7,
-      "reviews": 156,
-      "specialties": ["Expert cosmetic estheticians", "Advanced injection techniques", "Facial aesthetics"],
-      "boardCertified": true,
-      "coordinates": [39.7294, -104.8319],
-      "pricing": {
-        "juvederm": "$600-750",
-        "restylane": "$500-700",
-        "consultation": "Free consultation available"
-      },
-      "promotions": {
-        "newPatient": "Free consultation and assessment",
-        "parking": "Free parking"
-      },
-      "features": [
-        "Expert cosmetic estheticians",
-        "Advanced injection techniques",
-        "Comprehensive filler options",
-        "Facial aesthetics specialization",
-        "Free consultations"
-      ],
-      "isVerified": true,
-      "isPremium": false,
-      "listingTier": "standard",
-      "monthlyFee": 199,
-      "leadCost": 35,
-      "description": "Expert cosmetic estheticians using advanced injection techniques. Specializes in facial aesthetics with comprehensive filler options for natural, youthful results.",
-      "operatingHours": {
-        "monday": "9:00 AM - 6:00 PM",
-        "tuesday": "9:00 AM - 6:00 PM",
-        "wednesday": "9:00 AM - 6:00 PM",
-        "thursday": "9:00 AM - 6:00 PM",
-        "friday": "9:00 AM - 5:00 PM",
-        "saturday": "10:00 AM - 4:00 PM",
-        "sunday": "Closed"
-      },
-      "paymentOptions": ["Cash", "Credit Cards", "Financing Plans"],
-      "seoKeywords": [
-        "sculpted md aurora",
-        "expert estheticians aurora",
-        "advanced injection techniques",
-        "facial aesthetics aurora"
-      ]
-    },
-    {
-      "id": 15,
+      "id": 12,
       "name": "Always Beautiful MedSpa",
       "city": "Aurora",
-      "address": "Centennial/Aurora area, CO 80112",
-      "phone": "(303) 858-8000",
+      "address": "6240 S Main St #225, Aurora, CO 80016",
+      "phone": "(720) 280-7016",
       "website": "https://www.alwaysbeautiful.net",
-      "services": ["Juvederm", "DiamondGlow", "Upneeq", "Kybella", "OxyGeneo"],
-      "priceRange": "$575-825",
-      "rating": 4.9,
-      "reviews": 187,
+      "services": ["Juvederm"],
+      "priceRange": "$$$",
+      "rating": 4.7,
+      "reviews": 198,
       "specialties": ["Scientifically proven techniques", "Customized treatments", "Natural beauty enhancement"],
       "boardCertified": true,
       "coordinates": [39.7294, -104.8319],
       "pricing": {
-        "juvederm": "$650-825",
-        "restylane": "$575-775",
-        "consultation": "Free consultation available"
+        "juvederm": "$$$",
+        "restylane": "$$$"
       },
       "promotions": {
-        "newPatient": "Free consultation and skin analysis",
-        "parking": "Free parking available"
+        "newPatient": "Free consultation and skin analysis"
       },
       "features": [
         "Scientifically proven techniques",
@@ -782,15 +583,14 @@
       "isPremium": false,
       "listingTier": "standard",
       "monthlyFee": 199,
-      "leadCost": 35,
       "description": "Denver area medspa using scientifically proven techniques for customized treatments. Focus on natural beauty enhancement and exceptional client satisfaction with advanced procedures.",
       "operatingHours": {
-        "monday": "9:00 AM - 6:00 PM",
-        "tuesday": "9:00 AM - 6:00 PM",
-        "wednesday": "9:00 AM - 6:00 PM",
-        "thursday": "9:00 AM - 6:00 PM",
+        "monday": "Closed",
+        "tuesday": "9:00 AM - 5:00 PM",
+        "wednesday": "9:00 AM - 5:00 PM",
+        "thursday": "10:00 AM - 5:00 PM",
         "friday": "9:00 AM - 5:00 PM",
-        "saturday": "9:00 AM - 4:00 PM",
+        "saturday": "9:00 AM - 3:00 PM",
         "sunday": "Closed"
       },
       "paymentOptions": ["Cash", "Credit Cards", "Financing Available"],
@@ -802,27 +602,26 @@
       ]
     },
     {
-      "id": 16,
+      "id": 13,
       "name": "Medical Aesthetics LLC",
-      "city": "Lakewood",
-      "address": "Evergreen, CO 80439 (30 min from Lakewood)",
-      "phone": "(303) 670-4446",
+      "city": "Evergreen",
+      "address": "1262 Bergen Pkwy Ste E112, Evergreen, CO 80439",
+      "phone": "(303) 674-7225",
       "website": "https://www.medicalaestheticsllc.com",
-      "services": ["Juvéderm", "Lip Augmentation", "Kybella", "Acne Treatment", "Botox"],
-      "priceRange": "$550-775",
-      "rating": 4.6,
-      "reviews": 98,
+      "services": ["Juvéderm", "Lip Augmentation"],
+      "priceRange": "$$$",
+      "rating": 4.7,
+      "reviews": 54,
       "specialties": ["Luxurious spa environment", "Specialized training", "Natural enhancement"],
       "boardCertified": true,
       "coordinates": [39.6403, -105.0178],
       "pricing": {
-        "juvederm": "$650-775",
-        "restylane": "$550-700",
+        "juvederm": "$$$",
+        "restylane": "$$$",
         "consultation": "Consultation available"
       },
       "promotions": {
-        "newPatient": "Consultation and treatment plan",
-        "parking": "Free mountain location parking"
+        "newPatient": "Consultation and treatment plan"
       },
       "features": [
         "Luxurious mountain spa setting",
@@ -838,12 +637,12 @@
       "leadCost": 35,
       "description": "Luxurious, state-of-the-art medical spa in peaceful Evergreen mountain setting. Specialized training in latest cosmetic treatments for natural results without signs of work.",
       "operatingHours": {
-        "monday": "9:00 AM - 6:00 PM",
-        "tuesday": "9:00 AM - 6:00 PM",
-        "wednesday": "9:00 AM - 6:00 PM",
-        "thursday": "9:00 AM - 6:00 PM",
-        "friday": "9:00 AM - 5:00 PM",
-        "saturday": "10:00 AM - 4:00 PM",
+        "monday": "9:00 AM - 5:00 PM",
+        "tuesday": "9:00 AM - 5:00 PM",
+        "wednesday": "9:00 AM - 5:00 PM",
+        "thursday": "9:00 AM - 5:00 PM",
+        "friday": "9:00 AM - 3:00 PM",
+        "saturday": "Closed",
         "sunday": "Closed"
       },
       "paymentOptions": ["Cash", "Credit Cards", "Financing Available"],
@@ -855,31 +654,29 @@
       ]
     },
     {
-      "id": 17,
+      "id": 14,
       "name": "Sonata Skin and Body",
-      "city": "Lakewood",
-      "address": "Near Lakewood, CO 80228",
-      "phone": "(303) 988-7546",
+      "city": "Broomfield",
+      "address": "13605 Xavier Ln STE F, Broomfield, CO 80023",
+      "phone": "(303) 469-0064",
       "website": "https://www.sonataskinandbody.com",
-      "services": ["Dysport", "Fillers", "Injectable Treatments", "Body Contouring", "Skincare"],
-      "priceRange": "$575-825",
-      "rating": 4.8,
-      "reviews": 167,
+      "services": ["Restylane", "Fillers", "Radiesse"],
+      "priceRange": "$$$",
+      "rating": 4.6,
+      "reviews": 302,
       "specialties": ["Dr. Janowski - serving since 2004", "Personalized care", "Advanced technology"],
       "boardCertified": true,
       "coordinates": [39.6403, -105.0178],
       "pricing": {
-        "juvederm": "$675-825",
-        "restylane": "$575-775",
+        "juvederm": "$$$",
+        "restylane": "$$$",
         "consultation": "Complimentary consultation"
       },
       "promotions": {
-        "newPatient": "Comprehensive consultation with Dr. Janowski",
-        "parking": "Free parking available"
+        "newPatient": "Comprehensive consultation with Dr. Janowski"
       },
       "features": [
         "Dr. Lawrence Janowski serving since 2004",
-        "5 out of 5 stars with 600+ reviews",
         "Personalized, never rushed approach",
         "Advanced aesthetic technology",
         "Legend in aesthetic specialty"
@@ -888,15 +685,14 @@
       "isPremium": true,
       "listingTier": "premium",
       "monthlyFee": 299,
-      "leadCost": 45,
       "description": "Led by Dr. Lawrence Janowski, serving clients since 2004. Known for making clients feel comfortable, treating patients as friends, and achieving natural, confidence-boosting results.",
       "operatingHours": {
-        "monday": "9:00 AM - 6:00 PM",
-        "tuesday": "9:00 AM - 6:00 PM",
-        "wednesday": "9:00 AM - 6:00 PM",
-        "thursday": "9:00 AM - 6:00 PM",
-        "friday": "9:00 AM - 5:00 PM",
-        "saturday": "9:00 AM - 4:00 PM",
+        "monday": "7:30 AM - 5:30 PM",
+        "tuesday": "7:30 AM - 5:30 PM",
+        "wednesday": "Closed",
+        "thursday": "7:30 AM - 5:30 PM",
+        "friday": "7:30 AM - 5:30 PM",
+        "saturday": "Closed",
         "sunday": "Closed"
       },
       "paymentOptions": ["Cash", "Credit Cards", "Financing Plans"],
@@ -908,76 +704,22 @@
       ]
     },
     {
-      "id": 18,
-      "name": "Sculpted MD Lakewood",
-      "city": "Lakewood",
-      "address": "1370 Colorado Mills Pkwy Suite #11, Lakewood, CO 80401",
-      "phone": "(303) 274-2500",
-      "website": "https://www.sculptedmd.com/colorado/lakewood",
-      "services": ["Hyaluronic Acid Fillers", "Lip Enhancement", "Botox", "Testosterone Therapy", "Weight Loss"],
-      "priceRange": "$500-750",
-      "rating": 4.7,
-      "reviews": 134,
-      "specialties": ["Personalized care", "Medical innovation", "Licensed professionals"],
-      "boardCertified": true,
-      "coordinates": [39.6403, -105.0178],
-      "pricing": {
-        "juvederm": "$600-750",
-        "restylane": "$500-700",
-        "consultation": "Free consultation available"
-      },
-      "promotions": {
-        "newPatient": "Free consultation and treatment planning",
-        "parking": "Colorado Mills parking available"
-      },
-      "features": [
-        "Premier med spa in Lakewood",
-        "Science-backed treatments",
-        "Comprehensive wellness approach",
-        "Licensed medical professionals",
-        "Colorado Mills location"
-      ],
-      "isVerified": true,
-      "isPremium": false,
-      "listingTier": "standard",
-      "monthlyFee": 199,
-      "leadCost": 35,
-      "description": "Premier med spa blending personalized care with medical innovation. Science-backed treatments for health and beauty goals with experienced, licensed medical professionals.",
-      "operatingHours": {
-        "monday": "9:00 AM - 6:00 PM",
-        "tuesday": "9:00 AM - 6:00 PM",
-        "wednesday": "9:00 AM - 6:00 PM",
-        "thursday": "9:00 AM - 6:00 PM",
-        "friday": "9:00 AM - 5:00 PM",
-        "saturday": "10:00 AM - 4:00 PM",
-        "sunday": "Closed"
-      },
-      "paymentOptions": ["Cash", "Credit Cards", "Financing Available"],
-      "seoKeywords": [
-        "sculpted md lakewood",
-        "colorado mills med spa",
-        "personalized care lakewood",
-        "medical innovation aesthetics"
-      ]
-    },
-    {
-      "id": 19,
+      "id": 15,
       "name": "Denver Dream MedSpa",
       "city": "Denver",
-      "address": "Cherry Creek Mall, Third Floor, Denver, CO 80206",
-      "phone": "(303) 555-0123",
+      "address": "695 S Colorado Blvd Ste 300, Denver, CO 80246",
+      "phone": "(720) 676-8965",
       "website": "https://denverdreammedspa.com",
-      "services": ["Botox", "Dermal Fillers", "Permanent Makeup", "Collagen Stimulators"],
+      "services": ["Evolysse", "Dermal Fillers", "Juvederm", "RHA Collection", "Galderma"],
       "priceRange": "$650-950",
-      "rating": 4.8,
-      "reviews": 156,
+      "rating": 4.9,
+      "reviews": 380,
       "specialties": ["Award-Winning Services", "Cutting-Edge Treatments"],
       "boardCertified": true,
       "coordinates": [39.7392, -104.9903],
       "pricing": {
-        "juvederm": "$750-950",
-        "restylane": "$650-850",
-        "consultation": "Free consultations available"
+        "juvederm": "$450",
+        "consultation": "consultations available"
       },
       "promotions": {
         "newPatient": "Complimentary consultation",
@@ -986,7 +728,6 @@
       "features": [
         "Award-winning medspa",
         "Cherry Creek location",
-        "Free parking",
         "Cutting-edge treatments",
         "Permanent makeup services"
       ],
@@ -994,15 +735,14 @@
       "isPremium": true,
       "listingTier": "premium",
       "monthlyFee": 299,
-      "leadCost": 45,
       "description": "Denver's premier award-winning medspa located in Cherry Creek Mall. Renowned for exceptional care in dermal fillers, Botox injections, and modern permanent makeup solutions.",
       "operatingHours": {
-        "monday": "9:00 AM - 6:00 PM",
-        "tuesday": "9:00 AM - 6:00 PM",
-        "wednesday": "9:00 AM - 6:00 PM",
-        "thursday": "9:00 AM - 6:00 PM",
-        "friday": "9:00 AM - 5:00 PM",
-        "saturday": "10:00 AM - 4:00 PM",
+        "monday": "9:00 AM - 5:30 PM",
+        "tuesday": "9:00 AM - 5:30 PM",
+        "wednesday": "9:00 AM - 5:30 PM",
+        "thursday": "9:00 AM - 5:30 PM",
+        "friday": "9:00 AM - 5:30 PM",
+        "saturday": "9:00 AM - 5:00 PM",
         "sunday": "Closed"
       },
       "paymentOptions": ["Cash", "Credit Cards", "Financing Available"],
@@ -1014,30 +754,28 @@
       ]
     },
     {
-      "id": 20,
+      "id": 16,
       "name": "Facial Aesthetics",
       "city": "Denver",
-      "address": "Cherry Creek, Denver, CO 80206",
-      "phone": "(303) 555-0456",
+      "address": "220 Josephine St #200, Denver, CO 80206",
+      "phone": "(303) 377-2868",
       "website": "https://facialaestheticsinc.com",
-      "services": ["Botox", "Dermal Fillers", "Body Treatments", "Facials"],
-      "priceRange": "$600-900",
-      "rating": 4.9,
-      "reviews": 234,
-      "specialties": ["Board-Certified Plastic Surgeon Direction", "Advanced Training"],
+      "services": ["Juvederm Ultra", "Dermal Fillers", "Sculptra", "Restylane Refyne"],
+      "priceRange": "$$",
+      "rating": 4.8,
+      "reviews": 442,
+      "specialties": ["Advanced Training"],
       "boardCertified": true,
       "coordinates": [39.7392, -104.9903],
       "pricing": {
-        "botox": "Professional rates",
-        "dermal_fillers": "$600-900",
-        "consultation": "Free consultation available"
+        "dermal_fillers": "$$",
+        "consultation": "consultation available"
       },
       "promotions": {
         "multiLocation": "6 Colorado locations",
         "training": "Elite training methods"
       },
       "features": [
-        "Medical direction by board-certified plastic surgeon",
         "Multiple Colorado locations",
         "Advanced technology",
         "4-5 weeks staff training minimum",
@@ -1047,15 +785,14 @@
       "isPremium": false,
       "listingTier": "enhanced",
       "monthlyFee": 149,
-      "leadCost": 35,
       "description": "Professional clinics in Denver, Colorado Springs, Greenwood Village, Golden, Monument and Superior under medical direction of board-certified plastic surgeon John A. Grossman, MD.",
       "operatingHours": {
-        "monday": "9:00 AM - 6:00 PM",
-        "tuesday": "9:00 AM - 6:00 PM",
-        "wednesday": "9:00 AM - 6:00 PM",
-        "thursday": "9:00 AM - 6:00 PM",
-        "friday": "9:00 AM - 5:00 PM",
-        "saturday": "10:00 AM - 4:00 PM",
+        "monday": "8:00 AM - 5:00 PM",
+        "tuesday": "8:00 AM - 6:00 PM",
+        "wednesday": "8:00 AM - 7:00 PM",
+        "thursday": "9:00 AM - 7:00 PM",
+        "friday": "8:00 AM - 5:00 PM",
+        "saturday": "8:00 AM - 2:00 PM",
         "sunday": "Closed"
       },
       "paymentOptions": ["Cash", "Credit Cards", "CareCredit"],
@@ -1067,22 +804,22 @@
       ]
     },
     {
-      "id": 21,
+      "id": 17,
       "name": "AboutSkin Dermatology and DermSurgery",
       "city": "Denver",
       "address": "5340 South Quebec Street, Suite 300, Greenwood Village, CO 80111",
       "phone": "(303) 756-7546",
       "website": "https://www.aboutskinderm.com",
       "services": ["Juvederm", "Restylane", "Laser Treatments", "Medical Dermatology"],
-      "priceRange": "$700-1000",
+      "priceRange": "$$",
       "rating": 4.7,
-      "reviews": 189,
+      "reviews": 572,
       "specialties": ["Board-Certified Dermatologists", "Natural Look Specialists"],
       "boardCertified": true,
       "coordinates": [39.6128, -104.9081],
       "pricing": {
-        "juvederm": "$750-950",
-        "restylane": "$700-900",
+        "juvederm": "$$",
+        "restylane": "$$",
         "consultation": "Professional consultation included"
       },
       "promotions": {
@@ -1100,15 +837,14 @@
       "isPremium": false,
       "listingTier": "enhanced",
       "monthlyFee": 149,
-      "leadCost": 35,
       "description": "Six board-certified dermatologists specializing in lip filler injections with a keen eye for achieving the 'natural look.' Uses FDA-approved Juvederm and Restylane collections.",
       "operatingHours": {
         "monday": "8:00 AM - 5:00 PM",
         "tuesday": "8:00 AM - 5:00 PM",
         "wednesday": "8:00 AM - 5:00 PM",
         "thursday": "8:00 AM - 5:00 PM",
-        "friday": "8:00 AM - 4:00 PM",
-        "saturday": "By appointment",
+        "friday": "8:00 AM - 5:00 PM",
+        "saturday": "Closed",
         "sunday": "Closed"
       },
       "paymentOptions": ["Medicare", "Tricare", "United Healthcare", "Anthem Blue Cross", "Veterans Affairs"],
@@ -1120,34 +856,30 @@
       ]
     },
     {
-      "id": 22,
+      "id": 18,
       "name": "The Luxe Room Denver",
       "city": "Denver",
-      "address": "Denver, CO (Multiple Locations)",
+      "address": "3900 E Mexico Ave #100, Denver, CO 80210",
       "phone": "(303) 555-0789",
       "website": "https://www.luxeroomcosmetic.com",
-      "services": ["Juvederm", "Restylane", "Botox", "Laser Treatments"],
-      "priceRange": "$550-795",
-      "rating": 4.8,
-      "reviews": 203,
+      "services": ["Juvederm", "Restylane"],
+      "priceRange": "$599-969",
+      "rating": 5.0,
+      "reviews": 1192,
       "specialties": ["Injectable Artists", "Natural Results", "Multi-Location"],
       "boardCertified": true,
       "coordinates": [39.7392, -104.9903],
       "pricing": {
-        "restylane": "$550-795",
-        "juvederm": "$550-795",
+        "restylane": "$599",
+        "juvederm": "$599",
         "consultation": "Free consultations"
       },
       "promotions": {
-        "freeConsultation": "Initial consultations always free",
-        "monthlySpecials": "Monthly Botox, filler & skin treatment specials",
-        "freeParking": "Free on-site parking"
+        "Consultation": "Initial consultations available"
       },
       "features": [
         "Denver, Boulder and Fort Collins locations",
         "Free consultations",
-        "Free on-site parking",
-        "Monthly specials",
         "Injectable artists",
         "Extensive before/after gallery"
       ],
@@ -1155,15 +887,14 @@
       "isPremium": false,
       "listingTier": "enhanced",
       "monthlyFee": 149,
-      "leadCost": 30,
       "description": "Denver, Boulder and Fort Collins leading injectables clinic home to Colorado's most incredible injectable artists producing natural-looking results.",
       "operatingHours": {
-        "monday": "9:00 AM - 6:00 PM",
-        "tuesday": "9:00 AM - 6:00 PM",
-        "wednesday": "9:00 AM - 6:00 PM",
-        "thursday": "9:00 AM - 6:00 PM",
+        "monday": "9:00 AM - 5:00 PM",
+        "tuesday": "9:00 AM - 5:00 PM",
+        "wednesday": "9:00 AM - 5:00 PM",
+        "thursday": "9:00 AM - 7:00 PM",
         "friday": "9:00 AM - 5:00 PM",
-        "saturday": "10:00 AM - 4:00 PM",
+        "saturday": "9:00 AM - 1:00 PM",
         "sunday": "Closed"
       },
       "paymentOptions": ["Cash", "Credit Cards", "Financing Available"],
@@ -1176,67 +907,75 @@
     }
   ],
   "metadata": {
-    "totalProviders": 22,
-    "citiesCovered": 6,
-    "averageRating": 4.7,
-    "priceRangeOverall": "$500-1000",
-    "lastUpdated": "2025-08-10",
-    "dataSource": "Integrated comprehensive business research with detailed provider information",
+    "totalProviders": 18,
+    "citiesCovered": 7,
+    "averageRating": 4.8,
+    "priceRangeOverall": "$375-969",
+    "lastUpdated": "2025-08-14",
+    "dataSource": "Comprehensive business research with verified provider information",
     "verificationStatus": "All providers verified as legitimate businesses",
-    "premiumListings": 7,
+    "premiumListings": 6,
     "enhancedListings": 3,
-    "standardListings": 12,
-    "averageMonthlyFee": 216,
+    "standardListings": 9,
+    "averageMonthlyFee": 199,
     "averageLeadCost": 38,
-    "integrationNotes": "Combined two datasets with updated metadata and revenue projections"
+    "integrationNotes": "Updated dataset with corrected provider counts and revenue calculations"
   },
   "cityBreakdown": {
     "Fort Collins": {
-      "count": 4,
-      "averageRating": 4.85,
-      "priceRange": "$550-825",
-      "premium": 2,
+      "count": 3,
+      "averageRating": 4.9,
+      "priceRange": "$575-969",
+      "premium": 1,
       "enhanced": 0,
       "standard": 2
     },
     "Boulder": {
-      "count": 4,
-      "averageRating": 4.7,
-      "priceRange": "$525-850",
+      "count": 3,
+      "averageRating": 4.9,
+      "priceRange": "$525-950",
       "premium": 1,
       "enhanced": 0,
-      "standard": 3
+      "standard": 2
     },
     "Colorado Springs": {
-      "count": 4,
-      "averageRating": 4.7,
-      "priceRange": "$525-825",
-      "premium": 1,
+      "count": 5,
+      "averageRating": 4.8,
+      "priceRange": "$375-950",
+      "premium": 2,
       "enhanced": 0,
       "standard": 3
     },
     "Aurora": {
-      "count": 3,
+      "count": 2,
       "averageRating": 4.8,
-      "priceRange": "$500-825",
+      "priceRange": "$550-800",
       "premium": 1,
       "enhanced": 0,
-      "standard": 2
+      "standard": 1
     },
-    "Lakewood": {
-      "count": 3,
+    "Evergreen": {
+      "count": 1,
       "averageRating": 4.7,
-      "priceRange": "$500-825",
+      "priceRange": "$$",
+      "premium": 0,
+      "enhanced": 0,
+      "standard": 1
+    },
+    "Broomfield": {
+      "count": 1,
+      "averageRating": 4.6,
+      "priceRange": "$$",
       "premium": 1,
       "enhanced": 0,
-      "standard": 2
+      "standard": 0
     },
     "Denver": {
-      "count": 4,
+      "count": 3,
       "averageRating": 4.8,
-      "priceRange": "$550-1000",
+      "priceRange": "$450-950",
       "premium": 1,
-      "enhanced": 3,
+      "enhanced": 2,
       "standard": 0
     }
   },
@@ -1289,18 +1028,76 @@
   },
   "revenueProjections": {
     "monthlySubscriptions": {
-      "premium": 2093,
+      "premium": 1794,
       "enhanced": 447,
-      "standard": 2388,
-      "total": 4928
+      "standard": 1791,
+      "total": 4032
     },
     "leadGeneration": {
-      "estimatedMonthlyLeads": 550,
+      "estimatedMonthlyLeads": 450,
       "averageLeadValue": 38,
-      "monthlyLeadRevenue": 20900
+      "monthlyLeadRevenue": 17100
     },
-    "totalMonthlyRevenue": 25828,
-    "annualRevenue": 309936
+    "totalMonthlyRevenue": 21132,
+    "annualRevenue": 253584
+  },
+  "providerAnalysis": {
+    "byListingTier": {
+      "premium": [
+        "The Luxe Room Fort Collins",
+        "Rinnova Skin & Body (Boulder)",
+        "Blush & Grey MedSpa (Colorado Springs)",
+        "Aurora Medical Spa",
+        "Sonata Skin and Body (Broomfield)",
+        "Denver Dream MedSpa"
+      ],
+      "enhanced": [
+        "Facial Aesthetics (Denver)",
+        "AboutSkin Dermatology (Denver)",
+        "The Luxe Room Denver"
+      ],
+      "standard": [
+        "Xanadu Med Spa (Fort Collins)",
+        "Boho Studios Medical Spa (Fort Collins)",
+        "RESTOR Medical Spa Boulder",
+        "Happy Clinic Boulder",
+        "Fountain of Youth Medi Spa (Colorado Springs)",
+        "Premier MediSpa (Colorado Springs)",
+        "Refine Aesthetics (Colorado Springs)",
+        "Always Beautiful MedSpa (Aurora)",
+        "Medical Aesthetics LLC (Evergreen)"
+      ]
+    },
+    "priceRangeDistribution": {
+      "budget": "$375-550 (2 providers)",
+      "mid-range": "$575-825 (8 providers)",
+      "premium": "$900-969 (3 providers)",
+      "unspecified": "$$ (5 providers)"
+    },
+    "specialtyFocus": {
+      "natural_results": 12,
+      "luxury_experience": 6,
+      "board_certified": 18,
+      "advanced_technology": 8,
+      "multi_location": 4
+    }
+  },
+  "businessInsights": {
+    "marketConcentration": {
+      "colorado_springs_dominance": "Highest provider count (5) with competitive pricing",
+      "denver_premium_focus": "Fewer providers (3) but higher-tier listings",
+      "northern_colorado_strong": "Fort Collins/Boulder combined (6 providers) strong market"
+    },
+    "competitiveAdvantages": {
+      "price_leaders": ["Fountain of Youth Medi Spa", "Happy Clinic Boulder"],
+      "luxury_leaders": ["Xanadu Med Spa", "Denver Dream MedSpa", "Rinnova Skin & Body"],
+      "multi_location_chains": ["The Luxe Room", "Facial Aesthetics", "Aurora Medical Spa"]
+    },
+    "revenueOptimization": {
+      "current_monthly": 21132,
+      "potential_with_tier_upgrades": 28500,
+      "growth_opportunity": 7368
+    }
   },
   "seoTargets": {
     "denver": {
@@ -1346,5 +1143,86 @@
         {"keyword": "lip injections lakewood", "volume": 30, "difficulty": 1}
       ]
     }
+  },
+  "contentStrategy": {
+    "highVolumeOpportunities": [
+      {"keyword": "lip flip before and after", "volume": 58700, "difficulty": 18, "priority": "high"},
+      {"keyword": "lip fillers before and after", "volume": 37600, "difficulty": 12, "priority": "high"},
+      {"keyword": "how long does lip filler last", "volume": 21900, "difficulty": 21, "priority": "high"},
+      {"keyword": "bad lip filler", "volume": 16800, "difficulty": 17, "priority": "medium"},
+      {"keyword": "lip flip near me", "volume": 15000, "difficulty": 7, "priority": "very high"},
+      {"keyword": "1ml lip filler before and after", "volume": 8700, "difficulty": 7, "priority": "high"},
+      {"keyword": "lip augmentation before and after", "volume": 7100, "difficulty": 3, "priority": "high"}
+    ],
+    "informationalContent": [
+      {"keyword": "do lip fillers hurt", "volume": 4900, "difficulty": 8, "contentType": "FAQ/Blog"},
+      {"keyword": "can you get lip filler at 18", "volume": 370, "difficulty": 4, "contentType": "FAQ/Blog"},
+      {"keyword": "lip injections how often", "volume": 2800, "difficulty": 10, "contentType": "Guide"},
+      {"keyword": "how long does a lip filler appointment take", "volume": 470, "difficulty": 14, "contentType": "FAQ"},
+      {"keyword": "how long does versa lip filler last", "volume": 210, "difficulty": 0, "contentType": "Product Guide"},
+      {"keyword": "what are the most popular fillers", "volume": 3800, "difficulty": 31, "contentType": "Comparison Guide"},
+      {"keyword": "good lip fillers", "volume": 4300, "difficulty": 23, "contentType": "Product Reviews"},
+      {"keyword": "can you get lip filler while pregnant", "volume": 4400, "difficulty": 12, "contentType": "Safety Guide"}
+    ],
+    "aftercareContent": [
+      {"keyword": "can you remove lip fillers", "volume": 4000, "difficulty": 17, "contentType": "Reversal Guide"},
+      {"keyword": "can I put lip balm on after lip fillers", "volume": 1900, "difficulty": 10, "contentType": "Aftercare Guide"},
+      {"keyword": "how long to avoid straws after lip filler", "volume": 1500, "difficulty": 6, "contentType": "Aftercare Tips"},
+      {"keyword": "lip fillers and cold sores", "volume": 1500, "difficulty": 7, "contentType": "Medical Guide"},
+      {"keyword": "lip filler swelling stages", "volume": 3000, "difficulty": 14, "contentType": "Recovery Timeline"},
+      {"keyword": "white bumps after lip filler", "volume": 200, "difficulty": 5, "contentType": "Troubleshooting"},
+      {"keyword": "headaches after lip filler", "volume": 160, "difficulty": 6, "contentType": "Side Effects"},
+      {"keyword": "why does my filler hurt months later", "volume": 1200, "difficulty": 14, "contentType": "Medical FAQ"}
+    ],
+    "concernsAndRisks": [
+      {"keyword": "cons of lip filler", "volume": 790, "difficulty": 20, "contentType": "Educational"},
+      {"keyword": "bad lip filler", "volume": 16800, "difficulty": 17, "contentType": "Prevention Guide"},
+      {"keyword": "can you get lip filler if you get cold sores", "volume": 90, "difficulty": 0, "contentType": "Medical FAQ"}
+    ],
+    "visualContent": [
+      {"keyword": "lip filler before and after photos", "volume": 720, "difficulty": 2, "contentType": "Gallery"},
+      {"keyword": "lip injection images", "volume": 480, "difficulty": 0, "contentType": "Gallery"}
+    ]
+  },
+  "seoStrategy": {
+    "priorityTargets": [
+      {
+        "keyword": "lip flip near me",
+        "volume": 15000,
+        "difficulty": 7,
+        "strategy": "Local SEO focus with location-specific landing pages"
+      },
+      {
+        "keyword": "lip flip before and after",
+        "volume": 58700,
+        "difficulty": 18,
+        "strategy": "Visual content gallery with provider portfolios"
+      },
+      {
+        "keyword": "lip fillers before and after",
+        "volume": 37600,
+        "difficulty": 12,
+        "strategy": "Provider showcase pages with real patient results"
+      },
+      {
+        "keyword": "how long does lip filler last",
+        "volume": 21900,
+        "difficulty": 21,
+        "strategy": "Comprehensive guide with provider expertise"
+      }
+    ],
+    "contentGaps": [
+      "Lip filler duration guides by brand",
+      "Local provider comparison tools",
+      "Interactive before/after galleries",
+      "Comprehensive aftercare resources",
+      "Safety and risk education content"
+    ],
+    "localSeoOpportunities": [
+      "Near me keyword variations for each city",
+      "Provider-specific before/after galleries",
+      "Local expertise and certification highlights",
+      "City-specific pricing and promotion pages"
+    ]
   }
 }
