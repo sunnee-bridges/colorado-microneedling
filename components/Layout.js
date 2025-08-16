@@ -1,14 +1,14 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function Layout({ children, title = "Colorado's ONLY 100% Verified Medical Professional Lip Filler Directory" }) {
+export default function Layout({ children, title = "Colorado Licensed Medical Professional Lip Filler Directory" }) {
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Colorado's ONLY 100% verified medical professional lip filler directory. Every provider individually credential-verified. Licensed RNs, NPs, and MDs only. Hospital-grade standards guaranteed." />
-        <meta name="keywords" content="verified lip fillers Colorado, licensed medical professionals, RN injectors Colorado, board certified lip fillers, hospital grade standards" />
+        <meta name="description" content="Colorado lip filler directory featuring licensed medical professionals. Find qualified RNs, NPs, and MDs for lip enhancement. We encourage independent credential verification." />
+        <meta name="keywords" content="licensed lip fillers Colorado, medical professionals, RN injectors Colorado, qualified lip fillers, medical grade standards" />
       </Head>
       
       <header style={{ 
@@ -33,7 +33,7 @@ export default function Layout({ children, title = "Colorado's ONLY 100% Verifie
                 fontWeight: 'bold',
                 display: 'inline-block'
               }}>
-                ✅ 100% VERIFIED MEDICAL PROFESSIONALS
+                ✅ FEATURING LICENSED MEDICAL PROFESSIONALS
               </div>
             </div>
             
@@ -45,12 +45,12 @@ export default function Layout({ children, title = "Colorado's ONLY 100% Verifie
               fontSize: '0.8rem',
               textAlign: 'right'
             }}>
-              <div style={{ fontWeight: 'bold' }}>Colorado's ONLY</div>
-              <div>100% Verified Directory</div>
+              <div style={{ fontWeight: 'bold' }}>Quality-Focused</div>
+              <div>Licensed Professionals</div>
             </div>
           </div>
           
-          {/* UPDATED NAVIGATION - Now includes all verification pages */}
+          {/* UPDATED NAVIGATION - Dropdown Only */}
           <nav style={{ marginTop: '15px' }}>
             <div style={{ 
               display: 'flex', 
@@ -71,8 +71,8 @@ export default function Layout({ children, title = "Colorado's ONLY 100% Verifie
                 🏠 Home
               </Link>
 
-              {/* Verification Dropdown or Separate Links */}
-              <div style={{ position: 'relative', display: 'inline-block' }}>
+              {/* Verification Dropdown */}
+              <div style={{ position: 'relative', display: 'inline-block' }} className="verification-container">
                 <span style={{
                   color: 'white',
                   padding: '8px 12px',
@@ -83,10 +83,10 @@ export default function Layout({ children, title = "Colorado's ONLY 100% Verifie
                   fontWeight: 'bold',
                   cursor: 'pointer'
                 }}>
-                  ✅ Verification ▼
+                  ✅ Quality Standards ▼
                 </span>
                 
-                {/* Dropdown Menu - CSS hover effect needed */}
+                {/* Dropdown Menu */}
                 <div style={{
                   position: 'absolute',
                   top: '100%',
@@ -97,7 +97,7 @@ export default function Layout({ children, title = "Colorado's ONLY 100% Verifie
                   padding: '10px 0',
                   minWidth: '220px',
                   zIndex: 1000,
-                  display: 'none', // Will be shown on hover with CSS
+                  display: 'none',
                   marginTop: '5px'
                 }} className="verification-dropdown">
                   <Link href="/verification" style={{
@@ -108,7 +108,7 @@ export default function Layout({ children, title = "Colorado's ONLY 100% Verifie
                     fontSize: '0.9rem',
                     borderBottom: '1px solid #f0f0f0'
                   }}>
-                    📋 Our Verification Process
+                    📋 Our Quality Standards
                   </Link>
                   <Link href="/why-verification-matters" style={{
                     display: 'block',
@@ -118,7 +118,7 @@ export default function Layout({ children, title = "Colorado's ONLY 100% Verifie
                     fontSize: '0.9rem',
                     borderBottom: '1px solid #f0f0f0'
                   }}>
-                    ⚠️ Why Verification Matters
+                    ⚠️ Why Credentials Matter
                   </Link>
                   <Link href="/verified-vs-unverified" style={{
                     display: 'block',
@@ -128,7 +128,7 @@ export default function Layout({ children, title = "Colorado's ONLY 100% Verifie
                     fontSize: '0.9rem',
                     borderBottom: '1px solid #f0f0f0'
                   }}>
-                    ⚖️ Verified vs Unverified
+                    ⚖️ Licensed vs Unlicensed
                   </Link>
                   <Link href="/hospital-grade-standards" style={{
                     display: 'block',
@@ -137,35 +137,10 @@ export default function Layout({ children, title = "Colorado's ONLY 100% Verifie
                     textDecoration: 'none',
                     fontSize: '0.9rem'
                   }}>
-                    🏥 Hospital-Grade Standards
+                    🏥 Medical Standards
                   </Link>
                 </div>
               </div>
-
-              {/* OR Simple Separate Links (Alternative approach) */}
-              <Link href="/verification" style={{ 
-                color: 'white', 
-                textDecoration: 'none',
-                padding: '8px 12px',
-                borderRadius: '15px',
-                background: 'rgba(40, 167, 69, 0.3)',
-                border: '1px solid rgba(255,255,255,0.4)',
-                fontSize: '0.9rem',
-                fontWeight: 'bold'
-              }}>
-                📋 Verification
-              </Link>
-
-              <Link href="/why-verification-matters" style={{ 
-                color: 'white', 
-                textDecoration: 'none',
-                padding: '8px 12px',
-                borderRadius: '15px',
-                background: 'rgba(40, 167, 69, 0.2)',
-                fontSize: '0.85rem'
-              }}>
-                ⚠️ Why Verify
-              </Link>
 
               {/* Other Pages */}
               <Link href="/before-after" style={{ 
@@ -176,7 +151,7 @@ export default function Layout({ children, title = "Colorado's ONLY 100% Verifie
                 background: 'rgba(255,255,255,0.1)',
                 fontSize: '0.9rem'
               }}>
-                📸 Verified Results
+                📸 Results Gallery
               </Link>
 
               <Link href="/pricing" style={{ 
@@ -190,6 +165,28 @@ export default function Layout({ children, title = "Colorado's ONLY 100% Verifie
                 💰 Pricing
               </Link>
 
+              <Link href="/shapes" style={{ 
+                color: 'white', 
+                textDecoration: 'none',
+                padding: '8px 12px',
+                borderRadius: '15px',
+                background: 'rgba(255,255,255,0.1)',
+                fontSize: '0.9rem'
+              }}>
+                💋 Shapes
+              </Link>
+
+             <Link href="/lipfillerfaq" style={{ 
+                color: 'white', 
+                textDecoration: 'none',
+                padding: '8px 12px',
+                borderRadius: '15px',
+                background: 'rgba(255,255,255,0.1)',
+                fontSize: '0.9rem'
+              }}>
+                ❓ FAQ
+              </Link>
+
               <Link href="/about" style={{ 
                 color: 'white', 
                 textDecoration: 'none',
@@ -201,31 +198,18 @@ export default function Layout({ children, title = "Colorado's ONLY 100% Verifie
                 ℹ️ About
               </Link>
 
-              <Link href="/lipfillerfaq" style={{ 
-                color: 'white', 
-                textDecoration: 'none',
-                padding: '8px 12px',
-                borderRadius: '15px',
-                background: 'rgba(255,255,255,0.1)',
-                fontSize: '0.9rem'
-              }}>
-                ❓ FAQ
-              </Link>
+
             </div>
           </nav>
         </div>
       </header>
       
-      {/* ADD CSS for dropdown hover effect */}
+      {/* CSS for dropdown hover effect */}
       <style jsx>{`
         .verification-dropdown {
           display: none;
         }
-        .verification-dropdown:hover,
-        div:hover .verification-dropdown {
-          display: block !important;
-        }
-        nav div:hover .verification-dropdown {
+        .verification-container:hover .verification-dropdown {
           display: block !important;
         }
       `}</style>
@@ -256,12 +240,12 @@ export default function Layout({ children, title = "Colorado's ONLY 100% Verifie
             textAlign: 'center'
           }}>
             <h3 style={{ color: '#28a745', margin: '0 0 15px 0' }}>
-              🛡️ The Colorado Verification Promise
+              🛡️ Our Quality Commitment
             </h3>
             <p style={{ margin: '0', color: '#666', fontSize: '0.9rem' }}>
-              <strong>100% Licensed Medical Professionals.</strong> Every provider individually credential-verified.
+              <strong>We strive to feature licensed medical professionals.</strong> We encourage patients to independently verify all provider credentials.
               <br />
-              While other directories list anyone who pays, we maintain hospital-grade standards.
+              While other directories list anyone who pays, we focus on quality and safety.
             </p>
             <div style={{ 
               display: 'flex', 
@@ -271,18 +255,18 @@ export default function Layout({ children, title = "Colorado's ONLY 100% Verifie
               flexWrap: 'wrap'
             }}>
               <span style={{ fontSize: '0.8rem', color: '#28a745' }}>
-                ✅ Colorado Medical Board Verified
+                ✅ Licensed Medical Professionals
               </span>
               <span style={{ fontSize: '0.8rem', color: '#28a745' }}>
-                ✅ Educational Background Confirmed
+                ✅ Quality-Focused Listings
               </span>
               <span style={{ fontSize: '0.8rem', color: '#28a745' }}>
-                ✅ Zero Unlicensed Injectors
+                ✅ Patient Education First
               </span>
             </div>
           </div>
 
-          {/* UPDATED Footer links - now includes verification pages */}
+          {/* Footer links */}
           <div style={{ 
             display: 'grid', 
             gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
@@ -290,52 +274,26 @@ export default function Layout({ children, title = "Colorado's ONLY 100% Verifie
             marginBottom: '20px'
           }}>
             <div>
-              <h4 style={{ color: '#333', marginBottom: '15px' }}>Verified Cities</h4>
+              <h4 style={{ color: '#333', marginBottom: '15px' }}>Featured Cities</h4>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                 <li style={{ marginBottom: '5px' }}>
                   <Link href="/providers/denver" style={{ color: '#667eea', textDecoration: 'none' }}>
-                    ✅ Denver (4 Verified Providers)
+                    ✅ Denver (Featured Providers)
                   </Link>
                 </li>
                 <li style={{ marginBottom: '5px' }}>
                   <Link href="/providers/boulder" style={{ color: '#667eea', textDecoration: 'none' }}>
-                    ✅ Boulder (3 Verified Providers)
+                    ✅ Boulder (Featured Providers)
                   </Link>
                 </li>
                 <li style={{ marginBottom: '5px' }}>
                   <Link href="/providers/colorado-springs" style={{ color: '#667eea', textDecoration: 'none' }}>
-                    ✅ Colorado Springs (5 Verified Providers)
+                    ✅ Colorado Springs (Featured Providers)
                   </Link>
                 </li>
                 <li style={{ marginBottom: '5px' }}>
                   <Link href="/providers/fort-collins" style={{ color: '#667eea', textDecoration: 'none' }}>
-                    ✅ Fort Collins (3 Verified Providers)
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 style={{ color: '#333', marginBottom: '15px' }}>Verification Info</h4>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                <li style={{ marginBottom: '5px' }}>
-                  <Link href="/verification" style={{ color: '#667eea', textDecoration: 'none', fontSize: '0.9rem' }}>
-                    📋 Our Verification Process
-                  </Link>
-                </li>
-                <li style={{ marginBottom: '5px' }}>
-                  <Link href="/why-verification-matters" style={{ color: '#667eea', textDecoration: 'none', fontSize: '0.9rem' }}>
-                    ⚠️ Why Verification Matters
-                  </Link>
-                </li>
-                <li style={{ marginBottom: '5px' }}>
-                  <Link href="/verified-vs-unverified" style={{ color: '#667eea', textDecoration: 'none', fontSize: '0.9rem' }}>
-                    ⚖️ Verified vs Unverified
-                  </Link>
-                </li>
-                <li style={{ marginBottom: '5px' }}>
-                  <Link href="/hospital-grade-standards" style={{ color: '#667eea', textDecoration: 'none', fontSize: '0.9rem' }}>
-                    🏥 Hospital-Grade Standards
+                    ✅ Fort Collins (Featured Providers)
                   </Link>
                 </li>
               </ul>
@@ -343,21 +301,47 @@ export default function Layout({ children, title = "Colorado's ONLY 100% Verifie
 
             <div>
               <h4 style={{ color: '#333', marginBottom: '15px' }}>Quality Standards</h4>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, color: '#666', fontSize: '0.9rem' }}>
-                <li style={{ marginBottom: '5px' }}>🏥 Licensed RNs, NPs, PAs & MDs Only</li>
-                <li style={{ marginBottom: '5px' }}>🎓 University-Educated Professionals</li>
-                <li style={{ marginBottom: '5px' }}>⭐ National Trainer Network</li>
-                <li style={{ marginBottom: '5px' }}>🛡️ Hospital-Grade Standards</li>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                <li style={{ marginBottom: '5px' }}>
+                  <Link href="/verification" style={{ color: '#667eea', textDecoration: 'none', fontSize: '0.9rem' }}>
+                    📋 Our Quality Standards
+                  </Link>
+                </li>
+                <li style={{ marginBottom: '5px' }}>
+                  <Link href="/why-verification-matters" style={{ color: '#667eea', textDecoration: 'none', fontSize: '0.9rem' }}>
+                    ⚠️ Why Credentials Matter
+                  </Link>
+                </li>
+                <li style={{ marginBottom: '5px' }}>
+                  <Link href="/verified-vs-unverified" style={{ color: '#667eea', textDecoration: 'none', fontSize: '0.9rem' }}>
+                    ⚖️ Licensed vs Unlicensed
+                  </Link>
+                </li>
+                <li style={{ marginBottom: '5px' }}>
+                  <Link href="/hospital-grade-standards" style={{ color: '#667eea', textDecoration: 'none', fontSize: '0.9rem' }}>
+                    🏥 Medical Standards
+                  </Link>
+                </li>
               </ul>
             </div>
 
             <div>
-              <h4 style={{ color: '#333', marginBottom: '15px' }}>Why Choose Us</h4>
+              <h4 style={{ color: '#333', marginBottom: '15px' }}>Our Focus</h4>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, color: '#666', fontSize: '0.9rem' }}>
-                <li style={{ marginBottom: '5px' }}>🚫 No Unlicensed Practitioners</li>
-                <li style={{ marginBottom: '5px' }}>✅ Individual Credential Checks</li>
-                <li style={{ marginBottom: '5px' }}>🔍 Annual Re-verification</li>
-                <li style={{ marginBottom: '5px' }}>📋 Transparent Standards</li>
+                <li style={{ marginBottom: '5px' }}>🏥 Licensed RNs, NPs, PAs & MDs</li>
+                <li style={{ marginBottom: '5px' }}>🎓 Medical Education & Training</li>
+                <li style={{ marginBottom: '5px' }}>⭐ Quality-Focused Listings</li>
+                <li style={{ marginBottom: '5px' }}>🛡️ Patient Safety First</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 style={{ color: '#333', marginBottom: '15px' }}>Why Choose Quality</h4>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, color: '#666', fontSize: '0.9rem' }}>
+                <li style={{ marginBottom: '5px' }}>🚫 Avoid Unlicensed Practitioners</li>
+                <li style={{ marginBottom: '5px' }}>✅ Research Provider Credentials</li>
+                <li style={{ marginBottom: '5px' }}>🔍 Verify Medical Licenses</li>
+                <li style={{ marginBottom: '5px' }}>📋 Ask About Training</li>
               </ul>
             </div>
           </div>
@@ -376,9 +360,9 @@ export default function Layout({ children, title = "Colorado's ONLY 100% Verifie
               margin: '0',
               fontStyle: 'italic'
             }}>
-              <strong>Colorado's Premier 100% Verified Medical Professional Directory</strong>
+              <strong>Colorado's Quality-Focused Medical Professional Directory</strong>
               <br />
-              Committed to maintaining hospital-grade standards through individual credential verification of every listed provider.
+              Committed to featuring licensed medical professionals and promoting patient education about provider credentials.
             </p>
             <div style={{
               background: 'linear-gradient(135deg, #667eea, #764ba2)',
@@ -390,7 +374,7 @@ export default function Layout({ children, title = "Colorado's ONLY 100% Verifie
               fontSize: '0.8rem',
               fontWeight: 'bold'
             }}>
-              🏆 FIRST & ONLY 100% VERIFIED DIRECTORY IN COLORADO
+              🏆 QUALITY-FOCUSED COLORADO DIRECTORY
             </div>
           </div>
         </div>

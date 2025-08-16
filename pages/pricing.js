@@ -83,10 +83,7 @@ export default function PricingPage({ providers }) {
               </table>
             </div>
 
-            <div className="special-offer">
-              <div className="offer-title">💰 Current Promotions</div>
-              <p><strong>January 2025 Specials:</strong> New patient discounts up to $200 off • Multiple syringe savings 15-20% • Free consultations at participating clinics</p>
-            </div>
+            
           </div>
         </section>
 
@@ -108,13 +105,14 @@ export default function PricingPage({ providers }) {
         </section>
 
         {/* Price Calculator */}
-        <section className="calculator-section" id="calculator">
-          <div className="container">
-            <h3>💻 Lip Filler Cost Calculator</h3>
-            <p><em>Targeting: "needleless lip fillers near me" (110 searches, KD 0%)</em></p>
-            <PriceCalculator />
-          </div>
-        </section>
+<section className="calculator-section" id="calculator">
+  <div className="container">
+    <h3>💻 Lip Filler Cost Calculator</h3>
+    <p><em>Targeting: "needleless lip fillers near me" (110 searches, KD 0%)</em></p>
+    <PriceCalculator />
+    
+  </div>
+</section>
 
         {/* Brand Specific Pricing */}
         <section className="content-section">
@@ -164,7 +162,7 @@ export default function PricingPage({ providers }) {
               <div className="feature-card">
                 <div className="feature-icon">🎁</div>
                 <h3>New Patient Specials</h3>
-                <p>Save $100-300 off your first treatment at participating clinics. Many providers offer consultation credits and package deals.</p>
+                <p>Some clinics offer deals for new patients. You might get money off your first visit, a credit for the first meeting, and lower prices if you buy several visits.</p>
               </div>
               
               <div className="feature-card">
@@ -176,13 +174,13 @@ export default function PricingPage({ providers }) {
               <div className="feature-card">
                 <div className="feature-icon">👥</div>
                 <h3>Group Discounts</h3>
-                <p>Bring a friend and both save $50-100. Multiple syringe treatments often include 10-20% volume discounts.</p>
+                <p>Ask about friend referrals and bundle pricing; some clinics have special deals.</p>
               </div>
               
               <div className="feature-card">
                 <div className="feature-icon">🎓</div>
                 <h3>Training Clinics</h3>
-                <p>Save 30-50% at supervised training sessions. Performed by students under expert physician oversight.</p>
+                <p>Ask about supervised training appointments—trainees do the work while experienced physicians oversee every step.</p>
               </div>
             </div>
           </div>

@@ -50,7 +50,7 @@ export default function PriceCalculator() {
   };
 
   const calculateCost = () => {
-    const { city, filler, amount, experience, newpatient } = formData;
+    const { city, filler, amount, experience } = formData;
     
     if (!city || !filler || !amount || !experience) {
       setResult(null);
@@ -60,17 +60,10 @@ export default function PriceCalculator() {
     let baseCost = pricing[city][filler] * parseFloat(amount);
     baseCost *= experienceMultiplier[experience];
     
-    let discount = 0;
-    if (newpatient === 'yes') {
-      discount = 100;
-      baseCost -= discount;
-    }
-
     const finalCost = Math.round(baseCost);
     
     setResult({
-      cost: finalCost,
-      discount: discount
+      cost: finalCost
     });
   };
 
@@ -159,21 +152,70 @@ export default function PriceCalculator() {
               onChange={(e) => handleChange('newpatient', e.target.value)}
             >
               <option value="no">No</option>
-              <option value="yes">Yes (Discount eligible)</option>
+              <option value="yes">Yes</option>
             </select>
           </div>
+          
+          {formData.newpatient === 'yes' && (
+            <div className="new-patient-info" style={{
+              padding: '12px',
+              backgroundColor: '#f0f9ff',
+              borderLeft: '4px solid #0ea5e9',
+              borderRadius: '4px',
+              marginTop: '10px'
+            }}>
+              <p style={{ 
+                fontSize: '0.9rem', 
+                color: '#0369a1', 
+                margin: 0 
+              }}>
+                <strong>Great!</strong> Many providers offer new patient discounts. Be sure to mention you're a new patient when contacting them to ask about current promotions.
+              </p>
+            </div>
+          )}
           
           {result && (
             <div className="calc-result">
               Your estimated cost: ${result.cost}
-              {result.discount > 0 && (
-                <div style={{ fontSize: '0.9rem', marginTop: '10px' }}>
-                  You saved ${result.discount} with new patient discount!
-                </div>
-              )}
+              <div style={{ 
+                fontSize: '0.85rem', 
+                marginTop: '8px',
+                padding: '8px',
+                backgroundColor: '#fef3c7',
+                borderLeft: '3px solid #f59e0b',
+                borderRadius: '3px'
+              }}>
+                <strong>Note:</strong> This is a base estimate. Final pricing may vary based on consultation and current promotions.
+              </div>
             </div>
           )}
         </div>
+      </div>
+      
+      {/* Disclaimer */}
+      <div style={{
+        marginTop: '24px',
+        padding: '16px',
+        backgroundColor: '#eff6ff',
+        border: '1px solid #bfdbfe',
+        borderRadius: '8px'
+      }}>
+        <h4 style={{
+          fontWeight: '600',
+          color: '#1e40af',
+          marginBottom: '8px',
+          fontSize: '1rem'
+        }}>
+          Pricing Disclaimer
+        </h4>
+        <p style={{
+          fontSize: '0.875rem',
+          color: '#1e40af',
+          margin: 0,
+          lineHeight: '1.4'
+        }}>
+          Prices shown are base estimates and may vary significantly based on individual treatment needs, provider consultation, and current promotions. New patient discounts are commonly available but vary by provider. Always contact providers directly to confirm current pricing and available discounts before booking your appointment.
+        </p>
       </div>
     </div>
   );

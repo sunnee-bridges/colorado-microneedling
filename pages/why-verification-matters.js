@@ -2,7 +2,7 @@ import Layout from '../components/Layout';
 
 export default function WhyVerificationMatters() {
   return (
-    <Layout title="Why Verification Matters - Protecting Your Safety with Licensed Medical Professionals">
+    <Layout title="Why Credentials Matter - Understanding Licensed Medical Professionals">
       <div style={{ maxWidth: '900px', margin: '0 auto' }}>
         {/* Hero Section */}
         <div style={{
@@ -14,10 +14,10 @@ export default function WhyVerificationMatters() {
           marginBottom: '40px'
         }}>
           <h1 style={{ fontSize: '2.5rem', marginBottom: '20px', fontWeight: 'bold' }}>
-            ⚠️ Why Verification Matters
+            ⚠️ Why Credentials Matter
           </h1>
           <p style={{ fontSize: '1.3rem', opacity: '0.95', maxWidth: '700px', margin: '0 auto 20px auto' }}>
-            The hidden dangers of unlicensed injectors and why your safety depends on medical professionals
+            Understanding the importance of licensed medical professionals for aesthetic procedures
           </p>
           <div style={{
             background: 'rgba(255,255,255,0.2)',
@@ -27,14 +27,30 @@ export default function WhyVerificationMatters() {
             display: 'inline-block',
             fontWeight: 'bold'
           }}>
-            🚨 Medical procedures should only be performed by medical professionals
+            🚨 Patient education about provider qualifications
           </div>
         </div>
 
-        {/* The Problem Section */}
+        {/* Important Disclaimer */}
+        <div style={{
+          backgroundColor: '#fff3cd',
+          border: '2px solid #ffc107',
+          borderRadius: '8px',
+          padding: '20px',
+          marginBottom: '40px'
+        }}>
+          <h4 style={{ color: '#856404', margin: '0 0 10px 0' }}>
+            Important Patient Responsibility
+          </h4>
+          <p style={{ color: '#856404', margin: 0, lineHeight: '1.5' }}>
+            <strong>This information is for educational purposes only.</strong> Patients are solely responsible for researching and verifying provider credentials, licensing status, and qualifications before scheduling any treatments. Always consult with qualified healthcare providers for personalized medical advice.
+          </p>
+        </div>
+
+        {/* The Importance of Credentials Section */}
         <section style={{ marginBottom: '50px' }}>
           <h2 style={{ color: '#dc3545', borderBottom: '3px solid #dc3545', paddingBottom: '10px' }}>
-            The Hidden Problem in Colorado
+            Understanding Provider Qualifications
           </h2>
           
           <div style={{
@@ -45,12 +61,12 @@ export default function WhyVerificationMatters() {
             margin: '20px 0'
           }}>
             <h3 style={{ color: '#721c24', marginBottom: '15px' }}>
-              🚨 Shocking Truth: Most Directories Don't Verify Credentials
+              📚 Educational Information: Provider Types
             </h3>
             <p style={{ color: '#721c24', fontSize: '1.1rem', lineHeight: '1.6' }}>
-              The majority of aesthetic provider directories in Colorado list <strong>anyone willing to pay a fee</strong> - 
-              including unlicensed practitioners, estheticians performing illegal procedures, and "certified injectors" 
-              with no medical training. Your safety is not their priority.
+              It's important for patients to understand the different types of providers who may offer aesthetic services. 
+              Not all providers have the same level of medical training or licensing. <strong>We encourage patients to research 
+              and verify credentials independently.</strong>
             </p>
           </div>
 
@@ -66,12 +82,12 @@ export default function WhyVerificationMatters() {
               borderRadius: '8px',
               padding: '20px'
             }}>
-              <h4 style={{ color: '#dc3545', marginBottom: '15px' }}>❌ Who's Injecting You?</h4>
+              <h4 style={{ color: '#dc3545', marginBottom: '15px' }}>⚠️ Questions to Consider</h4>
               <ul style={{ color: '#666', lineHeight: '1.7' }}>
-                <li><strong>Estheticians:</strong> Not licensed for medical procedures</li>
-                <li><strong>"Certified Injectors":</strong> Weekend course certificates</li>
-                <li><strong>Medical Assistants:</strong> Cannot legally inject independently</li>
-                <li><strong>Unlicensed Staff:</strong> No medical training whatsoever</li>
+                <li>What type of license does the provider have?</li>
+                <li>What is their medical training background?</li>
+                <li>Are they supervised by a physician?</li>
+                <li>What emergency protocols are in place?</li>
               </ul>
             </div>
 
@@ -81,89 +97,89 @@ export default function WhyVerificationMatters() {
               borderRadius: '8px',
               padding: '20px'
             }}>
-              <h4 style={{ color: '#856404', marginBottom: '15px' }}>⚠️ The Risks</h4>
+              <h4 style={{ color: '#856404', marginBottom: '15px' }}>📋 Research Recommendations</h4>
               <ul style={{ color: '#666', lineHeight: '1.7' }}>
-                <li>Permanent facial nerve damage</li>
-                <li>Blindness from improper injection</li>
-                <li>Severe allergic reactions</li>
-                <li>Infection and scarring</li>
-                <li>Asymmetrical results</li>
-                <li>Emergency room visits</li>
+                <li>Verify licenses through state boards</li>
+                <li>Ask about medical training and experience</li>
+                <li>Understand the facility's safety protocols</li>
+                <li>Seek referrals from trusted sources</li>
               </ul>
             </div>
           </div>
         </section>
 
-        {/* Real Stories Section */}
+        {/* Educational Case Studies Section */}
         <section style={{ marginBottom: '50px' }}>
           <h2 style={{ color: '#333', borderBottom: '3px solid #dc3545', paddingBottom: '10px' }}>
-            Real Stories from Colorado
+            Educational Case Studies
           </h2>
+          
+          <div style={{
+            background: '#d1ecf1',
+            border: '1px solid #bee5eb',
+            borderRadius: '8px',
+            padding: '20px',
+            marginBottom: '20px'
+          }}>
+            <p style={{ color: '#0c5460', margin: 0, fontSize: '1rem', fontStyle: 'italic' }}>
+              <strong>Educational Note:</strong> The following are hypothetical scenarios created for educational purposes 
+              to illustrate potential issues that may arise. These are not specific claims about any providers and are 
+              meant to help patients understand what questions to ask.
+            </p>
+          </div>
           
           <div style={{ margin: '30px 0' }}>
             {[
               {
-                location: "Denver Area",
-                story: "Sarah received lip fillers from an unlicensed 'certified injector' at a med spa. The filler was injected incorrectly, causing permanent lumps and requiring corrective surgery by a plastic surgeon.",
-                outcome: "2 corrective procedures, $8,000 in additional costs"
+                location: "Educational Scenario A",
+                story: "A patient researched a provider's credentials and discovered they only had an esthetician license, which may not authorize certain procedures. The patient decided to seek a licensed medical professional instead.",
+                outcome: "Patient made an informed decision"
               },
               {
-                location: "Colorado Springs",
-                story: "Michael went to an esthetician advertising Botox treatments. The esthetician hit a blood vessel, causing severe bruising and temporary facial paralysis that lasted 3 months.",
-                outcome: "Emergency room visit, 3 months recovery time"
+                location: "Educational Scenario B",
+                story: "Before booking, a patient asked about emergency protocols and physician oversight. The facility couldn't provide clear answers, so the patient chose a medical clinic with established safety procedures.",
+                outcome: "Patient chose a more appropriate setting"
               },
               {
-                location: "Boulder",
-                story: "Jennifer trusted a 'cosmetic injector' who wasn't a nurse. The injector used expired product and caused a severe infection requiring antibiotics and leaving permanent scarring.",
-                outcome: "Infection treatment, permanent scarring, legal action"
+                location: "Educational Scenario C",
+                story: "A patient verified a provider's medical license online and confirmed their training background before proceeding with treatment at a licensed medical facility.",
+                outcome: "Patient made an educated choice"
               }
             ].map((story, index) => (
               <div key={index} style={{
-                background: '#fff3cd',
-                border: '1px solid #ffeaa7',
+                background: '#e8f4fd',
+                border: '1px solid #bee5eb',
                 borderRadius: '8px',
                 padding: '20px',
                 marginBottom: '20px'
               }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '10px' }}>
-                  <h4 style={{ color: '#856404', margin: 0 }}>📍 {story.location}</h4>
+                  <h4 style={{ color: '#0c5460', margin: 0 }}>📚 {story.location}</h4>
                   <span style={{
-                    background: '#dc3545',
+                    background: '#17a2b8',
                     color: 'white',
                     padding: '2px 8px',
                     borderRadius: '10px',
                     fontSize: '0.8rem'
                   }}>
-                    Unlicensed Provider
+                    Educational Example
                   </span>
                 </div>
-                <p style={{ color: '#856404', margin: '10px 0', fontStyle: 'italic' }}>
-                  "{story.story}"
+                <p style={{ color: '#0c5460', margin: '10px 0', fontStyle: 'italic' }}>
+                  {story.story}
                 </p>
-                <p style={{ color: '#721c24', margin: 0, fontWeight: 'bold', fontSize: '0.9rem' }}>
-                  <strong>Result:</strong> {story.outcome}
+                <p style={{ color: '#0c5460', margin: 0, fontWeight: 'bold', fontSize: '0.9rem' }}>
+                  <strong>Outcome:</strong> {story.outcome}
                 </p>
               </div>
             ))}
-          </div>
-
-          <div style={{
-            background: '#d1ecf1',
-            border: '1px solid #bee5eb',
-            borderRadius: '8px',
-            padding: '20px'
-          }}>
-            <p style={{ color: '#0c5460', margin: 0, fontSize: '1rem', fontStyle: 'italic' }}>
-              <strong>Note:</strong> Names have been changed to protect privacy. These stories represent 
-              real complications that occur when unlicensed practitioners perform medical procedures.
-            </p>
           </div>
         </section>
 
         {/* Legal Requirements Section */}
         <section style={{ marginBottom: '50px' }}>
           <h2 style={{ color: '#333', borderBottom: '3px solid #28a745', paddingBottom: '10px' }}>
-            Colorado Legal Requirements
+            Understanding Colorado Licensing Requirements
           </h2>
           
           <div style={{
@@ -174,30 +190,34 @@ export default function WhyVerificationMatters() {
             margin: '20px 0'
           }}>
             <h3 style={{ color: '#155724', marginBottom: '15px' }}>
-              📋 Who Can Legally Inject in Colorado
+              📋 Educational Information: Licensing in Colorado
             </h3>
+            <p style={{ color: '#155724', marginBottom: '15px' }}>
+              Patients should understand that different types of providers have different licensing requirements. 
+              We encourage patients to research these requirements and verify provider credentials independently.
+            </p>
             <div style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
               gap: '20px'
             }}>
               <div>
-                <h4 style={{ color: '#28a745', marginBottom: '10px' }}>✅ LEGAL</h4>
+                <h4 style={{ color: '#28a745', marginBottom: '10px' }}>💡 Research These Licenses</h4>
                 <ul style={{ color: '#155724', lineHeight: '1.6' }}>
                   <li><strong>Medical Doctors (MD/DO)</strong></li>
                   <li><strong>Nurse Practitioners (NP)</strong></li>
                   <li><strong>Physician Assistants (PA)</strong></li>
-                  <li><strong>Registered Nurses (RN)</strong> under physician supervision</li>
+                  <li><strong>Registered Nurses (RN)</strong></li>
                 </ul>
               </div>
               
               <div>
-                <h4 style={{ color: '#dc3545', marginBottom: '10px' }}>❌ ILLEGAL</h4>
+                <h4 style={{ color: '#dc3545', marginBottom: '10px' }}>❓ Questions to Ask</h4>
                 <ul style={{ color: '#721c24', lineHeight: '1.6' }}>
-                  <li><strong>Estheticians</strong> (cannot inject)</li>
-                  <li><strong>Medical Assistants</strong> (without RN license)</li>
-                  <li><strong>"Certified Injectors"</strong> (not a legal license)</li>
-                  <li><strong>Unlicensed Personnel</strong></li>
+                  <li>What type of license do you have?</li>
+                  <li>Can I verify your license online?</li>
+                  <li>What is your medical training?</li>
+                  <li>Is there physician supervision?</li>
                 </ul>
               </div>
             </div>
@@ -210,9 +230,9 @@ export default function WhyVerificationMatters() {
             padding: '20px'
           }}>
             <p style={{ color: '#856404', margin: 0, fontSize: '1rem' }}>
-              <strong>⚖️ Colorado Law:</strong> Injectable treatments like Botox and dermal fillers are 
-              considered medical procedures and must be performed by licensed medical professionals. 
-              Estheticians and unlicensed practitioners performing these procedures are violating state law.
+              <strong>💡 Patient Education:</strong> Patients should verify provider licensing and qualifications 
+              through official state boards and ensure they understand what type of provider they are seeing. 
+              Different licenses have different scopes of practice and supervision requirements.
             </p>
           </div>
         </section>
@@ -220,7 +240,7 @@ export default function WhyVerificationMatters() {
         {/* Benefits of Medical Professionals */}
         <section style={{ marginBottom: '50px' }}>
           <h2 style={{ color: '#333', borderBottom: '3px solid #28a745', paddingBottom: '10px' }}>
-            Why Choose Licensed Medical Professionals
+            Understanding Medical Professional Training
           </h2>
           
           <div style={{
@@ -232,39 +252,39 @@ export default function WhyVerificationMatters() {
             {[
               {
                 icon: "🧠",
-                title: "Medical Training",
-                description: "Years of anatomy, physiology, and pharmacology education",
-                details: "Understanding of facial anatomy, nerve pathways, and vascular structures"
+                title: "Medical Education",
+                description: "Formal medical or nursing school training",
+                details: "Anatomy, physiology, pharmacology, and clinical training"
               },
               {
                 icon: "🚨",
-                title: "Emergency Response",
-                description: "Trained to handle complications and adverse reactions",
-                details: "Can quickly recognize and treat allergic reactions, vascular occlusion, and other emergencies"
+                title: "Emergency Training",
+                description: "Education in handling medical emergencies",
+                details: "Recognition and management of adverse reactions"
               },
               {
                 icon: "💉",
-                title: "Injection Expertise",
-                description: "Extensive experience with needles and injection techniques",
-                details: "Proper sterile technique, depth control, and product placement"
+                title: "Clinical Experience",
+                description: "Hands-on medical practice and procedures",
+                details: "Sterile technique and injection procedures"
               },
               {
                 icon: "📋",
-                title: "Regulatory Oversight",
-                description: "Licensed and regulated by state medical boards",
-                details: "Continuing education requirements, professional standards, and accountability"
+                title: "Professional Oversight",
+                description: "Licensed and regulated by state boards",
+                details: "Continuing education and professional standards"
               },
               {
                 icon: "🔬",
-                title: "Product Knowledge",
-                description: "Understanding of injectable products and their properties",
-                details: "Proper storage, dilution, dosing, and contraindications"
+                title: "Medical Knowledge",
+                description: "Understanding of medications and treatments",
+                details: "Product knowledge, contraindications, and interactions"
               },
               {
                 icon: "🏥",
-                title: "Medical Setting",
-                description: "Access to emergency equipment and physician oversight",
-                details: "Emergency medications, resuscitation equipment, and immediate medical backup"
+                title: "Medical Environment",
+                description: "Practice in medical facilities with proper equipment",
+                details: "Access to emergency supplies and physician support"
               }
             ].map((benefit, index) => (
               <div key={index} style={{
@@ -287,10 +307,10 @@ export default function WhyVerificationMatters() {
           </div>
         </section>
 
-        {/* Red Flags Section */}
+        {/* Research Guidelines Section */}
         <section style={{ marginBottom: '50px' }}>
           <h2 style={{ color: '#dc3545', borderBottom: '3px solid #dc3545', paddingBottom: '10px' }}>
-            🚩 Red Flags to Avoid
+            🔍 Patient Research Guidelines
           </h2>
           
           <div style={{
@@ -301,7 +321,7 @@ export default function WhyVerificationMatters() {
             margin: '20px 0'
           }}>
             <p style={{ color: '#721c24', fontSize: '1.1rem', marginBottom: '20px', fontWeight: 'bold' }}>
-              Warning signs that you're dealing with an unlicensed or unqualified provider:
+              We encourage patients to research the following before choosing any provider:
             </p>
             
             <div style={{
@@ -310,42 +330,42 @@ export default function WhyVerificationMatters() {
               gap: '20px'
             }}>
               <div>
-                <h4 style={{ color: '#721c24', marginBottom: '10px' }}>🚨 Credential Red Flags</h4>
+                <h4 style={{ color: '#721c24', marginBottom: '10px' }}>🔍 Credential Research</h4>
                 <ul style={{ color: '#721c24', lineHeight: '1.6' }}>
-                  <li>Calls themselves "certified injector" (not a real license)</li>
-                  <li>Won't provide license numbers</li>
-                  <li>Lists "esthetician" as their only credential</li>
-                  <li>No medical professional on site</li>
+                  <li>Verify license type and status</li>
+                  <li>Check state board websites</li>
+                  <li>Confirm educational background</li>
+                  <li>Ask about medical training</li>
                 </ul>
               </div>
 
               <div>
-                <h4 style={{ color: '#721c24', marginBottom: '10px' }}>💸 Pricing Red Flags</h4>
+                <h4 style={{ color: '#721c24', marginBottom: '10px' }}>🏥 Facility Assessment</h4>
                 <ul style={{ color: '#721c24', lineHeight: '1.6' }}>
-                  <li>Prices significantly below market rate</li>
-                  <li>Groupon deals for medical procedures</li>
-                  <li>Pressure to buy packages immediately</li>
-                  <li>No consultation fee (cutting corners)</li>
+                  <li>Understand supervision structure</li>
+                  <li>Ask about emergency protocols</li>
+                  <li>Verify facility licensing</li>
+                  <li>Assess overall professionalism</li>
                 </ul>
               </div>
 
               <div>
-                <h4 style={{ color: '#721c24', marginBottom: '10px' }}>🏠 Setting Red Flags</h4>
+                <h4 style={{ color: '#721c24', marginBottom: '10px' }}>💰 Value Assessment</h4>
                 <ul style={{ color: '#721c24', lineHeight: '1.6' }}>
-                  <li>Home-based "clinics"</li>
-                  <li>No emergency equipment visible</li>
-                  <li>Unmarked or suspicious products</li>
-                  <li>No physician supervision</li>
+                  <li>Compare qualifications vs. pricing</li>
+                  <li>Understand what's included</li>
+                  <li>Ask about follow-up care</li>
+                  <li>Consider long-term value</li>
                 </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* How to Verify Section */}
+        {/* How to Research Section */}
         <section style={{ marginBottom: '50px' }}>
           <h2 style={{ color: '#333', borderBottom: '3px solid #667eea', paddingBottom: '10px' }}>
-            🔍 How to Verify Your Provider
+            🔍 How to Research Your Provider
           </h2>
           
           <div style={{
@@ -356,18 +376,18 @@ export default function WhyVerificationMatters() {
             margin: '20px 0'
           }}>
             <h3 style={{ color: '#004085', marginBottom: '20px' }}>
-              ✅ Questions to Ask Before Your Appointment
+              ✅ Questions Patients Should Ask
             </h3>
             
             <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
               {[
-                "What is your medical license type and number?",
-                "Can I verify your license online?",
-                "What is your educational background?",
-                "How many years of injection experience do you have?",
-                "Is there a physician on-site or available for emergencies?",
+                "What type of medical license do you hold?",
+                "Can you provide your license number for verification?",
+                "What is your educational and training background?",
+                "How long have you been performing these procedures?",
+                "Is there physician supervision or oversight?",
                 "What emergency protocols do you have in place?",
-                "Can you show me before/after photos of your work?",
+                "Can you show examples of your previous work?",
                 "What products do you use and where do you source them?"
               ].map((question, index) => (
                 <div key={index} style={{
@@ -390,20 +410,19 @@ export default function WhyVerificationMatters() {
             padding: '20px'
           }}>
             <h4 style={{ color: '#155724', marginBottom: '10px' }}>
-              💡 Pro Tip: License Verification
+              💡 License Verification Resources
             </h4>
             <p style={{ color: '#155724', margin: 0 }}>
-              You can verify any Colorado medical license online at <strong>dpo.colorado.gov</strong>. 
-              Look up your provider's license before your appointment. If they can't provide a license 
-              number or seem evasive, find someone else.
+              Patients can verify Colorado medical licenses through official state board websites. 
+              We encourage patients to independently verify all provider credentials before scheduling treatments.
             </p>
           </div>
         </section>
 
-        {/* Our Promise Section */}
+        {/* Our Approach Section */}
         <section style={{ marginBottom: '50px' }}>
           <h2 style={{ color: '#333', borderBottom: '3px solid #28a745', paddingBottom: '10px' }}>
-            Our Verification Promise
+            Our Educational Approach
           </h2>
           
           <div style={{
@@ -414,11 +433,11 @@ export default function WhyVerificationMatters() {
             textAlign: 'center'
           }}>
             <h3 style={{ color: '#155724', marginBottom: '20px' }}>
-              🛡️ We Do the Verification Work for You
+              🎓 Patient Education Focus
             </h3>
             <p style={{ color: '#155724', fontSize: '1.1rem', marginBottom: '20px' }}>
-              Every provider in our directory has been individually verified as a licensed medical professional. 
-              We check their credentials so you don't have to worry.
+              Our goal is to help patients understand the importance of provider qualifications and 
+              encourage independent verification of credentials. We believe informed patients make better decisions.
             </p>
             
             <div style={{
@@ -428,20 +447,20 @@ export default function WhyVerificationMatters() {
               margin: '20px 0'
             }}>
               <div>
+                <div style={{ fontSize: '2rem', marginBottom: '10px' }}>📚</div>
+                <div style={{ color: '#155724', fontWeight: 'bold' }}>Patient Education</div>
+              </div>
+              <div>
+                <div style={{ fontSize: '2rem', marginBottom: '10px' }}>🔍</div>
+                <div style={{ color: '#155724', fontWeight: 'bold' }}>Research Tools</div>
+              </div>
+              <div>
                 <div style={{ fontSize: '2rem', marginBottom: '10px' }}>✅</div>
-                <div style={{ color: '#155724', fontWeight: 'bold' }}>License Verified</div>
+                <div style={{ color: '#155724', fontWeight: 'bold' }}>Verification Support</div>
               </div>
               <div>
-                <div style={{ fontSize: '2rem', marginBottom: '10px' }}>🎓</div>
-                <div style={{ color: '#155724', fontWeight: 'bold' }}>Education Confirmed</div>
-              </div>
-              <div>
-                <div style={{ fontSize: '2rem', marginBottom: '10px' }}>📋</div>
-                <div style={{ color: '#155724', fontWeight: 'bold' }}>Experience Documented</div>
-              </div>
-              <div>
-                <div style={{ fontSize: '2rem', marginBottom: '10px' }}>🔄</div>
-                <div style={{ color: '#155724', fontWeight: 'bold' }}>Annually Re-verified</div>
+                <div style={{ fontSize: '2rem', marginBottom: '10px' }}>🤝</div>
+                <div style={{ color: '#155724', fontWeight: 'bold' }}>Informed Decisions</div>
               </div>
             </div>
             
@@ -454,7 +473,7 @@ export default function WhyVerificationMatters() {
               marginTop: '20px',
               fontWeight: 'bold'
             }}>
-              🏆 100% Licensed Medical Professionals - Guaranteed
+              🎯 Empowering Patient Choice Through Education
             </div>
           </div>
         </section>
@@ -468,9 +487,9 @@ export default function WhyVerificationMatters() {
           textAlign: 'center',
           marginBottom: '40px'
         }}>
-          <h2 style={{ marginBottom: '20px' }}>Your Safety is Worth It</h2>
+          <h2 style={{ marginBottom: '20px' }}>Make Informed Decisions</h2>
           <p style={{ fontSize: '1.2rem', marginBottom: '30px', opacity: '0.95' }}>
-            Don't risk your face with unlicensed practitioners. Choose from Colorado's only 100% verified medical professional network.
+            Use our educational resources to understand provider qualifications and make informed choices about your care.
           </p>
           <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a 
@@ -485,7 +504,7 @@ export default function WhyVerificationMatters() {
                 display: 'inline-block'
               }}
             >
-              🔍 Find Verified Professionals
+              🔍 Browse Featured Providers
             </a>
             <a 
               href="/verification" 
@@ -500,10 +519,35 @@ export default function WhyVerificationMatters() {
                 display: 'inline-block'
               }}
             >
-              📋 See Our Verification Process
+              📋 Our Quality Standards
             </a>
           </div>
         </section>
+
+        {/* Final Legal Disclaimer */}
+        <div style={{
+          backgroundColor: '#f8f9fa',
+          border: '1px solid #dee2e6',
+          borderRadius: '8px',
+          padding: '20px',
+          marginBottom: '40px',
+          textAlign: 'center'
+        }}>
+          <h4 style={{ color: '#6c757d', margin: '0 0 10px 0' }}>
+            Important Legal Disclaimer
+          </h4>
+          <p style={{ 
+            color: '#6c757d', 
+            fontSize: '0.9rem', 
+            margin: 0, 
+            lineHeight: '1.5',
+            fontStyle: 'italic'
+          }}>
+            This information is provided for educational purposes only and does not constitute medical advice or provider recommendations. 
+            We make no claims about specific providers or their qualifications. Patients are solely responsible for researching, 
+            verifying, and selecting healthcare providers. Always consult with qualified medical professionals for personalized guidance.
+          </p>
+        </div>
       </div>
     </Layout>
   );
