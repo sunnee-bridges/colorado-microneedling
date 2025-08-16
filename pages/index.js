@@ -8,7 +8,7 @@ export default function Home() {
   const [filteredProviders, setFilteredProviders] = useState(providersData.providers);
   
   return (
-    <Layout title="Colorado's ONLY 100% Verified Medical Professional Lip Filler Directory">
+    <Layout title="Colorado Licensed Medical Professional Lip Filler Directory">
       <div>
         {/* Updated Hero Section */}
         <div style={{
@@ -25,8 +25,8 @@ export default function Home() {
             fontWeight: 'bold',
             textShadow: '0 2px 4px rgba(0,0,0,0.3)'
           }}>
-            Colorado's ONLY 100% Verified<br />
-            Medical Professional Lip Filler Directory
+            Colorado Licensed Medical Professional<br />
+            Lip Filler Directory
           </h1>
           
           <p style={{ 
@@ -36,7 +36,7 @@ export default function Home() {
             margin: '0 auto 30px auto',
             opacity: '0.95'
           }}>
-            Every single provider individually credential-verified. Every injector a licensed medical professional. <strong>Guaranteed.</strong>
+            We strive to feature licensed medical professionals. <strong>Always verify credentials independently.</strong>
           </p>
 
           {/* Trust Badges */}
@@ -56,7 +56,7 @@ export default function Home() {
               fontSize: '0.9rem',
               fontWeight: 'bold'
             }}>
-              ✅ 100% Licensed Medical Professionals
+              ✅ Quality-Focused Listings
             </div>
             <div style={{
               background: 'rgba(255,255,255,0.2)',
@@ -67,7 +67,7 @@ export default function Home() {
               fontSize: '0.9rem',
               fontWeight: 'bold'
             }}>
-              ✅ Zero Unlicensed Injectors
+              ✅ Licensed Professional Focus
             </div>
             <div style={{
               background: 'rgba(255,255,255,0.2)',
@@ -78,7 +78,7 @@ export default function Home() {
               fontSize: '0.9rem',
               fontWeight: 'bold'
             }}>
-              ✅ Emergency Medicine Expertise
+              ✅ Educational Resources
             </div>
           </div>
 
@@ -91,12 +91,31 @@ export default function Home() {
             margin: '20px auto',
             fontSize: '0.95rem'
           }}>
-            <strong>The Colorado Verification Promise:</strong><br />
-            While other directories list anyone who pays, we maintain hospital-grade standards with individual credential verification of every provider.
+            <strong>Our Quality Focus:</strong><br />
+            We make every effort to feature licensed medical professionals. We encourage patients to independently verify all provider credentials before scheduling treatments.
           </div>
         </div>
 
-        {/* Quality Guarantee Section */}
+        {/* Important Disclaimer Section */}
+        <div style={{
+          background: '#fff3cd',
+          border: '2px solid #ffc107',
+          borderRadius: '12px',
+          padding: '25px',
+          margin: '20px 0',
+          textAlign: 'center'
+        }}>
+          <h3 style={{ color: '#856404', marginBottom: '15px' }}>
+            ⚠️ Important: Verify All Provider Credentials
+          </h3>
+          <p style={{ color: '#856404', margin: '0', lineHeight: '1.6' }}>
+            <strong>This directory is for informational purposes only.</strong> While we strive to feature licensed medical professionals, 
+            we strongly encourage all patients to independently verify provider credentials, licenses, and qualifications through official state boards 
+            before scheduling any treatments. Always consult with qualified healthcare providers for personalized medical advice.
+          </p>
+        </div>
+
+        {/* Quality Standards Section */}
         <div style={{
           background: 'white',
           border: '2px solid #28a745',
@@ -106,7 +125,7 @@ export default function Home() {
           textAlign: 'center'
         }}>
           <h2 style={{ color: '#28a745', marginBottom: '20px' }}>
-            🏥 Hospital-Grade Standards Guarantee
+            🏥 Our Quality Standards Approach
           </h2>
           
           <div style={{
@@ -116,22 +135,22 @@ export default function Home() {
             margin: '20px 0'
           }}>
             <div style={{ textAlign: 'left' }}>
-              <h4 style={{ color: '#dc3545', marginBottom: '10px' }}>❌ Other Directories List:</h4>
+              <h4 style={{ color: '#dc3545', marginBottom: '10px' }}>⚠️ What to Watch For:</h4>
               <ul style={{ color: '#666', lineHeight: '1.6' }}>
                 <li>Unlicensed "certified injectors"</li>
                 <li>Estheticians performing medical procedures</li>
-                <li>Anyone willing to pay listing fees</li>
-                <li>No credential verification</li>
+                <li>Lack of proper medical credentials</li>
+                <li>Inability to provide license verification</li>
               </ul>
             </div>
             
             <div style={{ textAlign: 'left' }}>
-              <h4 style={{ color: '#28a745', marginBottom: '10px' }}>✅ We ONLY List:</h4>
+              <h4 style={{ color: '#28a745', marginBottom: '10px' }}>✅ What We Strive to Feature:</h4>
               <ul style={{ color: '#666', lineHeight: '1.6' }}>
                 <li>Licensed RNs, NPs, PAs, and MDs</li>
-                <li>Individual credential verification</li>
-                <li>Active Colorado license confirmation</li>
-                <li>Medical professional standards</li>
+                <li>Medical professional backgrounds</li>
+                <li>Quality-focused practices</li>
+                <li>Transparent credential information</li>
               </ul>
             </div>
           </div>
@@ -143,7 +162,7 @@ export default function Home() {
             padding: '20px',
             margin: '20px 0'
           }}>
-            <strong style={{ color: '#333' }}>Our Verification Process:</strong>
+            <strong style={{ color: '#333' }}>How to Verify Providers:</strong>
             <div style={{ 
               display: 'flex', 
               justifyContent: 'space-around', 
@@ -151,10 +170,10 @@ export default function Home() {
               gap: '10px',
               marginTop: '15px'
             }}>
-              <span style={{ fontSize: '0.9rem', color: '#666' }}>Colorado Medical Board Verification</span>
-              <span style={{ fontSize: '0.9rem', color: '#666' }}>Educational Background Check</span>
-              <span style={{ fontSize: '0.9rem', color: '#666' }}>Experience Documentation</span>
-              <span style={{ fontSize: '0.9rem', color: '#666' }}>Annual Re-verification</span>
+              <span style={{ fontSize: '0.9rem', color: '#666' }}>Check Colorado Medical Board</span>
+              <span style={{ fontSize: '0.9rem', color: '#666' }}>Verify Nursing License</span>
+              <span style={{ fontSize: '0.9rem', color: '#666' }}>Ask About Training</span>
+              <span style={{ fontSize: '0.9rem', color: '#666' }}>Review Credentials</span>
             </div>
           </div>
 
@@ -163,7 +182,7 @@ export default function Home() {
             color: '#333',
             fontStyle: 'italic'
           }}>
-            <strong>Result:</strong> 18 providers, 18 verified licensed medical professionals. 100% success rate.
+            <strong>Remember:</strong> You are responsible for verifying provider credentials. Always research thoroughly before treatment.
           </p>
         </div>
 
@@ -173,11 +192,11 @@ export default function Home() {
           onFilter={setFilteredProviders} 
         />
 
-        {/* Popular Cities - Updated with verification messaging */}
+        {/* Popular Cities - Updated with safer messaging */}
         <div style={{ marginBottom: '30px' }}>
-          <h2>Verified Medical Professionals by City</h2>
+          <h2>Featured Providers by City</h2>
           <p style={{ color: '#666', marginBottom: '20px' }}>
-            Every provider in every city individually credential-verified
+            Browse providers by location. Remember to verify all credentials independently.
           </p>
           <div style={{ 
             display: 'grid', 
@@ -199,16 +218,16 @@ export default function Home() {
                 position: 'absolute',
                 top: '-8px',
                 right: '10px',
-                background: '#28a745',
+                background: '#17a2b8',
                 color: 'white',
                 fontSize: '0.7rem',
                 padding: '2px 6px',
                 borderRadius: '10px'
               }}>
-                ✓ VERIFIED
+                FEATURED
               </div>
               📍 Denver Lip Fillers<br />
-              <small style={{ color: '#667eea' }}>4 Verified Providers</small>
+              <small style={{ color: '#667eea' }}>4 Featured Providers</small>
             </a>
             <a href="/providers/boulder" style={{ 
               padding: '15px', 
@@ -224,16 +243,16 @@ export default function Home() {
                 position: 'absolute',
                 top: '-8px',
                 right: '10px',
-                background: '#28a745',
+                background: '#17a2b8',
                 color: 'white',
                 fontSize: '0.7rem',
                 padding: '2px 6px',
                 borderRadius: '10px'
               }}>
-                ✓ VERIFIED
+                FEATURED
               </div>
               📍 Boulder Lip Fillers<br />
-              <small style={{ color: '#667eea' }}>3 Verified Providers</small>
+              <small style={{ color: '#667eea' }}>3 Featured Providers</small>
             </a>
             <a href="/providers/colorado-springs" style={{ 
               padding: '15px', 
@@ -249,16 +268,16 @@ export default function Home() {
                 position: 'absolute',
                 top: '-8px',
                 right: '10px',
-                background: '#28a745',
+                background: '#17a2b8',
                 color: 'white',
                 fontSize: '0.7rem',
                 padding: '2px 6px',
                 borderRadius: '10px'
               }}>
-                ✓ VERIFIED
+                FEATURED
               </div>
               📍 Colorado Springs Lip Fillers<br />
-              <small style={{ color: '#667eea' }}>5 Verified Providers</small>
+              <small style={{ color: '#667eea' }}>5 Featured Providers</small>
             </a>
           </div>
         </div>
@@ -272,7 +291,7 @@ export default function Home() {
           margin: '40px 0'
         }}>
           <h2 style={{ textAlign: 'center', marginBottom: '30px' }}>
-            🎓 Why Our Network is Different
+            🎓 What to Look for in Quality Providers
           </h2>
           
           <div style={{
@@ -295,9 +314,9 @@ export default function Home() {
               }}>
                 🏥
               </div>
-              <h4>Hospital-Grade Expertise</h4>
+              <h4>Medical Background</h4>
               <p style={{ color: '#666', fontSize: '0.9rem' }}>
-                Emergency Department RNs, Cardiac specialists, Surgical backgrounds with 15-30 years experience
+                Look for providers with nursing, medical, or healthcare backgrounds with relevant experience
               </p>
             </div>
 
@@ -316,9 +335,9 @@ export default function Home() {
               }}>
                 🎯
               </div>
-              <h4>National-Level Training</h4>
+              <h4>Proper Training</h4>
               <p style={{ color: '#666', fontSize: '0.9rem' }}>
-                Galderma & Allergan national trainers, Georgetown & USF graduates, award-winning professionals
+                Seek providers with formal aesthetic training from reputable institutions and ongoing education
               </p>
             </div>
 
@@ -337,9 +356,9 @@ export default function Home() {
               }}>
                 ⭐
               </div>
-              <h4>Advanced Certifications</h4>
+              <h4>Valid Credentials</h4>
               <p style={{ color: '#666', fontSize: '0.9rem' }}>
-                CANS certified, BSN degrees, NP credentials, continuous education requirements
+                Always verify current licenses and certifications through official state boards
               </p>
             </div>
           </div>
@@ -355,9 +374,9 @@ export default function Home() {
           margin: '40px 0'
         }}>
           <div>
-            <h2>See Real Results from Verified Professionals</h2>
+            <h2>Educational Resources & Results Gallery</h2>
             <p style={{ fontSize: '1.1rem', margin: '20px 0' }}>
-              Browse 500+ before and after photos from our 100% verified Colorado medical professionals
+              Browse educational content and before/after photos to help inform your decisions
             </p>
             <a 
               href="/before-after" 
@@ -372,40 +391,82 @@ export default function Home() {
                 boxShadow: '0 4px 15px rgba(255,255,255,0.2)'
               }}
             >
-              📸 View Verified Results Gallery
+              📸 View Educational Gallery
             </a>
           </div>
         </section>
 
-        {/* Provider List with Verification Status */}
+        {/* Provider List with Updated Language */}
         <div>
           <h2>
-            All Verified Medical Professionals ({filteredProviders.length})
+            Featured Medical Professionals ({filteredProviders.length})
             <span style={{
-              background: '#28a745',
+              background: '#17a2b8',
               color: 'white',
               padding: '5px 15px',
               borderRadius: '20px',
               fontSize: '0.8rem',
               marginLeft: '15px'
             }}>
-              100% VERIFIED
+              QUALITY FOCUSED
             </span>
           </h2>
           <p style={{ color: '#666', marginBottom: '20px' }}>
-            Every provider below has been individually credential-verified as a licensed medical professional
+            The providers below represent our quality-focused approach. Please independently verify all credentials before scheduling treatments.
           </p>
+          
+          {/* Additional Verification Reminder */}
+          <div style={{
+            background: '#e3f2fd',
+            border: '1px solid #2196f3',
+            borderRadius: '8px',
+            padding: '15px',
+            marginBottom: '20px'
+          }}>
+            <p style={{ color: '#1976d2', margin: '0', fontSize: '0.9rem' }}>
+              <strong>📋 Verification Reminder:</strong> Before booking any treatment, independently verify provider licenses through the 
+              <a href="https://www.colorado.gov/dora" target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', marginLeft: '5px' }}>
+                Colorado Department of Regulatory Agencies (DORA)
+              </a> and consult with the provider about their qualifications.
+            </p>
+          </div>
+
           {filteredProviders.map(provider => (
             <ProviderCard 
               key={provider.id} 
               provider={{
                 ...provider,
-                isVerified: true, // Add verification badge to all providers
-                verificationLevel: '100% Medical Professional'
+                isFeatured: true,
+                qualityFocus: 'Licensed Professional Focus'
               }}
               showEnhanced={true}
             />
           ))}
+        </div>
+
+        {/* Legal Disclaimer Footer */}
+        <div style={{
+          background: '#f8f9fa',
+          border: '1px solid #dee2e6',
+          borderRadius: '8px',
+          padding: '25px',
+          margin: '40px 0',
+          textAlign: 'center'
+        }}>
+          <h4 style={{ color: '#495057', marginBottom: '15px' }}>Important Legal Disclaimer</h4>
+          <p style={{ 
+            color: '#6c757d', 
+            fontSize: '0.9rem', 
+            lineHeight: '1.6',
+            margin: '0',
+            fontStyle: 'italic'
+          }}>
+            <strong>This directory is for informational and educational purposes only.</strong> We make no warranties or guarantees 
+            about provider qualifications, treatment outcomes, or safety. All information is provided "as is" without any representations 
+            or warranties of any kind. Users are solely responsible for verifying provider credentials, conducting their own research, 
+            and making informed healthcare decisions. Always consult with qualified healthcare providers for personalized medical advice. 
+            By using this directory, you acknowledge that you understand these limitations and agree to independently verify all information.
+          </p>
         </div>
       </div>
     </Layout>

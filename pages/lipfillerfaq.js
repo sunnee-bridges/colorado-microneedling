@@ -765,7 +765,7 @@ const ImprovedFAQPage = () => {
 • You can always start small and add more later
 
 **Want to see all the options?** 
-Check out our complete [Lip Filler Shapes Guide](/lip-filler-shapes) with detailed descriptions and examples of all 14 popular lip shapes!`,
+Check out our complete Lip Filler Shapes Guide with detailed descriptions and examples of all 14 popular lip shapes!`,
       tags: ['shapes', 'styles', 'natural', 'dramatic', 'cupid bow', 'russian lips', 'classic', 'guide']
     }
   ];
@@ -821,6 +821,17 @@ Check out our complete [Lip Filler Shapes Guide](/lip-filler-shapes) with detail
       if (line.trim() === '') {
         return <br key={index} />;
       }
+      
+      // Handle the specific shapes guide link
+      if (line.includes('Lip Filler Shapes Guide')) {
+        return (
+          <p key={index} style={{ marginBottom: '8px' }}>
+            **Want to see all the options?** 
+            Check out our complete <a href="/shapes" style={{ color: '#007bff', textDecoration: 'none', fontWeight: '600' }}>Lip Filler Shapes Guide</a> with detailed descriptions and examples of all 14 popular lip shapes!
+          </p>
+        );
+      }
+      
       return <p key={index} style={{ marginBottom: '8px' }}>{line}</p>;
     });
   };
