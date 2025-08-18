@@ -50,7 +50,7 @@ export default function Layout({ children, title = "Colorado Licensed Medical Pr
             </div>
           </div>
           
-          {/* UPDATED NAVIGATION - Dropdown Only */}
+          {/* UPDATED NAVIGATION - Added Shapes Link */}
           <nav style={{ marginTop: '15px' }}>
             <div style={{ 
               display: 'flex', 
@@ -142,18 +142,6 @@ export default function Layout({ children, title = "Colorado Licensed Medical Pr
                 </div>
               </div>
 
-              {/* Other Pages */}
-              <Link href="/before-after" style={{ 
-                color: 'white', 
-                textDecoration: 'none',
-                padding: '8px 12px',
-                borderRadius: '15px',
-                background: 'rgba(255,255,255,0.1)',
-                fontSize: '0.9rem'
-              }}>
-                📸 Results Gallery
-              </Link>
-
               <Link href="/pricing" style={{ 
                 color: 'white', 
                 textDecoration: 'none',
@@ -165,6 +153,7 @@ export default function Layout({ children, title = "Colorado Licensed Medical Pr
                 💰 Pricing
               </Link>
 
+              {/* ADDED SHAPES LINK */}
               <Link href="/shapes" style={{ 
                 color: 'white', 
                 textDecoration: 'none',
@@ -176,7 +165,7 @@ export default function Layout({ children, title = "Colorado Licensed Medical Pr
                 💋 Shapes
               </Link>
 
-             <Link href="/lipfillerfaq" style={{ 
+              <Link href="/lipfillerfaq" style={{ 
                 color: 'white', 
                 textDecoration: 'none',
                 padding: '8px 12px',
@@ -198,7 +187,16 @@ export default function Layout({ children, title = "Colorado Licensed Medical Pr
                 ℹ️ About
               </Link>
 
-
+              <Link href="/contact" style={{ 
+                color: 'white', 
+                textDecoration: 'none',
+                padding: '8px 12px',
+                borderRadius: '15px',
+                background: 'rgba(255,255,255,0.1)',
+                fontSize: '0.9rem'
+              }}>
+                📧 Contact
+              </Link>
             </div>
           </nav>
         </div>
@@ -300,6 +298,32 @@ export default function Layout({ children, title = "Colorado Licensed Medical Pr
             </div>
 
             <div>
+              <h4 style={{ color: '#333', marginBottom: '15px' }}>Educational Resources</h4>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                <li style={{ marginBottom: '5px' }}>
+                  <Link href="/faq" style={{ color: '#667eea', textDecoration: 'none', fontSize: '0.9rem' }}>
+                    ❓ Lip Filler FAQ
+                  </Link>
+                </li>
+                <li style={{ marginBottom: '5px' }}>
+                  <Link href="/shapes" style={{ color: '#667eea', textDecoration: 'none', fontSize: '0.9rem' }}>
+                    💋 Lip Filler Shapes Guide
+                  </Link>
+                </li>
+                <li style={{ marginBottom: '5px' }}>
+                  <Link href="/pricing" style={{ color: '#667eea', textDecoration: 'none', fontSize: '0.9rem' }}>
+                    💰 Pricing Information
+                  </Link>
+                </li>
+                <li style={{ marginBottom: '5px' }}>
+                  <Link href="/about" style={{ color: '#667eea', textDecoration: 'none', fontSize: '0.9rem' }}>
+                    ℹ️ About Our Directory
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
               <h4 style={{ color: '#333', marginBottom: '15px' }}>Quality Standards</h4>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                 <li style={{ marginBottom: '5px' }}>
@@ -326,22 +350,28 @@ export default function Layout({ children, title = "Colorado Licensed Medical Pr
             </div>
 
             <div>
-              <h4 style={{ color: '#333', marginBottom: '15px' }}>Our Focus</h4>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, color: '#666', fontSize: '0.9rem' }}>
-                <li style={{ marginBottom: '5px' }}>🏥 Licensed RNs, NPs, PAs & MDs</li>
-                <li style={{ marginBottom: '5px' }}>🎓 Medical Education & Training</li>
-                <li style={{ marginBottom: '5px' }}>⭐ Quality-Focused Listings</li>
-                <li style={{ marginBottom: '5px' }}>🛡️ Patient Safety First</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 style={{ color: '#333', marginBottom: '15px' }}>Why Choose Quality</h4>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, color: '#666', fontSize: '0.9rem' }}>
-                <li style={{ marginBottom: '5px' }}>🚫 Avoid Unlicensed Practitioners</li>
-                <li style={{ marginBottom: '5px' }}>✅ Research Provider Credentials</li>
-                <li style={{ marginBottom: '5px' }}>🔍 Verify Medical Licenses</li>
-                <li style={{ marginBottom: '5px' }}>📋 Ask About Training</li>
+              <h4 style={{ color: '#333', marginBottom: '15px' }}>Legal & Support</h4>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                <li style={{ marginBottom: '5px' }}>
+                  <Link href="/terms" style={{ color: '#667eea', textDecoration: 'none', fontSize: '0.9rem' }}>
+                    📄 Terms & Conditions
+                  </Link>
+                </li>
+                <li style={{ marginBottom: '5px' }}>
+                  <Link href="/privacy" style={{ color: '#667eea', textDecoration: 'none', fontSize: '0.9rem' }}>
+                    🔒 Privacy Policy
+                  </Link>
+                </li>
+                <li style={{ marginBottom: '5px' }}>
+                  <a href="https://www.colorado.gov/dora" target="_blank" rel="noopener noreferrer" style={{ color: '#667eea', textDecoration: 'none', fontSize: '0.9rem' }}>
+                    🔍 Verify Credentials (DORA)
+                  </a>
+                </li>
+                <li style={{ marginBottom: '5px' }}>
+                  <Link href="/contact" style={{ color: '#667eea', textDecoration: 'none', fontSize: '0.9rem' }}>
+                    📧 Contact Us
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

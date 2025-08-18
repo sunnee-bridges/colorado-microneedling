@@ -684,7 +684,7 @@ export default function HospitalGradeStandards() {
 
           <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a 
-              href="/" 
+              href="/#find-providers" 
               style={{
                 background: 'white',
                 color: '#6f42c1',
@@ -695,7 +695,7 @@ export default function HospitalGradeStandards() {
                 display: 'inline-block'
               }}
             >
-              🔍 Browse Featured Providers
+              🔍 Browse Providers
             </a>
             <a 
               href="/verification" 

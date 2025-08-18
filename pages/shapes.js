@@ -512,7 +512,7 @@ const LipFillerShapesGuide = () => {
           </p>
           <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a
-              href="/providers"
+              href="/#find-providers"
               style={{
                 backgroundColor: 'white',
                 color: '#007bff',

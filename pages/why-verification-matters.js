@@ -493,7 +493,7 @@ export default function WhyVerificationMatters() {
           </p>
           <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a 
-              href="/" 
+              href="/#find-providers" 
               style={{
                 background: 'white',
                 color: '#667eea',
@@ -504,7 +504,7 @@ export default function WhyVerificationMatters() {
                 display: 'inline-block'
               }}
             >
-              🔍 Browse Featured Providers
+              🔍 Browse Providers
             </a>
             <a 
               href="/verification" 

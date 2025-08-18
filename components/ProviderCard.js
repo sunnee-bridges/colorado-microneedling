@@ -61,15 +61,17 @@ export default function ProviderCard({
           .slice(0, showFullPricing ? undefined : 2)
           .map(([type, price]) => (
             <div key={type} style={{
-              display: 'flex',
-              justifyContent: 'space-between',
               margin: '5px 0',
               fontSize: '0.85rem'
             }}>
               <span style={{ color: '#666', textTransform: 'capitalize' }}>
                 {type.replace(/([A-Z])/g, ' $1').trim()}:
               </span>
-              <span style={{ fontWeight: 'bold', color: '#667eea' }}>
+              <span style={{ 
+                fontWeight: 'bold', 
+                color: '#667eea',
+                marginLeft: '8px'
+              }}>
                 {price}
               </span>
             </div>
@@ -107,42 +109,18 @@ export default function ProviderCard({
     );
   };
 
-  // Enhanced badges with verification
+  // Streamlined badges
   const renderBadges = () => {
     return (
-      <div style={{ display: 'flex', gap: '5px', marginBottom: '8px', flexWrap: 'wrap' }}>
-        {/* Always show verification badge for all providers */}
-        <span style={{
-          background: 'linear-gradient(135deg, #28a745, #20c997)',
-          color: 'white',
-          padding: '4px 10px',
-          borderRadius: '15px',
-          fontSize: '0.75rem',
-          fontWeight: 'bold',
-          boxShadow: '0 2px 4px rgba(40, 167, 69, 0.3)'
-        }}>
-          ✅ VERIFIED MEDICAL PROFESSIONAL
-        </span>
-        
-        {provider.isPremium && (
-          <span style={{
-            background: '#ffc107',
-            color: '#212529',
-            padding: '2px 6px',
-            borderRadius: '10px',
-            fontSize: '0.7rem'
-          }}>
-            ⭐ Premium
-          </span>
-        )}
-
+      <div style={{ display: 'flex', gap: '5px', marginBottom: '10px', flexWrap: 'wrap' }}>
         {provider.listingTier === 'premium' && (
           <span style={{
             background: 'linear-gradient(135deg, #667eea, #764ba2)',
             color: 'white',
-            padding: '2px 6px',
-            borderRadius: '10px',
-            fontSize: '0.7rem'
+            padding: '3px 8px',
+            borderRadius: '12px',
+            fontSize: '0.75rem',
+            fontWeight: 'bold'
           }}>
             💎 Featured
           </span>
@@ -153,9 +131,9 @@ export default function ProviderCard({
           <span style={{
             background: '#6f42c1',
             color: 'white',
-            padding: '2px 6px',
-            borderRadius: '10px',
-            fontSize: '0.7rem'
+            padding: '3px 8px',
+            borderRadius: '12px',
+            fontSize: '0.75rem'
           }}>
             🎓 {provider.credentials}
           </span>
@@ -224,100 +202,208 @@ export default function ProviderCard({
             ✓
           </span>
           <strong style={{ color: '#155724', fontSize: '0.9rem' }}>
-            Credential Verification Complete
+            Provider Information Listed
           </strong>
         </div>
         <div style={{ fontSize: '0.8rem', color: '#155724' }}>
-          • Colorado medical license verified<br />
-          • Educational background confirmed<br />
-          • Professional experience documented<br />
-          • Hospital-grade standards maintained
+          • Colorado medical license information provided<br />
+          • Educational background information listed<br />
+          • Professional experience information documented<br />
+          • Provider information maintained per listing standards
         </div>
       </div>
     );
   };
 
-  // Enhanced action buttons
+  // Tiered action buttons based on listing level
   const renderActionButtons = () => {
-    if (!showEnhanced) {
-      return (
-        <a 
-          href={provider.website} 
-          target="_blank" 
-          rel="noopener noreferrer"
-          onClick={() => handleProviderClick('website_visit')}
-          style={{
-            background: 'linear-gradient(135deg, #667eea, #764ba2)',
-            color: 'white',
-            padding: '10px 20px',
-            borderRadius: '8px',
-            textDecoration: 'none',
-            display: 'inline-block',
-            fontSize: '0.9rem'
-          }}
-        >
-          🌐 Visit Verified Provider
-        </a>
-      );
-    }
-
+    const tier = provider.listingTier || 'free';
+    
     return (
-      <div style={{ display: 'flex', gap: '8px', marginTop: '10px', flexWrap: 'wrap' }}>
-        <button
-          onClick={() => handleProviderClick('view_profile')}
-          style={{
-            background: '#667eea',
-            color: 'white',
-            border: 'none',
-            padding: '8px 16px',
-            borderRadius: '6px',
-            fontSize: '0.85rem',
-            cursor: 'pointer',
-            flex: 1,
-            minWidth: '100px'
-          }}
-        >
-          📋 View Profile
-        </button>
-
-        <button
-          onClick={() => handleProviderClick('book_consultation')}
-          style={{
-            background: '#28a745',
-            color: 'white',
-            border: 'none',
-            padding: '8px 16px',
-            borderRadius: '6px',
-            fontSize: '0.85rem',
-            cursor: 'pointer',
-            flex: 1,
-            minWidth: '120px'
-          }}
-        >
-          📞 Book with Verified Pro
-        </button>
-
-        {provider.website && (
-          <a
-            href={provider.website}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => handleProviderClick('website_visit')}
-            style={{
-              background: 'white',
-              color: '#667eea',
-              border: '1px solid #667eea',
-              padding: '7px 14px',
-              borderRadius: '6px',
+      <div style={{ display: 'flex', gap: '8px', marginTop: '15px', flexWrap: 'wrap' }}>
+        {/* Free tier: Website only */}
+        {tier === 'free' && (
+          <>
+            {provider.website && (
+              <a
+                href={provider.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => handleProviderClick('website_visit')}
+                style={{
+                  background: 'white',
+                  color: '#667eea',
+                  border: '2px solid #667eea',
+                  padding: '10px 20px',
+                  borderRadius: '8px',
+                  fontSize: '0.9rem',
+                  textDecoration: 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontWeight: 'bold',
+                  flex: 1
+                }}
+              >
+                🌐 Visit Website
+              </a>
+            )}
+            <div style={{
+              background: '#f8f9fa',
+              border: '1px dashed #dee2e6',
+              padding: '10px 20px',
+              borderRadius: '8px',
               fontSize: '0.85rem',
-              textDecoration: 'none',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}
-          >
-            🌐 Website
-          </a>
+              color: '#6c757d',
+              textAlign: 'center',
+              flex: 1,
+              minWidth: '140px'
+            }}>
+              💎 Upgrade for Direct Booking
+            </div>
+          </>
+        )}
+
+        {/* Basic paid tier: Contact request */}
+        {tier === 'basic' && (
+          <>
+            <button
+              onClick={() => handleProviderClick('request_consultation')}
+              style={{
+                background: 'linear-gradient(135deg, #667eea, #764ba2)',
+                color: 'white',
+                border: 'none',
+                padding: '10px 20px',
+                borderRadius: '8px',
+                fontSize: '0.9rem',
+                cursor: 'pointer',
+                flex: 1,
+                minWidth: '140px',
+                fontWeight: 'bold'
+              }}
+            >
+              📋 Request Consultation
+            </button>
+
+            {provider.website && (
+              <a
+                href={provider.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => handleProviderClick('website_visit')}
+                style={{
+                  background: 'white',
+                  color: '#667eea',
+                  border: '2px solid #667eea',
+                  padding: '8px 16px',
+                  borderRadius: '8px',
+                  fontSize: '0.9rem',
+                  textDecoration: 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontWeight: 'bold'
+                }}
+              >
+                🌐 Website
+              </a>
+            )}
+          </>
+        )}
+
+        {/* Premium tier: Priority booking */}
+        {tier === 'premium' && (
+          <>
+            <button
+              onClick={() => handleProviderClick('priority_booking')}
+              style={{
+                background: 'linear-gradient(135deg, #28a745, #20c997)',
+                color: 'white',
+                border: 'none',
+                padding: '10px 20px',
+                borderRadius: '8px',
+                fontSize: '0.9rem',
+                cursor: 'pointer',
+                flex: 1,
+                minWidth: '160px',
+                fontWeight: 'bold',
+                boxShadow: '0 3px 8px rgba(40, 167, 69, 0.3)'
+              }}
+            >
+              ⚡ Priority Booking Request
+            </button>
+
+            {provider.website && (
+              <a
+                href={provider.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => handleProviderClick('website_visit')}
+                style={{
+                  background: 'white',
+                  color: '#667eea',
+                  border: '2px solid #667eea',
+                  padding: '8px 16px',
+                  borderRadius: '8px',
+                  fontSize: '0.9rem',
+                  textDecoration: 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontWeight: 'bold'
+                }}
+              >
+                🌐 Website
+              </a>
+            )}
+          </>
+        )}
+
+        {/* Enhanced tier: Direct booking */}
+        {tier === 'enhanced' && (
+          <>
+            <button
+              onClick={() => handleProviderClick('direct_booking')}
+              style={{
+                background: 'linear-gradient(135deg, #ff6b6b, #ee5a24)',
+                color: 'white',
+                border: 'none',
+                padding: '10px 20px',
+                borderRadius: '8px',
+                fontSize: '0.9rem',
+                cursor: 'pointer',
+                flex: 1,
+                minWidth: '140px',
+                fontWeight: 'bold'
+              }}
+            >
+              🚀 Direct Booking
+            </button>
+
+            {provider.website && (
+              <a
+                href={provider.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => handleProviderClick('website_visit')}
+                style={{
+                  background: 'white',
+                  color: '#667eea',
+                  border: '2px solid #667eea',
+                  padding: '8px 16px',
+                  borderRadius: '8px',
+                  fontSize: '0.9rem',
+                  textDecoration: 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontWeight: 'bold'
+                }}
+              >
+                🌐 Website
+              </a>
+            )}
+          </>
         )}
       </div>
     );
@@ -376,7 +462,7 @@ export default function ProviderCard({
         </div>
       )}
 
-      {/* Verified ribbon for all providers */}
+      {/* Single verified badge */}
       <div style={{
         position: 'absolute',
         top: '-8px',
@@ -385,21 +471,22 @@ export default function ProviderCard({
         color: 'white',
         padding: '4px 12px',
         borderRadius: '15px',
-        fontSize: '0.7rem',
+        fontSize: '0.75rem',
         fontWeight: 'bold',
         boxShadow: '0 2px 4px rgba(40, 167, 69, 0.3)'
       }}>
-        ✅ VERIFIED
+        ✅ LISTED
       </div>
 
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start' }}>
-        <div style={{ flex: 1 }}>
-          {renderBadges()}
-          
-          <h3 style={{ margin: '0 0 10px 0', color: '#333' }}>
-            {provider.name}
-          </h3>
-          
+      {/* Streamlined single column layout */}
+      <div>
+        {renderBadges()}
+        
+        <h3 style={{ margin: '0 0 15px 0', color: '#333', fontSize: '1.3rem' }}>
+          {provider.name}
+        </h3>
+        
+        <div style={{ marginBottom: '15px' }}>
           <p style={{ color: '#666', margin: '5px 0' }}>
             📍 {provider.address}
           </p>
@@ -407,87 +494,72 @@ export default function ProviderCard({
           <p style={{ color: '#666', margin: '5px 0' }}>
             📞 {provider.phone}
           </p>
-          
-          <div style={{ margin: '15px 0' }}>
-            <strong>Services: </strong>
-            {provider.services && provider.services.join(', ')}
-          </div>
-          
-          <div style={{ margin: '15px 0' }}>
-            <strong>Price Range: </strong>
-            <span style={{ color: '#667eea', fontWeight: 'bold' }}>
-              {provider.priceRange}
-            </span>
-            <small style={{ color: '#28a745', marginLeft: '10px' }}>
-              ✓ Verified Pricing
-            </small>
-          </div>
-          
-          {provider.rating && (
-            <div style={{ margin: '10px 0' }}>
-              <span style={{ color: '#ffc107' }}>
-                {'⭐'.repeat(Math.floor(provider.rating))}
-              </span>
-              <span style={{ marginLeft: '10px', color: '#666' }}>
-                {provider.rating} ({provider.reviews} reviews)
-              </span>
-            </div>
-          )}
-
-          {/* Verification Details */}
-          {renderVerificationDetails()}
-
-          {/* Enhanced sections */}
-          {renderEnhancedPricing()}
-          {renderPromotions()}
-          {renderFeatures()}
-
-          {/* Enhanced description */}
-          {showEnhanced && provider.description && (
-            <p style={{
-              color: '#666',
-              margin: '10px 0',
-              fontSize: '0.9rem',
-              fontStyle: 'italic'
-            }}>
-              {provider.description}
-            </p>
-          )}
-
-          {/* Operating hours */}
-          {showEnhanced && provider.operatingHours && (
-            <div style={{ margin: '10px 0' }}>
-              <strong style={{ color: '#333', fontSize: '0.9rem' }}>🕒 Hours: </strong>
-              <span style={{ color: '#666', fontSize: '0.85rem' }}>
-                {(() => {
-                  const today = new Date().toDateString().toLocaleLowerCase().slice(0, 3) + 'day';
-                  const todayHours = provider.operatingHours[today];
-                  return todayHours === 'Closed' ? 
-                    'Closed Today' : 
-                    `Open Today: ${todayHours}`;
-                })()}
-              </span>
-            </div>
-          )}
         </div>
         
-        <div style={{ marginLeft: '20px' }}>
-          {/* Updated board certified badge */}
-          <div style={{
-            background: 'linear-gradient(135deg, #28a745, #20c997)',
-            color: 'white',
-            padding: '8px 15px',
-            borderRadius: '20px',
-            fontSize: '0.8rem',
-            marginBottom: '10px',
-            textAlign: 'center',
-            fontWeight: 'bold'
-          }}>
-            ✓ Medical Professional
-          </div>
-          
-          {renderActionButtons()}
+        <div style={{ margin: '15px 0' }}>
+          <strong>Services: </strong>
+          {provider.services && provider.services.join(', ')}
         </div>
+        
+        <div style={{ margin: '15px 0' }}>
+          <strong>Price Range: </strong>
+          <span style={{ color: '#667eea', fontWeight: 'bold' }}>
+            {provider.priceRange}
+          </span>
+          <small style={{ color: '#28a745', marginLeft: '10px' }}>
+            ✓ Listed Pricing
+          </small>
+        </div>
+        
+        {provider.rating && (
+          <div style={{ margin: '15px 0' }}>
+            <span style={{ color: '#ffc107' }}>
+              {'⭐'.repeat(Math.floor(provider.rating))}
+            </span>
+            <span style={{ marginLeft: '10px', color: '#666' }}>
+              {provider.rating} ({provider.reviews} reviews)
+            </span>
+          </div>
+        )}
+
+        {/* Verification Details */}
+        {renderVerificationDetails()}
+
+        {/* Enhanced sections */}
+        {renderEnhancedPricing()}
+        {renderPromotions()}
+        {renderFeatures()}
+
+        {/* Enhanced description */}
+        {showEnhanced && provider.description && (
+          <p style={{
+            color: '#666',
+            margin: '15px 0',
+            fontSize: '0.9rem',
+            fontStyle: 'italic'
+          }}>
+            {provider.description}
+          </p>
+        )}
+
+        {/* Operating hours */}
+        {showEnhanced && provider.operatingHours && (
+          <div style={{ margin: '15px 0' }}>
+            <strong style={{ color: '#333', fontSize: '0.9rem' }}>🕒 Hours: </strong>
+            <span style={{ color: '#666', fontSize: '0.85rem' }}>
+              {(() => {
+                const today = new Date().toDateString().toLocaleLowerCase().slice(0, 3) + 'day';
+                const todayHours = provider.operatingHours[today];
+                return todayHours === 'Closed' ? 
+                  'Closed Today' : 
+                  `Open Today: ${todayHours}`;
+              })()}
+            </span>
+          </div>
+        )}
+
+        {/* Action buttons */}
+        {renderActionButtons()}
       </div>
 
       {/* Payment options */}
@@ -504,7 +576,7 @@ export default function ProviderCard({
         </div>
       )}
 
-      {/* Safety guarantee footer */}
+      {/* Safety disclaimer footer */}
       <div style={{
         marginTop: '15px',
         padding: '10px',
@@ -513,7 +585,7 @@ export default function ProviderCard({
         textAlign: 'center'
       }}>
         <small style={{ color: '#155724', fontWeight: 'bold' }}>
-          🛡️ Part of Colorado's ONLY 100% Verified Medical Professional Network
+          🛡️ Listed in Colorado's Curated Medical Professional Directory
         </small>
       </div>
     </div>

@@ -636,7 +636,7 @@ export default function VerifiedVsUnverified() {
 
           <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a 
-              href="/" 
+              href="/#find-providers" 
               style={{
                 background: 'white',
                 color: '#667eea',

@@ -3,6 +3,7 @@
 // ===================================
 
 import React, { useState, useEffect } from 'react';
+import providersData from '../data/providers.json'; // Add this import
 
 export default function PriceCalculator() {
   const [formData, setFormData] = useState({
@@ -15,6 +16,34 @@ export default function PriceCalculator() {
   
   const [result, setResult] = useState(null);
 
+  // Generate city data from providers.json
+  const getCityData = () => {
+    const cityMap = {};
+    
+    providersData.providers.forEach(provider => {
+      const city = provider.city;
+      if (cityMap[city]) {
+        cityMap[city].count += 1;
+      } else {
+        cityMap[city] = {
+          name: city,
+          count: 1,
+          slug: city.toLowerCase().replace(/\s+/g, '').replace('village', '')
+        };
+      }
+    });
+    
+    return Object.values(cityMap).sort((a, b) => {
+      if (b.count !== a.count) {
+        return b.count - a.count;
+      }
+      return a.name.localeCompare(b.name);
+    });
+  };
+
+  const cityData = getCityData();
+
+  // Updated pricing to include all cities
   const pricing = {
     denver: {
       juvederm: 750,
@@ -22,7 +51,7 @@ export default function PriceCalculator() {
       rha: 800,
       budget: 550
     },
-    springs: {
+    'colorado springs': {
       juvederm: 650,
       restylane: 550,
       rha: 700,
@@ -34,11 +63,35 @@ export default function PriceCalculator() {
       rha: 900,
       budget: 650
     },
-    fortcollins: {
+    'fort collins': {
       juvederm: 725,
       restylane: 625,
       rha: 775,
       budget: 525
+    },
+    broomfield: {
+      juvederm: 700,
+      restylane: 600,
+      rha: 750,
+      budget: 500
+    },
+    aurora: {
+      juvederm: 675,
+      restylane: 575,
+      rha: 725,
+      budget: 475
+    },
+    evergreen: {
+      juvederm: 825,
+      restylane: 725,
+      rha: 875,
+      budget: 625
+    },
+    'greenwood village': {
+      juvederm: 875,
+      restylane: 775,
+      rha: 925,
+      budget: 675
     }
   };
 
@@ -57,7 +110,16 @@ export default function PriceCalculator() {
       return;
     }
 
-    let baseCost = pricing[city][filler] * parseFloat(amount);
+    // Convert city name to match pricing keys
+    const cityKey = city.toLowerCase();
+    const cityPricing = pricing[cityKey];
+    
+    if (!cityPricing) {
+      setResult(null);
+      return;
+    }
+
+    let baseCost = cityPricing[filler] * parseFloat(amount);
     baseCost *= experienceMultiplier[experience];
     
     const finalCost = Math.round(baseCost);
@@ -90,10 +152,11 @@ export default function PriceCalculator() {
               onChange={(e) => handleChange('city', e.target.value)}
             >
               <option value="">Select a city...</option>
-              <option value="denver">Denver</option>
-              <option value="springs">Colorado Springs</option>
-              <option value="boulder">Boulder</option>
-              <option value="fortcollins">Fort Collins</option>
+              {cityData.map(city => (
+                <option key={city.slug} value={city.name}>
+                  {city.name} ({city.count} provider{city.count !== 1 ? 's' : ''})
+                </option>
+              ))}
             </select>
           </div>
           
@@ -175,17 +238,23 @@ export default function PriceCalculator() {
           )}
           
           {result && (
-            <div className="calc-result">
+            <div className="calc-result" style={{
+              color: '#2c3e50',
+              fontWeight: '600',
+              fontSize: '1.1rem'
+            }}>
               Your estimated cost: ${result.cost}
               <div style={{ 
-                fontSize: '0.85rem', 
-                marginTop: '8px',
-                padding: '8px',
-                backgroundColor: '#fef3c7',
-                borderLeft: '3px solid #f59e0b',
-                borderRadius: '3px'
+                fontSize: '0.9rem', 
+                marginTop: '12px',
+                padding: '12px',
+                backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                border: '1px solid rgba(255, 255, 255, 0.3)',
+                borderRadius: '6px',
+                color: '#2c3e50',
+                fontWeight: '400'
               }}>
-                <strong>Note:</strong> This is a base estimate. Final pricing may vary based on consultation and current promotions.
+                <strong style={{ color: '#1a5490' }}>Note:</strong> This is a base estimate. Final pricing may vary based on consultation and current promotions.
               </div>
             </div>
           )}

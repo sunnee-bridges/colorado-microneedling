@@ -7,8 +7,11 @@ export default function SearchFilter({ providers, onFilter }) {
     priceRange: ''
   });
 
-  const cities = [...new Set(providers.map(p => p.city))];
-  const services = [...new Set(providers.flatMap(p => p.services || []))];
+  // Dynamically get all unique cities from providers
+  const cities = [...new Set(providers.map(p => p.city))].sort();
+  
+  // Dynamically get all unique services from providers
+  const services = [...new Set(providers.flatMap(p => p.services || []))].sort();
 
   const handleFilterChange = (filterType, value) => {
     const newFilters = { ...filters, [filterType]: value };
@@ -29,12 +32,18 @@ export default function SearchFilter({ providers, onFilter }) {
     
     if (newFilters.priceRange) {
       // Simple price filtering - you can make this more sophisticated
-      filtered = filtered.filter(p => 
-        p.priceRange && p.priceRange.includes(newFilters.priceRange)
-      );
+      filtered = filtered.filter(p => {
+        if (!p.priceRange) return false;
+        return p.priceRange.includes(newFilters.priceRange);
+      });
     }
     
     onFilter(filtered);
+  };
+
+  const clearAllFilters = () => {
+    setFilters({ city: '', service: '', priceRange: '' });
+    onFilter(providers);
   };
 
   return (
@@ -52,6 +61,7 @@ export default function SearchFilter({ providers, onFilter }) {
         gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
         gap: '15px' 
       }}>
+        {/* City Filter */}
         <div>
           <label style={{ display: 'block', marginBottom: '5px', fontWeight: '600' }}>
             City:
@@ -66,13 +76,19 @@ export default function SearchFilter({ providers, onFilter }) {
               borderRadius: '6px'
             }}
           >
-            <option value="">All Cities</option>
-            {cities.map(city => (
-              <option key={city} value={city}>{city}</option>
-            ))}
+            <option value="">All Cities ({cities.length} total)</option>
+            {cities.map(city => {
+              const count = providers.filter(p => p.city === city).length;
+              return (
+                <option key={city} value={city}>
+                  {city} ({count} provider{count !== 1 ? 's' : ''})
+                </option>
+              );
+            })}
           </select>
         </div>
         
+        {/* Service Filter */}
         <div>
           <label style={{ display: 'block', marginBottom: '5px', fontWeight: '600' }}>
             Service:
@@ -94,11 +110,9 @@ export default function SearchFilter({ providers, onFilter }) {
           </select>
         </div>
         
+        {/* Clear Filters Button */}
         <button
-          onClick={() => {
-            setFilters({ city: '', service: '', priceRange: '' });
-            onFilter(providers);
-          }}
+          onClick={clearAllFilters}
           style={{
             padding: '8px 16px',
             background: '#ff6b6b',
@@ -106,12 +120,41 @@ export default function SearchFilter({ providers, onFilter }) {
             border: 'none',
             borderRadius: '6px',
             cursor: 'pointer',
-            alignSelf: 'end'
+            alignSelf: 'end',
+            fontWeight: '600'
           }}
         >
           Clear Filters
         </button>
       </div>
+
+      {/* Active Filters Display */}
+      {(filters.city || filters.service) && (
+        <div style={{ marginTop: '15px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+          {filters.city && (
+            <span style={{
+              backgroundColor: '#e3f2fd',
+              color: '#1976d2',
+              padding: '4px 8px',
+              borderRadius: '4px',
+              fontSize: '14px'
+            }}>
+              City: {filters.city}
+            </span>
+          )}
+          {filters.service && (
+            <span style={{
+              backgroundColor: '#f3e5f5',
+              color: '#7b1fa2',
+              padding: '4px 8px',
+              borderRadius: '4px',
+              fontSize: '14px'
+            }}>
+              Service: {filters.service}
+            </span>
+          )}
+        </div>
+      )}
     </div>
   );
 }
