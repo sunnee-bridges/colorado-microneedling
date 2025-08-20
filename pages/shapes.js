@@ -234,14 +234,36 @@ const LipFillerShapesGuide = () => {
     <Layout title="Lip Filler Shapes Guide - 14 Popular Styles | Colorado Lip Fillers Directory">
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px' }}>
         {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-          <h1 style={{ fontSize: '2.5rem', marginBottom: '15px', color: '#333' }}>
-            14 Popular Lip Filler Shapes
-          </h1>
-          <p style={{ fontSize: '1.2rem', color: '#666', maxWidth: '800px', margin: '0 auto' }}>
-            Explore different lip enhancement styles to find the perfect look for you. Each shape offers unique benefits and creates different aesthetic results.
-          </p>
-        </div>
+         <section style={{
+          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+          color: 'white',
+          padding: '60px 20px',
+          textAlign: 'center',
+          borderRadius: '16px',
+          margin: '0 0 40px 0',
+          boxShadow: '0 8px 32px rgba(102, 126, 234, 0.3)'
+        }}>
+          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+            <div style={{ fontSize: '3rem', marginBottom: '20px' }}>💋</div>
+            <h1 style={{ 
+              fontSize: '2.8rem', 
+              marginBottom: '25px', 
+              fontWeight: 'bold',
+              lineHeight: '1.2'
+            }}>
+              14 Popular Lip Filler Shapes
+            </h1>
+            <p style={{ 
+              fontSize: '1.4rem', 
+              opacity: '0.95', 
+              marginBottom: '30px',
+              lineHeight: '1.5'
+            }}>
+              Explore different lip enhancement styles to find the perfect look for you. Each shape offers unique benefits and creates different aesthetic results.
+            </p>
+
+          </div>
+        </section>
 
         {/* Quick Guide */}
         <div style={{
@@ -275,7 +297,7 @@ const LipFillerShapesGuide = () => {
           </div>
         </div>
 
-        {/* Search and Filter */}
+        {/* Filter */}
         <div style={{
           backgroundColor: '#f8f9fa',
           padding: '25px',
@@ -283,35 +305,6 @@ const LipFillerShapesGuide = () => {
           marginBottom: '30px',
           border: '1px solid #e9ecef'
         }}>
-          {/* Search Bar */}
-          <div style={{ position: 'relative', marginBottom: '20px' }}>
-            <div style={{
-              position: 'absolute',
-              left: '15px',
-              top: '50%',
-              transform: 'translateY(-50%)',
-              color: '#6c757d'
-            }}>
-              <SearchIcon />
-            </div>
-            <input
-              type="text"
-              placeholder="Search lip shapes by name or style..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              style={{
-                width: '100%',
-                padding: '12px 45px',
-                border: '2px solid #dee2e6',
-                borderRadius: '8px',
-                fontSize: '16px',
-                outline: 'none',
-                transition: 'border-color 0.2s'
-              }}
-              onFocus={(e) => e.target.style.borderColor = '#007bff'}
-              onBlur={(e) => e.target.style.borderColor = '#dee2e6'}
-            />
-          </div>
 
           {/* Category Filter */}
           <div>
@@ -477,11 +470,12 @@ const LipFillerShapesGuide = () => {
 
         {/* Important Notes */}
         <div style={{
-          backgroundColor: '#fff3cd',
+          background: 'linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%)',
           border: '2px solid #ffc107',
           borderRadius: '12px',
           padding: '25px',
-          margin: '40px 0'
+          marginBottom: '40px',
+          boxShadow: '0 4px 12px rgba(255, 193, 7, 0.2)'
         }}>
           <h3 style={{ color: '#856404', margin: '0 0 15px 0' }}>Important Considerations</h3>
           <div style={{ color: '#856404', lineHeight: '1.6' }}>
@@ -499,9 +493,9 @@ const LipFillerShapesGuide = () => {
 
         {/* CTA Section */}
         <div style={{
-          backgroundColor: '#007bff',
+          background: 'linear-gradient(135deg, #667eea, #764ba2)',
           color: 'white',
-          padding: '40px',
+          padding: '40px 20px',
           borderRadius: '12px',
           textAlign: 'center',
           margin: '40px 0'
@@ -527,7 +521,7 @@ const LipFillerShapesGuide = () => {
               Find Qualified Providers
             </a>
             <a
-              href="/faq"
+              href="/lipfillerfaq"
               style={{
                 backgroundColor: 'transparent',
                 color: 'white',

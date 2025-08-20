@@ -1,7 +1,11 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function Layout({ children, title = "Colorado Licensed Medical Professional Lip Filler Directory" }) {
+  const router = useRouter();
+  const pathname = router.pathname;
+
   return (
     <>
       <Head>
@@ -50,7 +54,7 @@ export default function Layout({ children, title = "Colorado Licensed Medical Pr
             </div>
           </div>
           
-          {/* UPDATED NAVIGATION - Added Shapes Link */}
+          {/* UPDATED NAVIGATION - Consolidated Verification */}
           <nav style={{ marginTop: '15px' }}>
             <div style={{ 
               display: 'flex', 
@@ -59,141 +63,90 @@ export default function Layout({ children, title = "Colorado Licensed Medical Pr
               alignItems: 'center'
             }}>
               {/* Main Navigation */}
-              <Link href="/" style={{ 
+              <Link href="/" className="nav-link" style={{ 
                 color: 'white', 
                 textDecoration: 'none',
                 padding: '8px 12px',
                 borderRadius: '15px',
-                background: 'rgba(255,255,255,0.1)',
+                background: pathname === '/' ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.1)',
                 fontSize: '0.9rem',
-                fontWeight: 'bold'
+                fontWeight: 'bold',
+                transition: 'all 0.2s ease'
               }}>
                 🏠 Home
               </Link>
 
-              {/* Verification Dropdown */}
-              <div style={{ position: 'relative', display: 'inline-block' }} className="verification-container">
-                <span style={{
-                  color: 'white',
-                  padding: '8px 12px',
-                  borderRadius: '15px',
-                  background: 'rgba(40, 167, 69, 0.3)',
-                  border: '1px solid rgba(255,255,255,0.4)',
-                  fontSize: '0.9rem',
-                  fontWeight: 'bold',
-                  cursor: 'pointer'
-                }}>
-                  ✅ Quality Standards ▼
-                </span>
-                
-                {/* Dropdown Menu */}
-                <div style={{
-                  position: 'absolute',
-                  top: '100%',
-                  left: '0',
-                  background: 'white',
-                  borderRadius: '8px',
-                  boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-                  padding: '10px 0',
-                  minWidth: '220px',
-                  zIndex: 1000,
-                  display: 'none',
-                  marginTop: '5px'
-                }} className="verification-dropdown">
-                  <Link href="/verification" style={{
-                    display: 'block',
-                    padding: '8px 15px',
-                    color: '#333',
-                    textDecoration: 'none',
-                    fontSize: '0.9rem',
-                    borderBottom: '1px solid #f0f0f0'
-                  }}>
-                    📋 Our Quality Standards
-                  </Link>
-                  <Link href="/why-verification-matters" style={{
-                    display: 'block',
-                    padding: '8px 15px',
-                    color: '#333',
-                    textDecoration: 'none',
-                    fontSize: '0.9rem',
-                    borderBottom: '1px solid #f0f0f0'
-                  }}>
-                    ⚠️ Why Credentials Matter
-                  </Link>
-                  <Link href="/verified-vs-unverified" style={{
-                    display: 'block',
-                    padding: '8px 15px',
-                    color: '#333',
-                    textDecoration: 'none',
-                    fontSize: '0.9rem',
-                    borderBottom: '1px solid #f0f0f0'
-                  }}>
-                    ⚖️ Licensed vs Unlicensed
-                  </Link>
-                  <Link href="/hospital-grade-standards" style={{
-                    display: 'block',
-                    padding: '8px 15px',
-                    color: '#333',
-                    textDecoration: 'none',
-                    fontSize: '0.9rem'
-                  }}>
-                    🏥 Medical Standards
-                  </Link>
-                </div>
-              </div>
-
-              <Link href="/pricing" style={{ 
+              {/* Consolidated Verification Link */}
+              <Link href="/verification" className="nav-link" style={{ 
                 color: 'white', 
                 textDecoration: 'none',
                 padding: '8px 12px',
                 borderRadius: '15px',
-                background: 'rgba(255,255,255,0.1)',
-                fontSize: '0.9rem'
+                background: pathname === '/verification' ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.1)',
+                border: '1px solid rgba(255,255,255,0.4)',
+                fontSize: '0.9rem',
+                fontWeight: 'bold',
+                transition: 'all 0.2s ease'
+              }}>
+                🛡️ Provider Verification
+              </Link>
+
+              <Link href="/pricing" className="nav-link" style={{ 
+                color: 'white', 
+                textDecoration: 'none',
+                padding: '8px 12px',
+                borderRadius: '15px',
+                background: pathname === '/pricing' ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.1)',
+                fontSize: '0.9rem',
+                transition: 'all 0.2s ease'
               }}>
                 💰 Pricing
               </Link>
 
-              {/* ADDED SHAPES LINK */}
-              <Link href="/shapes" style={{ 
+              <Link href="/shapes" className="nav-link" style={{ 
                 color: 'white', 
                 textDecoration: 'none',
                 padding: '8px 12px',
                 borderRadius: '15px',
-                background: 'rgba(255,255,255,0.1)',
-                fontSize: '0.9rem'
+                background: pathname === '/shapes' ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.1)',
+                fontSize: '0.9rem',
+                transition: 'all 0.2s ease'
               }}>
                 💋 Shapes
               </Link>
 
-              <Link href="/lipfillerfaq" style={{ 
+              <Link href="/lipfillerfaq" className="nav-link" style={{ 
                 color: 'white', 
                 textDecoration: 'none',
                 padding: '8px 12px',
                 borderRadius: '15px',
-                background: 'rgba(255,255,255,0.1)',
-                fontSize: '0.9rem'
+                background: pathname === '/lipfillerfaq' ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.1)',
+                fontSize: '0.9rem',
+                transition: 'all 0.2s ease'
               }}>
                 ❓ FAQ
               </Link>
 
-              <Link href="/about" style={{ 
+              <Link href="/about" className="nav-link" style={{ 
                 color: 'white', 
                 textDecoration: 'none',
                 padding: '8px 12px',
                 borderRadius: '15px',
-                background: 'rgba(255,255,255,0.1)',
-                fontSize: '0.9rem'
+                background: pathname === '/about' ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.1)',
+                fontSize: '0.9rem',
+                transition: 'all 0.2s ease'
               }}>
                 ℹ️ About
               </Link>
 
-              <Link href="/contact" style={{ 
+              <Link href="/contact" className="nav-link" style={{ 
                 color: 'white', 
                 textDecoration: 'none',
                 padding: '8px 12px',
                 borderRadius: '15px',
-                background: 'rgba(255,255,255,0.1)',
-                fontSize: '0.9rem'
+                background: pathname === '/contact' ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.1)',
+                fontSize: '0.9rem',
+                transition: 'all 0.2s ease'
               }}>
                 📧 Contact
               </Link>
@@ -202,15 +155,13 @@ export default function Layout({ children, title = "Colorado Licensed Medical Pr
         </div>
       </header>
       
-      {/* CSS for dropdown hover effect */}
-      <style jsx>{`
-        .verification-dropdown {
-          display: none;
-        }
-        .verification-container:hover .verification-dropdown {
-          display: block !important;
-        }
-      `}</style>
+    {/* CSS for navigation hover effects */}
+<style jsx global>{`
+  .nav-link:hover {
+    background: rgba(255,255,255,0.25) !important;
+    transform: translateY(-1px);
+  }
+`}</style>
       
       <main style={{ 
         padding: '20px',
@@ -328,22 +279,7 @@ export default function Layout({ children, title = "Colorado Licensed Medical Pr
               <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                 <li style={{ marginBottom: '5px' }}>
                   <Link href="/verification" style={{ color: '#667eea', textDecoration: 'none', fontSize: '0.9rem' }}>
-                    📋 Our Quality Standards
-                  </Link>
-                </li>
-                <li style={{ marginBottom: '5px' }}>
-                  <Link href="/why-verification-matters" style={{ color: '#667eea', textDecoration: 'none', fontSize: '0.9rem' }}>
-                    ⚠️ Why Credentials Matter
-                  </Link>
-                </li>
-                <li style={{ marginBottom: '5px' }}>
-                  <Link href="/verified-vs-unverified" style={{ color: '#667eea', textDecoration: 'none', fontSize: '0.9rem' }}>
-                    ⚖️ Licensed vs Unlicensed
-                  </Link>
-                </li>
-                <li style={{ marginBottom: '5px' }}>
-                  <Link href="/hospital-grade-standards" style={{ color: '#667eea', textDecoration: 'none', fontSize: '0.9rem' }}>
-                    🏥 Medical Standards
+                    🛡️ Provider Verification Standards
                   </Link>
                 </li>
               </ul>
@@ -394,18 +330,6 @@ export default function Layout({ children, title = "Colorado Licensed Medical Pr
               <br />
               Committed to featuring licensed medical professionals and promoting patient education about provider credentials.
             </p>
-            <div style={{
-              background: 'linear-gradient(135deg, #667eea, #764ba2)',
-              color: 'white',
-              padding: '8px 20px',
-              borderRadius: '20px',
-              display: 'inline-block',
-              marginTop: '10px',
-              fontSize: '0.8rem',
-              fontWeight: 'bold'
-            }}>
-              🏆 QUALITY-FOCUSED COLORADO DIRECTORY
-            </div>
           </div>
         </div>
       </footer>

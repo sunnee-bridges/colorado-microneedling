@@ -1,418 +1,498 @@
+import React, { useState } from 'react';
 import Layout from '../components/Layout';
 
+const ShieldIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1Z"/>
+  </svg>
+);
+
+const CheckIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/>
+  </svg>
+);
+
+const AlertIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"/>
+  </svg>
+);
+
 export default function Verification() {
+  const [activeTab, setActiveTab] = useState('overview');
+
   return (
-    <Layout title="Our Quality Standards - Colorado Quality-Focused Medical Professional Directory">
-      <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-        {/* Hero Section */}
-        <div style={{
-          background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)',
-          color: 'white',
-          padding: '40px 30px',
-          borderRadius: '12px',
-          textAlign: 'center',
-          marginBottom: '40px'
-        }}>
-          <h1 style={{ fontSize: '2.5rem', marginBottom: '20px', fontWeight: 'bold' }}>
-            🛡️ Our Quality Standards
-          </h1>
-          <p style={{ fontSize: '1.3rem', opacity: '0.95', maxWidth: '700px', margin: '0 auto' }}>
-            Our commitment to featuring licensed medical professionals and promoting patient education
-          </p>
-          <div style={{
-            background: 'rgba(255,255,255,0.2)',
-            border: '1px solid rgba(255,255,255,0.3)',
-            borderRadius: '25px',
-            padding: '10px 25px',
-            display: 'inline-block',
-            marginTop: '20px',
-            fontWeight: 'bold'
-          }}>
-            ✅ Quality-Focused Directory • Licensed Professionals • Patient Education First
-          </div>
-        </div>
-
-        {/* Important Disclaimer */}
-        <div style={{
-          backgroundColor: '#fff3cd',
-          border: '2px solid #ffc107',
-          borderRadius: '8px',
-          padding: '20px',
-          marginBottom: '40px'
-        }}>
-          <h4 style={{ color: '#856404', margin: '0 0 10px 0' }}>
-            Important Patient Responsibility
-          </h4>
-          <p style={{ color: '#856404', margin: 0, lineHeight: '1.5' }}>
-            <strong>We encourage all patients to independently verify provider credentials and licensing status before booking treatments.</strong> While we strive to feature licensed medical professionals, patients should always confirm qualifications directly with providers and state licensing boards.
-          </p>
-        </div>
-
-        {/* Why Quality Matters Section */}
-        <section style={{ marginBottom: '50px' }}>
-          <h2 style={{ color: '#333', borderBottom: '3px solid #28a745', paddingBottom: '10px' }}>
-            Why We Focus on Licensed Medical Professionals
-          </h2>
-          <div style={{
-            background: '#e8f4fd',
-            border: '1px solid #bee5eb',
-            borderRadius: '8px',
-            padding: '20px',
-            margin: '20px 0'
-          }}>
-            <p style={{ fontSize: '1.1rem', color: '#0c5460', margin: '0', fontStyle: 'italic' }}>
-              <strong>"We believe patients deserve access to qualified medical professionals for cosmetic procedures."</strong>
-            </p>
-          </div>
-          
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '25px',
-            margin: '30px 0'
-          }}>
-            <div style={{
-              background: '#f8f9fa',
-              border: '1px solid #e9ecef',
-              borderRadius: '8px',
-              padding: '20px'
-            }}>
-              <h4 style={{ color: '#dc3545', marginBottom: '15px' }}>⚠️ Potential Risks</h4>
-              <ul style={{ color: '#666', lineHeight: '1.7' }}>
-                <li>Unlicensed practitioners performing medical procedures</li>
-                <li>Lack of proper medical training and oversight</li>
-                <li>Limited ability to handle complications</li>
-                <li>Varying safety protocols and standards</li>
-              </ul>
-            </div>
-
-            <div style={{
-              background: '#e8f5e8',
-              border: '1px solid #28a745',
-              borderRadius: '8px',
-              padding: '20px'
-            }}>
-              <h4 style={{ color: '#28a745', marginBottom: '15px' }}>✅ Our Approach</h4>
-              <ul style={{ color: '#666', lineHeight: '1.7' }}>
-                <li>Focus on licensed medical professionals</li>
-                <li>Encourage credential verification by patients</li>
-                <li>Promote education about provider qualifications</li>
-                <li>Emphasize importance of medical oversight</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Our Quality Guidelines */}
-        <section style={{ marginBottom: '50px' }}>
-          <h2 style={{ color: '#333', borderBottom: '3px solid #28a745', paddingBottom: '10px' }}>
-            Our Provider Quality Guidelines
-          </h2>
-          <p style={{ color: '#666', fontSize: '1.1rem', marginBottom: '30px' }}>
-            We strive to feature providers who meet these professional standards. We encourage patients to verify these qualifications independently.
-          </p>
-
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            {[
-              {
-                step: 1,
-                title: "Valid Medical License",
-                description: "Current state licensing for medical practice",
-                details: "Patients should verify through Colorado Medical Board or Nursing Board databases"
-              },
-              {
-                step: 2,
-                title: "Proper Medical Education",
-                description: "Graduated from accredited medical or nursing programs",
-                details: "BSN, MSN, NP, PA, or MD degrees from recognized institutions"
-              },
-              {
-                step: 3,
-                title: "Relevant Experience",
-                description: "Training and experience in aesthetic procedures",
-                details: "Background in medical aesthetics, injection training, and patient care"
-              },
-              {
-                step: 4,
-                title: "Professional Certifications",
-                description: "Additional training in aesthetic medicine",
-                details: "Specialized courses, advanced training, and continuing education"
-              },
-              {
-                step: 5,
-                title: "Medical Oversight",
-                description: "Appropriate supervision and practice standards",
-                details: "Physician oversight where required, established safety protocols"
-              },
-              {
-                step: 6,
-                title: "Clean Professional Record",
-                description: "Good standing with licensing boards",
-                details: "Patients should check for any disciplinary actions or restrictions"
-              },
-              {
-                step: 7,
-                title: "Ongoing Education",
-                description: "Commitment to continuing professional development",
-                details: "Regular training updates and skill enhancement programs"
-              }
-            ].map((item, index) => (
-              <div key={index} style={{
-                display: 'flex',
-                background: 'white',
-                border: '2px solid #e9ecef',
-                borderRadius: '12px',
-                padding: '20px',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
-              }}>
-                <div style={{
-                  background: '#28a745',
-                  color: 'white',
-                  width: '40px',
-                  height: '40px',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '1.2rem',
-                  fontWeight: 'bold',
-                  marginRight: '20px',
-                  flexShrink: 0
-                }}>
-                  {item.step}
-                </div>
-                <div style={{ flex: 1 }}>
-                  <h4 style={{ color: '#333', marginBottom: '8px' }}>{item.title}</h4>
-                  <p style={{ color: '#666', marginBottom: '10px', fontSize: '1rem' }}>
-                    {item.description}
-                  </p>
-                  <p style={{ color: '#888', fontSize: '0.9rem', fontStyle: 'italic' }}>
-                    {item.details}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Types of Licensed Professionals */}
-        <section style={{ marginBottom: '50px' }}>
-          <h2 style={{ color: '#333', borderBottom: '3px solid #28a745', paddingBottom: '10px' }}>
-            Licensed Medical Professionals We Feature
-          </h2>
-          
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '20px',
-            margin: '30px 0'
-          }}>
-            {[
-              {
-                title: "Registered Nurses (RN)",
-                requirements: ["Active Colorado RN license", "Medical training and education", "Injection certification preferred", "Physician oversight as required"],
-                icon: "👩‍⚕️"
-              },
-              {
-                title: "Nurse Practitioners (NP)",
-                requirements: ["Active Colorado NP license", "Advanced practice authority", "Masters level education", "Independent practice capability"],
-                icon: "🏥"
-              },
-              {
-                title: "Physician Assistants (PA)",
-                requirements: ["Active Colorado PA license", "Masters degree education", "Physician collaboration", "Medical model training"],
-                icon: "🩺"
-              },
-              {
-                title: "Medical Doctors (MD/DO)",
-                requirements: ["Active Colorado medical license", "Medical school graduation", "Residency training completed", "Board eligibility or certification"],
-                icon: "⚕️"
-              }
-            ].map((category, index) => (
-              <div key={index} style={{
-                background: 'white',
-                border: '1px solid #e9ecef',
-                borderRadius: '8px',
-                padding: '20px',
-                textAlign: 'center'
-              }}>
-                <div style={{ fontSize: '2rem', marginBottom: '15px' }}>{category.icon}</div>
-                <h4 style={{ color: '#333', marginBottom: '15px' }}>{category.title}</h4>
-                <ul style={{ 
-                  listStyle: 'none', 
-                  padding: 0, 
-                  margin: 0,
-                  color: '#666',
-                  fontSize: '0.9rem'
-                }}>
-                  {category.requirements.map((req, reqIndex) => (
-                    <li key={reqIndex} style={{ marginBottom: '5px' }}>
-                      ✅ {req}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Patient Verification Guide */}
-        <section style={{ marginBottom: '50px' }}>
-          <h2 style={{ color: '#0066cc', borderBottom: '3px solid #0066cc', paddingBottom: '10px' }}>
-            📋 How Patients Can Verify Provider Credentials
-          </h2>
-          
-          <div style={{
-            background: '#e8f4fd',
-            border: '1px solid #bee5eb',
-            borderRadius: '8px',
-            padding: '20px',
-            margin: '20px 0'
-          }}>
-            <p style={{ color: '#0c5460', margin: '0 0 15px 0', fontWeight: 'bold' }}>
-              We strongly encourage all patients to independently verify:
-            </p>
-            <ul style={{ color: '#0c5460', lineHeight: '1.7', margin: 0 }}>
-              <li><strong>License Status:</strong> Check Colorado Medical Board or Nursing Board websites</li>
-              <li><strong>Disciplinary History:</strong> Review any sanctions or restrictions</li>
-              <li><strong>Education:</strong> Confirm medical or nursing school graduation</li>
-              <li><strong>Experience:</strong> Ask about aesthetic training and years of practice</li>
-              <li><strong>Supervision:</strong> Understand medical oversight and emergency protocols</li>
-            </ul>
-          </div>
-
-          <div style={{
-            background: '#fff3cd',
-            border: '1px solid #ffeaa7',
-            borderRadius: '8px',
-            padding: '20px',
-            margin: '20px 0'
-          }}>
-            <h4 style={{ color: '#856404', margin: '0 0 10px 0' }}>
-              Verification Resources
-            </h4>
-            <ul style={{ color: '#856404', lineHeight: '1.6', margin: 0 }}>
-              <li><strong>Colorado Medical Board:</strong> For MD/DO license verification</li>
-              <li><strong>Colorado Board of Nursing:</strong> For RN/NP license verification</li>
-              <li><strong>Provider Websites:</strong> Review credentials and experience</li>
-              <li><strong>Consultation Questions:</strong> Ask about training and qualifications</li>
-            </ul>
-          </div>
-        </section>
-
-        {/* Our Directory Focus */}
-        <section style={{ marginBottom: '50px' }}>
-          <h2 style={{ color: '#333', borderBottom: '3px solid #28a745', paddingBottom: '10px' }}>
-            Our Directory Statistics
-          </h2>
-          
-          <div style={{
-            background: 'linear-gradient(135deg, #e8f5e8 0%, #d4f1d4 100%)',
-            border: '2px solid #28a745',
-            borderRadius: '12px',
-            padding: '30px',
-            textAlign: 'center'
-          }}>
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-              gap: '30px',
-              marginBottom: '20px'
-            }}>
-              <div>
-                <div style={{ fontSize: '2.5rem', color: '#28a745', fontWeight: 'bold' }}>15+</div>
-                <div style={{ color: '#155724', fontWeight: 'bold' }}>Featured Providers</div>
-              </div>
-              <div>
-                <div style={{ fontSize: '2.5rem', color: '#28a745', fontWeight: 'bold' }}>100%</div>
-                <div style={{ color: '#155724', fontWeight: 'bold' }}>Licensed Focus</div>
-              </div>
-              <div>
-                <div style={{ fontSize: '2.5rem', color: '#28a745', fontWeight: 'bold' }}>7</div>
-                <div style={{ color: '#155724', fontWeight: 'bold' }}>Colorado Cities</div>
-              </div>
-              <div>
-                <div style={{ fontSize: '2.5rem', color: '#28a745', fontWeight: 'bold' }}>24/7</div>
-                <div style={{ color: '#155724', fontWeight: 'bold' }}>Patient Education</div>
-              </div>
-            </div>
-            
-            <h3 style={{ color: '#155724', marginBottom: '15px' }}>
-              🎯 Commitment: Quality-Focused Medical Professional Directory
-            </h3>
-            <p style={{ color: '#155724', fontSize: '1.1rem', margin: 0 }}>
-              Our goal is to help patients find licensed medical professionals while encouraging 
-              independent verification of all provider credentials.
-            </p>
-          </div>
-        </section>
-
-        {/* Call to Action */}
+    <Layout title="Provider Verification & Quality Standards | Colorado Quality-Focused Medical Professional Directory">
+      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        
+        {/* Header */}
         <section style={{
-          background: 'linear-gradient(135deg, #667eea, #764ba2)',
+          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
           color: 'white',
-          padding: '40px 30px',
-          borderRadius: '12px',
+          padding: '60px 20px',
           textAlign: 'center',
-          marginBottom: '40px'
+          borderRadius: '16px',
+          margin: '0 0 40px 0',
+          boxShadow: '0 8px 32px rgba(102, 126, 234, 0.3)'
         }}>
-          <h2 style={{ marginBottom: '20px' }}>Ready to Find Licensed Medical Professionals?</h2>
-          <p style={{ fontSize: '1.1rem', marginBottom: '30px', opacity: '0.95' }}>
-            Browse our quality-focused directory and remember to verify credentials independently
-          </p>
-          <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+            <div style={{ fontSize: '3rem', marginBottom: '20px' }}>🛡️</div>
+            <h1 style={{ 
+              fontSize: '2.8rem', 
+              marginBottom: '25px', 
+              fontWeight: 'bold',
+              lineHeight: '1.2'
+            }}>
+              Provider Verification Standards
+            </h1>
+            <p style={{ 
+              fontSize: '1.4rem', 
+              opacity: '0.95', 
+              marginBottom: '30px',
+              lineHeight: '1.5'
+            }}>
+              Professional framework for authenticating healthcare provider credentials and clinical safety standards.
+            </p>
             <a 
-              href="/#find-providers" 
-              style={{
-                background: 'white',
-                color: '#667eea',
-                padding: '15px 30px',
-                borderRadius: '25px',
-                textDecoration: 'none',
-                fontWeight: 'bold',
-                display: 'inline-block'
-              }}
-            >
-              🔍 Browse Providers
-            </a>
-            <a 
-              href="/why-verification-matters" 
+              href="#verification-guide" 
               style={{
                 background: 'rgba(255,255,255,0.2)',
-                color: 'white',
+                backdropFilter: 'blur(10px)',
                 border: '2px solid white',
-                padding: '13px 28px',
-                borderRadius: '25px',
+                color: 'white',
+                padding: '15px 30px',
+                borderRadius: '30px',
                 textDecoration: 'none',
                 fontWeight: 'bold',
-                display: 'inline-block'
+                display: 'inline-block',
+                fontSize: '1.1rem',
+                transition: 'transform 0.2s ease'
               }}
             >
-              📖 Why Credentials Matter
+              Review The Standards
             </a>
           </div>
         </section>
 
-        {/* Final Disclaimer */}
+        {/* Critical Disclaimer */}
+        <div style={{
+          backgroundColor: '#fff3cd',
+          border: '1px solid #ffeaa7',
+          borderRadius: '6px',
+          padding: '16px',
+          margin: '24px 0'
+        }}>
+          <h4 style={{ color: '#856404', margin: '0 0 8px 0', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <AlertIcon />
+            Patient Responsibility
+          </h4>
+          <p style={{ 
+            color: '#856404', 
+            fontSize: '0.9rem', 
+            margin: 0, 
+            lineHeight: '1.5' 
+          }}>
+            <strong>You are solely responsible</strong> for independently verifying all provider credentials, 
+            licensing status, and qualifications before scheduling treatments. This guide provides educational 
+            information only and does not guarantee provider qualifications.
+          </p>
+        </div>
+
+        {/* Tab Navigation */}
+        <div id="verification-guide" style={{
+          backgroundColor: 'white',
+          borderRadius: '12px',
+          marginBottom: '25px',
+          boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+          overflow: 'hidden'
+        }}>
+          <div style={{ display: 'flex', borderBottom: '1px solid #e5e7eb' }}>
+            {['overview', 'providers', 'verification', 'safety'].map(tab => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                style={{
+                  flex: 1,
+                  padding: '15px',
+                  border: 'none',
+                  backgroundColor: activeTab === tab ? '#667eea' : 'white',
+                  color: activeTab === tab ? 'white' : '#6b7280',
+                  fontSize: '14px',
+                  fontWeight: '600',
+                  cursor: 'pointer',
+                  textTransform: 'capitalize'
+                }}
+              >
+                {tab === 'overview' ? 'Standards' : tab}
+              </button>
+            ))}
+          </div>
+
+          <div style={{ padding: '30px' }}>
+            
+            {/* Overview Tab */}
+            {activeTab === 'overview' && (
+              <div>
+                <h2 style={{ fontSize: '1.8rem', fontWeight: '700', color: '#111827', marginBottom: '25px' }}>
+                  Medical Quality Standards
+                </h2>
+                
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', marginBottom: '30px' }}>
+                  <div style={{
+                    backgroundColor: '#f0f9ff',
+                    border: '2px solid #3b82f6',
+                    borderRadius: '10px',
+                    padding: '20px'
+                  }}>
+                    <h3 style={{ color: '#1e40af', marginBottom: '12px', fontSize: '1.1rem', fontWeight: '700' }}>
+                      Regulatory Standards
+                    </h3>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                      <li style={{ color: '#1e40af', marginBottom: '6px', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '14px' }}>
+                        <CheckIcon /> Current state licensing verification
+                      </li>
+                      <li style={{ color: '#1e40af', marginBottom: '6px', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '14px' }}>
+                        <CheckIcon /> Professional education authentication
+                      </li>
+                      <li style={{ color: '#1e40af', marginBottom: '6px', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '14px' }}>
+                        <CheckIcon /> Continuing education compliance
+                      </li>
+                      <li style={{ color: '#1e40af', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '14px' }}>
+                        <CheckIcon /> State board oversight
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div style={{
+                    backgroundColor: '#f0fdf4',
+                    border: '2px solid #10b981',
+                    borderRadius: '10px',
+                    padding: '20px'
+                  }}>
+                    <h3 style={{ color: '#047857', marginBottom: '12px', fontSize: '1.1rem', fontWeight: '700' }}>
+                      Safety Requirements
+                    </h3>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                      <li style={{ color: '#047857', marginBottom: '6px', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '14px' }}>
+                        <CheckIcon /> Emergency preparedness protocols
+                      </li>
+                      <li style={{ color: '#047857', marginBottom: '6px', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '14px' }}>
+                        <CheckIcon /> Sterile technique implementation
+                      </li>
+                      <li style={{ color: '#047857', marginBottom: '6px', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '14px' }}>
+                        <CheckIcon /> Medical oversight availability
+                      </li>
+                      <li style={{ color: '#047857', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '14px' }}>
+                        <CheckIcon /> FDA-approved products only
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div style={{
+                  backgroundColor: '#f8fafc',
+                  border: '1px solid #e2e8f0',
+                  borderRadius: '10px',
+                  padding: '25px'
+                }}>
+                  <h3 style={{ color: '#374151', marginBottom: '15px', fontSize: '1.2rem', fontWeight: '700' }}>
+                    Official Verification Resources
+                  </h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '15px' }}>
+                    <div>
+                      <h4 style={{ margin: '0 0 5px 0', color: '#dc2626', fontWeight: '600' }}>Colorado Medical Board</h4>
+                      <p style={{ margin: 0, color: '#6b7280', fontSize: '13px' }}>MD/DO License Verification</p>
+                    </div>
+                    <div>
+                      <h4 style={{ margin: '0 0 5px 0', color: '#7c3aed', fontWeight: '600' }}>Colorado Board of Nursing</h4>
+                      <p style={{ margin: 0, color: '#6b7280', fontSize: '13px' }}>RN/APRN License Verification</p>
+                    </div>
+                    <div>
+                      <h4 style={{ margin: '0 0 5px 0', color: '#059669', fontWeight: '600' }}>Direct Provider Inquiry</h4>
+                      <p style={{ margin: 0, color: '#6b7280', fontSize: '13px' }}>Primary Credential Verification</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Provider Types Tab */}
+            {activeTab === 'providers' && (
+              <div>
+                <h2 style={{ fontSize: '1.8rem', fontWeight: '700', color: '#111827', marginBottom: '25px' }}>
+                  Licensed Medical Provider Classifications
+                </h2>
+                
+                {[
+                  { title: "Medical Doctors (MD/DO)", level: "Independent Practice", color: "#dc2626", requirements: ["Active Colorado medical license", "Board certification/eligibility", "Residency completion"] },
+                  { title: "Advanced Practice Nurses (APRN)", level: "Advanced Practice", color: "#7c3aed", requirements: ["Active Colorado APRN license", "National certification", "Graduate education"] },
+                  { title: "Physician Assistants (PA)", level: "Supervised Practice", color: "#0891b2", requirements: ["Active Colorado PA license", "NCCPA certification", "Physician collaboration"] },
+                  { title: "Registered Nurses (RN)", level: "Nursing Practice", color: "#059669", requirements: ["Active Colorado RN license", "Aesthetic training", "Physician supervision"] }
+                ].map((provider, index) => (
+                  <div
+                    key={index}
+                    style={{
+                      backgroundColor: 'white',
+                      border: `2px solid ${provider.color}`,
+                      borderRadius: '12px',
+                      padding: '20px',
+                      marginBottom: '15px'
+                    }}
+                  >
+                    <h3 style={{ margin: '0 0 8px 0', color: provider.color, fontSize: '1.2rem', fontWeight: '700' }}>
+                      {provider.title}
+                    </h3>
+                    <div style={{
+                      backgroundColor: provider.color,
+                      color: 'white',
+                      padding: '3px 10px',
+                      borderRadius: '8px',
+                      fontSize: '11px',
+                      fontWeight: '600',
+                      display: 'inline-block',
+                      marginBottom: '12px'
+                    }}>
+                      {provider.level}
+                    </div>
+                    <ul style={{ margin: 0, paddingLeft: '15px' }}>
+                      {provider.requirements.map((req, reqIndex) => (
+                        <li key={reqIndex} style={{ color: '#6b7280', marginBottom: '3px', fontSize: '14px' }}>
+                          {req}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Verification Process Tab */}
+            {activeTab === 'verification' && (
+              <div>
+                <h2 style={{ fontSize: '1.8rem', fontWeight: '700', color: '#111827', marginBottom: '25px' }}>
+                  Verification Protocol
+                </h2>
+                
+                {[
+                  { title: "License Verification", actions: ["Check state board databases", "Verify license status", "Review disciplinary history"] },
+                  { title: "Education Authentication", actions: ["Confirm institution graduation", "Verify training certificates", "Review continuing education"] },
+                  { title: "Experience Assessment", actions: ["Inquire about practice years", "Ask about procedure volume", "Request outcome information"] },
+                  { title: "Safety Protocol Review", actions: ["Review emergency protocols", "Confirm physician oversight", "Evaluate facility standards"] }
+                ].map((step, index) => (
+                  <div
+                    key={index}
+                    style={{
+                      backgroundColor: 'white',
+                      border: '1px solid #e5e7eb',
+                      borderRadius: '10px',
+                      padding: '20px',
+                      marginBottom: '15px',
+                      display: 'flex',
+                      gap: '15px'
+                    }}
+                  >
+                    <div style={{
+                      width: '30px',
+                      height: '30px',
+                      backgroundColor: '#667eea',
+                      borderRadius: '50%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: 'white',
+                      fontSize: '14px',
+                      fontWeight: '700',
+                      flexShrink: 0
+                    }}>
+                      {index + 1}
+                    </div>
+                    <div>
+                      <h3 style={{ margin: '0 0 8px 0', color: '#111827', fontSize: '1.1rem', fontWeight: '700' }}>
+                        {step.title}
+                      </h3>
+                      <ul style={{ margin: 0, paddingLeft: '15px' }}>
+                        {step.actions.map((action, actionIndex) => (
+                          <li key={actionIndex} style={{ color: '#6b7280', marginBottom: '3px', fontSize: '14px' }}>
+                            {action}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+
+                <div style={{
+                  backgroundColor: '#fef2f2',
+                  border: '2px solid #ef4444',
+                  borderRadius: '10px',
+                  padding: '20px',
+                  marginTop: '20px'
+                }}>
+                  <h3 style={{ color: '#7f1d1d', marginBottom: '12px', fontSize: '1.1rem', fontWeight: '700' }}>
+                    Warning Signs
+                  </h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '8px' }}>
+                    {["Unwilling to provide license numbers", "Vague about qualifications", "No medical oversight", "Pressure for quick decisions"].map((flag, index) => (
+                      <div key={index} style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                        <AlertIcon />
+                        <span style={{ color: '#7f1d1d', fontSize: '13px' }}>{flag}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Safety Standards Tab */}
+            {activeTab === 'safety' && (
+              <div>
+                <h2 style={{ fontSize: '1.8rem', fontWeight: '700', color: '#111827', marginBottom: '25px' }}>
+                  Clinical Safety Standards
+                </h2>
+                
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginBottom: '25px' }}>
+                  <div style={{
+                    backgroundColor: '#f0fdf4',
+                    border: '2px solid #10b981',
+                    borderRadius: '10px',
+                    padding: '18px'
+                  }}>
+                    <h3 style={{ color: '#047857', marginBottom: '12px', fontSize: '1.1rem', fontWeight: '700' }}>
+                      Provider Qualifications
+                    </h3>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                      {["Board certification", "Current licensing", "Specialized training", "Education compliance"].map((item, itemIndex) => (
+                        <li key={itemIndex} style={{ 
+                          color: '#047857', 
+                          marginBottom: '6px', 
+                          display: 'flex', 
+                          alignItems: 'center', 
+                          gap: '6px',
+                          fontSize: '14px'
+                        }}>
+                          <CheckIcon /> {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div style={{
+                    backgroundColor: '#fef3c7',
+                    border: '2px solid #f59e0b',
+                    borderRadius: '10px',
+                    padding: '18px'
+                  }}>
+                    <h3 style={{ color: '#92400e', marginBottom: '12px', fontSize: '1.1rem', fontWeight: '700' }}>
+                      Safety Protocols
+                    </h3>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                      {["Sterile techniques", "Single-use equipment", "FDA-approved products", "Pre-procedure screening"].map((item, itemIndex) => (
+                        <li key={itemIndex} style={{ 
+                          color: '#92400e', 
+                          marginBottom: '6px', 
+                          display: 'flex', 
+                          alignItems: 'center', 
+                          gap: '6px',
+                          fontSize: '14px'
+                        }}>
+                          <CheckIcon /> {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div style={{
+                    backgroundColor: '#fef2f2',
+                    border: '2px solid #ef4444',
+                    borderRadius: '10px',
+                    padding: '18px'
+                  }}>
+                    <h3 style={{ color: '#7f1d1d', marginBottom: '12px', fontSize: '1.1rem', fontWeight: '700' }}>
+                      Emergency Preparedness
+                    </h3>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                      {["Emergency medications", "Staff training", "Clear protocols", "Physician oversight"].map((item, itemIndex) => (
+                        <li key={itemIndex} style={{ 
+                          color: '#7f1d1d', 
+                          marginBottom: '6px', 
+                          display: 'flex', 
+                          alignItems: 'center', 
+                          gap: '6px',
+                          fontSize: '14px'
+                        }}>
+                          <CheckIcon /> {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div style={{
+                  backgroundColor: 'white',
+                  border: '1px solid #e5e7eb',
+                  borderRadius: '10px',
+                  padding: '20px'
+                }}>
+                  <h3 style={{ color: '#374151', marginBottom: '15px', fontSize: '1.1rem', fontWeight: '700' }}>
+                    Essential Safety Questions
+                  </h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '15px' }}>
+                    <div>
+                      <h4 style={{ color: '#667eea', marginBottom: '8px', fontSize: '1rem' }}>Emergency Protocols</h4>
+                      <ul style={{ margin: 0, paddingLeft: '15px', color: '#6b7280', fontSize: '14px' }}>
+                        <li>What emergency medications are available?</li>
+                        <li>Is physician oversight available?</li>
+                        <li>What are complication protocols?</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 style={{ color: '#667eea', marginBottom: '8px', fontSize: '1rem' }}>Safety Standards</h4>
+                      <ul style={{ margin: 0, paddingLeft: '15px', color: '#6b7280', fontSize: '14px' }}>
+                        <li>What infection control measures?</li>
+                        <li>Only FDA-approved products used?</li>
+                        <li>How is sterile technique maintained?</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+
+        <h2>Our Verification Commitment</h2>
+        <p style={{ lineHeight: '1.6', margin: '20px 0' }}>
+          We help Colorado patients make informed decisions about aesthetic treatments by 
+          providing comprehensive information about provider verification standards. We strive to feature 
+          licensed medical professionals and encourage patients to verify credentials independently.
+        </p>
+
+        <h2>Why Verification Matters</h2>
+        <p style={{ lineHeight: '1.6', margin: '20px 0' }}>
+          Licensed medical professionals have formal training in anatomy, safety protocols, 
+          and emergency management. They are accountable to state medical boards and must 
+          maintain continuing education requirements. Always verify your provider's credentials 
+          through official state licensing boards.
+        </p>
+
         <div style={{
           backgroundColor: '#f8f9fa',
           border: '1px solid #dee2e6',
-          borderRadius: '8px',
-          padding: '20px',
-          marginBottom: '40px',
+          borderRadius: '6px',
+          padding: '16px',
+          margin: '24px 0',
           textAlign: 'center'
         }}>
-          <h4 style={{ color: '#6c757d', margin: '0 0 10px 0' }}>
-            Important Legal Disclaimer
-          </h4>
           <p style={{ 
-            color: '#6c757d', 
+            margin: '0', 
             fontSize: '0.9rem', 
-            margin: 0, 
-            lineHeight: '1.5',
+            color: '#6c757d',
             fontStyle: 'italic'
           }}>
-            This directory is for informational and educational purposes only. We make no guarantees about provider qualifications or credentials. Patients are solely responsible for verifying all provider information, licensing status, and qualifications before scheduling treatments. Always consult with qualified healthcare providers for personalized medical advice.
+            This verification guide is for educational purposes only and does not constitute 
+            medical advice. Always consult with qualified healthcare providers for 
+            personalized medical guidance and independently verify all credentials.
           </p>
         </div>
       </div>

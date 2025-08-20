@@ -86,48 +86,7 @@ export default function Home() {
             Quality-focused directory featuring licensed medical professionals. Browse providers, compare services, and make informed decisions.
           </p>
 
-          {/* Value Props */}
-          <div style={{
-            display: 'flex',
-            justifyContent: 'center',
-            flexWrap: 'wrap',
-            gap: '15px',
-            margin: '30px 0'
-          }}>
-            <div style={{
-              background: 'rgba(255,255,255,0.2)',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255,255,255,0.3)',
-              borderRadius: '25px',
-              padding: '10px 20px',
-              fontSize: '0.9rem',
-              fontWeight: 'bold'
-            }}>
-              🏥 Licensed Professionals
-            </div>
-            <div style={{
-              background: 'rgba(255,255,255,0.2)',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255,255,255,0.3)',
-              borderRadius: '25px',
-              padding: '10px 20px',
-              fontSize: '0.9rem',
-              fontWeight: 'bold'
-            }}>
-              📋 Educational Resources
-            </div>
-            <div style={{
-              background: 'rgba(255,255,255,0.2)',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255,255,255,0.3)',
-              borderRadius: '25px',
-              padding: '10px 20px',
-              fontSize: '0.9rem',
-              fontWeight: 'bold'
-            }}>
-              🔍 Easy Comparison
-            </div>
-          </div>
+        
         </div>
 
         {/* Brief Important Notice */}

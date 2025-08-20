@@ -4,12 +4,55 @@ export default function About() {
   return (
     <Layout title="About Colorado Lip Fillers Directory">
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-        <h1>About Colorado Lip Fillers Directory</h1>
-        
-        <p style={{ fontSize: '1.1rem', lineHeight: '1.6', margin: '20px 0' }}>
-          Colorado Lip Fillers Directory is your trusted resource for finding qualified, 
+               <section style={{
+          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+          color: 'white',
+          padding: '60px 20px',
+          textAlign: 'center',
+          borderRadius: '16px',
+          margin: '0 0 40px 0',
+          boxShadow: '0 8px 32px rgba(102, 126, 234, 0.3)'
+        }}>
+          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+            <div style={{ fontSize: '3rem', marginBottom: '20px' }}>❓</div>
+            <h1 style={{ 
+              fontSize: '2.8rem', 
+              marginBottom: '25px', 
+              fontWeight: 'bold',
+              lineHeight: '1.2'
+            }}>
+             About Colorado Lip Fillers Directory
+            </h1>
+            <p style={{ 
+              fontSize: '1.4rem', 
+              opacity: '0.95', 
+              marginBottom: '30px',
+              lineHeight: '1.5'
+            }}>
+               Colorado Lip Fillers Directory is your trusted resource for finding qualified, 
           licensed medical providers offering lip enhancement services throughout Colorado.
-        </p>
+            </p>
+            <a 
+              href="#calculator" 
+              style={{
+                background: 'rgba(255,255,255,0.2)',
+                backdropFilter: 'blur(10px)',
+                border: '2px solid white',
+                color: 'white',
+                padding: '15px 30px',
+                borderRadius: '30px',
+                textDecoration: 'none',
+                fontWeight: 'bold',
+                display: 'inline-block',
+                fontSize: '1.1rem',
+                transition: 'transform 0.2s ease'
+              }}
+            >
+              Review The Guide
+            </a>
+          </div>
+        </section>
+        
 
         <h2>Our Mission</h2>
         <p style={{ lineHeight: '1.6', margin: '20px 0' }}>
@@ -48,45 +91,6 @@ export default function About() {
             before scheduling any treatments. Always consult with licensed medical 
             professionals for personalized advice.
           </p>
-        </div>
-
-        <h2>Why Choose Licensed Medical Providers?</h2>
-        <ul style={{ lineHeight: '1.6', margin: '20px 0' }}>
-          <li>Formal medical training and certification</li>
-          <li>Understanding of facial anatomy and safety protocols</li>
-          <li>Adherence to medical standards and best practices</li>
-          <li>Access to FDA-approved dermal fillers</li>
-          <li>Ability to handle complications should they arise</li>
-        </ul>
-
-        <h2>Popular Lip Filler Brands</h2>
-        <div style={{ margin: '20px 0' }}>
-          <h3>Juvederm</h3>
-          <p>Hyaluronic acid-based fillers known for smooth, natural results. FDA-approved for lip augmentation.</p>
-          
-          <h3>Restylane</h3>
-          <p>Long-lasting fillers ideal for both subtle and dramatic enhancement. Clinically proven safety profile.</p>
-          
-          <h3>RHA Fillers</h3>
-          <p>Newest generation fillers designed to move naturally with facial expressions. Advanced cross-linking technology.</p>
-        </div>
-
-        <h2>What to Look for in a Provider</h2>
-        <div style={{
-          backgroundColor: '#e8f4fd',
-          border: '1px solid #bee5eb',
-          borderRadius: '6px',
-          padding: '16px',
-          margin: '24px 0'
-        }}>
-          <ul style={{ margin: '10px 0', paddingLeft: '20px' }}>
-            <li style={{ marginBottom: '8px' }}>Current medical license (verify through state board)</li>
-            <li style={{ marginBottom: '8px' }}>Proper training in aesthetic injections</li>
-            <li style={{ marginBottom: '8px' }}>Clean, medical-grade facility</li>
-            <li style={{ marginBottom: '8px' }}>Before/after portfolio of actual work</li>
-            <li style={{ marginBottom: '8px' }}>Clear pricing and treatment plans</li>
-            <li style={{ marginBottom: '8px' }}>Emergency protocols and complication management</li>
-          </ul>
         </div>
 
         <h2>Your Safety First</h2>
