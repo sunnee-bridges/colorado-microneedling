@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
+import Head from 'next/head';
+import Link from 'next/link';
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+const CANON = `${SITE_URL.replace(/\/$/, '')}/shapes`;
+const OG_IMG = `${SITE_URL.replace(/\/$/, '')}/images/lip-shapes-1200x630.jpg`; // add this asset
+const slugify = s => s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
 
 // Simple SVG Icon Components
 const SearchIcon = () => (
@@ -232,6 +239,63 @@ const LipFillerShapesGuide = () => {
 
   return (
     <Layout title="Lip Filler Shapes Guide - 14 Popular Styles | Colorado Lip Fillers Directory">
+      <Head>
+  <title>Lip Filler Shapes Guide: 14 Popular Styles</title>
+  <meta name="description" content="Explore 14 popular lip filler shapes—from natural to dramatic—with what each suits best." />
+  <link rel="canonical" href={CANON} />
+  <meta name="robots" content="index,follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Lip Filler Shapes Guide: 14 Popular Styles" />
+  <meta property="og:description" content="Compare natural, dramatic, defined and specialty lip shapes. See which suits your goals." />
+  <meta property="og:url" content={CANON} />
+  <meta property="og:image" content={OG_IMG} />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lip Filler Shapes Guide: 14 Popular Styles" />
+  <meta name="twitter:description" content="Explore 14 lip shapes and find your preferred look." />
+  <meta name="twitter:image" content={OG_IMG} />
+</Head>
+
+{/* Breadcrumb (visible) */}
+<nav aria-label="Breadcrumb" style={{ margin: '16px 0', fontSize: 14, color: '#6c757d' }}>
+  <Link href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</Link>
+  <span style={{ margin: '0 8px' }}>›</span>
+  <span>Shapes</span>
+</nav>
+
+{/* BreadcrumbList JSON-LD */}
+<script type="application/ld+json" dangerouslySetInnerHTML={{
+  __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
+      { "@type": "ListItem", "position": 2, "name": "Shapes", "item": CANON }
+    ]
+  })
+}} />
+
+<script type="application/ld+json" dangerouslySetInnerHTML={{
+  __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Lip Filler Shapes Guide",
+    "url": CANON,
+    "about": [
+      {"@type":"Thing","name":"Lip filler"}, 
+      {"@type":"Thing","name":"Lip shapes"}
+    ],
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "Lip Filler Shapes",
+      "itemListElement": (typeof window === 'undefined' ? [] : []) // placeholder ignored at runtime
+    }
+  })
+}} />
+
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px' }}>
         {/* Header */}
          <section style={{
@@ -259,7 +323,7 @@ const LipFillerShapesGuide = () => {
               marginBottom: '30px',
               lineHeight: '1.5'
             }}>
-              Explore different lip enhancement styles to find the perfect look for you. Each shape offers unique benefits and creates different aesthetic results.
+              Explore different lip enhancement styles to find the look you prefer. Each shape offers unique aesthetics and considerations.
             </p>
 
           </div>
@@ -346,6 +410,7 @@ const LipFillerShapesGuide = () => {
           {filteredShapes.map(shape => (
             <div
               key={shape.id}
+              id={slugify(shape.name)}
               style={{
                 backgroundColor: 'white',
                 border: '1px solid #e9ecef',
@@ -483,7 +548,7 @@ const LipFillerShapesGuide = () => {
               <strong>Remember:</strong> Not every lip shape works for every person. Your natural lip anatomy, face shape, and personal features all affect what will look best on you.
             </p>
             <ul style={{ margin: '10px 0', paddingLeft: '20px' }}>
-              <li>Always consult with a qualified injector about which shape suits you best</li>
+              <li>Consult directly with a provider about which approach may suit you.</li>
               <li>Start with conservative amounts - you can always add more</li>
               <li>Consider your lifestyle and maintenance preferences</li>
               <li>Discuss realistic expectations with your provider</li>
@@ -500,9 +565,9 @@ const LipFillerShapesGuide = () => {
           textAlign: 'center',
           margin: '40px 0'
         }}>
-          <h3 style={{ margin: '0 0 15px 0', fontSize: '1.8rem' }}>Ready to Find Your Perfect Lip Shape?</h3>
+          <h3 style={{ margin: '0 0 15px 0', fontSize: '1.8rem' }}>Ready to explore your options??</h3>
           <p style={{ fontSize: '1.1rem', margin: '0 0 25px 0', opacity: 0.9 }}>
-            Connect with experienced providers who can help you achieve the lip shape you want safely and beautifully.
+            Connect with providers in our directory to discuss styles, suitability, and next steps.
           </p>
           <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a
@@ -518,10 +583,10 @@ const LipFillerShapesGuide = () => {
                 transition: 'transform 0.2s'
               }}
             >
-              Find Qualified Providers
+              Browse Providers
             </a>
             <a
-              href="/lipfillerfaq"
+              href="/lip-filler-faq"
               style={{
                 backgroundColor: 'transparent',
                 color: 'white',
@@ -551,9 +616,9 @@ const LipFillerShapesGuide = () => {
           textAlign: 'center'
         }}>
           <p style={{ margin: 0 }}>
-            <strong>Medical Disclaimer:</strong> This guide is for educational purposes only. 
-            Individual results may vary. Always consult with qualified medical professionals 
-            for personalized treatment recommendations and to determine which lip shape is best for your anatomy.
+             <strong>Disclaimer:</strong> This guide and directory are for informational purposes only and do not constitute medical advice or endorsements. 
+            Providers listed are independent and not vetted by us; verify any credentials, licensure, and suitability directly with the provider. 
+            For medical concerns, consult a healthcare professional.
           </p>
         </div>
       </div>

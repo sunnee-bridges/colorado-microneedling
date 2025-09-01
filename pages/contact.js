@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import Head from 'next/head';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -54,6 +55,93 @@ export default function Contact() {
 
   return (
     <Layout title="Contact Us - Colorado Lip Fillers Directory">
+
+       <Head>
+        <title>Contact Colorado Lip Fillers Directory | Support & Listing Updates</title>
+        <meta
+          name="description"
+          content="Get in touch for directory support, provider listing updates, partnerships, and site feedback. We don’t offer medical advice—contact providers directly."
+        />
+        <link rel="canonical" href="https://yourdomain.com/contact" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Contact Colorado Lip Fillers Directory" />
+        <meta property="og:description" content="Support, listing updates, partnerships, and site feedback." />
+        <meta property="og:url" content="https://yourdomain.com/contact" />
+        <meta property="og:site_name" content="Colorado Lip Fillers Directory" />
+        <meta property="og:image" content="https://yourdomain.com/og/contact-og.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact Colorado Lip Fillers Directory" />
+        <meta name="twitter:description" content="Support, listing updates, partnerships, and site feedback." />
+        <meta name="twitter:image" content="https://yourdomain.com/og/contact-og.jpg" />
+
+        {/* Optional: prevent indexing of a thank-you page, not this page */}
+        {/* <meta name="robots" content="index,follow" /> */}
+        
+        {/* JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ContactPage",
+              "name": "Contact Colorado Lip Fillers Directory",
+              "url": "https://yourdomain.com/contact",
+              "description": "Contact page for support, listing updates, partnerships, and feedback."
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://yourdomain.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Contact",
+                  "item": "https://yourdomain.com/contact"
+                }
+              ]
+            })
+          }}
+        />
+        {/* Optional Organization contactPoint (no email/phone needed) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Colorado Lip Fillers Directory",
+              "url": "https://yourdomain.com",
+              "areaServed": "US-CO",
+              "contactPoint": [{
+                "@type": "ContactPoint",
+                "contactType": "customer support",
+                "url": "https://yourdomain.com/contact",
+                "availableLanguage": ["en"]
+              }]
+            })
+          }}
+        />
+      </Head>
+            <nav aria-label="Breadcrumb" style={{ margin: '12px 0', fontSize: 14 }}>
+        <a href="/" style={{ textDecoration: 'none', color: '#667eea' }}>Home</a>
+        <span style={{ margin: '0 8px', color: '#6c757d' }}>›</span>
+        <span>Contact</span>
+      </nav>
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
         <h1>Contact Us</h1>
         
@@ -71,7 +159,7 @@ export default function Contact() {
           marginBottom: '30px'
         }}>
           <h3 style={{ color: '#856404', margin: '0 0 10px 0' }}>
-            ⚠️ Important Notice
+            Important Notice
           </h3>
           <p style={{ color: '#856404', margin: 0, lineHeight: '1.5' }}>
             <strong>We do not provide medical advice or treatment recommendations.</strong> For medical questions, 
@@ -248,7 +336,7 @@ export default function Contact() {
               marginBottom: '25px'
             }}>
               <h4 style={{ color: '#495057', margin: '0 0 15px 0' }}>
-                📋 For Provider Verification:
+                For Provider Verification:
               </h4>
               <p style={{ margin: '0 0 10px 0', fontSize: '0.9rem', color: '#666' }}>
                 To verify provider credentials and licenses:
@@ -263,7 +351,7 @@ export default function Contact() {
                   fontWeight: '600'
                 }}
               >
-                🔗 Colorado Department of Regulatory Agencies (DORA)
+                Colorado Department of Regulatory Agencies (DORA)
               </a>
             </div>
 
@@ -275,7 +363,7 @@ export default function Contact() {
               marginBottom: '25px'
             }}>
               <h4 style={{ color: '#1976d2', margin: '0 0 15px 0' }}>
-                💡 Common Questions:
+                Common Questions:
               </h4>
               <div style={{ fontSize: '0.9rem', color: '#1976d2' }}>
                 <p style={{ margin: '0 0 8px 0' }}>
@@ -331,7 +419,7 @@ export default function Contact() {
           textAlign: 'center'
         }}>
           <h3 style={{ color: '#721c24', margin: '0 0 10px 0' }}>
-            🚨 Medical Emergency Notice
+            Medical Emergency Notice
           </h3>
           <p style={{ color: '#721c24', margin: 0, lineHeight: '1.5' }}>
             <strong>This is not a medical service.</strong> For medical emergencies, call 911 immediately. 

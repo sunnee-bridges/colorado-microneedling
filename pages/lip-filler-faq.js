@@ -1,5 +1,54 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
+import Head from 'next/head';
+
+const SITE = (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000').replace(/\/$/, '');
+const CANONICAL = `${SITE}/lip-filler-faq`; // change to `${SITE}/faq` if you rename the route
+const OG_IMAGE = `${SITE}/images/og/faq.jpg`; // create one if you don’t have it
+
+
+// helper to strip markdown/emoji/bullets for JSON-LD
+const stripMd = (s) =>
+  s
+    .replace(/\*\*(.*?)\*\*/g, '$1')
+    .replace(/^[•\-\*\s]+/gm, '')
+    .replace(/[_#`>]/g, '')
+    .replace(/:[^:\s]*(?:::[^:\s]*)*:/g, '') // emoji shortcodes
+    .replace(/[^\S\r\n]+/g, ' ')             // collapse spaces
+    .trim();
+
+const faqJsonLd = (faqArray) => ({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqArray.map(f => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: stripMd(f.answer)
+    }
+  }))
+});
+
+const breadcrumbsJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE },
+    { '@type': 'ListItem', position: 2, name: 'Lip Filler FAQ', item: CANONICAL }
+  ]
+};
+
+const webpageJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Lip Filler FAQ',
+  description:
+    'Plain-language answers to common lip filler questions: safety, pain, cost, recovery, results, and more.',
+  url: CANONICAL,
+  isPartOf: { '@type': 'WebSite', name: 'Colorado Lip Enhancement Directory', url: SITE },
+  dateModified: new Date().toISOString()
+};
 
 // Simple SVG Icon Components
 const SearchIcon = () => (
@@ -838,6 +887,50 @@ Check out our complete Lip Filler Shapes Guide with detailed descriptions and ex
 
   return (
     <Layout title="Lip Filler FAQ - Colorado Lip Fillers Directory">
+    <Head>
+  <title>Lip Filler FAQ | Colorado Lip Enhancement Directory</title>
+  <meta
+    name="description"
+    content="Plain-language answers to common lip filler questions: safety, pain, cost, recovery, and results."
+  />
+  <link rel="canonical" href={CANONICAL} />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Lip Filler FAQ" />
+  <meta property="og:description" content="Straightforward answers on safety, pain, cost, recovery, and results." />
+  <meta property="og:url" content={CANONICAL} />
+  <meta property="og:image" content={OG_IMAGE} />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lip Filler FAQ" />
+  <meta name="twitter:description" content="Straightforward answers on safety, pain, cost, recovery, and results." />
+  <meta name="twitter:image" content={OG_IMAGE} />
+
+  {/* JSON-LD: FAQPage */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqData)) }}
+  />
+  {/* JSON-LD: Breadcrumbs */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }}
+  />
+  {/* JSON-LD: WebPage */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageJsonLd) }}
+  />
+</Head>
+<nav style={{ margin: '20px 0', fontSize: 14 }}>
+  <a href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</a>
+  <span style={{ margin: '0 8px' }}>›</span>
+  <span>Lip Filler FAQ</span>
+</nav>
+
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px' }}>
         {/* Header */}
         <section style={{
@@ -1170,9 +1263,9 @@ Check out our complete Lip Filler Shapes Guide with detailed descriptions and ex
           textAlign: 'center',
           margin: '40px 0'
         }}>
-          <h3 style={{ margin: '0 0 15px 0', fontSize: '1.8rem' }}>Ready to Find a Qualified Provider?</h3>
+          <h3 style={{ margin: '0 0 15px 0', fontSize: '1.8rem' }}>Ready to Find a Provider?</h3>
           <p style={{ fontSize: '1.1rem', margin: '0 0 25px 0', opacity: 0.9 }}>
-            Browse our directory of licensed medical professionals offering lip filler treatments throughout Colorado.
+            Browse our directory of providers offering lip filler treatments throughout Colorado.
           </p>
           <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a
@@ -1188,23 +1281,7 @@ Check out our complete Lip Filler Shapes Guide with detailed descriptions and ex
                 transition: 'transform 0.2s'
               }}
             >
-              Find Providers Near Me
-            </a>
-            <a
-              href="/pricing"
-              style={{
-                backgroundColor: 'transparent',
-                color: 'white',
-                padding: '12px 30px',
-                textDecoration: 'none',
-                borderRadius: '8px',
-                border: '2px solid white',
-                fontWeight: '600',
-                display: 'inline-block',
-                transition: 'transform 0.2s'
-              }}
-            >
-              View Pricing Guide
+              Find Providers
             </a>
           </div>
         </div>

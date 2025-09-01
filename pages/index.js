@@ -1,25 +1,52 @@
 import { useState } from 'react';
+import Link from 'next/link';
+import Head from 'next/head';
 import Layout from '../components/Layout';
 import ProviderCard from '../components/ProviderCard';
 import SearchFilter from '../components/SearchFilter';
 import providersData from '../data/providers.json';
+import { providerSlug, citySlug } from '../lib/slug';
+
+const SITE_URL = 'https://your-domain.com'; // ← set your real domain
 
 export default function Home() {
+
+  // helpers
+const slugifyCity = (s = '') =>
+  s
+    .toString()
+    .normalize('NFKD')                      // remove accents
+    .replace(/[\u0300-\u036f]/g, '')
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')            // replace spaces & symbols with -
+    .replace(/(^-|-$)/g, '');               // trim leading/trailing -
+
+
+  const providers = providersData.providers.map(p => ({
+    ...p,
+    slug: p.slug || providerSlug(p),
+  }));
+
   const [filteredProviders, setFilteredProviders] = useState(providersData.providers);
+  const [selectedCity, setSelectedCity] = useState('');
   
   // Dynamically generate city data from providers
   const getCityData = () => {
     const cityMap = {};
     
     providersData.providers.forEach(provider => {
-      const city = provider.city;
-      if (cityMap[city]) {
-        cityMap[city].count += 1;
+      // Use provider.address.city instead of provider.city to match your JSON structure
+      const city = provider.address?.city || provider.city || 'Unknown';
+      if(!city) returns;
+      const key = slugifyCity(city);
+      if (cityMap[key]) {
+        cityMap[key].count += 1;
       } else {
-        cityMap[city] = {
+        cityMap[key] = {
           name: city,
           count: 1,
-          slug: city.toLowerCase().replace(/\s+/g, '-')
+          slug: key
         };
       }
     });
@@ -36,26 +63,36 @@ export default function Home() {
   const cityData = getCityData();
 
   const handleCityFilter = (cityName) => {
-    // Filter providers by the selected city
-    const filtered = providersData.providers.filter(provider => provider.city === cityName);
-    setFilteredProviders(filtered);
-    
-    // Optional: scroll to results section
-    const resultsSection = document.getElementById('provider-results') || 
-                          document.querySelector('[data-results]') ||
-                          document.querySelector('.provider-list');
-    if (resultsSection) {
-      resultsSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    setSelectedCity(cityName);
+    setFilteredProviders(
+      providers.filter(p => (p.address?.city || p.city) === cityName)
+    );
+    const el = document.getElementById('provider-results');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
-  // Add this function to your component:
   const handleShowAllCities = () => {
+    setSelectedCity('');
     setFilteredProviders(providersData.providers);
+  };
+
+  const itemListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: filteredProviders.map((p, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `${SITE_URL}/providers/${p.slug}`,
+      name: p.name
+    }))
   };
   
   return (
-    <Layout title="Colorado Licensed Medical Professional Lip Filler Directory">
+    <Layout title="Colorado Lip Enhancement Provider Directory">
+      <Head>
+        <link rel="canonical" href={`${SITE_URL}/`} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
+      </Head>
       <div>
         {/* Streamlined Hero Section */}
         <div style={{
@@ -72,8 +109,8 @@ export default function Home() {
             fontWeight: 'bold',
             textShadow: '0 2px 4px rgba(0,0,0,0.3)'
           }}>
-            Find Licensed Medical Professionals<br />
-            for Lip Fillers in Colorado
+            Colorado Lip Enhancement<br />
+            Provider Directory
           </h1>
           
           <p style={{ 
@@ -83,10 +120,8 @@ export default function Home() {
             margin: '0 auto 30px auto',
             opacity: '0.95'
           }}>
-            Quality-focused directory featuring licensed medical professionals. Browse providers, compare services, and make informed decisions.
+            Find providers offering lip enhancement services in Colorado. Research options and verify all credentials independently.
           </p>
-
-        
         </div>
 
         {/* Brief Important Notice */}
@@ -99,10 +134,10 @@ export default function Home() {
           textAlign: 'center'
         }}>
           <p style={{ color: '#1976d2', margin: '0', fontSize: '0.9rem' }}>
-            <strong>📋 Important:</strong> This directory is for reference only. Please verify all provider credentials independently through 
+            <strong>Important:</strong> This directory is for informational purposes only. Always verify provider credentials independently through 
             <a href="https://www.colorado.gov/dora" target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', marginLeft: '5px' }}>
               Colorado DORA
-            </a> before scheduling treatments. <a href="/terms" style={{ color: '#1976d2' }}>View full terms</a>.
+            </a> before scheduling any treatments. <Link href="/terms" style={{ color: '#1976d2' }}>View full terms</Link>.
           </p>
         </div>
 
@@ -116,9 +151,9 @@ export default function Home() {
           margin: '40px 0',
           scrollMarginTop: '20px'
         }}>
-          <h2 style={{ marginBottom: '20px' }}>Ready to Find Licensed Medical Professionals?</h2>
+          <h2 style={{ marginBottom: '20px' }}>Ready to Research Providers?</h2>
           <p style={{ fontSize: '1.1rem', marginBottom: '30px', opacity: '0.95' }}>
-            Browse our quality-focused directory and remember to verify credentials independently
+            Browse provider listings and remember to verify all credentials independently
           </p>
           <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <button 
@@ -142,30 +177,13 @@ export default function Home() {
               onMouseEnter={(e) => e.target.style.transform = 'translateY(-2px)'}
               onMouseLeave={(e) => e.target.style.transform = 'translateY(0)'}
             >
-              🔍 Start Your Search Below
+              Start Your Search Below
             </button>
-            <a 
-              href="/why-verification-matters" 
-              style={{
-                background: 'rgba(255,255,255,0.2)',
-                color: 'white',
-                border: '2px solid white',
-                padding: '13px 28px',
-                borderRadius: '25px',
-                textDecoration: 'none',
-                fontWeight: 'bold',
-                display: 'inline-block',
-                transition: 'transform 0.2s'
-              }}
-              onMouseEnter={(e) => e.target.style.transform = 'translateY(-2px)'}
-              onMouseLeave={(e) => e.target.style.transform = 'translateY(0)'}
-            >
-              📖 Why Credentials Matter
-            </a>
+            
           </div>
         </section>
 
-        {/* Search & Filter Section - Updated with anchor ID */}
+        {/* Search & Filter Section */}
         <div id="directory-search" style={{ 
           scrollMarginTop: '20px',
           paddingTop: '20px'
@@ -183,7 +201,7 @@ export default function Home() {
               fontSize: '1.4rem',
               textAlign: 'center'
             }}>
-              🔍 Search & Filter Providers
+              Search & Filter Providers
             </h3>
             <p style={{ 
               textAlign: 'center', 
@@ -191,7 +209,7 @@ export default function Home() {
               marginBottom: '20px',
               fontSize: '1rem'
             }}>
-              Use the filters below to find providers in your area that match your preferences
+              Use the filters below to find providers in your area
             </p>
             
             <SearchFilter 
@@ -205,7 +223,6 @@ export default function Home() {
         <div style={{ marginBottom: '30px' }}>
           <h2 style={{ marginBottom: '15px' }}>Browse by City</h2>
 
-          {/* Show All Cities Button */}
           <button
             onClick={handleShowAllCities}
             style={{
@@ -221,42 +238,103 @@ export default function Home() {
               width: '100%'
             }}
           >
-            🌟 Show All Cities ({providersData.providers.length} providers)
+            Show All Cities ({providersData.providers.length} providers)
           </button>
 
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
-            gap: '15px',
-            margin: '20px 0'
-          }}>
-            {cityData.map(city => (
-              <button 
-                key={city.slug}
-                onClick={() => handleCityFilter(city.name)}
-                style={{ 
-                  padding: '15px', 
-                  background: 'white', 
-                  border: '2px solid #667eea',
-                  borderRadius: '8px',
-                  textDecoration: 'none',
-                  color: '#333',
-                  textAlign: 'center',
-                  transition: 'transform 0.2s',
-                  cursor: 'pointer',
-                  fontSize: 'inherit',
-                  fontFamily: 'inherit'
-                }}
-                onMouseEnter={(e) => e.target.style.transform = 'translateY(-2px)'}
-                onMouseLeave={(e) => e.target.style.transform = 'translateY(0)'}
-              >
-                📍 {city.name}<br />
-                <small style={{ color: '#667eea' }}>
-                  {city.count} Provider{city.count !== 1 ? 's' : ''}
-                </small>
-              </button>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+              gap: '15px',
+              margin: '20px 0'
+            }}
+          >
+            {cityData.map((city) => (
+              <div key={city.slug} style={{ display: 'grid', gap: 6 }}>
+                <button
+                  onClick={() => handleCityFilter(city.name)}
+                  style={{
+                    padding: '15px',
+                    background: 'white',
+                    border:
+                      selectedCity === city.name
+                        ? '2px solid #dc3545'
+                        : '2px solid #667eea',
+                    borderRadius: '8px',
+                    textDecoration: 'none',
+                    color: '#333',
+                    textAlign: 'center',
+                    transition: 'transform 0.2s',
+                    cursor: 'pointer',
+                    fontSize: 'inherit',
+                    fontFamily: 'inherit'
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.transform = 'translateY(-2px)')}
+                  onMouseLeave={(e) => (e.currentTarget.style.transform = 'translateY(0)')}
+                >
+                  {city.name}
+                  <br />
+                  <small style={{ color: '#667eea' }}>
+                    {city.count} Provider{city.count !== 1 ? 's' : ''}
+                  </small>
+                </button>
+
+                {/* SEO-friendly link to the city page */}
+                <Link href={`/cities/${slugifyCity(city.name)}`} style={{ fontSize: 12, color: '#667eea' }}>
+                  Open city page →
+                </Link>
+              </div>
             ))}
           </div>
+        </div>
+
+        {/* Provider Listings */}
+        <div id="provider-results">
+          <h2 style={{ marginBottom: '15px' }}>
+            Provider Listings ({filteredProviders.length})
+          </h2>
+          <p style={{ color: '#666', marginBottom: '20px' }}>
+            Browse provider listings. Always verify credentials independently and contact providers directly for current information.
+          </p>
+
+          {filteredProviders.map((provider) => {
+            const slug =
+              provider.slug ||
+              `${(provider.address?.city || '')
+                .toLowerCase()
+                .replace(/\s+/g, '-')}-${provider.name
+                .toLowerCase()
+                .replace(/\s+/g, '-')}`;
+
+            return (
+              <div key={provider.id} style={{ marginBottom: 24 }}>
+                <ProviderCard
+                  provider={{ ...provider, isFeatured: false }}
+                  showEnhanced={false}
+                />
+
+                {/* Details link (SSG page) */}
+                <div style={{ textAlign: 'center', margin: '0 0 20px' }}>
+                  <Link
+                    href={`/providers/${slug}`}
+                    style={{
+                      color: '#667eea',
+                      textDecoration: 'none',
+                      fontSize: '1rem',
+                      fontWeight: 'bold',
+                      padding: '10px 20px',
+                      border: '2px solid #667eea',
+                      borderRadius: '25px',
+                      display: 'inline-block',
+                      background: 'white'
+                    }}
+                  >
+                    View Details & Contact
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
         {/* Educational Quick Links */}
@@ -268,9 +346,9 @@ export default function Home() {
           margin: '40px 0',
           textAlign: 'center'
         }}>
-          <h2 style={{ marginBottom: '20px' }}>📚 Learn Before You Choose</h2>
+          <h2 style={{ marginBottom: '20px' }}>Learn Before You Choose</h2>
           <p style={{ color: '#666', marginBottom: '25px' }}>
-            Get informed with our educational resources to make the best decision for your needs.
+            Get informed with our educational resources to help with your research.
           </p>
           
           <div style={{
@@ -278,78 +356,57 @@ export default function Home() {
             gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
             gap: '20px'
           }}>
-            <a href="/lipfillerfaq" style={{
+            <Link href="/lipfillerfaq" style={{
               background: 'white',
               padding: '20px',
               borderRadius: '8px',
               textDecoration: 'none',
               color: '#333',
               border: '1px solid #dee2e6',
-              transition: 'transform 0.2s'
+              transition: 'transform 0.2s',
+              display: 'block'
             }}>
-              <div style={{ fontSize: '2rem', marginBottom: '10px' }}>❓</div>
               <h4 style={{ margin: '0 0 10px 0' }}>FAQ Guide</h4>
               <p style={{ margin: 0, fontSize: '0.9rem', color: '#666' }}>
-                Common questions about lip fillers, safety, and costs
+                Common questions about lip enhancement procedures
               </p>
-            </a>
+            </Link>
 
-            <a href="/shapes" style={{
+            <Link href="/shapes" style={{
               background: 'white',
               padding: '20px',
               borderRadius: '8px',
               textDecoration: 'none',
               color: '#333',
               border: '1px solid #dee2e6',
-              transition: 'transform 0.2s'
+              transition: 'transform 0.2s',
+              display: 'block'
             }}>
-              <div style={{ fontSize: '2rem', marginBottom: '10px' }}>💋</div>
               <h4 style={{ margin: '0 0 10px 0' }}>Lip Shapes Guide</h4>
               <p style={{ margin: 0, fontSize: '0.9rem', color: '#666' }}>
-                Explore 14 popular lip filler shapes and styles
+                Explore different lip enhancement styles
               </p>
-            </a>
+            </Link>
 
-            <a href="/pricing" style={{
+            <Link href="/cost-breakdown" style={{
               background: 'white',
               padding: '20px',
               borderRadius: '8px',
               textDecoration: 'none',
               color: '#333',
               border: '1px solid #dee2e6',
-              transition: 'transform 0.2s'
+              transition: 'transform 0.2s',
+              display: 'block'
             }}>
-              <div style={{ fontSize: '2rem', marginBottom: '10px' }}>💰</div>
-              <h4 style={{ margin: '0 0 10px 0' }}>Pricing Guide</h4>
+              <h4 style={{ margin: '0 0 10px 0' }}>Cost Information</h4>
               <p style={{ margin: 0, fontSize: '0.9rem', color: '#666' }}>
-                Learn about lip filler costs in Colorado
+                General cost information for lip enhancement features
               </p>
-            </a>
+            </Link>
           </div>
         </div>
 
-        {/* Provider Listings */}
-        <div id="provider-results">
-          <h2 style={{ marginBottom: '15px' }}>
-            Featured Providers ({filteredProviders.length})
-          </h2>
-          <p style={{ color: '#666', marginBottom: '20px' }}>
-            Browse our directory of medical professionals. Remember to verify credentials and contact providers directly for current pricing and availability.
-          </p>
-
-          {filteredProviders.map(provider => (
-            <ProviderCard 
-              key={provider.id} 
-              provider={{
-                ...provider,
-                isFeatured: true
-              }}
-              showEnhanced={true}
-            />
-          ))}
-        </div>
-
-        {/* What to Look For Section */}
+        {/* What to Research Section */}
         <div style={{
           background: 'white',
           border: '2px solid #28a745',
@@ -358,7 +415,7 @@ export default function Home() {
           margin: '40px 0'
         }}>
           <h3 style={{ color: '#28a745', textAlign: 'center', marginBottom: '25px' }}>
-            🎯 What to Look for in a Provider
+            What to Research When Choosing a Provider
           </h3>
           
           <div style={{
@@ -367,28 +424,28 @@ export default function Home() {
             gap: '20px'
           }}>
             <div>
-              <h4 style={{ color: '#333', marginBottom: '10px' }}>✅ Medical Credentials</h4>
+              <h4 style={{ color: '#333', marginBottom: '10px' }}>Credentials & Licensing</h4>
               <ul style={{ color: '#666', lineHeight: '1.6', paddingLeft: '20px' }}>
-                <li>Valid Colorado medical license</li>
-                <li>RN, NP, PA, or MD credentials</li>
-                <li>Aesthetic injection training</li>
+                <li>Verify current licensing status</li>
+                <li>Check professional certifications</li>
+                <li>Research training background</li>
               </ul>
             </div>
             
             <div>
-              <h4 style={{ color: '#333', marginBottom: '10px' }}>✅ Verify Through Official Sources</h4>
+              <h4 style={{ color: '#333', marginBottom: '10px' }}>Official Verification Sources</h4>
               <ul style={{ color: '#666', lineHeight: '1.6', paddingLeft: '20px' }}>
                 <li>Colorado Department of Regulatory Agencies</li>
-                <li>State medical/nursing boards</li>
-                <li>Ask for license numbers</li>
+                <li>Relevant state licensing boards</li>
+                <li>Request to see license documentation</li>
               </ul>
             </div>
 
             <div>
-              <h4 style={{ color: '#333', marginBottom: '10px' }}>✅ During Consultation</h4>
+              <h4 style={{ color: '#333', marginBottom: '10px' }}>During Consultation</h4>
               <ul style={{ color: '#666', lineHeight: '1.6', paddingLeft: '20px' }}>
                 <li>Ask about experience and training</li>
-                <li>Review before/after photos</li>
+                <li>Request before/after examples</li>
                 <li>Discuss realistic expectations</li>
               </ul>
             </div>
@@ -406,10 +463,10 @@ export default function Home() {
         }}>
           <h2 style={{ marginBottom: '15px' }}>Ready to Get Started?</h2>
           <p style={{ fontSize: '1.1rem', margin: '20px 0', opacity: 0.9 }}>
-            Use our educational resources to learn about lip fillers, then find qualified providers near you.
+            Use our educational resources to learn about lip enhancement, then research providers in your area.
           </p>
           <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a 
+            <Link 
               href="/lipfillerfaq" 
               style={{
                 background: 'white',
@@ -421,9 +478,9 @@ export default function Home() {
                 display: 'inline-block'
               }}
             >
-              📚 Read FAQ First
-            </a>
-            <a 
+              Read FAQ First
+            </Link>
+            <Link 
               href="/shapes" 
               style={{
                 background: 'rgba(255,255,255,0.2)',
@@ -436,26 +493,26 @@ export default function Home() {
                 border: '2px solid white'
               }}
             >
-              💋 Explore Shapes
-            </a>
+              Explore Styles
+            </Link>
           </div>
         </section>
-      </div>
 
-      {/* Streamlined Footer Disclaimer */}
-      <div style={{
-        background: '#f8f9fa',
-        border: '1px solid #dee2e6',
-        borderRadius: '8px',
-        padding: '20px',
-        margin: '40px 0',
-        textAlign: 'center',
-        fontSize: '0.9rem',
-        color: '#6c757d'
-      }}>
-        <strong>Educational Directory:</strong> Information provided for reference only. 
-        Always verify provider credentials independently and consult with qualified healthcare providers for medical advice. 
-        <a href="/terms" style={{ color: '#007bff', textDecoration: 'none' }}>View complete terms and conditions</a>.
+        {/* Streamlined Footer Disclaimer */}
+        <div style={{
+          background: '#f8f9fa',
+          border: '1px solid #dee2e6',
+          borderRadius: '8px',
+          padding: '20px',
+          margin: '40px 0',
+          textAlign: 'center',
+          fontSize: '0.9rem',
+          color: '#6c757d'
+        }}>
+          <strong>Provider Directory:</strong> Information provided for reference only. 
+          Always verify provider credentials independently and consult with qualified professionals for medical advice. 
+          <Link href="/terms" style={{ color: '#007bff', textDecoration: 'none' }}>View complete terms and conditions</Link>.
+        </div>
       </div>
     </Layout>
   );

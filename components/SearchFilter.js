@@ -3,15 +3,15 @@ import { useState } from 'react';
 export default function SearchFilter({ providers, onFilter }) {
   const [filters, setFilters] = useState({
     city: '',
-    service: '',
-    priceRange: ''
+    brand: '',
+    hasOnlineBooking: false
   });
 
-  // Dynamically get all unique cities from providers
-  const cities = [...new Set(providers.map(p => p.city))].sort();
+  // Fix: Use provider.address.city instead of provider.city to match your JSON structure
+  const cities = [...new Set(providers.map(p => p.address?.city || p.city).filter(Boolean))].sort();
   
-  // Dynamically get all unique services from providers
-  const services = [...new Set(providers.flatMap(p => p.services || []))].sort();
+  // Fix: Use provider.brands instead of provider.services since your data has filler brands
+  const brands = [...new Set(providers.flatMap(p => p.brands || []))].sort();
 
   const handleFilterChange = (filterType, value) => {
     const newFilters = { ...filters, [filterType]: value };
@@ -21,28 +21,27 @@ export default function SearchFilter({ providers, onFilter }) {
     let filtered = providers;
     
     if (newFilters.city) {
-      filtered = filtered.filter(p => p.city === newFilters.city);
+      filtered = filtered.filter(p => {
+        const providerCity = p.address?.city || p.city;
+        return providerCity === newFilters.city;
+      });
     }
     
-    if (newFilters.service) {
+    if (newFilters.brand) {
       filtered = filtered.filter(p => 
-        p.services && p.services.includes(newFilters.service)
+        p.brands && p.brands.includes(newFilters.brand)
       );
     }
     
-    if (newFilters.priceRange) {
-      // Simple price filtering - you can make this more sophisticated
-      filtered = filtered.filter(p => {
-        if (!p.priceRange) return false;
-        return p.priceRange.includes(newFilters.priceRange);
-      });
+    if (newFilters.hasOnlineBooking) {
+      filtered = filtered.filter(p => p.booking?.onlineBookingUrl);
     }
     
     onFilter(filtered);
   };
 
   const clearAllFilters = () => {
-    setFilters({ city: '', service: '', priceRange: '' });
+    setFilters({ city: '', brand: '', hasOnlineBooking: false });
     onFilter(providers);
   };
 
@@ -54,12 +53,13 @@ export default function SearchFilter({ providers, onFilter }) {
       border: '1px solid #e0e0e0',
       marginBottom: '30px'
     }}>
-      <h3 style={{ margin: '0 0 20px 0' }}>🔍 Filter Providers</h3>
+      <h3 style={{ margin: '0 0 20px 0' }}>Filter Providers</h3>
       
       <div style={{ 
         display: 'grid', 
         gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
-        gap: '15px' 
+        gap: '15px',
+        marginBottom: '15px'
       }}>
         {/* City Filter */}
         <div>
@@ -78,7 +78,10 @@ export default function SearchFilter({ providers, onFilter }) {
           >
             <option value="">All Cities ({cities.length} total)</option>
             {cities.map(city => {
-              const count = providers.filter(p => p.city === city).length;
+              const count = providers.filter(p => {
+                const providerCity = p.address?.city || p.city;
+                return providerCity === city;
+              }).length;
               return (
                 <option key={city} value={city}>
                   {city} ({count} provider{count !== 1 ? 's' : ''})
@@ -88,14 +91,14 @@ export default function SearchFilter({ providers, onFilter }) {
           </select>
         </div>
         
-        {/* Service Filter */}
+        {/* Brand Filter */}
         <div>
           <label style={{ display: 'block', marginBottom: '5px', fontWeight: '600' }}>
-            Service:
+            Filler Brand:
           </label>
           <select 
-            value={filters.service}
-            onChange={(e) => handleFilterChange('service', e.target.value)}
+            value={filters.brand}
+            onChange={(e) => handleFilterChange('brand', e.target.value)}
             style={{
               width: '100%',
               padding: '8px 12px',
@@ -103,14 +106,39 @@ export default function SearchFilter({ providers, onFilter }) {
               borderRadius: '6px'
             }}
           >
-            <option value="">All Services</option>
-            {services.map(service => (
-              <option key={service} value={service}>{service}</option>
-            ))}
+            <option value="">All Brands</option>
+            {brands.map(brand => {
+              const count = providers.filter(p => p.brands && p.brands.includes(brand)).length;
+              return (
+                <option key={brand} value={brand}>
+                  {brand} ({count} provider{count !== 1 ? 's' : ''})
+                </option>
+              );
+            })}
           </select>
         </div>
         
-        {/* Clear Filters Button */}
+        {/* Online Booking Filter */}
+        <div style={{ display: 'flex', alignItems: 'end' }}>
+          <label style={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            cursor: 'pointer',
+            fontSize: '14px'
+          }}>
+            <input 
+              type="checkbox"
+              checked={filters.hasOnlineBooking}
+              onChange={(e) => handleFilterChange('hasOnlineBooking', e.target.checked)}
+              style={{ marginRight: '8px' }}
+            />
+            Online Booking Only
+          </label>
+        </div>
+      </div>
+
+      {/* Clear Filters Button */}
+      {(filters.city || filters.brand || filters.hasOnlineBooking) && (
         <button
           onClick={clearAllFilters}
           style={{
@@ -120,17 +148,17 @@ export default function SearchFilter({ providers, onFilter }) {
             border: 'none',
             borderRadius: '6px',
             cursor: 'pointer',
-            alignSelf: 'end',
-            fontWeight: '600'
+            fontWeight: '600',
+            marginBottom: '10px'
           }}
         >
-          Clear Filters
+          Clear All Filters
         </button>
-      </div>
+      )}
 
       {/* Active Filters Display */}
-      {(filters.city || filters.service) && (
-        <div style={{ marginTop: '15px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+      {(filters.city || filters.brand || filters.hasOnlineBooking) && (
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
           {filters.city && (
             <span style={{
               backgroundColor: '#e3f2fd',
@@ -142,7 +170,7 @@ export default function SearchFilter({ providers, onFilter }) {
               City: {filters.city}
             </span>
           )}
-          {filters.service && (
+          {filters.brand && (
             <span style={{
               backgroundColor: '#f3e5f5',
               color: '#7b1fa2',
@@ -150,11 +178,23 @@ export default function SearchFilter({ providers, onFilter }) {
               borderRadius: '4px',
               fontSize: '14px'
             }}>
-              Service: {filters.service}
+              Brand: {filters.brand}
+            </span>
+          )}
+          {filters.hasOnlineBooking && (
+            <span style={{
+              backgroundColor: '#e8f5e8',
+              color: '#2e7d32',
+              padding: '4px 8px',
+              borderRadius: '4px',
+              fontSize: '14px'
+            }}>
+              Online Booking Available
             </span>
           )}
         </div>
       )}
+
     </div>
   );
 }

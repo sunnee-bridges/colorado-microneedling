@@ -25,7 +25,7 @@ export default function Terms() {
         <h2>1. Directory Purpose and Limitations</h2>
         <p>
           This directory is an <strong>informational resource only</strong>. We provide a platform for users to find 
-          information about medical professionals who may offer lip filler services in Colorado. We do not:
+          information about providers who may offer lip filler services in Colorado. We do not:
         </p>
         <ul>
           <li>Provide medical advice, recommendations, or treatment guidance</li>
@@ -74,7 +74,7 @@ export default function Terms() {
           <li>Guarantees about treatment outcomes or safety</li>
         </ul>
         <p>
-          Always consult with qualified, licensed healthcare providers for personalized medical advice and treatment decisions.
+          Always consult with qualified healthcare providers for personalized medical advice and treatment decisions.
         </p>
 
         <h2>5. Provider Verification Requirements</h2>
@@ -90,7 +90,7 @@ export default function Terms() {
           </h4>
           <ol style={{ color: '#0c5460', paddingLeft: '20px' }}>
             <li><strong>Verify licenses through Colorado DORA:</strong> www.colorado.gov/dora</li>
-            <li><strong>Confirm medical credentials</strong> through appropriate state boards</li>
+            <li><strong>Confirm credentials</strong> through appropriate state boards</li>
             <li><strong>Ask providers directly</strong> about their training and experience</li>
             <li><strong>Request current pricing</strong> and service availability</li>
             <li><strong>Verify consultation policies</strong> and any associated fees</li>
@@ -196,7 +196,7 @@ export default function Terms() {
           textAlign: 'center'
         }}>
           <h4 style={{ color: '#1976d2', margin: '0 0 10px 0' }}>
-            🔗 Official Verification Resources
+            Official Verification Resources
           </h4>
           <p style={{ color: '#1976d2', margin: '10px 0' }}>
   <strong>Colorado Department of Regulatory Agencies (DORA):</strong><br />
