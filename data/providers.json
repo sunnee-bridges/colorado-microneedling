@@ -41,7 +41,10 @@
 "brands": ["Juvéderm Volbella XC", "Juvéderm Ultra XC", "Revanesse Lips+"],
 "brandsVerified": "self_reported",
 "brandsAsOf": "2025-08-24",
-"brandsNote": "Only FDA-indicated lip fillers are listed.",
+"brandsNote": "",
+"shortDescription": "Fort Collins med spa focused on balanced lip enhancement with hyaluronic-acid fillers (Juvéderm, Revanesse). Appointments required; accessible space, online scheduling and memberships.",
+"metaDescription": "Xanadu Med Spa in Fort Collins offers lip filler with Juvéderm and Revanesse. Accessible clinic with online scheduling and memberships. Book a consult.",
+"about": "Since Mark purchased the business in 2015, the team at Xanadu Med Spa has focused on delivering calm, client-first experiences in Fort Collins. We began as a small, soothing spa and quickly expanded into medical aesthetics to better serve guests who wanted thoughtful, conservative lip enhancement options.\n\n Our approach is simple: listen first, plan together, and treat conservatively. For lip augmentation, we work with hyaluronic-acid fillers such as Juvéderm and Revanesse, chosen for their smooth feel and reversibility when clinically appropriate. Many clients notice immediate improvement, with typical longevity ranging from 12–24 months depending on product, placement, and individual metabolism.\n\n Visits are by appointment (appointments recommended), and our space includes several accessibility features: a wheelchair-accessible entrance, parking, and restroom.\n You’ll also find conveniences like online scheduling, membership options, and a gender-neutral restroom. During your consultation, we’ll discuss goals, expected swelling and aftercare, and how often maintenance may be needed. We encourage all clients to independently verify professional credentials through official Colorado resources (DORA) and to ask questions about product choices and safety protocols.\n\n Address: 2105 Bighorn Drive, Suite 104, Fort Collins, CO 80525 • Phone: (970) 482-1889.\n\nResults and experiences vary; your provider will tailor recommendations to your anatomy and preferences.",
 "description": "Lip fillers available: Juvéderm Volbella XC, Juvéderm Ultra XC, Revanesse Lips+.",
 "brandsProof": ["https://www.xanadumedspa.com/service/fillers-in-fort-collins/"]
 },
@@ -239,11 +242,19 @@
 "restylane kysse colorado springs",
 "juvederm colorado springs"
 ],
+"social": {
+        "instagram": "https://www.instagram.com/blushgrey",
+        "facebook": "https://www.facebook.com/blushgrey"
+      },
+"seo": {
+        "title": "Blush & Grey Medspa – Lip Fillers in Colorado Springs, CO",
+        "description": "Explore lip filler options at Blush & Grey Medspa in Colorado Springs, CO. Compare experience, products used, and aftercare policies. Verify credentials via DORA."
+      },
 "analytics": { "track": true, "events": ["view", "open_scheduler", "slot_select", "deposit_paid", "confirm"], "conversionWindowDays": 30 },
 "brands": ["Restylane Kysse", "Restylane Silk", "Juvéderm Volbella XC"],
 "brandsVerified": "self_reported",
 "brandsAsOf": "2025-08-24",
-"brandsNote": "Only FDA-indicated lip fillers are listed from the provided set. Non-lip indications (e.g., Contour, Defyne, Lyft, Voluma) and off-label products (e.g., Ultra Plus) were excluded.",
+"brandsNote": "",
 "brandsProof": ["https://www.blushandgreymedspa.com/treatment/juvederm-fillers/", "https://www.blushandgreymedspa.com/treatment/restylane-portfolio/"]
 },
 {
