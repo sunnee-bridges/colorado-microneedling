@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import Head from 'next/head';
+import Link from 'next/link';
 
 const SITE = (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000').replace(/\/$/, '');
 const CANONICAL = `${SITE}/lip-filler-faq`; // change to `${SITE}/faq` if you rename the route
-const OG_IMAGE = `${SITE}/images/og/faq.jpg`; // create one if you don’t have it
+const OG_IMAGE = `${SITE}/images/og/faq.jpg`; // create one if you don't have it
 
 
 // helper to strip markdown/emoji/bullets for JSON-LD
@@ -876,7 +877,7 @@ Check out our complete Lip Filler Shapes Guide with detailed descriptions and ex
         return (
           <p key={index} style={{ marginBottom: '8px' }}>
             **Want to see all the options?** 
-            Check out our complete <a href="/shapes" style={{ color: '#007bff', textDecoration: 'none', fontWeight: '600' }}>Lip Filler Shapes Guide</a> with detailed descriptions and examples of all 14 popular lip shapes!
+            Check out our complete <Link href="/shapes" style={{ color: '#007bff', textDecoration: 'none', fontWeight: '600' }}>Lip Filler Shapes Guide</Link> with detailed descriptions and examples of all 14 popular lip shapes!
           </p>
         );
       }
@@ -926,7 +927,7 @@ Check out our complete Lip Filler Shapes Guide with detailed descriptions and ex
   />
 </Head>
 <nav style={{ margin: '20px 0', fontSize: 14 }}>
-  <a href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</a>
+  <Link href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</Link>
   <span style={{ margin: '0 8px' }}>›</span>
   <span>Lip Filler FAQ</span>
 </nav>
@@ -1013,6 +1014,36 @@ Check out our complete Lip Filler Shapes Guide with detailed descriptions and ex
           border: '1px solid #e9ecef'
         }}>
 
+          {/* Search Input */}
+          <div style={{ marginBottom: '20px' }}>
+            <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600', color: '#495057' }}>
+              Search Questions
+            </label>
+            <div style={{ position: 'relative' }}>
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                placeholder="Search questions, answers, or topics..."
+                style={{
+                  width: '100%',
+                  padding: '12px 45px 12px 12px',
+                  border: '1px solid #ced4da',
+                  borderRadius: '6px',
+                  fontSize: '16px'
+                }}
+              />
+              <div style={{
+                position: 'absolute',
+                right: '12px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                color: '#6c757d'
+              }}>
+                <SearchIcon />
+              </div>
+            </div>
+          </div>
 
           {/* Filter Toggle */}
           <button
@@ -1104,7 +1135,7 @@ Check out our complete Lip Filler Shapes Guide with detailed descriptions and ex
                   borderRadius: '4px',
                   fontSize: '14px'
                 }}>
-                  Search: "{searchTerm}"
+                  Search: &ldquo;{searchTerm}&rdquo;
                 </span>
               )}
               {selectedCategory !== 'all' && (
@@ -1250,7 +1281,7 @@ Check out our complete Lip Filler Shapes Guide with detailed descriptions and ex
               <SearchIcon />
             </div>
             <h3>No questions found</h3>
-            <p>Try adjusting your search terms or filters to find what you're looking for.</p>
+            <p>Try adjusting your search terms or filters to find what you&apos;re looking for.</p>
           </div>
         )}
 
@@ -1268,7 +1299,7 @@ Check out our complete Lip Filler Shapes Guide with detailed descriptions and ex
             Browse our directory of providers offering lip filler treatments throughout Colorado.
           </p>
           <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a
+            <Link
               href="/#find-providers"
               style={{
                 backgroundColor: 'white',
@@ -1282,7 +1313,7 @@ Check out our complete Lip Filler Shapes Guide with detailed descriptions and ex
               }}
             >
               Find Providers
-            </a>
+            </Link>
           </div>
         </div>
 

@@ -48,7 +48,7 @@ export default function Terms() {
 
         <h2>3. Information Accuracy and Currency</h2>
         <p>
-          <strong>All information is provided "as is" without warranties of any kind.</strong> We make no representations 
+          <strong>All information is provided &ldquo;as is&rdquo; without warranties of any kind.</strong> We make no representations 
           or warranties regarding:
         </p>
         <ul>
@@ -142,7 +142,7 @@ export default function Terms() {
 
         <h2>9. Consultation and Treatment Disclaimers</h2>
         <ul>
-          <li><strong>"Free consultation"</strong> claims are subject to provider policies and may have limitations</li>
+          <li><strong>&ldquo;Free consultation&rdquo;</strong> claims are subject to provider policies and may have limitations</li>
           <li><strong>Promotional offers</strong> are subject to availability, terms, and conditions</li>
           <li><strong>Service availability</strong> may be limited and subject to provider discretion</li>
           <li><strong>Treatment outcomes</strong> vary by individual and are not guaranteed</li>

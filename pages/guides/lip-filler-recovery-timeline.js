@@ -1,12 +1,13 @@
 import React from 'react';
+import Link from 'next/link';
 import Layout from '../../components/Layout';
 import Head from 'next/head';
 
 export default function LipFillerRecoveryTimeline() {
-      const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-    
-    const CANON = `${SITE_URL.replace(/\/$/,'')}/guides/lip-filler-recovery-timeline`;
-    const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-recovery-1200x630.jpg`; // add this file
+  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const CANON = `${SITE_URL.replace(/\/$/,'')}/guides/lip-filler-recovery-timeline`;
+  const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-recovery-1200x630.jpg`; // add this file
+  
   return (
     <>
       <Head>
@@ -29,80 +30,78 @@ export default function LipFillerRecoveryTimeline() {
         <meta name="twitter:title" content="Lip Filler Recovery Timeline: Day-by-Day Swelling & Aftercare" />
         <meta name="twitter:description" content="What to expect each day after lip fillers—simple recovery timeline and aftercare tips." />
         <meta name="twitter:image" content={OG_IMG} />
-        <link rel="canonical" href="https://yourdomain.com/guides/lip-filler-recovery-timeline" />
         
         {/* Article */}
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Lip Filler Recovery Timeline: Day-by-Day Guide",
-    "description": "A plain-language, day-by-day lip filler recovery guide covering swelling, bruising, aftercare, and when to call your provider.",
-    "mainEntityOfPage": { "@type": "WebPage", "@id": CANON },
-    "image": [ `${SITE_URL}/images/lip-filler-recovery-1200x630.jpg` ],
-    "author": { "@type": "Organization", "name": "Colorado Lip Enhancement Directory" },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Colorado Lip Enhancement Directory",
-      "logo": { "@type": "ImageObject", "url": `${SITE_URL}/images/logo-600x60.png` }
-    },
-    "datePublished": "2025-08-20",
-    "dateModified": "2025-08-20",
-    "articleSection": "Guides"
-  })
-}} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Lip Filler Recovery Timeline: Day-by-Day Guide",
+            "description": "A plain-language, day-by-day lip filler recovery guide covering swelling, bruising, aftercare, and when to call your provider.",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": CANON },
+            "image": [ `${SITE_URL}/images/lip-filler-recovery-1200x630.jpg` ],
+            "author": { "@type": "Organization", "name": "Colorado Lip Enhancement Directory" },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Colorado Lip Enhancement Directory",
+              "logo": { "@type": "ImageObject", "url": `${SITE_URL}/images/logo-600x60.png` }
+            },
+            "datePublished": "2025-08-20",
+            "dateModified": "2025-08-20",
+            "articleSection": "Guides"
+          })
+        }} />
 
-{/* Breadcrumbs */}
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type":"ListItem", "position":1, "name":"Home", "item": SITE_URL },
-      { "@type":"ListItem", "position":2, "name":"Guides", "item": `${SITE_URL}/guides` },
-      { "@type":"ListItem", "position":3, "name":"Lip Filler Recovery Timeline", "item": CANON }
-    ]
-  })
-}} />
+        {/* Breadcrumbs */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type":"ListItem", "position":1, "name":"Home", "item": SITE_URL },
+              { "@type":"ListItem", "position":2, "name":"Guides", "item": `${SITE_URL}/guides` },
+              { "@type":"ListItem", "position":3, "name":"Lip Filler Recovery Timeline", "item": CANON }
+            ]
+          })
+        }} />
 
-{/* FAQ (texts must match on-page content) */}
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How long does swelling last after lip fillers?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Biggest swelling is in the first 1-2 days. Most people look normal by day 5-7." }
-      },
-      {
-        "@type": "Question",
-        "name": "When can I wear lipstick after lip fillers?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Often after day 1 if the area is clean and your provider says it's okay." }
-      },
-      {
-        "@type": "Question",
-        "name": "When do I see the final results?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Usually by 2-4 weeks when everything has settled." }
-      }
-    ]
-  })
-}} />
-
+        {/* FAQ (texts must match on-page content) */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How long does swelling last after lip fillers?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Biggest swelling is in the first 1-2 days. Most people look normal by day 5-7." }
+              },
+              {
+                "@type": "Question",
+                "name": "When can I wear lipstick after lip fillers?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Often after day 1 if the area is clean and your provider says it's okay." }
+              },
+              {
+                "@type": "Question",
+                "name": "When do I see the final results?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Usually by 2-4 weeks when everything has settled." }
+              }
+            ]
+          })
+        }} />
       </Head>
       
       <Layout title="Lip Filler Recovery Timeline: Day-by-Day Guide | Colorado Directory">
-                {/* Breadcrumbs */}
-          <nav style={{ margin: '20px 0', fontSize: '14px', color: '#6c757d' }}>
-            <a href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</a>
-            <span style={{ margin: '0 8px' }}>›</span>
-            <a href="/guides" style={{ color: '#667eea', textDecoration: 'none' }}>Guides</a>
-            <span style={{ margin: '0 8px' }}>›</span>
-            <span>Recovery Timeline</span>
-          </nav>
+        {/* Breadcrumbs */}
+        <nav style={{ margin: '20px 0', fontSize: '14px', color: '#6c757d' }}>
+          <Link href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</Link>
+          <span style={{ margin: '0 8px' }}>›</span>
+          <Link href="/guides" style={{ color: '#667eea', textDecoration: 'none' }}>Guides</Link>
+          <span style={{ margin: '0 8px' }}>›</span>
+          <span>Recovery Timeline</span>
+        </nav>
+        
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-
           {/* Header */}
           <section style={{
             background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -393,7 +392,7 @@ export default function LipFillerRecoveryTimeline() {
                   <li style={{ marginBottom: '8px' }}>Ice with a clean cloth as needed</li>
                   <li style={{ marginBottom: '8px' }}>Keep lips and hands <strong>clean</strong></li>
                   <li style={{ marginBottom: '8px' }}><strong>Drink water</strong> to stay hydrated</li>
-                  <li>Use gentle <strong>lip balm</strong> if your provider says it's okay</li>
+                  <li>Use gentle <strong>lip balm</strong> if your provider says it&apos;s okay</li>
                 </ul>
               </div>
               
@@ -403,11 +402,11 @@ export default function LipFillerRecoveryTimeline() {
                 borderRadius: '12px',
                 padding: '25px'
               }}>
-                <h3 style={{ color: '#721c24', marginBottom: '15px', fontSize: '1.2rem' }}>Don't Do These</h3>
+                <h3 style={{ color: '#721c24', marginBottom: '15px', fontSize: '1.2rem' }}>Don&apos;t Do These</h3>
                 <ul style={{ fontSize: '0.95rem', lineHeight: '1.6', paddingLeft: '20px', margin: 0, color: '#721c24' }}>
-                  <li style={{ marginBottom: '8px' }}>Don't rub or press your lips</li>
-                  <li style={{ marginBottom: '8px' }}>Don't use <strong>lip plumpers</strong> or go to <strong>saunas/steam rooms</strong> the first week</li>
-                  <li>Don't book <strong>dental work</strong> for a couple of weeks unless your provider says it's okay</li>
+                  <li style={{ marginBottom: '8px' }}>Don&apos;t rub or press your lips</li>
+                  <li style={{ marginBottom: '8px' }}>Don&apos;t use <strong>lip plumpers</strong> or go to <strong>saunas/steam rooms</strong> the first week</li>
+                  <li>Don&apos;t book <strong>dental work</strong> for a couple of weeks unless your provider says it&apos;s okay</li>
                 </ul>
               </div>
             </div>
@@ -444,7 +443,7 @@ export default function LipFillerRecoveryTimeline() {
                 borderRadius: '8px'
               }}>
                 <p style={{ margin: 0, fontWeight: '600' }}>
-                  If you can't reach your provider, go to urgent care or the emergency room.
+                  If you can&apos;t reach your provider, go to urgent care or the emergency room.
                 </p>
               </div>
             </div>
@@ -470,7 +469,7 @@ export default function LipFillerRecoveryTimeline() {
                 },
                 {
                   question: "When can I wear lipstick?",
-                  answer: "Often after day 1 if the area is clean and your provider says it's okay."
+                  answer: "Often after day 1 if the area is clean and your provider says it&apos;s okay."
                 },
                 {
                   question: "When do I see the final look?",
@@ -526,7 +525,7 @@ export default function LipFillerRecoveryTimeline() {
               Related Guides
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '15px' }}>
-              <a href="/guides/lip-filler-101" style={{
+              <Link href="/guides/lip-filler-101" style={{
                 backgroundColor: '#f8f9ff',
                 border: '1px solid #667eea',
                 borderRadius: '8px',
@@ -536,8 +535,8 @@ export default function LipFillerRecoveryTimeline() {
                 fontWeight: '600'
               }}>
                 Complete Lip Filler Guide
-              </a>
-              <a href="/guides/lip-filler-vs-lip-flip" style={{
+              </Link>
+              <Link href="/guides/lip-filler-vs-lip-flip" style={{
                 backgroundColor: '#f8f9ff',
                 border: '1px solid #667eea',
                 borderRadius: '8px',
@@ -547,7 +546,7 @@ export default function LipFillerRecoveryTimeline() {
                 fontWeight: '600'
               }}>
                 Filler vs Lip Flip Guide
-              </a>
+              </Link>
             </div>
           </section>
 
@@ -567,7 +566,7 @@ export default function LipFillerRecoveryTimeline() {
               Find providers in Colorado who can answer your questions and provide aftercare guidance.
             </p>
             <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a
+              <Link
                 href="/#find-providers"
                 style={{
                   backgroundColor: 'white',
@@ -580,7 +579,7 @@ export default function LipFillerRecoveryTimeline() {
                 }}
               >
                 Browse Providers
-              </a>
+              </Link>
             </div>
           </div>
 

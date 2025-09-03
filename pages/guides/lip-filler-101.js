@@ -1,22 +1,26 @@
 import React from 'react';
+import Link from 'next/link';
 import Layout from '../../components/Layout';
 import Head from 'next/head';
 
 export default function LipFiller101() {
+  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const CANONICAL = `${SITE_URL.replace(/\/$/, '')}/guides/lip-filler-101`;
+  
   return (
     <>
       <Head>
         <title>Lip Filler Guide: What to Expect, Costs & Recovery</title>
         <meta name="description" content="Simple guide to lip fillers—what they are, how much they cost, what to expect during recovery, and how to research providers in Colorado." />
         <meta name="keywords" content="lip filler, lip injections, lip augmentation cost, recovery, Colorado providers" />
-        <link rel="canonical" href="https://yourdomain.com/guides/lip-filler-101" />
+        <link rel="canonical" href={CANONICAL} />
         <meta name="robots" content="index,follow" />
 
          {/* Open Graph */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Lip Filler Guide: What to Expect, Costs & Recovery" />
         <meta property="og:description" content="Simple guide to lip fillers—what they are, costs, recovery timeline, and provider research tips." />
-        <meta property="og:url" content={"https://yourdomain.com/guides/lip-filler-101"} />
+        <meta property="og:url" content={CANONICAL} />
         <meta property="article:published_time" content="2025-08-20" />
         <meta property="article:modified_time" content="2025-08-20" />
 
@@ -25,87 +29,85 @@ export default function LipFiller101() {
         <meta name="twitter:title" content="Lip Filler Guide: What to Expect, Costs & Recovery" />
         <meta name="twitter:description" content="Simple guide to lip fillers—what they are, costs, recovery, and provider research tips." />
       
-        
         {/* Article */}
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Lip Filler Guide: What to Expect, Costs & Recovery",
-    "description": "Simple guide to lip fillers—what they are, costs, recovery, and provider research tips.",
-    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://yourdomain.com/guides/lip-filler-101" },
-    "author": { "@type": "Organization", "name": "Colorado Lip Enhancement Directory" },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Colorado Lip Enhancement Directory",
-      "logo": { "@type": "ImageObject" } // add logo
-    },
-    "datePublished": "2025-08-20",
-    "dateModified": "2025-08-20"
-  })
-}}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Lip Filler Guide: What to Expect, Costs & Recovery",
+            "description": "Simple guide to lip fillers—what they are, costs, recovery, and provider research tips.",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": CANONICAL },
+            "author": { "@type": "Organization", "name": "Colorado Lip Enhancement Directory" },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Colorado Lip Enhancement Directory",
+              "logo": { "@type": "ImageObject", "url": `${SITE_URL.replace(/\/$/,'')}/images/logo-600x60.png` }
+            },
+            "datePublished": "2025-08-20",
+            "dateModified": "2025-08-20",
+            "articleSection": "Guides"
+          })
+        }}/>
 
-{/* Breadcrumbs */}
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type":"ListItem", "position":1, "name":"Home", "item": "https://yourdomain.com" },
-      { "@type":"ListItem", "position":2, "name":"Guides", "item": `https://yourdomain.com/guides` },
-      { "@type":"ListItem", "position":3, "name":"Lip Filler Guide", "item": 'https://yourdomain.com/lip-filler-101' }
-    ]
-  })
-}}/>
+        {/* Breadcrumbs */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type":"ListItem", "position":1, "name":"Home", "item": SITE_URL },
+              { "@type":"ListItem", "position":2, "name":"Guides", "item": `${SITE_URL.replace(/\/$/,'')}/guides` },
+              { "@type":"ListItem", "position":3, "name":"Lip Filler Guide", "item": CANONICAL }
+            ]
+          })
+        }}/>
 
-{/* FAQ (keep content identical to on-page Q&A) */}
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How long do lip fillers last?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Most lip fillers last 6-12 months. How long yours last depends on your body, the type of filler used, and how much you get."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do lip fillers hurt?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Most people feel mild to moderate discomfort. Your provider will use numbing cream or injections to help with any pain."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can lip fillers be removed?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, hyaluronic acid fillers can be dissolved with a special injection if you don't like the results."
-        }
-      }
-    ]
-  })
-}}/>
-
+        {/* FAQ (keep content identical to on-page Q&A) */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How long do lip fillers last?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Most lip fillers last 6-12 months. How long yours last depends on your body, the type of filler used, and how much you get."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do lip fillers hurt?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Most people feel mild to moderate discomfort. Your provider will use numbing cream or injections to help with any pain."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can lip fillers be removed?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, hyaluronic acid fillers can be dissolved with a special injection if you don't like the results."
+                }
+              }
+            ]
+          })
+        }}/>
       </Head>
       
       <Layout title="Lip Filler Guide: What to Expect, Costs & Recovery | Colorado Directory">
-                {/* Breadcrumbs */}
-          <nav style={{ margin: '20px 0', fontSize: '14px', color: '#6c757d' }}>
-            <a href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</a>
-            <span style={{ margin: '0 8px' }}>›</span>
-            <a href="/guides" style={{ color: '#667eea', textDecoration: 'none' }}>Guides</a>
-            <span style={{ margin: '0 8px' }}>›</span>
-            <span>Lip Filler Guide</span>
-          </nav>
+        {/* Breadcrumbs */}
+        <nav style={{ margin: '20px 0', fontSize: '14px', color: '#6c757d' }}>
+          <Link href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</Link>
+          <span style={{ margin: '0 8px' }}>›</span>
+          <Link href="/guides" style={{ color: '#667eea', textDecoration: 'none' }}>Guides</Link>
+          <span style={{ margin: '0 8px' }}>›</span>
+          <span>Lip Filler Guide</span>
+        </nav>
+        
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-          
-
           {/* Header */}
           <section style={{
             background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -229,7 +231,7 @@ export default function LipFiller101() {
                   <li style={{ marginBottom: '8px' }}>Want fuller or more balanced lips</li>
                   <li style={{ marginBottom: '8px' }}>Have realistic expectations about results</li>
                   <li style={{ marginBottom: '8px' }}>Are in good overall health</li>
-                  <li style={{ marginBottom: '8px' }}>Don't have active cold sores or lip infections</li>
+                  <li style={{ marginBottom: '8px' }}>Don&apos;t have active cold sores or lip infections</li>
                   <li>Are not pregnant or breastfeeding</li>
                 </ul>
               </div>
@@ -274,11 +276,11 @@ export default function LipFiller101() {
                 {[
                   {
                     step: "Consultation",
-                    details: "Your provider will discuss your goals, examine your lips, and explain the process. You'll sign a consent form."
+                    details: "Your provider will discuss your goals, examine your lips, and explain the process. You&apos;ll sign a consent form."
                   },
                   {
                     step: "Getting Ready",
-                    details: "They'll clean your lips and apply numbing cream to make you more comfortable during the injections."
+                    details: "They&apos;ll clean your lips and apply numbing cream to make you more comfortable during the injections."
                   },
                   {
                     step: "The Injections",
@@ -286,7 +288,7 @@ export default function LipFiller101() {
                   },
                   {
                     step: "Final Check",
-                    details: "You'll look at the results together, get aftercare instructions, and schedule any follow-up appointments."
+                    details: "You&apos;ll look at the results together, get aftercare instructions, and schedule any follow-up appointments."
                   }
                 ].map((step, index) => (
                   <div key={index} style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
@@ -353,7 +355,7 @@ export default function LipFiller101() {
               
               <h4 style={{ color: '#856404', marginBottom: '12px' }}>What Affects the Price:</h4>
               <ul style={{ fontSize: '0.95rem', lineHeight: '1.6', paddingLeft: '20px', margin: 0, color: '#856404' }}>
-                <li style={{ marginBottom: '6px' }}>Your provider's experience and background</li>
+                <li style={{ marginBottom: '6px' }}>Your provider&apos;s experience and background</li>
                 <li style={{ marginBottom: '6px' }}>Brand of filler (Juvéderm, Restylane, Versa, etc.)</li>
                 <li style={{ marginBottom: '6px' }}>Where you live and the practice location</li>
                 <li style={{ marginBottom: '6px' }}>How much filler you need</li>
@@ -381,7 +383,7 @@ export default function LipFiller101() {
               padding: '25px',
               marginBottom: '20px'
             }}>
-              <h4 style={{ color: '#004085', marginBottom: '12px' }}>What's Normal After Treatment</h4>
+              <h4 style={{ color: '#004085', marginBottom: '12px' }}>What&apos;s Normal After Treatment</h4>
               <p style={{ 
                 fontSize: '1rem', 
                 lineHeight: '1.6', 
@@ -489,7 +491,7 @@ export default function LipFiller101() {
                       Contact your provider immediately
                     </p>
                     <p style={{ margin: 0, fontSize: '0.9rem' }}>
-                      If you can't reach them: Go to urgent care or call emergency services
+                      If you can&apos;t reach them: Go to urgent care or call emergency services
                     </p>
                   </div>
                 </div>
@@ -521,7 +523,7 @@ export default function LipFiller101() {
                 },
                 {
                   question: "Can lip fillers be removed?",
-                  answer: "Yes, hyaluronic acid fillers can be dissolved with a special injection if you don't like the results."
+                  answer: "Yes, hyaluronic acid fillers can be dissolved with a special injection if you don&apos;t like the results."
                 },
                 {
                   question: "How swollen will my lips be?",
@@ -565,7 +567,7 @@ export default function LipFiller101() {
               Helpful Resource
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '15px' }}>
-              <a href="/shapes" style={{
+              <Link href="/shapes" style={{
                 backgroundColor: '#f8f9ff',
                 border: '1px solid #667eea',
                 borderRadius: '8px',
@@ -576,7 +578,7 @@ export default function LipFiller101() {
                 textAlign: 'center'
               }}>
                 Lip Shape Options
-              </a>
+              </Link>
             </div>
           </section>
 
@@ -596,7 +598,7 @@ export default function LipFiller101() {
               Find providers offering lip enhancement services in Colorado and learn how to verify their credentials.
             </p>
             <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a
+              <Link
                 href="/#find-providers"
                 style={{
                   backgroundColor: 'white',
@@ -609,7 +611,7 @@ export default function LipFiller101() {
                 }}
               >
                 Browse Providers
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -630,7 +632,7 @@ export default function LipFiller101() {
               color: '#6c757d',
               lineHeight: '1.6'
             }}>
-              This guide is for educational purposes only and doesn't replace professional medical advice. Results vary from person to person based on your unique situation. Always consult with a qualified healthcare provider to discuss whether lip fillers are right for you and verify provider credentials through official sources before scheduling any treatments.
+              This guide is for educational purposes only and doesn&apos;t replace professional medical advice. Results vary from person to person based on your unique situation. Always consult with a qualified healthcare provider to discuss whether lip fillers are right for you and verify provider credentials through official sources before scheduling any treatments.
             </p>
           </div>
         </div>

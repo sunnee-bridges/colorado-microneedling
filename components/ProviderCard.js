@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 export default function ProviderCard({
@@ -8,16 +8,19 @@ export default function ProviderCard({
   linkToDetails = true // show "View Details" if slug is present
 }) {
   const [showFullBrands, setShowFullBrands] = useState(false);
-  if (!provider) return null;
-
-  // ---------- helpers ----------
+  
+  // Move all hooks before any early return
   const sanitizedPhone = useMemo(() => {
+    if (!provider) return { display: '', tel: '' };
     const raw = provider.displayPhone || provider.phone || '';
     const tel = (provider.phone || raw).replace(/[^\d+]/g, '');
     return { display: raw, tel };
-  }, [provider.displayPhone, provider.phone]);
+  }, [provider?.displayPhone, provider?.phone]);
 
-  const addressParts = provider.address || {};
+  const addressParts = useMemo(() => {
+    return provider?.address || {};
+  }, [provider?.address]);
+
   const addressText = useMemo(() => {
     const parts = [
       addressParts.street,
@@ -25,9 +28,10 @@ export default function ProviderCard({
       addressParts.postalCode,
     ].filter(Boolean);
     return parts.join(', ');
-  }, [addressParts]);
+  }, [addressParts.street, addressParts.city, addressParts.state, addressParts.postalCode]);
 
   const directionsUrl = useMemo(() => {
+    if (!provider) return null;
     // Priority: explicit mapsUrl → fallbackUrl → raw address search
     if (provider.google?.mapsUrl) return provider.google.mapsUrl;
     if (provider.google?.fallbackUrl) return provider.google.fallbackUrl;
@@ -35,8 +39,12 @@ export default function ProviderCard({
       return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addressText)}`;
     }
     return null;
-  }, [provider.google, addressText]);
+  }, [provider?.google?.mapsUrl, provider?.google?.fallbackUrl, addressText]);
 
+  // Early return after all hooks
+  if (!provider) return null;
+
+  // ---------- helpers ----------
   const handleProviderClick = (action) => {
     if (trackClick && typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'provider_interaction', {
@@ -131,7 +139,6 @@ export default function ProviderCard({
   const renderBookingOptions = () => {
     if (!provider.booking) return null;
     const hasOnlineBooking = provider.booking.onlineBookingUrl;
-    const hasWebForm = provider.booking.webFormUrl;
 
     const box = {
       bg: hasOnlineBooking ? 'linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%)' : '#fff3cd',

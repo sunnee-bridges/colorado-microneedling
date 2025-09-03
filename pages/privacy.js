@@ -17,7 +17,7 @@ export default function Privacy() {
           margin: '24px 0'
         }}>
           <p style={{ margin: 0, lineHeight: '1.6' }}>
-            <strong>Who we are:</strong> Colorado Lip Fillers Directory ("we," "us," or "our") 
+            <strong>Who we are:</strong> Colorado Lip Fillers Directory (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) 
             operates an online directory helping Colorado residents find qualified lip enhancement 
             providers. We are not a medical provider and do not store medical records or protected 
             health information (PHI).
@@ -42,7 +42,7 @@ export default function Privacy() {
             photos, and pricing information submitted by providers who pay for listings.
           </p>
           
-          <h3>Contact & Support:</h3>
+          <h3>Contact &amp; Support:</h3>
           <p style={{ lineHeight: '1.6' }}>
             Messages sent to our support email for directory inquiries or listing updates.
           </p>
@@ -168,7 +168,7 @@ export default function Privacy() {
           you to review independently.
         </p>
 
-        <h2>9. Children's Privacy</h2>
+        <h2>9. Children&apos;s Privacy</h2>
         <p style={{ lineHeight: '1.6', margin: '20px 0' }}>
           Our directory is intended for adults seeking cosmetic treatments. We do not 
           knowingly collect information from individuals under 18 years of age.

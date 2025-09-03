@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Layout from '../../components/Layout';
 import Head from 'next/head';
 
@@ -84,9 +85,9 @@ export default function CannulaVsNeedle() {
       <Layout title="Cannula vs Needle: Easy Guide to Lip Filler Tools | Colorado Directory">
                 {/* Breadcrumbs */}
           <nav style={{ margin: '20px 0', fontSize: '14px', color: '#6c757d' }}>
-            <a href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</a>
+            <Link href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</Link>
             <span style={{ margin: '0 8px' }}>›</span>
-            <a href="/guides" style={{ color: '#667eea', textDecoration: 'none' }}>Guides</a>
+            <Link href="/guides" style={{ color: '#667eea', textDecoration: 'none' }}>Guides</Link>
             <span style={{ margin: '0 8px' }}>›</span>
             <span>Cannula vs Needle</span>
           </nav>
@@ -423,7 +424,7 @@ export default function CannulaVsNeedle() {
               }}>
                 <h4 style={{ color: '#6f42c1', marginBottom: '10px' }}>Visit Time</h4>
                 <p style={{ margin: 0, fontSize: '0.9rem', color: '#555', lineHeight: '1.5' }}>
-                  Both are quick office visits. The technique doesn't significantly change appointment length.
+                  Both are quick office visits. The technique doesn&apos;t significantly change appointment length.
                 </p>
               </div>
             </div>
@@ -501,12 +502,12 @@ export default function CannulaVsNeedle() {
                   answer: "Yes. A small needle is used to make one tiny entry point before the cannula is inserted."
                 },
                 {
-                  question: "Can I ask my provider which they'll use?",
-                  answer: "Absolutely! Your provider should explain their technique and why they think it's best for your goals."
+                  question: "Can I ask my provider which they&apos;ll use?",
+                  answer: "Absolutely! Your provider should explain their technique and why they think it&apos;s best for your goals."
                 },
                 {
                   question: "Which gives more natural results?",
-                  answer: "Both can look natural when done well. It depends more on the provider's skill and your specific goals than the tool itself."
+                  answer: "Both can look natural when done well. It depends more on the provider&apos;s skill and your specific goals than the tool itself."
                 }
               ].map((faq, index) => (
                 <div key={index} style={{
@@ -546,7 +547,7 @@ export default function CannulaVsNeedle() {
               Related Guides
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '15px' }}>
-              <a href="/guides/lip-filler-101" style={{
+              <Link href="/guides/lip-filler-101" style={{
                 backgroundColor: '#f8f9ff',
                 border: '1px solid #667eea',
                 borderRadius: '8px',
@@ -556,8 +557,8 @@ export default function CannulaVsNeedle() {
                 fontWeight: '600'
               }}>
                 Complete Lip Filler Guide
-              </a>
-              <a href="/guides/lip-filler-recovery-timeline" style={{
+              </Link>
+              <Link href="/guides/lip-filler-recovery-timeline" style={{
                 backgroundColor: '#f8f9ff',
                 border: '1px solid #667eea',
                 borderRadius: '8px',
@@ -567,7 +568,7 @@ export default function CannulaVsNeedle() {
                 fontWeight: '600'
               }}>
                 Recovery Timeline Guide
-              </a>
+              </Link>
             </div>
           </section>
 
@@ -584,10 +585,10 @@ export default function CannulaVsNeedle() {
               Ready to Discuss Technique Options?
             </h3>
             <p style={{ fontSize: '1rem', marginBottom: '25px', opacity: '0.95' }}>
-              Find providers in Colorado who can explain their preferred techniques and help you choose what's best for your goals.
+              Find providers in Colorado who can explain their preferred techniques and help you choose what&apos;s best for your goals.
             </p>
             <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a
+              <Link
                 href="/#find-providers"
                 style={{
                   backgroundColor: 'white',
@@ -600,7 +601,7 @@ export default function CannulaVsNeedle() {
                 }}
               >
                 Browse Providers
-              </a>
+              </Link>
             </div>
           </div>
 

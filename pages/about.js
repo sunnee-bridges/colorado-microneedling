@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import Layout from '../components/Layout';
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
@@ -78,7 +79,7 @@ export default function About() {
         />
       </Head>
       <nav aria-label="Breadcrumb" style={{ margin: '12px 0', fontSize: 14 }}>
-        <a href="/" style={{ textDecoration: 'none', color: '#667eea' }}>Home</a>
+        <Link href="/" style={{ textDecoration: 'none', color: '#667eea' }}>Home</Link>
         <span style={{ margin: '0 8px', color: '#6c757d' }}>›</span>
         <span>About</span>
       </nav>
@@ -112,7 +113,7 @@ export default function About() {
               Find lip filler providers in Colorado and learn what questions to ask 
               when considering lip enhancement treatments.
             </p>
-            <a 
+            <Link 
               href="/#find-providers" 
               style={{
                 background: 'rgba(255,255,255,0.2)',
@@ -129,7 +130,7 @@ export default function About() {
               }}
             >
               Browse Directory
-            </a>
+            </Link>
           </div>
         </section>
 
@@ -225,7 +226,7 @@ export default function About() {
           </h3>
           <div style={{ color: '#856404', fontSize: '0.95rem', lineHeight: '1.6' }}>
             <p style={{ margin: '0 0 12px 0' }}>
-              <strong>Take your time with research.</strong> Don't rush into decisions. 
+              <strong>Take your time with research.</strong> Don&apos;t rush into decisions. 
               Take time to understand your options and feel comfortable with your choice.
             </p>
             <p style={{ margin: '0 0 12px 0' }}>
@@ -233,7 +234,7 @@ export default function About() {
               should be willing to discuss your concerns and explain the process thoroughly.
             </p>
             <p style={{ margin: '0' }}>
-              <strong>Trust your instincts.</strong> If something doesn't feel right 
+              <strong>Trust your instincts.</strong> If something doesn&apos;t feel right 
               during your consultation or research process, consider other options.
             </p>
           </div>
@@ -241,7 +242,7 @@ export default function About() {
 
         <h2>General Safety Information</h2>
         <p style={{ lineHeight: '1.6', margin: '20px 0' }}>
-          As with any cosmetic procedure, it's important to understand that lip enhancement 
+          As with any cosmetic procedure, it&apos;s important to understand that lip enhancement 
           treatments carry potential risks and side effects. We encourage you to discuss 
           these thoroughly with providers who can provide personalized 
           guidance based on your individual situation.

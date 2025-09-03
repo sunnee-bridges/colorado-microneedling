@@ -23,7 +23,6 @@ const HeartIcon = () => (
 );
 
 const LipFillerShapesGuide = () => {
-  const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
@@ -206,14 +205,8 @@ const LipFillerShapesGuide = () => {
   ];
 
   const filteredShapes = shapesData.filter(shape => {
-    const matchesSearch = searchTerm === '' || 
-      shape.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      shape.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      shape.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
     const matchesCategory = selectedCategory === 'all' || shape.category === selectedCategory;
-    
-    return matchesSearch && matchesCategory;
+    return matchesCategory;
   });
 
   const getPopularityColor = (popularity) => {
@@ -565,12 +558,12 @@ const LipFillerShapesGuide = () => {
           textAlign: 'center',
           margin: '40px 0'
         }}>
-          <h3 style={{ margin: '0 0 15px 0', fontSize: '1.8rem' }}>Ready to explore your options??</h3>
+          <h3 style={{ margin: '0 0 15px 0', fontSize: '1.8rem' }}>Ready to explore your options?</h3>
           <p style={{ fontSize: '1.1rem', margin: '0 0 25px 0', opacity: 0.9 }}>
             Connect with providers in our directory to discuss styles, suitability, and next steps.
           </p>
           <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a
+            <Link
               href="/#find-providers"
               style={{
                 backgroundColor: 'white',
@@ -584,8 +577,8 @@ const LipFillerShapesGuide = () => {
               }}
             >
               Browse Providers
-            </a>
-            <a
+            </Link>
+            <Link
               href="/lip-filler-faq"
               style={{
                 backgroundColor: 'transparent',
@@ -600,7 +593,7 @@ const LipFillerShapesGuide = () => {
               }}
             >
               Read More FAQs
-            </a>
+            </Link>
           </div>
         </div>
 

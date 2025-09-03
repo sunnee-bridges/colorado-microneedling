@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import ProviderCard from '../components/ProviderCard';
 import SearchFilter from '../components/SearchFilter';
 import providersData from '../data/providers.json';
-import { providerSlug, citySlug } from '../lib/slug';
+import { providerSlug } from '../lib/slug';
 
 const SITE_URL = 'https://your-domain.com'; // ← set your real domain
 
@@ -38,7 +38,7 @@ const slugifyCity = (s = '') =>
     providersData.providers.forEach(provider => {
       // Use provider.address.city instead of provider.city to match your JSON structure
       const city = provider.address?.city || provider.city || 'Unknown';
-      if(!city) returns;
+      if(!city) return;
       const key = slugifyCity(city);
       if (cityMap[key]) {
         cityMap[key].count += 1;

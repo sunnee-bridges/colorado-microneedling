@@ -1,5 +1,6 @@
 // pages/cities/[city].js
 import Head from 'next/head';
+import Link from 'next/link';
 import Layout from '../../components/Layout';
 import ProviderCard from '../../components/ProviderCard';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -110,19 +111,19 @@ export default function CityPage({ cityName, citySlug, providers, canonicalUrl, 
                   <React.Fragment key={slug}>
  
                       {humanizeSlug(slug)}
-                   
+                  
                     {i < nearby.length - 1 && <span style={{ color: '#6c757d' }}>•</span>}
                   </React.Fragment>
                 ))}
                 <span style={{ color: '#6c757d', marginLeft: 10 }}>|</span>
               </>
             )}
-            <a href="/lip-filler-faq" style={{ color: '#28a745', textDecoration: 'none', fontWeight: 600 }}>
+            <Link href="/lip-filler-faq" style={{ color: '#28a745', textDecoration: 'none', fontWeight: 600 }}>
               Lip Filler FAQ
-            </a>
-            <a href="/guides" style={{ color: '#28a745', textDecoration: 'none', fontWeight: 600 }}>
+            </Link>
+            <Link href="/guides" style={{ color: '#28a745', textDecoration: 'none', fontWeight: 600 }}>
               Educational Guides
-            </a>
+            </Link>
           </div>
         </section>
         {/* ---- End city intro ---- */}

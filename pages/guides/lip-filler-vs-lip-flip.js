@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function FillerVsLipFlip() {
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
@@ -9,13 +10,13 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
   return (
     <>
       <Head>
-        <title>Filler vs Lip Flip: What's the Difference, Results & How Long It Lasts</title>
+        <title>Filler vs Lip Flip: What&apos;s the Difference, Results &amp; How Long It Lasts</title>
         <meta name="description" content="Easy guide to lip filler vs lip flip—what they are, who they fit, recovery, and how long results last. Find the right option for your goals." />
         <meta name="keywords" content="lip filler vs lip flip, lip flip botox, lip augmentation options, lip enhancement comparison" />
         
         {/* Open Graph */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Filler vs Lip Flip: What's the Difference, Results & How Long It Lasts" />
+        <meta property="og:title" content="Filler vs Lip Flip: What&apos;s the Difference, Results &amp; How Long It Lasts" />
         <meta property="og:description" content="Easy guide to lip filler vs lip flip—what they are, who they fit, recovery, and duration." />
         <meta property="og:url" content={CANON} />
         <meta property="og:image" content={OG_IMG} />
@@ -24,7 +25,7 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Filler vs Lip Flip: What's the Difference, Results & How Long It Lasts" />
+        <meta name="twitter:title" content="Filler vs Lip Flip: What&apos;s the Difference, Results &amp; How Long It Lasts" />
         <meta name="twitter:description" content="Understand the difference between lip fillers and lip flips—plus how to choose for your goals." />
         <meta name="twitter:image" content={OG_IMG} />
         <link rel="canonical" href="https://yourdomain.com/guides/filler-vs-lip-flip" />
@@ -97,9 +98,9 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
       <Layout title="Filler vs Lip Flip: Complete Comparison Guide | Colorado Directory">
         {/* Breadcrumbs */}
           <nav style={{ margin: '20px 0', fontSize: '14px', color: '#6c757d' }}>
-            <a href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</a>
+            <Link href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</Link>
             <span style={{ margin: '0 8px' }}>›</span>
-            <a href="/guides" style={{ color: '#667eea', textDecoration: 'none' }}>Guides</a>
+            <Link href="/guides" style={{ color: '#667eea', textDecoration: 'none' }}>Guides</Link>
             <span style={{ margin: '0 8px' }}>›</span>
             <span>Filler vs Lip Flip</span>
           </nav>
@@ -131,7 +132,7 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
                 marginBottom: '25px',
                 lineHeight: '1.5'
               }}>
-                Easy guide to understanding the difference between lip fillers and lip flips—plus how to choose what's best for your goals.
+                Easy guide to understanding the difference between lip fillers and lip flips—plus how to choose what&apos;s best for your goals.
               </p>
             </div>
           </section>
@@ -211,7 +212,7 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
                 margin: '0 0 15px 0',
                 color: '#333'
               }}>
-                A lip flip uses a tiny amount of muscle relaxer (often called "Botox") injected around your top lip. It relaxes the muscle so the lip rolls out a bit. This makes more of your top lip show without adding any gel or volume.
+                A lip flip uses a tiny amount of muscle relaxer (often called &ldquo;Botox&rdquo;) injected around your top lip. It relaxes the muscle so the lip rolls out a bit. This makes more of your top lip show without adding any gel or volume.
               </p>
               <div style={{
                 backgroundColor: '#28a745',
@@ -411,7 +412,7 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
                 <h4 style={{ color: '#495057', marginBottom: '12px' }}>Aftercare (First Day or Two)</h4>
                 <ul style={{ fontSize: '0.9rem', lineHeight: '1.5', paddingLeft: '20px', margin: 0, color: '#555' }}>
                   <li style={{ marginBottom: '5px' }}>Use ice with a clean cloth</li>
-                  <li style={{ marginBottom: '5px' }}>Don't rub your lips</li>
+                  <li style={{ marginBottom: '5px' }}>Don&apos;t rub your lips</li>
                   <li style={{ marginBottom: '5px' }}>Sleep with your head elevated</li>
                   <li>Skip hard exercise for one day</li>
                 </ul>
@@ -556,7 +557,7 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
                 <div>
                   <h4 style={{ color: '#004085', marginBottom: '8px' }}>Clear Communication</h4>
                   <p style={{ margin: 0, fontSize: '0.9rem', color: '#004085' }}>
-                    They explain risks, aftercare, and have a plan if there's a problem
+                    They explain risks, aftercare, and have a plan if there&apos;s a problem
                   </p>
                 </div>
                 <div>
@@ -579,7 +580,7 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
               Related Guides
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '15px' }}>
-              <a href="/guides/lip-filler-101" style={{
+              <Link href="/guides/lip-filler-101" style={{
                 backgroundColor: '#f8f9ff',
                 border: '1px solid #667eea',
                 borderRadius: '8px',
@@ -589,8 +590,8 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
                 fontWeight: '600'
               }}>
                 Complete Lip Filler Guide
-              </a>
-              <a href="/guides/lip-filler-recovery-timeline" style={{
+              </Link>
+              <Link href="/guides/lip-filler-recovery-timeline" style={{
                 backgroundColor: '#f8f9ff',
                 border: '1px solid #667eea',
                 borderRadius: '8px',
@@ -600,7 +601,7 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
                 fontWeight: '600'
               }}>
                 Recovery Timeline Guide
-              </a>
+              </Link>
             </div>
           </section>
 
@@ -620,7 +621,7 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
               Find providers offering lip enhancement services in Colorado and learn how to verify their credentials.
             </p>
             <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a
+              <Link
                 href="/#find-providers"
                 style={{
                   backgroundColor: 'white',
@@ -633,7 +634,7 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
                 }}
               >
                 Browse Providers
-              </a>
+              </Link>
             </div>
           </div>
 

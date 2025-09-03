@@ -1,15 +1,17 @@
 import React from 'react';
+import Link from 'next/link';
 import Layout from '../../components/Layout';
 import Head from 'next/head';
 
 export default function LipFillerCosts() {
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-const CANON = `${SITE_URL.replace(/\/$/,'')}/guides/cost-breakdown`;
-const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-costs-1200x630.jpg`; // add this image
+  const CANON = `${SITE_URL.replace(/\/$/,'')}/guides/cost-breakdown`;
+  const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-costs-1200x630.jpg`; // add this image
+  
   return (
     <>
       <Head>
-         <title>Lip Filler Costs: Simple Guide to Prices & How Pricing Works</title>
+        <title>Lip Filler Costs: Simple Guide to Prices & How Pricing Works</title>
         <meta name="description" content="Easy guide to lip filler costs—how providers price, what affects the price, questions to ask, and ways to save. Get the full picture before you book." />
         <link rel="canonical" href={CANON} />
         <meta name="robots" content="index,follow" />
@@ -29,72 +31,68 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-costs-1200x630.j
         <meta name="twitter:description" content="Easy breakdown of lip filler pricing with FAQs and a simple cost worksheet." />
         <meta name="twitter:image" content={OG_IMG} />
         
-        
-       {/* Article */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{
-        __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": "Lip Filler Costs: Simple Guide to Prices & How Pricing Works",
-          "description": "Plain-language guide to lip filler costs: how providers price, what changes the price, questions to ask, and safe ways to save.",
-          "mainEntityOfPage": { "@type": "WebPage", "@id": CANON },
-          "image": [ OG_IMG ],
-          "author": { "@type": "Organization", "name": "Colorado Lip Enhancement Directory" },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Colorado Lip Enhancement Directory",
-            "logo": { "@type": "ImageObject", "url": `${SITE_URL}/images/logo-600x60.png` }
-          },
-          "datePublished": "2025-08-20",
-          "dateModified": "2025-08-20",
-          "articleSection": "Guides"
-        })
-      }} />
+        {/* Article */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Lip Filler Costs: Simple Guide to Prices & How Pricing Works",
+            "description": "Plain-language guide to lip filler costs: how providers price, what changes the price, questions to ask, and safe ways to save.",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": CANON },
+            "image": [ OG_IMG ],
+            "author": { "@type": "Organization", "name": "Colorado Lip Enhancement Directory" },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Colorado Lip Enhancement Directory",
+              "logo": { "@type": "ImageObject", "url": `${SITE_URL}/images/logo-600x60.png` }
+            },
+            "datePublished": "2025-08-20",
+            "dateModified": "2025-08-20",
+            "articleSection": "Guides"
+          })
+        }} />
 
-    {/* Breadcrumbs */}
-    <script type="application/ld+json" dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type":"ListItem", "position":1, "name":"Home", "item": SITE_URL },
-          { "@type":"ListItem", "position":2, "name":"Guides", "item": `${SITE_URL}/guides` },
-          { "@type":"ListItem", "position":3, "name":"Lip Filler Costs", "item": CANON }
-        ]
-      })
-    }} />
+        {/* Breadcrumbs */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type":"ListItem", "position":1, "name":"Home", "item": SITE_URL },
+              { "@type":"ListItem", "position":2, "name":"Guides", "item": `${SITE_URL}/guides` },
+              { "@type":"ListItem", "position":3, "name":"Lip Filler Costs", "item": CANON }
+            ]
+          })
+        }} />
 
-    {/* FAQ — must match on-page Q&A exactly (your 6 items) */}
-    <script type="application/ld+json" dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          { "@type":"Question","name":"Is cheaper always worse?","acceptedAnswer":{"@type":"Answer","text":"Not always. But make sure the provider is qualified and the setting is safe. Price shouldn't be your only consideration—safety comes first."}},
-          { "@type":"Question","name":"Does more filler always look better?","acceptedAnswer":{"@type":"Answer","text":"No. The best look is the right amount for you. More isn't always better, and you can always add more later."}},
-          { "@type":"Question","name":"Can I start small?","acceptedAnswer":{"@type":"Answer","text":"Yes! Many people start with a small amount and add more later if they want. This is often a smart approach."}},
-          { "@type":"Question","name":"Should I shop around for price?","acceptedAnswer":{"@type":"Answer","text":"Yes, but compare the whole package—not just price. Look at provider background, safety, location, and what's included."}},
-          { "@type":"Question","name":"Do I have to pay everything upfront?","acceptedAnswer":{"@type":"Answer","text":"Many providers offer payment plans or financing options. Ask about this during your consultation."}},
-          { "@type":"Question","name":"What if I don't like the results?","acceptedAnswer":{"@type":"Answer","text":"Ask about the provider's policy on touch-ups and whether they charge extra. Also make sure they have appropriate protocols for complications."}}
-        ]
-      })
-    }} />
-
+        {/* FAQ — must match on-page Q&A exactly (your 6 items) */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type":"Question","name":"Is cheaper always worse?","acceptedAnswer":{"@type":"Answer","text":"Not always. But make sure the provider is qualified and the setting is safe. Price shouldn't be your only consideration—safety comes first."}},
+              { "@type":"Question","name":"Does more filler always look better?","acceptedAnswer":{"@type":"Answer","text":"No. The best look is the right amount for you. More isn't always better, and you can always add more later."}},
+              { "@type":"Question","name":"Can I start small?","acceptedAnswer":{"@type":"Answer","text":"Yes! Many people start with a small amount and add more later if they want. This is often a smart approach."}},
+              { "@type":"Question","name":"Should I shop around for price?","acceptedAnswer":{"@type":"Answer","text":"Yes, but compare the whole package—not just price. Look at provider background, safety, location, and what's included."}},
+              { "@type":"Question","name":"Do I have to pay everything upfront?","acceptedAnswer":{"@type":"Answer","text":"Many providers offer payment plans or financing options. Ask about this during your consultation."}},
+              { "@type":"Question","name":"What if I don't like the results?","acceptedAnswer":{"@type":"Answer","text":"Ask about the provider's policy on touch-ups and whether they charge extra. Also make sure they have appropriate protocols for complications."}}
+            ]
+          })
+        }} />
       </Head>
       
       <Layout title="Lip Filler Costs: Simple Pricing Guide | Colorado Directory">
-                {/* Breadcrumbs */}
-          <nav style={{ margin: '20px 0', fontSize: '14px', color: '#6c757d' }}>
-            <a href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</a>
-            <span style={{ margin: '0 8px' }}>›</span>
-            <a href="/guides" style={{ color: '#667eea', textDecoration: 'none' }}>Guides</a>
-            <span style={{ margin: '0 8px' }}>›</span>
-            <span>Lip Filler Costs</span>
-          </nav>
+        {/* Breadcrumbs */}
+        <nav style={{ margin: '20px 0', fontSize: '14px', color: '#6c757d' }}>
+          <Link href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</Link>
+          <span style={{ margin: '0 8px' }}>›</span>
+          <Link href="/guides" style={{ color: '#667eea', textDecoration: 'none' }}>Guides</Link>
+          <span style={{ margin: '0 8px' }}>›</span>
+          <span>Lip Filler Costs</span>
+        </nav>
+        
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-          
-
-
           {/* Header */}
           <section style={{
             background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -296,7 +294,7 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-costs-1200x630.j
                     borderRadius: '8px',
                     fontSize: '0.95rem'
                   }}>
-                    "{question}"
+                    &ldquo;{question}&rdquo;
                   </div>
                 ))}
               </div>
@@ -551,7 +549,7 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-costs-1200x630.j
               Related Guides
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '15px' }}>
-              <a href="/guides/lip-filler-101" style={{
+              <Link href="/guides/lip-filler-101" style={{
                 backgroundColor: '#f8f9ff',
                 border: '1px solid #667eea',
                 borderRadius: '8px',
@@ -561,8 +559,8 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-costs-1200x630.j
                 fontWeight: '600'
               }}>
                 Complete Lip Filler Guide
-              </a>
-              <a href="/guides/lip-filler-vs-lip-flip" style={{
+              </Link>
+              <Link href="/guides/lip-filler-vs-lip-flip" style={{
                 backgroundColor: '#f8f9ff',
                 border: '1px solid #667eea',
                 borderRadius: '8px',
@@ -572,7 +570,7 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-costs-1200x630.j
                 fontWeight: '600'
               }}>
                 Lip Filler vs Lip Flip Guide
-              </a>
+              </Link>
             </div>
           </section>
 
@@ -592,7 +590,7 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-costs-1200x630.j
               Find providers in Colorado and get transparent pricing information. Remember to verify credentials independently.
             </p>
             <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a
+              <Link
                 href="/#find-providers"
                 style={{
                   backgroundColor: 'white',
@@ -605,7 +603,7 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-costs-1200x630.j
                 }}
               >
                 Browse Providers
-              </a>
+              </Link>
             </div>
           </div>
 
