@@ -4,9 +4,6 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-  [plugins.inputs]
-    # Downgrade to v4 to avoid the forms migration issue
-    version = "4.41.3"
 
 [build.environment]
   NODE_VERSION = "18"
