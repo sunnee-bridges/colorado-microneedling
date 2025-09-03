@@ -176,7 +176,7 @@ export default function Contact() {
                   value={formData.subject}
                   onChange={handleInputChange}
                   required
-                  style={{ width: '100%', padding: '10px', border: '1px solid '#ced4da', borderRadius: '6px' }}
+                  style={{ width: '100%', padding: '10px', border: '1px solid #ced4da', borderRadius: '6px' }}
                 />
               </div>
 
