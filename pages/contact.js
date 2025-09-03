@@ -37,45 +37,44 @@ export default function Contact() {
       .join('&');
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (emailError) return;
-    setIsSubmitting(true);
+  e.preventDefault();
+  if (emailError) return;
+  setIsSubmitting(true);
 
-    try {
-      // Important: include "form-name" in the payload
-      const payload = {
-        'form-name': 'contact',
-        ...formData
-      };
+  try {
+    const payload = {
+      'form-name': 'contact',
+      ...formData
+    };
 
-      const res = await fetch('/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode(payload),
-      });
+    // Post to the current page, not /contact
+    const res = await fetch('/', {  // Changed from '/contact' to '/'
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode(payload),
+    });
 
-      if (res.ok) {
-        setSubmitStatus('success');
-        setIsSubmitting(false);
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: '',
-          inquiryType: 'general',
-          'bot-field': ''
-        });
-        router.push('/contact/thanks');
-      } else {
-        throw new Error('Submission failed');
-      }
-    } catch (err) {
+    if (res.ok) {
+      setSubmitStatus('success');
       setIsSubmitting(false);
-      setSubmitStatus('error');
-      console.error(err);
-      // optionally show a toast/UI error here
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+        inquiryType: 'general',
+        'bot-field': ''
+      });
+      router.push('/contact/thanks');
+    } else {
+      throw new Error('Submission failed');
     }
-  };
+  } catch (err) {
+    setIsSubmitting(false);
+    setSubmitStatus('error');
+    console.error(err);
+  }
+};
 
   return (
     <Layout title="Contact Us - Colorado Lip Fillers Directory">
