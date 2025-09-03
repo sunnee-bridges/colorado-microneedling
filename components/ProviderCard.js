@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 
 export default function ProviderCard({
@@ -39,7 +39,7 @@ export default function ProviderCard({
       return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addressText)}`;
     }
     return null;
-  }, [provider?.google?.mapsUrl, provider?.google?.fallbackUrl, addressText]);
+  }, [provider, addressText]);
 
   // Early return after all hooks
   if (!provider) return null;
