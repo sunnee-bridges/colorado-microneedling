@@ -7,7 +7,7 @@ import SearchFilter from '../components/SearchFilter';
 import providersData from '../data/providers.json';
 import { providerSlug } from '../lib/slug';
 
-const SITE_URL = 'https://your-domain.com'; // ← set your real domain
+const SITE_URL = 'https://findlipfillers.com'; // ← set your real domain
 
 export default function Home() {
 

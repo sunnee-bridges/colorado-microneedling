@@ -2,7 +2,7 @@
 import data from '../data/providers.json';
 import { providerSlug, citySlug } from '../lib/slug';
 
-const SITE_URL = 'https://your-domain.com';
+const SITE_URL = 'https://findlipfillers.com';
 
 export default function Sitemap() { /* SSR only */ }
 export async function getServerSideProps({ res }) {
