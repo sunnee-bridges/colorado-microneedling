@@ -7,12 +7,12 @@ module.exports = {
   additionalSitemaps: [],
     // Add this section to manually include static pages
   additionalPaths: async (config) => [
-    await config.transform(config, '/faq'),
-    await config.transform(config, '/lip-filler-faq'),
-    await config.transform(config, '/shapes'),
-    await config.transform(config, '/guides'),
-    await config.transform(config, '/about'),
-    await config.transform(config, '/contact'),
+    '/faq',
+    '/lip-filler-faq',
+    '/shapes',
+    '/guides',
+     '/about',
+    '/contact',
   ],
   transform: async (config, path) => {
     const isHome            = path === '/';
