@@ -5,6 +5,15 @@ module.exports = {
   sitemapSize: 5000,
   exclude: ['/contact/thanks'], // keep the thank-you page out of the index
   additionalSitemaps: [],
+    // Add this section to manually include static pages
+  additionalPaths: async (config) => [
+    await config.transform(config, '/faq'),
+    await config.transform(config, '/lip-filler-faq'),
+    await config.transform(config, '/shapes'),
+    await config.transform(config, '/guides'),
+    await config.transform(config, '/about'),
+    await config.transform(config, '/contact'),
+  ],
   transform: async (config, path) => {
     const isHome            = path === '/';
     const isFAQ             = path === '/lip-filler-faq' || path === '/faq';
