@@ -246,7 +246,7 @@ const ExpertQuote = ({ expertQuote }) => {
       padding: '15px'
     }}>
       <p style={{ margin: '0 0 8px 0', fontSize: '14px', lineHeight: '1.5' }}>
-        "{expertQuote.text}"
+         &ldquo;{expertQuote.text}&rdquo;
       </p>
       <cite style={{ 
         fontSize: '12px', 
