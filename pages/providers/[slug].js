@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 import ProviderCard from '../../components/ProviderCard';
 import data from '../../data/providers.json';
-import { providerSlug, useMemo} from '../../lib/slug';
+import { providerSlug } from '../../lib/slug';
 
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000').replace(/\/$/, '');
 
