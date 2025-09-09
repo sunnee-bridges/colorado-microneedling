@@ -119,6 +119,74 @@ const getAnswerStats = (answer) => {
   return { wordCount, readTime };
 };
 
+const getWarningStyle = (level) => {
+  const styles = {
+    high: { 
+      background: '#fff5f5', 
+      border: '2px solid #f56565',
+      borderRadius: '8px',
+      padding: '12px',
+      margin: '10px 0'
+    },
+    medium: { 
+      background: '#fffbf0', 
+      border: '2px solid #ed8936',
+      borderRadius: '8px',
+      padding: '12px',
+      margin: '10px 0'
+    },
+    low: { 
+      background: '#f0fff4', 
+      border: '2px solid #68d391',
+      borderRadius: '8px',
+      padding: '12px',
+      margin: '10px 0'
+    }
+  };
+  return styles[level] || {};
+};
+
+const getWarningIcon = (level) => {
+  const icons = {
+    high: '⚠️',
+    medium: '⚡',
+    low: 'ℹ️'
+  };
+  return icons[level] || '';
+};
+
+const getWarningText = (level) => {
+  const text = {
+    high: 'Important Safety Warning',
+    medium: 'Safety Consideration',
+    low: 'Helpful Tip'
+  };
+  return text[level] || '';
+};
+
+const WarningBanner = ({ warningLevel, children }) => {
+  if (!warningLevel || warningLevel === 'none') return null;
+  
+  return (
+    <div style={getWarningStyle(warningLevel)}>
+      <div style={{ 
+        display: 'flex', 
+        alignItems: 'center', 
+        gap: '8px',
+        marginBottom: '8px',
+        fontWeight: '600',
+        fontSize: '14px'
+      }}>
+        <span>{getWarningIcon(warningLevel)}</span>
+        <span>{getWarningText(warningLevel)}</span>
+      </div>
+      <div style={{ fontSize: '13px', lineHeight: '1.4' }}>
+        {children}
+      </div>
+    </div>
+  );
+};
+
 // Add this component definition
 const RelatedQuestions = ({ relatedQuestions, toggleExpanded, faqData }) => {
   if (!relatedQuestions || relatedQuestions.length === 0) return null;
@@ -270,6 +338,7 @@ const faqData = [
     sourcesVerified: true,
     factChecked: true,
     relatedQuestions: [4, 7, 9],
+    warningLevel: 'low',
     expertQuote: {
       text: "Most patients tolerate lip filler injections well with appropriate pain management techniques including topical anesthetics",
       source: "American Society for Dermatologic Surgery"
@@ -308,6 +377,7 @@ const faqData = [
     lastUpdated: '2024-12-10',
     sourcesVerified: true,
     factChecked: true,
+    warningLevel: 'none',
     expertQuote: {
       text: "Hyaluronic acid fillers typically provide results lasting 6-18 months depending on the product and individual metabolic factors",
       source: "FDA Guidance on Dermal Fillers"
@@ -352,6 +422,7 @@ const faqData = [
     lastUpdated: '2024-12-08',
     sourcesVerified: true,
     factChecked: true,
+    warningLevel: 'high',
     relatedQuestions: [6, 12, 14],
     sources: [
       { 
@@ -391,6 +462,7 @@ const faqData = [
     lastUpdated: '2024-12-12',
     sourcesVerified: true,
     factChecked: true,
+    warningLevel: 'low',
     relatedQuestions: [1, 7, 8],
     sources: [
       { 
@@ -436,6 +508,7 @@ const faqData = [
     lastUpdated: '2024-12-14',
     sourcesVerified: true,
     factChecked: true,
+    warningLevel: 'none',
     relatedQuestions: [2, 13, 6],
     sources: [
       { 
@@ -480,6 +553,7 @@ const faqData = [
     lastUpdated: '2024-12-11',
     sourcesVerified: true,
     factChecked: false,
+    warningLevel: 'medium',
     relatedQuestions: [3, 11, 12],
     sources: [
       { 
@@ -518,6 +592,7 @@ const faqData = [
     lastUpdated: '2024-12-09',
     sourcesVerified: true,
     factChecked: true,
+    warningLevel: 'low',
     relatedQuestions: [1, 4, 8],
     sources: [
       { 
@@ -570,6 +645,7 @@ const faqData = [
     lastUpdated: '2024-12-13',
     sourcesVerified: true,
     factChecked: true,
+    warningLevel: 'low',
     relatedQuestions: [1, 4, 7],
     sources: [
       { 
@@ -609,6 +685,7 @@ const faqData = [
     lastUpdated: '2024-12-07',
     sourcesVerified: true,
     factChecked: true,
+    warningLevel: 'none',
     relatedQuestions: [2, 22, 16],
     sources: [
       { 
@@ -653,6 +730,7 @@ const faqData = [
     lastUpdated: '2024-12-06',
     sourcesVerified: true,
     factChecked: true,
+    warningLevel: 'none',
     relatedQuestions: [2, 14, 15],
     sources: [
       { 
@@ -699,6 +777,7 @@ const faqData = [
     lastUpdated: '2024-12-05',
     sourcesVerified: true,
     factChecked: false,
+    warningLevel: 'none',
     relatedQuestions: [6, 12, 14],
     sources: [
       { 
@@ -746,6 +825,7 @@ const faqData = [
     lastUpdated: '2024-12-14',
     sourcesVerified: true,
     factChecked: true,
+    warningLevel: 'high',
     relatedQuestions: [3, 6, 15],
     sources: [
       { 
@@ -792,6 +872,7 @@ const faqData = [
     lastUpdated: '2024-12-10',
     sourcesVerified: true,
     factChecked: true,
+    warningLevel: 'none',
     relatedQuestions: [17, 18, 19],
     sources: [
       { 
@@ -843,6 +924,7 @@ const faqData = [
     lastUpdated: '2024-12-08',
     sourcesVerified: true,
     factChecked: true,
+    warningLevel: 'medium',
     relatedQuestions: [10, 12, 15],
     sources: [
       { 
@@ -888,6 +970,7 @@ const faqData = [
     lastUpdated: '2024-12-12',
     sourcesVerified: true,
     factChecked: true,
+    warningLevel: 'medium',
     relatedQuestions: [12, 14, 13],
     sources: [
       { 
@@ -937,6 +1020,7 @@ const faqData = [
     lastUpdated: '2024-12-04',
     sourcesVerified: true,
     factChecked: false,
+    warningLevel: 'none',
     relatedQuestions: [9, 22, 11],
     sources: [
       { 
@@ -990,6 +1074,7 @@ const faqData = [
     lastUpdated: '2024-12-13',
     sourcesVerified: true,
     factChecked: true,
+    warningLevel: 'none',
     relatedQuestions: [13, 18, 2],
     sources: [
       { 
@@ -1046,6 +1131,7 @@ const faqData = [
     lastUpdated: '2024-12-11',
     sourcesVerified: true,
     factChecked: true,
+    warningLevel: 'none',
     relatedQuestions: [13, 17, 19],
     sources: [
       { 
@@ -1108,6 +1194,7 @@ const faqData = [
     lastUpdated: '2024-12-09',
     sourcesVerified: true,
     factChecked: true,
+    warningLevel: 'none',
     relatedQuestions: [13, 17, 18],
     sources: [
       { 
@@ -1174,6 +1261,7 @@ const faqData = [
     lastUpdated: '2024-12-07',
     sourcesVerified: true,
     factChecked: false,
+    warningLevel: 'none',
     relatedQuestions: [13, 17, 18],
     sources: [
       { 
@@ -1241,6 +1329,7 @@ const faqData = [
     lastUpdated: '2024-12-06',
     sourcesVerified: true,
     factChecked: false,
+    warningLevel: 'none',
     relatedQuestions: [13, 17, 18],
     sources: [
       { 
@@ -1309,6 +1398,7 @@ const faqData = [
     lastUpdated: '2024-12-15',
     sourcesVerified: true,
     factChecked: true,
+    warningLevel: 'none',
     relatedQuestions: [2, 9, 16],
     sources: [
       { 
@@ -1791,6 +1881,13 @@ Check out our complete Lip Filler Shapes Guide with detailed descriptions and ex
               {/* Answer Content */}
               {expandedItems.has(faq.id) && (
                 <div style={{ padding: '20px', lineHeight: '1.6', color: '#495057' }}>
+
+                  <WarningBanner warningLevel={faq.warningLevel}>
+                    {faq.warningLevel === 'high' && "This procedure has specific medical contraindications. Always consult qualified healthcare providers."}
+                    {faq.warningLevel === 'medium' && "Important safety considerations apply. Ensure you choose qualified practitioners."}
+                    {faq.warningLevel === 'low' && "Following proper aftercare guidelines helps ensure optimal results."}
+                  </WarningBanner>
+
                   {formatAnswer(faq.answer)}
 
                   {/* ADD THIS - Expert Quote Component */}
