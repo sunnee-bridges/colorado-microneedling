@@ -605,25 +605,31 @@ export default function CannulaVsNeedle() {
             </div>
           </div>
 
-          {/* Disclaimer */}
+              {/* Comprehensive Legal Disclaimer */}
           <div style={{
             backgroundColor: '#f8f9fa',
-            border: '1px solid #dee2e6',
+            border: '2px solid #6c757d',
             borderRadius: '8px',
-            padding: '25px',
+            padding: '30px',
             textAlign: 'center'
           }}>
-            <h4 style={{ margin: '0 0 12px 0', fontSize: '1rem', fontWeight: '600', color: '#495057' }}>
-              Important Note
+            <h4 style={{ margin: '0 0 15px 0', fontSize: '1.1rem', fontWeight: '600', color: '#495057' }}>
+              Important Legal and Medical Disclaimer
             </h4>
-            <p style={{ 
-              margin: '0', 
-              fontSize: '0.9rem', 
-              color: '#6c757d',
-              lineHeight: '1.6'
-            }}>
-              This guide is for general information only and is not medical advice. Your provider will choose the best technique based on your specific goals and anatomy. Always verify provider credentials independently and follow their specific instructions.
-            </p>
+            <div style={{ textAlign: 'left', fontSize: '0.9rem', color: '#6c757d', lineHeight: '1.6' }}>
+              <p style={{ margin: '0 0 15px 0' }}>
+                <strong>Educational Content Only:</strong> This guide provides general educational information about cosmetic procedures and should not be considered medical advice. Individual results, risks, and suitability vary significantly based on anatomy, medical history, and other factors.
+              </p>
+              <p style={{ margin: '0 0 15px 0' }}>
+                <strong>Professional Consultation Required:</strong> Always consult with board-certified healthcare providers to discuss whether these treatments are appropriate for your specific medical situation and aesthetic goals. This content does not establish a doctor-patient relationship.
+              </p>
+              <p style={{ margin: '0 0 15px 0' }}>
+                <strong>Verify Provider Credentials:</strong> Independently verify all provider qualifications through official state medical board databases and professional associations before scheduling any procedures. The listing or mention of providers does not constitute endorsement.
+              </p>
+              <p style={{ margin: 0 }}>
+                <strong>No Guarantees:</strong> Treatment outcomes cannot be guaranteed. All cosmetic procedures carry risks including but not limited to infection, scarring, asymmetry, nerve damage, and unsatisfactory results. Carefully review informed consent documentation before proceeding with any treatment.
+              </p>
+            </div>
           </div>
         </div>
       </Layout>

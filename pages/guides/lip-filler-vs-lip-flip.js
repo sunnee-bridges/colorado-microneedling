@@ -5,108 +5,195 @@ import Link from 'next/link';
 
 export default function FillerVsLipFlip() {
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-const CANON = `${SITE_URL.replace(/\/$/,'')}/guides/lip-filler-vs-lip-flip`;
-const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200x630.jpg`; // add this file
+  const CANON = `${SITE_URL.replace(/\/$/,'')}/guides/lip-filler-vs-lip-flip`;
+  const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200x630.jpg`;
+  
   return (
     <>
       <Head>
-        <title>Filler vs Lip Flip: What&apos;s the Difference, Results &amp; How Long It Lasts</title>
-        <meta name="description" content="Easy guide to lip filler vs lip flip—what they are, who they fit, recovery, and how long results last. Find the right option for your goals." />
-        <meta name="keywords" content="lip filler vs lip flip, lip flip botox, lip augmentation options, lip enhancement comparison" />
+        <title>Lip Filler vs Lip Flip 2025: Which Treatment Lasts Longer? Complete Comparison</title>
+        <meta name="description" content="Compare lip filler vs lip flip treatments - duration, results, cost factors, and which is better for your goals. Learn how long each lasts and if you can combine them." />
+        <meta name="keywords" content="lip filler vs lip flip, how long does lip flip last, lip flip vs filler which is better, can you do lip flip and filler together, lip filler vs botox lip flip, which lasts longer lip filler or lip flip" />
         
         {/* Open Graph */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Filler vs Lip Flip: What&apos;s the Difference, Results &amp; How Long It Lasts" />
-        <meta property="og:description" content="Easy guide to lip filler vs lip flip—what they are, who they fit, recovery, and duration." />
+        <meta property="og:title" content="Lip Filler vs Lip Flip 2025: Which Treatment Lasts Longer?" />
+        <meta property="og:description" content="Complete comparison of lip filler vs lip flip - duration, results, cost factors, and expert guidance on choosing the right treatment." />
         <meta property="og:url" content={CANON} />
         <meta property="og:image" content={OG_IMG} />
         <meta property="article:published_time" content="2025-08-20" />
-        <meta property="article:modified_time" content="2025-08-20" />
+        <meta property="article:modified_time" content="2025-09-10" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Filler vs Lip Flip: What&apos;s the Difference, Results &amp; How Long It Lasts" />
-        <meta name="twitter:description" content="Understand the difference between lip fillers and lip flips—plus how to choose for your goals." />
+        <meta name="twitter:title" content="Lip Filler vs Lip Flip: Which Lasts Longer?" />
+        <meta name="twitter:description" content="Complete comparison guide to help you choose between lip filler and lip flip treatments." />
         <meta name="twitter:image" content={OG_IMG} />
-        <link rel="canonical" href="https://yourdomain.com/guides/filler-vs-lip-flip" />
+        <link rel="canonical" href={CANON} />
         
-       {/* Article */}
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Filler vs Lip Flip: What's the Difference, Results & How Long It Lasts",
-    "description": "Easy guide to lip filler vs lip flip—what they are, who they fit, recovery, and result duration.",
-    "mainEntityOfPage": { "@type": "WebPage", "@id": CANON },
-    "image": [ OG_IMG ],
-    "author": { "@type": "Organization", "name": "Colorado Lip Enhancement Directory" },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Colorado Lip Enhancement Directory",
-      "logo": { "@type": "ImageObject", "url": `${SITE_URL}/images/logo-600x60.png` }
-    },
-    "datePublished": "2025-08-20",
-    "dateModified": "2025-08-20"
-  })
-}}/>
+        {/* Article Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Lip Filler vs Lip Flip 2025: Which Treatment Lasts Longer? Complete Comparison",
+            "description": "Complete comparison of lip filler vs lip flip treatments including duration, results, and guidance on choosing the right option.",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": CANON },
+            "image": [ OG_IMG ],
+            "author": { "@type": "Organization", "name": "Colorado Lip Enhancement Directory" },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Colorado Lip Enhancement Directory",
+              "logo": { "@type": "ImageObject", "url": `${SITE_URL}/images/logo-600x60.png` }
+            },
+            "datePublished": "2025-08-20",
+            "dateModified": "2025-09-10"
+          })
+        }}/>
 
-{/* Breadcrumbs */}
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type":"ListItem", "position":1, "name":"Home", "item": SITE_URL },
-      { "@type":"ListItem", "position":2, "name":"Guides", "item": `${SITE_URL}/guides` },
-      { "@type":"ListItem", "position":3, "name":"Filler vs Lip Flip", "item": CANON }
-    ]
-  })
-}}/>
+        {/* Breadcrumbs Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type":"ListItem", "position":1, "name":"Home", "item": SITE_URL },
+              { "@type":"ListItem", "position":2, "name":"Guides", "item": `${SITE_URL}/guides` },
+              { "@type":"ListItem", "position":3, "name":"Filler vs Lip Flip", "item": CANON }
+            ]
+          })
+        }}/>
 
-{/* FAQ — keep Q&A text exactly the same as on the page */}
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Does a lip flip add volume?",
-        "acceptedAnswer": { "@type": "Answer", "text": "No. A lip flip relaxes the muscle so the top lip rolls out and shows more, but it does not add gel or volume." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can lip filler be dissolved?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Many hyaluronic acid fillers can be dissolved with hyaluronidase by a trained provider." }
-      },
-      {
-        "@type": "Question",
-        "name": "How long do results last?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Lip filler can last months to about a year; a lip flip often lasts a few months." }
-      },
-      {
-        "@type": "Question",
-        "name": "Which is better: filler or lip flip?",
-        "acceptedAnswer": { "@type": "Answer", "text": "It depends on your goal. Choose filler for volume and shaping. Choose a lip flip for a subtle roll-out of the top lip. Some people do both." }
-      }
-    ]
-  })
-}}/>
+        {/* Comparison Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "about": [
+              {
+                "@type": "MedicalProcedure",
+                "name": "Lip Filler Treatment",
+                "description": "Cosmetic procedure involving injection of dermal fillers to enhance lip volume"
+              },
+              {
+                "@type": "MedicalProcedure", 
+                "name": "Lip Flip Treatment",
+                "description": "Cosmetic procedure using muscle relaxers to alter lip appearance"
+              }
+            ]
+          })
+        }}/>
 
+        {/* Enhanced FAQ Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How long does lip flip last vs filler?",
+                "acceptedAnswer": { 
+                  "@type": "Answer", 
+                  "text": "Lip flip results may last 2-4 months while lip filler results may last 6-12 months. Duration varies significantly between individuals based on metabolism, lifestyle, and treatment factors." 
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which is better: lip filler or lip flip?",
+                "acceptedAnswer": { 
+                  "@type": "Answer", 
+                  "text": "Treatment selection depends on individual goals and anatomy. Consult with qualified healthcare providers to determine which option may be appropriate for your specific situation." 
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can you do lip flip and filler together?",
+                "acceptedAnswer": { 
+                  "@type": "Answer", 
+                  "text": "Some providers may recommend combination treatments. This decision should be made in consultation with qualified medical professionals based on individual anatomy and goals." 
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does a lip flip add volume?",
+                "acceptedAnswer": { 
+                  "@type": "Answer", 
+                  "text": "Lip flip treatments are intended to alter muscle function rather than add volume. The appearance of increased lip prominence may result from muscle relaxation effects." 
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can lip filler be dissolved?",
+                "acceptedAnswer": { 
+                  "@type": "Answer", 
+                  "text": "Many hyaluronic acid-based fillers may be dissolved by qualified healthcare providers using appropriate enzymes. Discuss reversal options with your provider before treatment." 
+                }
+              }
+            ]
+          })
+        }}/>
+
+        {/* HowTo Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "name": "How to Choose Between Lip Filler and Lip Flip",
+            "description": "Step-by-step guide to comparing lip enhancement options",
+            "step": [
+              {
+                "@type": "HowToStep",
+                "name": "Assess Your Goals",
+                "text": "Determine whether you seek volume enhancement or subtle lip border changes"
+              },
+              {
+                "@type": "HowToStep",
+                "name": "Research Qualified Providers",
+                "text": "Verify provider credentials through official medical boards"
+              },
+              {
+                "@type": "HowToStep",
+                "name": "Schedule Consultations",
+                "text": "Consult with board-certified providers to discuss your specific anatomy and goals"
+              },
+              {
+                "@type": "HowToStep",
+                "name": "Review Informed Consent",
+                "text": "Understand all risks, benefits, and alternatives before making treatment decisions"
+              }
+            ]
+          })
+        }}/>
       </Head>
       
-      <Layout title="Filler vs Lip Flip: Complete Comparison Guide | Colorado Directory">
-        {/* Breadcrumbs */}
-          <nav style={{ margin: '20px 0', fontSize: '14px', color: '#6c757d' }}>
-            <Link href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</Link>
-            <span style={{ margin: '0 8px' }}>›</span>
-            <Link href="/guides" style={{ color: '#667eea', textDecoration: 'none' }}>Guides</Link>
-            <span style={{ margin: '0 8px' }}>›</span>
-            <span>Filler vs Lip Flip</span>
-          </nav>
-        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-          
+      <Layout title="Lip Filler vs Lip Flip Complete Comparison 2025 | Colorado Directory">
+        {/* Medical Disclaimer Banner */}
+        <div style={{
+          backgroundColor: '#fff3cd',
+          border: '2px solid #ffc107',
+          borderRadius: '8px',
+          padding: '20px',
+          marginBottom: '20px'
+        }}>
+          <h4 style={{ color: '#856404', marginBottom: '10px', fontSize: '1rem', fontWeight: '600' }}>
+            Important Medical Disclaimer
+          </h4>
+          <p style={{ margin: 0, fontSize: '0.9rem', color: '#856404', lineHeight: '1.5' }}>
+            This guide provides general educational information only and does not constitute medical advice. Individual results vary significantly. Always consult with board-certified healthcare providers to discuss whether these treatments are appropriate for your specific medical situation and aesthetic goals.
+          </p>
+        </div>
 
+        {/* Breadcrumbs */}
+        <nav style={{ margin: '20px 0', fontSize: '14px', color: '#6c757d' }}>
+          <Link href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</Link>
+          <span style={{ margin: '0 8px' }}>›</span>
+          <Link href="/guides" style={{ color: '#667eea', textDecoration: 'none' }}>Guides</Link>
+          <span style={{ margin: '0 8px' }}>›</span>
+          <span>Filler vs Lip Flip</span>
+        </nav>
+        
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           {/* Header */}
           <section style={{
             background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -124,7 +211,7 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
                 fontWeight: '700',
                 lineHeight: '1.2'
               }}>
-                Filler vs Lip Flip: Which Is Right for You?
+                Lip Filler vs Lip Flip 2025: Which Treatment Lasts Longer?
               </h1>
               <p style={{ 
                 fontSize: '1.2rem', 
@@ -132,12 +219,12 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
                 marginBottom: '25px',
                 lineHeight: '1.5'
               }}>
-                Easy guide to understanding the difference between lip fillers and lip flips—plus how to choose what&apos;s best for your goals.
+                Complete comparison guide to help you understand the differences, duration, and considerations for choosing between these lip enhancement options.
               </p>
             </div>
           </section>
 
-          {/* Quick Answer */}
+          {/* Quick Answer for Featured Snippets */}
           <div style={{
             backgroundColor: '#e7f3ff',
             border: '2px solid #007bff',
@@ -145,15 +232,27 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
             padding: '25px',
             marginBottom: '30px'
           }}>
-            <h3 style={{ color: '#004085', marginBottom: '15px', fontSize: '1.3rem' }}>The Short Answer</h3>
+            <h3 style={{ color: '#004085', marginBottom: '15px', fontSize: '1.3rem' }}>
+              How Long Does Lip Flip Last vs Filler?
+            </h3>
             <div style={{ fontSize: '1rem', color: '#004085', lineHeight: '1.6' }}>
-              <p style={{ margin: '0 0 10px 0' }}><strong>Lip filler</strong> adds volume and shape to your lips.</p>
-              <p style={{ margin: '0 0 10px 0' }}><strong>Lip flip</strong> makes your top lip roll out a little so more lip shows.</p>
-              <p style={{ margin: 0 }}>You can choose one, or sometimes use both together.</p>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '15px' }}>
+                <div>
+                  <p style={{ margin: '0 0 8px 0', fontWeight: '600' }}>Lip Filler Duration:</p>
+                  <p style={{ margin: '0 0 10px 0' }}>May last 6-12 months</p>
+                </div>
+                <div>
+                  <p style={{ margin: '0 0 8px 0', fontWeight: '600' }}>Lip Flip Duration:</p>
+                  <p style={{ margin: '0 0 10px 0' }}>May last 2-4 months</p>
+                </div>
+              </div>
+              <p style={{ margin: 0, fontSize: '0.9rem', fontStyle: 'italic' }}>
+                Duration varies significantly between individuals based on metabolism, lifestyle, and treatment factors.
+              </p>
             </div>
           </div>
 
-          {/* What is Lip Filler */}
+          {/* What is Lip Filler - Enhanced */}
           <section style={{ marginBottom: '40px' }}>
             <h2 style={{ 
               color: '#333', 
@@ -162,7 +261,7 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
               fontSize: '1.8rem',
               marginBottom: '25px'
             }}>
-              What Is Lip Filler?
+              What Is Lip Filler? (Hyaluronic Acid Treatment)
             </h2>
             <div style={{
               backgroundColor: '#f8f9ff',
@@ -176,7 +275,7 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
                 margin: '0 0 15px 0',
                 color: '#333'
               }}>
-                Lip filler is a soft gel that trained providers inject into your lips. Most lip fillers are made with hyaluronic acid (HA), a natural substance your body already makes. HA attracts water, which adds volume and shape to your lips. Your body slowly breaks it down over time.
+                Lip filler treatments involve the injection of gel substances, typically hyaluronic acid (HA), into lip tissue by qualified medical professionals. HA is a naturally occurring substance in the body that may attract moisture to potentially enhance lip volume and definition. Individual results vary significantly based on anatomy and treatment approach.
               </p>
               <div style={{
                 backgroundColor: '#667eea',
@@ -184,12 +283,14 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
                 padding: '15px',
                 borderRadius: '8px'
               }}>
-                <strong>Lip filler helps with:</strong> Fuller lips, smoothing lines around the mouth, fixing uneven sides
+                <strong>Lip filler may help with:</strong> Volume enhancement, border definition, asymmetry correction
+                <br />
+                <em style={{ fontSize: '0.9rem' }}>Individual results vary. Consult qualified providers for personalized assessment.</em>
               </div>
             </div>
           </section>
 
-          {/* What is Lip Flip */}
+          {/* What is Lip Flip - Enhanced */}
           <section style={{ marginBottom: '40px' }}>
             <h2 style={{ 
               color: '#333', 
@@ -198,7 +299,7 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
               fontSize: '1.8rem',
               marginBottom: '25px'
             }}>
-              What Is a Lip Flip?
+              What Is a Lip Flip? (Muscle Relaxer Treatment)
             </h2>
             <div style={{
               backgroundColor: '#f8fff8',
@@ -212,7 +313,7 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
                 margin: '0 0 15px 0',
                 color: '#333'
               }}>
-                A lip flip uses a tiny amount of muscle relaxer (often called &ldquo;Botox&rdquo;) injected around your top lip. It relaxes the muscle so the lip rolls out a bit. This makes more of your top lip show without adding any gel or volume.
+                A lip flip treatment involves the strategic injection of muscle relaxers (such as botulinum toxin) around the upper lip area by qualified medical professionals. The treatment is intended to relax certain muscles, which may cause the lip to appear more prominent without adding volume. Results and mechanisms can vary between individuals.
               </p>
               <div style={{
                 backgroundColor: '#28a745',
@@ -220,12 +321,14 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
                 padding: '15px',
                 borderRadius: '8px'
               }}>
-                <strong>Lip flip helps with:</strong> Showing more pink lip, softening a mild gummy smile
+                <strong>Lip flip may help with:</strong> Upper lip prominence, subtle lip border enhancement, gummy smile reduction
+                <br />
+                <em style={{ fontSize: '0.9rem' }}>Individual results vary. Not suitable for all patients. Medical consultation required.</em>
               </div>
             </div>
           </section>
 
-          {/* The Big Differences */}
+          {/* Detailed Duration Comparison */}
           <section style={{ marginBottom: '40px' }}>
             <h2 style={{ 
               color: '#333', 
@@ -234,49 +337,133 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
               fontSize: '1.8rem',
               marginBottom: '25px'
             }}>
-              Filler vs Lip Flip: The Big Differences
+              How Long Does Each Treatment Last? Complete Timeline
+            </h2>
+            
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '25px', marginBottom: '25px' }}>
+              <div style={{
+                backgroundColor: '#f8f9ff',
+                border: '2px solid #667eea',
+                borderRadius: '12px',
+                padding: '25px'
+              }}>
+                <h3 style={{ color: '#667eea', marginBottom: '15px', fontSize: '1.2rem' }}>Lip Filler Duration</h3>
+                <div style={{ marginBottom: '15px' }}>
+                  <h4 style={{ color: '#667eea', marginBottom: '8px', fontSize: '1rem' }}>Typical Duration Range:</h4>
+                  <p style={{ margin: '0 0 10px 0', fontWeight: '600' }}>6-12 months (individual variation)</p>
+                </div>
+                <div style={{ marginBottom: '15px' }}>
+                  <h4 style={{ color: '#667eea', marginBottom: '8px', fontSize: '1rem' }}>Factors Affecting Duration:</h4>
+                  <ul style={{ fontSize: '0.9rem', paddingLeft: '15px', margin: 0 }}>
+                    <li>Individual metabolism rate</li>
+                    <li>Filler type and brand used</li>
+                    <li>Amount of product injected</li>
+                    <li>Lip movement and lifestyle factors</li>
+                    <li>Provider technique and placement</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div style={{
+                backgroundColor: '#f8fff8',
+                border: '2px solid #28a745',
+                borderRadius: '12px',
+                padding: '25px'
+              }}>
+                <h3 style={{ color: '#28a745', marginBottom: '15px', fontSize: '1.2rem' }}>Lip Flip Duration</h3>
+                <div style={{ marginBottom: '15px' }}>
+                  <h4 style={{ color: '#28a745', marginBottom: '8px', fontSize: '1rem' }}>Typical Duration Range:</h4>
+                  <p style={{ margin: '0 0 10px 0', fontWeight: '600' }}>2-4 months (individual variation)</p>
+                </div>
+                <div style={{ marginBottom: '15px' }}>
+                  <h4 style={{ color: '#28a745', marginBottom: '8px', fontSize: '1rem' }}>Factors Affecting Duration:</h4>
+                  <ul style={{ fontSize: '0.9rem', paddingLeft: '15px', margin: 0 }}>
+                    <li>Individual response to muscle relaxers</li>
+                    <li>Muscle strength and activity level</li>
+                    <li>Product type and dosage</li>
+                    <li>Injection technique and placement</li>
+                    <li>Previous treatment history</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div style={{
+              backgroundColor: '#fff3cd',
+              border: '2px solid #ffc107',
+              borderRadius: '12px',
+              padding: '20px'
+            }}>
+              <h4 style={{ color: '#856404', marginBottom: '10px' }}>Which Lasts Longer: Lip Filler or Lip Flip?</h4>
+              <p style={{ margin: 0, color: '#856404', fontSize: '0.95rem', lineHeight: '1.5' }}>
+                Based on typical treatment patterns, lip filler results may last longer than lip flip results. However, individual experiences vary significantly. Some patients may experience shorter or longer durations for either treatment. Duration should not be the only factor in treatment selection - consult with qualified providers to discuss which option aligns with your goals and expectations.
+              </p>
+            </div>
+          </section>
+
+          {/* Enhanced Comparison Table */}
+          <section style={{ marginBottom: '40px' }}>
+            <h2 style={{ 
+              color: '#333', 
+              borderBottom: '3px solid #dc3545', 
+              paddingBottom: '10px',
+              fontSize: '1.8rem',
+              marginBottom: '25px'
+            }}>
+              Lip Filler vs Lip Flip: Complete Comparison Chart
             </h2>
             
             <div style={{ display: 'grid', gap: '20px' }}>
               {[
                 {
-                  category: "Goal",
-                  filler: "Adds volume and shape",
-                  lipFlip: "Adds show (roll-out), not volume"
+                  category: "Primary Goal",
+                  filler: "Volume enhancement and shaping",
+                  lipFlip: "Subtle lip border prominence without volume"
                 },
                 {
-                  category: "How Long It Lasts",
-                  filler: "6 months to about a year (varies by person and product)",
-                  lipFlip: "Usually 2-4 months"
+                  category: "Treatment Duration",
+                  filler: "May last 6-12 months (individual variation)",
+                  lipFlip: "May last 2-4 months (individual variation)"
                 },
                 {
-                  category: "How It Feels",
-                  filler: "You may feel fuller lips",
-                  lipFlip: "Lips feel about the same; some people notice a change when whistling or using a straw"
+                  category: "Results Timeline", 
+                  filler: "Immediate visibility with final results in 1-2 weeks",
+                  lipFlip: "Gradual onset over 3-7 days, full effect 2 weeks"
                 },
                 {
-                  category: "Visit Time",
-                  filler: "Quick office visit (30-45 minutes)",
-                  lipFlip: "Very quick office visit (15-20 minutes)"
+                  category: "Ideal Candidates",
+                  filler: "Those seeking volume enhancement or lip reshaping",
+                  lipFlip: "Those seeking subtle upper lip enhancement"
                 },
                 {
-                  category: "The Look",
-                  filler: "More plump and full",
-                  lipFlip: "Subtle roll-out of the top lip border"
+                  category: "Treatment Experience",
+                  filler: "30-45 minute appointment with numbing available",
+                  lipFlip: "15-20 minute appointment, minimal discomfort reported"
+                },
+                {
+                  category: "Recovery Considerations",
+                  filler: "Possible swelling and bruising for several days",
+                  lipFlip: "Minimal downtime, temporary muscle adjustment period"
+                },
+                {
+                  category: "Reversibility",
+                  filler: "Hyaluronic acid types may be dissolved by qualified providers",
+                  lipFlip: "Effects gradually wear off, not immediately reversible"
                 }
               ].map((comparison, index) => (
                 <div key={index} style={{
                   backgroundColor: '#fff',
                   border: '1px solid #dee2e6',
                   borderRadius: '8px',
-                  padding: '20px'
+                  padding: '20px',
+                  boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
                 }}>
                   <h4 style={{ 
-                    color: '#ffc107', 
+                    color: '#dc3545', 
                     marginBottom: '15px', 
                     fontSize: '1.1rem',
                     fontWeight: '600',
-                    borderBottom: '1px solid #ffc107',
+                    borderBottom: '1px solid #dc3545',
                     paddingBottom: '5px'
                   }}>
                     {comparison.category}
@@ -296,7 +483,142 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
             </div>
           </section>
 
-          {/* Which Should I Pick */}
+          {/* Can You Combine Treatments */}
+          <section style={{ marginBottom: '40px' }}>
+            <h2 style={{ 
+              color: '#333', 
+              borderBottom: '3px solid #6f42c1', 
+              paddingBottom: '10px',
+              fontSize: '1.8rem',
+              marginBottom: '25px'
+            }}>
+              Can You Do Lip Flip and Filler Together?
+            </h2>
+            
+            <div style={{
+              backgroundColor: '#f8f4ff',
+              border: '2px solid #6f42c1',
+              borderRadius: '12px',
+              padding: '25px',
+              marginBottom: '25px'
+            }}>
+              <h3 style={{ color: '#6f42c1', marginBottom: '15px', fontSize: '1.3rem' }}>Combination Treatment Considerations</h3>
+              <p style={{ 
+                fontSize: '1rem', 
+                lineHeight: '1.6', 
+                margin: '0 0 20px 0',
+                color: '#333'
+              }}>
+                Some qualified providers may recommend combination treatments depending on individual anatomy and aesthetic goals. This approach may potentially address multiple concerns simultaneously, such as volume enhancement with subtle upper lip border changes.
+              </p>
+              
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+                <div>
+                  <h4 style={{ color: '#6f42c1', marginBottom: '10px' }}>Potential Benefits:</h4>
+                  <ul style={{ fontSize: '0.9rem', paddingLeft: '15px', margin: 0 }}>
+                    <li>May address multiple aesthetic concerns</li>
+                    <li>Could provide comprehensive lip enhancement</li>
+                    <li>May reduce total number of appointments</li>
+                    <li>Customizable approach to individual goals</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 style={{ color: '#6f42c1', marginBottom: '10px' }}>Important Considerations:</h4>
+                  <ul style={{ fontSize: '0.9rem', paddingLeft: '15px', margin: 0 }}>
+                    <li>Requires careful treatment planning</li>
+                    <li>May involve different recovery timelines</li>
+                    <li>Increased complexity in treatment approach</li>
+                    <li>Provider experience with combinations essential</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div style={{
+              backgroundColor: '#fff3cd',
+              border: '1px solid #ffc107',
+              borderRadius: '8px',
+              padding: '15px'
+            }}>
+              <h4 style={{ color: '#856404', marginBottom: '8px' }}>Medical Consultation Required</h4>
+              <p style={{ margin: 0, fontSize: '0.95rem', color: '#856404' }}>
+                Combination treatments require thorough evaluation by qualified medical professionals. Timing, sequencing, and suitability must be determined based on individual anatomy, medical history, and aesthetic goals. Not all patients are candidates for combination approaches.
+              </p>
+            </div>
+          </section>
+
+          {/* Cost Considerations - Legally Safe */}
+          <section style={{ marginBottom: '40px' }}>
+            <h2 style={{ 
+              color: '#333', 
+              borderBottom: '3px solid #17a2b8', 
+              paddingBottom: '10px',
+              fontSize: '1.8rem',
+              marginBottom: '25px'
+            }}>
+              Cost Considerations: Lip Filler vs Lip Flip
+            </h2>
+            
+            <div style={{
+              backgroundColor: '#e1f7fe',
+              border: '2px solid #17a2b8',
+              borderRadius: '12px',
+              padding: '25px'
+            }}>
+              <h3 style={{ color: '#17a2b8', marginBottom: '15px', fontSize: '1.3rem' }}>Understanding Treatment Costs</h3>
+              <p style={{ 
+                fontSize: '1rem', 
+                lineHeight: '1.6', 
+                margin: '0 0 20px 0',
+                color: '#333'
+              }}>
+                Treatment costs vary significantly based on multiple factors including provider experience, geographic location, facility overhead, product selection, and individual treatment complexity. Neither treatment type is universally more or less expensive as pricing depends on these variables.
+              </p>
+              
+              <div style={{ display: 'grid', gap: '15px' }}>
+                <div>
+                  <h4 style={{ color: '#17a2b8', marginBottom: '10px' }}>Factors Affecting Cost for Both Treatments:</h4>
+                  <ul style={{ fontSize: '0.95rem', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
+                    <li>Provider qualifications and experience level</li>
+                    <li>Geographic location and local market rates</li>
+                    <li>Facility overhead and operational costs</li>
+                    <li>Product brands and quality levels used</li>
+                    <li>Amount of product or number of injection sites</li>
+                    <li>Consultation fees and follow-up policies</li>
+                    <li>Complexity of individual case requirements</li>
+                  </ul>
+                </div>
+                
+                <div style={{
+                  backgroundColor: '#17a2b8',
+                  color: 'white',
+                  padding: '15px',
+                  borderRadius: '8px',
+                  marginTop: '15px'
+                }}>
+                  <h5 style={{ margin: '0 0 8px 0', fontWeight: '600' }}>Important Cost Considerations</h5>
+                  <p style={{ margin: 0, fontSize: '0.9rem' }}>
+                    Consider long-term maintenance costs when comparing options. While one treatment may have lower initial costs, the need for more frequent touch-ups could affect total annual expenses. Discuss maintenance schedules and total cost projections with qualified providers.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div style={{
+              backgroundColor: '#dc3545',
+              color: 'white',
+              padding: '20px',
+              borderRadius: '8px',
+              marginTop: '20px'
+            }}>
+              <h4 style={{ margin: '0 0 10px 0', fontWeight: '600' }}>Pricing Disclaimer</h4>
+              <p style={{ margin: 0, fontSize: '0.9rem', lineHeight: '1.5' }}>
+                Treatment costs vary significantly based on individual needs, provider experience, and geographic location. The information above represents general cost factors only. Always request detailed, written quotes from licensed providers for accurate pricing specific to your situation. Verify all provider credentials before scheduling consultations.
+              </p>
+            </div>
+          </section>
+
+          {/* Enhanced Safety Information */}
           <section style={{ marginBottom: '40px' }}>
             <h2 style={{ 
               color: '#333', 
@@ -305,166 +627,174 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
               fontSize: '1.8rem',
               marginBottom: '25px'
             }}>
-              Which Should I Pick?
+              Important Safety Information
             </h2>
             
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '25px', marginBottom: '25px' }}>
-              <div style={{
-                backgroundColor: '#f8f9ff',
-                border: '2px solid #667eea',
-                borderRadius: '12px',
-                padding: '25px'
+            <div style={{
+              backgroundColor: '#f8d7da',
+              border: '2px solid #dc3545',
+              borderRadius: '12px',
+              padding: '25px',
+              marginBottom: '25px'
+            }}>
+              <h3 style={{ color: '#721c24', marginBottom: '15px', fontSize: '1.3rem' }}>Medical Consultation Required</h3>
+              <p style={{ 
+                fontSize: '1rem', 
+                lineHeight: '1.6', 
+                margin: '0 0 15px 0',
+                color: '#721c24'
               }}>
-                <h3 style={{ color: '#667eea', marginBottom: '15px', fontSize: '1.2rem' }}>Choose Lip Filler If You Want:</h3>
-                <ul style={{ fontSize: '0.95rem', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
-                  <li style={{ marginBottom: '8px' }}>Clearly fuller lips</li>
-                  <li style={{ marginBottom: '8px' }}>To shape the border or fix uneven sides</li>
-                  <li style={{ marginBottom: '8px' }}>To smooth lines around the mouth</li>
-                  <li style={{ marginBottom: '8px' }}>More dramatic results</li>
-                  <li>Longer-lasting results</li>
-                </ul>
+                Both treatments involve medical procedures that require consultation with licensed healthcare providers. This information does not replace professional medical advice.
+              </p>
+              
+              <div style={{ display: 'grid', gap: '15px' }}>
+                <div>
+                  <h4 style={{ color: '#721c24', marginBottom: '8px' }}>Potential Risks May Include:</h4>
+                  <ul style={{ fontSize: '0.95rem', lineHeight: '1.5', paddingLeft: '20px', margin: 0, color: '#721c24' }}>
+                    <li>Infection or allergic reactions</li>
+                    <li>Asymmetry or unsatisfactory results</li>
+                    <li>Nerve damage or tissue complications</li>
+                    <li>Bruising, swelling, or prolonged discomfort</li>
+                    <li>Need for corrective procedures</li>
+                    <li>Rare but serious vascular complications</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 style={{ color: '#721c24', marginBottom: '8px' }}>Individual Suitability Assessment:</h4>
+                  <p style={{ margin: 0, fontSize: '0.95rem', color: '#721c24' }}>
+                    Not everyone is a candidate for these treatments. Medical history, current medications, anatomical factors, and individual health status all affect suitability. Some conditions may contraindicate treatment or require special precautions.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div style={{
+              backgroundColor: '#d4edda',
+              border: '2px solid #28a745',
+              borderRadius: '12px',
+              padding: '25px',
+              marginBottom: '25px'
+            }}>
+              <h4 style={{ color: '#155724', marginBottom: '12px' }}>Provider Verification Essential</h4>
+              <p style={{ margin: '0 0 15px 0', color: '#155724', fontSize: '0.95rem', lineHeight: '1.5' }}>
+                Always verify provider credentials through official state medical boards before scheduling any cosmetic procedures. Qualified providers should have appropriate medical training, facility licensing, and professional liability insurance.
+              </p>
+              
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '15px' }}>
+                <div>
+                  <h5 style={{ color: '#155724', marginBottom: '8px' }}>Verify Through Official Sources:</h5>
+                  <ul style={{ fontSize: '0.9rem', paddingLeft: '15px', margin: 0, color: '#155724' }}>
+                    <li>State medical board databases</li>
+                    <li>Professional association directories</li>
+                    <li>Hospital credentialing verification</li>
+                    <li>Facility licensing authorities</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 style={{ color: '#155724', marginBottom: '8px' }}>Red Flags to Avoid:</h5>
+                  <ul style={{ fontSize: '0.9rem', paddingLeft: '15px', margin: 0, color: '#155724' }}>
+                    <li>Unlicensed practitioners</li>
+                    <li>Non-medical facility locations</li>
+                    <li>Inability to provide credentials</li>
+                    <li>Pressure for immediate decisions</li>
+                  </ul>
+                </div>
               </div>
               
-              <div style={{
-                backgroundColor: '#f8fff8',
-                border: '2px solid #28a745',
-                borderRadius: '12px',
-                padding: '25px'
-              }}>
-                <h3 style={{ color: '#28a745', marginBottom: '15px', fontSize: '1.2rem' }}>Choose a Lip Flip If You Want:</h3>
-                <ul style={{ fontSize: '0.95rem', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
-                  <li style={{ marginBottom: '8px' }}>Just a little more top lip to show</li>
-                  <li style={{ marginBottom: '8px' }}>A very subtle change</li>
-                  <li style={{ marginBottom: '8px' }}>To test the look before getting filler</li>
-                  <li style={{ marginBottom: '8px' }}>To soften a gummy smile</li>
-                  <li>A more affordable option</li>
-                </ul>
-              </div>
+              <p style={{ margin: '15px 0 0 0', color: '#155724', fontSize: '0.9rem', fontStyle: 'italic' }}>
+                Never receive injections at non-medical locations, parties, or from unlicensed practitioners.
+              </p>
             </div>
 
             <div style={{
               backgroundColor: '#fff3cd',
               border: '2px solid #ffc107',
               borderRadius: '12px',
-              padding: '20px'
+              padding: '25px'
             }}>
-              <h4 style={{ color: '#856404', marginBottom: '10px' }}>Can I Do Both Together?</h4>
-              <p style={{ margin: 0, color: '#856404', fontSize: '0.95rem', lineHeight: '1.5' }}>
-                Yes! Some people do a small lip flip plus a small amount of filler for a soft, natural look. This can give you the best of both—some volume plus that subtle roll-out effect. Ask your provider what combination might work for your goals.
+              <h4 style={{ color: '#856404', marginBottom: '12px' }}>Emergency Preparedness</h4>
+              <p style={{ margin: '0 0 15px 0', color: '#856404', fontSize: '0.95rem', lineHeight: '1.5' }}>
+                Ensure your provider has established emergency protocols and 24/7 contact procedures before treatment. Know when to seek immediate medical attention.
               </p>
-            </div>
-          </section>
-
-          {/* Cost, Recovery, and Safety */}
-          <section style={{ marginBottom: '40px' }}>
-            <h2 style={{ 
-              color: '#333', 
-              borderBottom: '3px solid #667eea', 
-              paddingBottom: '10px',
-              fontSize: '1.8rem',
-              marginBottom: '25px'
-            }}>
-              Cost, Recovery, and Safety
-            </h2>
-            
-            <div style={{ display: 'grid', gap: '20px' }}>
-              <div style={{
-                backgroundColor: '#f8f9fa',
-                border: '1px solid #dee2e6',
-                borderRadius: '8px',
-                padding: '20px'
-              }}>
-                <h4 style={{ color: '#495057', marginBottom: '12px' }}>Cost</h4>
-                <p style={{ margin: 0, fontSize: '0.95rem', color: '#555', lineHeight: '1.5' }}>
-                  Prices vary by clinic and location. Lip flips are usually less expensive than fillers. Always ask for the total price before you start, including any consultation fees.
-                </p>
-              </div>
-
-              <div style={{
-                backgroundColor: '#f8f9fa',
-                border: '1px solid #dee2e6',
-                borderRadius: '8px',
-                padding: '20px'
-              }}>
-                <h4 style={{ color: '#495057', marginBottom: '12px' }}>Recovery</h4>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '15px' }}>
-                  <div>
-                    <h5 style={{ color: '#667eea', marginBottom: '8px', fontSize: '0.9rem' }}>Filler:</h5>
-                    <p style={{ margin: 0, fontSize: '0.85rem', color: '#555' }}>
-                      Swelling and small bruises can happen; often better in a few days
-                    </p>
-                  </div>
-                  <div>
-                    <h5 style={{ color: '#28a745', marginBottom: '8px', fontSize: '0.9rem' }}>Lip Flip:</h5>
-                    <p style={{ margin: 0, fontSize: '0.85rem', color: '#555' }}>
-                      Little to no downtime
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div style={{
-                backgroundColor: '#f8f9fa',
-                border: '1px solid #dee2e6',
-                borderRadius: '8px',
-                padding: '20px'
-              }}>
-                <h4 style={{ color: '#495057', marginBottom: '12px' }}>Aftercare (First Day or Two)</h4>
-                <ul style={{ fontSize: '0.9rem', lineHeight: '1.5', paddingLeft: '20px', margin: 0, color: '#555' }}>
-                  <li style={{ marginBottom: '5px' }}>Use ice with a clean cloth</li>
-                  <li style={{ marginBottom: '5px' }}>Don&apos;t rub your lips</li>
-                  <li style={{ marginBottom: '5px' }}>Sleep with your head elevated</li>
-                  <li>Skip hard exercise for one day</li>
+              
+              <div>
+                <h5 style={{ color: '#856404', marginBottom: '8px' }}>Contact Provider Immediately or Seek Emergency Care for:</h5>
+                <ul style={{ fontSize: '0.95rem', lineHeight: '1.5', paddingLeft: '20px', margin: 0, color: '#856404' }}>
+                  <li>Severe or worsening pain</li>
+                  <li>Skin color changes (white, blue, or gray areas)</li>
+                  <li>Signs of infection (fever, unusual swelling, pus)</li>
+                  <li>Difficulty breathing or swallowing</li>
+                  <li>Severe asymmetry or deformity</li>
+                  <li>Vision changes or severe headache</li>
+                  <li>Any symptoms that concern you</li>
                 </ul>
               </div>
             </div>
           </section>
 
-          {/* Safety Section */}
+          {/* Informed Consent Process */}
           <section style={{ marginBottom: '40px' }}>
             <h2 style={{ 
               color: '#333', 
-              borderBottom: '3px solid #dc3545', 
+              borderBottom: '3px solid #6c757d', 
               paddingBottom: '10px',
               fontSize: '1.8rem',
               marginBottom: '25px'
             }}>
-              Safety First
+              Understanding the Informed Consent Process
             </h2>
             
             <div style={{
-              backgroundColor: '#d4edda',
-              border: '2px solid #28a745',
-              borderRadius: '12px',
-              padding: '25px',
-              marginBottom: '20px'
-            }}>
-              <h4 style={{ color: '#155724', marginBottom: '12px' }}>Choose a Qualified Provider</h4>
-              <p style={{ margin: '0 0 10px 0', color: '#155724', fontSize: '0.95rem', lineHeight: '1.5' }}>
-                Always research providers thoroughly and verify their credentials independently. They should explain risks and aftercare, and have appropriate emergency protocols in place.
-              </p>
-              <p style={{ margin: 0, color: '#155724', fontSize: '0.9rem', fontStyle: 'italic' }}>
-                Never get injections at a home or party.
-              </p>
-            </div>
-
-            <div style={{
-              backgroundColor: '#f8d7da',
-              border: '2px solid #dc3545',
+              backgroundColor: '#f8f9fa',
+              border: '2px solid #6c757d',
               borderRadius: '12px',
               padding: '25px'
             }}>
-              <h4 style={{ color: '#721c24', marginBottom: '12px' }}>Contact Your Provider Right Away If You Have:</h4>
-              <ul style={{ fontSize: '0.95rem', lineHeight: '1.5', paddingLeft: '20px', margin: 0, color: '#721c24' }}>
-                <li style={{ marginBottom: '6px' }}>Pain that gets stronger</li>
-                <li style={{ marginBottom: '6px' }}>Skin that turns white or blue</li>
-                <li style={{ marginBottom: '6px' }}>One side swells a lot more than the other</li>
-                <li>Fever or signs of infection</li>
-              </ul>
+              <p style={{ 
+                fontSize: '1rem', 
+                lineHeight: '1.6', 
+                margin: '0 0 20px 0',
+                color: '#333'
+              }}>
+                Qualified providers should provide comprehensive informed consent documentation before any treatment. This process ensures you understand all aspects of the procedure, potential outcomes, and risks involved.
+              </p>
+              
+              <div style={{ display: 'grid', gap: '20px' }}>
+                <div>
+                  <h4 style={{ color: '#6c757d', marginBottom: '10px' }}>Informed Consent Should Include:</h4>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '15px' }}>
+                    <ul style={{ fontSize: '0.95rem', lineHeight: '1.5', paddingLeft: '20px', margin: 0 }}>
+                      <li>Detailed explanation of the procedure</li>
+                      <li>All potential risks and complications</li>
+                      <li>Expected outcomes and limitations</li>
+                      <li>Alternative treatment options</li>
+                    </ul>
+                    <ul style={{ fontSize: '0.95rem', lineHeight: '1.5', paddingLeft: '20px', margin: 0 }}>
+                      <li>Provider qualifications and experience</li>
+                      <li>Detailed aftercare instructions</li>
+                      <li>Emergency contact procedures</li>
+                      <li>Cost breakdown and payment policies</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div style={{
+                  backgroundColor: '#6c757d',
+                  color: 'white',
+                  padding: '15px',
+                  borderRadius: '8px'
+                }}>
+                  <h5 style={{ margin: '0 0 8px 0', fontWeight: '600' }}>Important</h5>
+                  <p style={{ margin: 0, fontSize: '0.9rem' }}>
+                    Never proceed with treatment without thoroughly reading, understanding, and signing informed consent documentation. Take time to ask questions and consider your decision carefully.
+                  </p>
+                </div>
+              </div>
             </div>
           </section>
 
-          {/* FAQ */}
+          {/* Enhanced FAQ */}
           <section style={{ marginBottom: '40px' }}>
             <h2 style={{ 
               color: '#333', 
@@ -473,41 +803,58 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
               fontSize: '1.8rem',
               marginBottom: '25px'
             }}>
-              Common Questions
+              Frequently Asked Questions: Lip Filler vs Lip Flip
             </h2>
             
             <div style={{ display: 'grid', gap: '20px' }}>
               {[
                 {
+                  question: "How long does lip flip last vs filler?",
+                  answer: "Lip flip results may last 2-4 months while lip filler results may last 6-12 months. Duration varies significantly between individuals based on metabolism, lifestyle, and treatment factors. Some patients may experience shorter or longer durations for either treatment."
+                },
+                {
+                  question: "Which is better: lip filler or lip flip?",
+                  answer: "Treatment selection depends on individual goals, anatomy, and medical suitability. Neither is universally 'better' - the appropriate choice varies by person. Consult with qualified healthcare providers to determine which option may be suitable for your specific situation and aesthetic goals."
+                },
+                {
+                  question: "Can you do lip flip and filler together?",
+                  answer: "Some providers may recommend combination treatments based on individual assessment. This decision should be made in consultation with qualified medical professionals who can evaluate your anatomy, goals, and suitability for combined approaches."
+                },
+                {
+                  question: "Which is more natural looking: lip flip or filler?",
+                  answer: "Both treatments can achieve natural-looking results when performed appropriately by qualified providers. The 'naturalness' of results depends on individual anatomy, treatment approach, product selection, and provider skill rather than treatment type alone."
+                },
+                {
                   question: "Does a lip flip add volume?",
-                  answer: "No. A lip flip relaxes the muscle so the top lip rolls out and shows more, but it does not add gel or volume."
+                  answer: "Lip flip treatments are intended to alter muscle function rather than add volume. The appearance of increased lip prominence may result from muscle relaxation effects, but this differs from the volume enhancement achieved with dermal fillers."
                 },
                 {
                   question: "Can lip filler be dissolved?",
-                  answer: "Yes. Many hyaluronic acid fillers can be dissolved with hyaluronidase by a trained provider."
+                  answer: "Many hyaluronic acid-based fillers may be dissolved by qualified healthcare providers using appropriate enzymes. Dissolution procedures carry their own risks and should only be performed by qualified medical professionals. Discuss reversal options with your provider before initial treatment."
                 },
                 {
-                  question: "Does it hurt?",
-                  answer: "You may feel small pinches or pressure. Numbing is often used to make you more comfortable."
+                  question: "Which treatment hurts more: lip flip or filler?",
+                  answer: "Pain perception varies significantly between individuals. Both treatments involve injections which may cause discomfort. Providers typically offer numbing options to minimize discomfort. Discuss pain management options during your consultation."
                 },
                 {
-                  question: "How long do results last?",
-                  answer: "Lip filler can last 6 months to about a year. A lip flip often lasts 2-4 months."
+                  question: "How much does lip flip cost vs filler?",
+                  answer: "Treatment costs vary significantly by provider, location, and individual case complexity. Neither treatment type is universally more or less expensive. Request detailed quotes from qualified providers and consider long-term maintenance costs when making decisions."
                 },
                 {
-                  question: "Can I start small?",
-                  answer: "Yes! You can do a little filler or a small lip flip and add more later if you want."
+                  question: "Which treatment is better for thin lips?",
+                  answer: "Treatment selection should be based on individual anatomy assessment by qualified providers. Both treatments address different aspects of lip appearance. A thorough consultation can help determine which approach may be most suitable for your specific anatomy and goals."
                 },
                 {
-                  question: "Which is better: filler or lip flip?",
-                  answer: "It depends on your goal. Choose filler for volume and shaping. Choose a lip flip for a subtle roll-out of the top lip. Some people do both."
+                  question: "Can I get both treatments in one appointment?",
+                  answer: "Some providers may offer combination treatments in a single session, while others may recommend staged approaches. Treatment timing and sequencing should be determined by qualified medical professionals based on individual assessment and safety considerations."
                 }
               ].map((faq, index) => (
                 <div key={index} style={{
                   backgroundColor: '#fff',
                   border: '1px solid #dee2e6',
                   borderRadius: '8px',
-                  padding: '20px'
+                  padding: '20px',
+                  boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
                 }}>
                   <h4 style={{ 
                     color: '#667eea', 
@@ -530,7 +877,7 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
             </div>
           </section>
 
-          {/* How to Research Providers */}
+          {/* Provider Research Guide */}
           <section style={{ marginBottom: '40px' }}>
             <h2 style={{ 
               color: '#333', 
@@ -539,45 +886,87 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
               fontSize: '1.8rem',
               marginBottom: '25px'
             }}>
-              How to Research Providers
+              How to Research and Choose Qualified Providers
             </h2>
+            
             <div style={{
               backgroundColor: '#e7f3ff',
               border: '2px solid #007bff',
               borderRadius: '12px',
-              padding: '25px'
+              padding: '25px',
+              marginBottom: '25px'
             }}>
-              <div style={{ display: 'grid', gap: '15px' }}>
+              <h3 style={{ color: '#004085', marginBottom: '15px', fontSize: '1.3rem' }}>Provider Verification Checklist</h3>
+              <div style={{ display: 'grid', gap: '20px' }}>
                 <div>
-                  <h4 style={{ color: '#004085', marginBottom: '8px' }}>Verify Credentials</h4>
-                  <p style={{ margin: 0, fontSize: '0.9rem', color: '#004085' }}>
-                    Check provider licensing through official state boards and verify their training background
-                  </p>
+                  <h4 style={{ color: '#004085', marginBottom: '8px' }}>Required Credentials to Verify:</h4>
+                  <ul style={{ fontSize: '0.95rem', lineHeight: '1.5', paddingLeft: '20px', margin: 0, color: '#004085' }}>
+                    <li>Board certification in relevant medical specialty</li>
+                    <li>Current medical license through state board</li>
+                    <li>Facility licensing and accreditation</li>
+                    <li>Professional liability insurance coverage</li>
+                    <li>Specialized training in cosmetic procedures</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 style={{ color: '#004085', marginBottom: '8px' }}>Questions to Ask During Consultation:</h4>
+                  <ul style={{ fontSize: '0.95rem', lineHeight: '1.5', paddingLeft: '20px', margin: 0, color: '#004085' }}>
+                    <li>How many of these procedures do you perform monthly?</li>
+                    <li>Can you show before/after photos of similar cases?</li>
+                    <li>What is your complication rate for these procedures?</li>
+                    <li>How do you handle complications or unsatisfactory results?</li>
+                    <li>What emergency protocols do you have in place?</li>
+                    <li>Can you provide references from recent patients?</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div style={{
+              backgroundColor: '#f8f9fa',
+              border: '1px solid #dee2e6',
+              borderRadius: '8px',
+              padding: '20px'
+            }}>
+              <h4 style={{ color: '#495057', marginBottom: '12px' }}>Professional Setting Standards</h4>
+              <p style={{ margin: '0 0 15px 0', fontSize: '0.95rem', color: '#555', lineHeight: '1.5' }}>
+                Qualified providers should operate in professional medical settings with appropriate safety protocols, sterile equipment, and documented procedures.
+              </p>
+              
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '15px' }}>
+                <div>
+                  <h5 style={{ color: '#495057', marginBottom: '8px' }}>Expect to See:</h5>
+                  <ul style={{ fontSize: '0.9rem', paddingLeft: '15px', margin: 0 }}>
+                    <li>Clean, professional medical facility</li>
+                    <li>Sterile injection techniques and equipment</li>
+                    <li>Documented before/after photography</li>
+                    <li>Clear pricing and policy documentation</li>
+                    <li>Comprehensive informed consent process</li>
+                  </ul>
                 </div>
                 <div>
-                  <h4 style={{ color: '#004085', marginBottom: '8px' }}>Clear Communication</h4>
-                  <p style={{ margin: 0, fontSize: '0.9rem', color: '#004085' }}>
-                    They explain risks, aftercare, and have a plan if there&apos;s a problem
-                  </p>
-                </div>
-                <div>
-                  <h4 style={{ color: '#004085', marginBottom: '8px' }}>Professional Setting</h4>
-                  <p style={{ margin: 0, fontSize: '0.9rem', color: '#004085' }}>
-                    Clean facilities, sterile tools, documented before/after photos of their work
-                  </p>
+                  <h5 style={{ color: '#495057', marginBottom: '8px' }}>Warning Signs:</h5>
+                  <ul style={{ fontSize: '0.9rem', paddingLeft: '15px', margin: 0 }}>
+                    <li>Unable or unwilling to provide credentials</li>
+                    <li>High-pressure sales tactics</li>
+                    <li>Significantly below-market pricing</li>
+                    <li>Non-medical facility locations</li>
+                    <li>Lack of emergency protocols</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Related Links */}
+          {/* Related Resources */}
           <section style={{ marginBottom: '40px' }}>
             <h3 style={{ 
               color: '#333', 
               fontSize: '1.4rem',
               marginBottom: '20px'
             }}>
-              Related Guides
+              Related Educational Resources
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '15px' }}>
               <Link href="/guides/lip-filler-101" style={{
@@ -587,21 +976,40 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
                 padding: '15px',
                 textDecoration: 'none',
                 color: '#667eea',
-                fontWeight: '600'
+                fontWeight: '600',
+                display: 'block',
+                textAlign: 'center'
               }}>
-                Complete Lip Filler Guide
+                Complete Lip Filler Guide 2025
               </Link>
-              <Link href="/guides/lip-filler-recovery-timeline" style={{
+            {/* 
+              <Link href="/guides/choosing-qualified-providers" style={{
                 backgroundColor: '#f8f9ff',
                 border: '1px solid #667eea',
                 borderRadius: '8px',
                 padding: '15px',
                 textDecoration: 'none',
                 color: '#667eea',
-                fontWeight: '600'
+                fontWeight: '600',
+                display: 'block',
+                textAlign: 'center'
               }}>
-                Recovery Timeline Guide
+                Provider Verification Guide
               </Link>
+              <Link href="/guides/cosmetic-treatment-safety" style={{
+                backgroundColor: '#f8f9ff',
+                border: '1px solid #667eea',
+                borderRadius: '8px',
+                padding: '15px',
+                textDecoration: 'none',
+                color: '#667eea',
+                fontWeight: '600',
+                display: 'block',
+                textAlign: 'center'
+              }}>
+                Cosmetic Treatment Safety
+              </Link>
+              */}
             </div>
           </section>
 
@@ -614,11 +1022,11 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
             textAlign: 'center',
             marginBottom: '30px'
           }}>
-            <h3 style={{ fontSize: '1.6rem', fontWeight: '600', marginBottom: '15px' }}>
-              Ready to Research Providers?
+            <h3 style={{ fontSize: '1.8rem', fontWeight: '600', marginBottom: '15px' }}>
+              Ready to Research Qualified Providers?
             </h3>
-            <p style={{ fontSize: '1rem', marginBottom: '25px', opacity: '0.95' }}>
-              Find providers offering lip enhancement services in Colorado and learn how to verify their credentials.
+            <p style={{ fontSize: '1.1rem', marginBottom: '25px', opacity: '0.95' }}>
+              Find board-certified providers offering lip enhancement services and learn how to verify their credentials through official sources.
             </p>
             <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link
@@ -626,37 +1034,45 @@ const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200
                 style={{
                   backgroundColor: 'white',
                   color: '#667eea',
-                  padding: '12px 30px',
+                  padding: '15px 35px',
                   textDecoration: 'none',
                   borderRadius: '8px',
                   fontWeight: '600',
+                  fontSize: '1.1rem',
                   display: 'inline-block'
                 }}
               >
-                Browse Providers
+                Browse Qualified Providers
               </Link>
+              
             </div>
           </div>
 
-          {/* Disclaimer */}
+          {/* Comprehensive Legal Disclaimer */}
           <div style={{
             backgroundColor: '#f8f9fa',
-            border: '1px solid #dee2e6',
+            border: '2px solid #6c757d',
             borderRadius: '8px',
-            padding: '25px',
+            padding: '30px',
             textAlign: 'center'
           }}>
-            <h4 style={{ margin: '0 0 12px 0', fontSize: '1rem', fontWeight: '600', color: '#495057' }}>
-              Important Note
+            <h4 style={{ margin: '0 0 15px 0', fontSize: '1.1rem', fontWeight: '600', color: '#495057' }}>
+              Important Legal and Medical Disclaimer
             </h4>
-            <p style={{ 
-              margin: '0', 
-              fontSize: '0.9rem', 
-              color: '#6c757d',
-              lineHeight: '1.6'
-            }}>
-              This guide is for general information only and does not constitute medical advice. Always consult with qualified healthcare providers about your specific situation and verify all provider credentials through official sources before scheduling treatments.
-            </p>
+            <div style={{ textAlign: 'left', fontSize: '0.9rem', color: '#6c757d', lineHeight: '1.6' }}>
+              <p style={{ margin: '0 0 15px 0' }}>
+                <strong>Educational Content Only:</strong> This guide provides general educational information about cosmetic procedures and should not be considered medical advice. Individual results, risks, and suitability vary significantly based on anatomy, medical history, and other factors.
+              </p>
+              <p style={{ margin: '0 0 15px 0' }}>
+                <strong>Professional Consultation Required:</strong> Always consult with board-certified healthcare providers to discuss whether these treatments are appropriate for your specific medical situation and aesthetic goals. This content does not establish a doctor-patient relationship.
+              </p>
+              <p style={{ margin: '0 0 15px 0' }}>
+                <strong>Verify Provider Credentials:</strong> Independently verify all provider qualifications through official state medical board databases and professional associations before scheduling any procedures. The listing or mention of providers does not constitute endorsement.
+              </p>
+              <p style={{ margin: 0 }}>
+                <strong>No Guarantees:</strong> Treatment outcomes cannot be guaranteed. All cosmetic procedures carry risks including but not limited to infection, scarring, asymmetry, nerve damage, and unsatisfactory results. Carefully review informed consent documentation before proceeding with any treatment.
+              </p>
+            </div>
           </div>
         </div>
       </Layout>

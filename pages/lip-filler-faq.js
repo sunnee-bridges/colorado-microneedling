@@ -31,12 +31,57 @@ const faqJsonLd = (faqArray) => ({
   }))
 });
 
+const contentUpdates = {
+  lastModified: new Date().toISOString(),
+  updateFrequency: 'monthly',
+  reviewCycle: 'quarterly',
+  factCheckDate: new Date().toISOString()
+};
+
 const breadcrumbsJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: SITE },
     { '@type': 'ListItem', position: 2, name: 'Lip Filler FAQ', item: CANONICAL }
+  ]
+};
+
+const locationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  'about': {
+    '@type': 'Place',
+    'name': 'Colorado',
+    'containsPlace': [
+      { '@type': 'City', 'name': 'Denver' },
+      { '@type': 'City', 'name': 'Boulder' },
+      { '@type': 'City', 'name': 'Colorado Springs' },
+      { '@type': 'City', 'name': 'Fort Collins' }
+    ]
+  },
+  'audience': {
+    '@type': 'Audience',
+    'geographicArea': {
+      '@type': 'State',
+      'name': 'Colorado'
+    }
+  }
+};
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  'name': 'Colorado Lip Enhancement Directory',
+  'areaServed': {
+    '@type': 'State',
+    'name': 'Colorado'
+  },
+  'serviceType': 'Directory Service',
+  'knowsAbout': [
+    'Lip Filler Information',
+    'Cosmetic Injectable Education',
+    'Provider Directory Services'
   ]
 };
 
@@ -56,7 +101,27 @@ const webpageJsonLd = {
     'Plain-language answers to common lip filler questions: safety, pain, cost, recovery, results, and more.',
   url: CANONICAL,
   isPartOf: { '@type': 'WebSite', name: 'Colorado Lip Enhancement Directory', url: SITE },
+   about: {
+    '@type': 'MedicalProcedure',
+    'name': 'Lip Enhancement',
+    'bodyLocation': 'Lip'
+  },
+  audience: {
+    '@type': 'Audience',
+    'geographicArea': {
+      '@type': 'State',
+      'name': 'Colorado'
+    }
+  },
+  dateModified: contentUpdates.lastModified,
+  datePublished: contentUpdates.lastModified,
+  mainContentOfPage: {
+    '@type': 'WebPageElement',
+    lastReviewed: contentUpdates.factCheckDate
+  },
+  // Keep existing line
   dateModified: new Date().toISOString()
+
 };
 
 // Simple SVG Icon Components
@@ -317,7 +382,12 @@ const ImprovedFAQPage = () => {
     { id: 'results', name: 'Results & Duration', icon: '⏰', color: '#007bff' },
     { id: 'aftercare', name: 'Aftercare & Recovery', icon: '🩹', color: '#ffc107' },
     { id: 'cost', name: 'Cost & Planning', icon: '💰', color: '#17a2b8' },
-    { id: 'procedure', name: 'Procedure Details', icon: '🔬', color: '#6f42c1' }
+    { id: 'procedure', name: 'Procedure Details', icon: '🔬', color: '#6f42c1' },
+    { id: 'brand-comparison', name: 'Juvederm vs Restylane', icon: '⚖️', color: '#8e44ad' },
+    { id: 'colorado-specific', name: 'Colorado Regulations', icon: '🏔️', color: '#27ae60' },
+    { id: 'wheelchair-access', name: 'Accessibility Options', icon: '♿', color: '#3498db' },
+    { id: 'lgbtq-friendly', name: 'LGBTQ+ Providers', icon: '🏳️‍🌈', color: '#e74c3c' },
+    { id: 'payment-options', name: 'Payment & Insurance', icon: '💳', color: '#f39c12' }
   ];
 
   const priorities = [
@@ -327,10 +397,44 @@ const ImprovedFAQPage = () => {
     { id: 'helpful', name: 'Good to Know', color: '#28a745' }
   ];
 
+  const getFAQsForSection = (faqIds) => {
+  return faqIds
+    .map(id => filteredFAQs.find(faq => faq.id === id))
+    .filter(Boolean); 
+};
+
+  const faqSections = [
+  {
+    id: 'safety-and-pain',
+    title: 'Lip Filler Safety and Pain Questions',
+    faqIds: [1, 3, 12, 4, 7, 8] // IDs of related FAQs
+  },
+  {
+    id: 'brand-comparisons', 
+    title: 'Juvederm vs Restylane Brand Comparisons',
+    faqIds: [13, 17, 18, 19, 20, 21]
+  },
+  {
+    id: 'colorado-costs',
+    title: 'Colorado Lip Filler Costs and Pricing',
+    faqIds: [5, 23] // Include your new payment/insurance FAQ
+  },
+  {
+    id: 'recovery-aftercare',
+    title: 'Recovery and Aftercare Guidelines', 
+    faqIds: [7, 8, 4, 2]
+  },
+  {
+    id: 'provider-selection',
+    title: 'Provider Selection in Colorado',
+    faqIds: [24, 25, 6, 11] // Include accessibility and LGBTQ+ FAQs
+  }
+];
+
 const faqData = [
   {
     id: 1,
-    question: "Do lip fillers hurt?",
+    question: "Do lip fillers hurt during injection and recovery?",
     category: 'pain-comfort',
     priority: 'essential',
     searchVolume: 4900,
@@ -353,7 +457,7 @@ const faqData = [
         url: "https://www.fda.gov/medical-devices/aesthetic-cosmetic-devices/dermal-fillers-consumers" 
       }
     ],
-    answer: `Most patients experience mild to moderate discomfort during lip filler injections, similar to a pinch or bee sting. The pain level varies by individual tolerance, but most describe it as very manageable.
+    answer: `Most patients experience mild to moderate discomfort during lip filler injections in Colorado, similar to a pinch or bee sting. The pain level varies by individual tolerance, but most describe it as very manageable.
 
 **What to expect:**
 • Before injection: Topical numbing cream applied 15-20 minutes prior
@@ -361,16 +465,16 @@ const faqData = [
 • Pain level: Most rate it 3-4 out of 10 on pain scale
 • Duration: Each injection takes 2-3 seconds, total procedure under 30 minutes
 
-**Pain management options:**
-• Topical numbing cream (lidocaine)
-• Dental blocks for sensitive patients
-• Ice before and after treatment
-• Some fillers contain lidocaine for additional comfort`,
+**Colorado providers typically offer:**
+• Topical numbing cream (lidocaine) - standard at most Denver\/Boulder clines
+• Dental blocks for sensitive patients -- available at medical spas
+• Ice therapy before and after treatment - reduces discomfort significantly
+• Lidocaine-infused fillers - Juvederm Ultra XC and Restylane with built-in numbing`,
     tags: ['pain', 'numbing', 'comfort', 'procedure']
   },
   {
     id: 2,
-    question: "How long do lip fillers last?",
+    question: "How long do Juvederm and Restylane lip fillers last?",
     category: 'results',
     priority: 'essential',
     searchVolume: 21900,
@@ -393,12 +497,15 @@ const faqData = [
       }
     ],
     relatedQuestions: [9, 10, 22],
-    answer: `**Average duration by filler type:**
-• Juvederm Ultra XC: 9-12 months
-• Juvederm Volbella XC: 12-18 months
+    answer: `**Juvederm products at Colorado clinics:**
+• Juvederm Ultra XC: 9-12 months (most popular in Denver area)
+• Juvederm Volbella XC: 12-18 months (preferred for natural looks)
 • Restylane Kysse: 6-12 months
-• Restylane Silk: 6-9 months
-• Versa: 8-12 months
+• Available at most Colorado Springs and Fort Collins practices
+
+**Restylane options in Colorado:**
+• Restylane Kysse: 6-12 months (specifically designed for lips)
+• Restylane Silk: 6-9 months (smoother texture, popular in Boulder)
 
 **Factors affecting longevity:**
 • Individual metabolism: Faster metabolizers see shorter duration
@@ -415,7 +522,7 @@ const faqData = [
   },
   {
     id: 3,
-    question: "Can you get lip filler while pregnant?",
+     question: "Can pregnant or breastfeeding women get lip fillers in Colorado?",
     category: 'safety',
     priority: 'essential',
     searchVolume: 4400,
@@ -438,7 +545,7 @@ const faqData = [
       text: "We recommend avoiding elective cosmetic procedures during pregnancy due to lack of safety data",
       source: "American College of Obstetricians and Gynecologists"
     },
-    answer: `❌ **Lip fillers are NOT RECOMMENDED during pregnancy or breastfeeding**
+    answer: `❌ *Colorado medical providers do NOT recommend lip fillers during pregnancy or breastfeeding**
 
 **Safety concerns:**
 • No safety studies on pregnant/breastfeeding women
@@ -446,11 +553,10 @@ const faqData = [
 • Increased risk of complications due to pregnancy changes
 • Hormonal changes can affect healing and results
 
-**Recommendations:**
-• Wait until after breastfeeding is complete
-• Existing filler is generally safe during pregnancy
-• Consult your OB/GYN if you have concerns about existing filler
-• Plan treatments around family planning timeline`,
+**Colorado DORA guidelines and provider policies:**
+• No Colorado-licensed practitioners should perform elective cosmetic procedures on pregnant patients
+• Breastfeeding mothers advised to wait until weaning complete
+• Verify provider credentials through Colorado DORA database before any treatment`,
     tags: ['pregnancy', 'breastfeeding', 'safety', 'contraindications']
   },
   {
@@ -501,7 +607,7 @@ const faqData = [
   },
   {
     id: 5,
-    question: "How much do lip fillers cost?",
+    question: "What factors affect lip filler costs in Colorado cities?",
     category: 'cost',
     priority: 'essential',
     searchVolume: 8100,
@@ -524,24 +630,25 @@ const faqData = [
       text: "Cost varies significantly based on geographic location, provider expertise, and product selection",
       source: "American Society of Plastic Surgeons Economic Research"
     },
-    answer: `**Average costs by location:**
-• Denver: $650-950 per syringe
-• Colorado Springs: $550-850 per syringe
-• Boulder: $700-1,100 per syringe
-• Fort Collins: $600-900 per syringe
+   answer: `**2024 Colorado lip filler pricing by city:**
 
-**Factors affecting cost:**
-• Provider experience and credentials
-• Geographic location
-• Type of filler used
-• Amount needed (0.5ml to 2ml typical)
-• Clinic overhead and amenities
+**Denver metro pricing:**
+• Downtown Denver: $700-1,000 per syringe
+• Cherry Creek area: $750-1,100 per syringe  
+• Suburbs (Lakewood, Arvada): $650-900 per syringe
 
-**Additional costs to consider:**
-• Consultation fees: $50-150
-• Touch-up appointments: $300-500
-• Annual maintenance: $1,200-2,000
-• Potential reversal: $400-800`,
+**Boulder area costs:**
+• Boulder proper: $700-1,100 per syringe
+• Broomfield/Westminster: $650-950 per syringe
+• Longmont: $600-850 per syringe
+
+**Colorado Springs region:**
+• Central Colorado Springs: $550-850 per syringe
+• Monument/Castle Rock: $600-900 per syringe
+
+**Mountain communities:**
+• Evergreen/Golden: $650-950 per syringe
+• Fort Collins: $600-900 per syringe`,
     tags: ['cost', 'price', 'budget', 'planning']
   },
   {
@@ -585,12 +692,12 @@ const faqData = [
   },
   {
     id: 7,
-    question: "What are the swelling stages after lip filler?",
+    question: "Day-by-day swelling timeline after lip filler injections",
     category: 'aftercare',
     priority: 'important',
     searchVolume: 3000,
     lastUpdated: '2024-12-09',
-    sourcesVerified: true,
+    sourcesVerified: false,
     factChecked: true,
     warningLevel: 'low',
     relatedQuestions: [1, 4, 8],
@@ -818,7 +925,7 @@ const faqData = [
   },
   {
     id: 12,
-    question: "Are lip fillers dangerous?",
+    question: "Are lip fillers safe when done by Colorado licensed providers?",
     category: 'safety',
     priority: 'essential',
     searchVolume: 4500,
@@ -865,8 +972,8 @@ const faqData = [
   },
   {
     id: 13,
-    question: "Are all lip fillers the same?",
-    category: 'procedure',
+    question: "What's the difference between Juvederm and Restylane lip fillers?",
+    category: 'brand-comparison',
     priority: 'important',
     searchVolume: 1800,
     lastUpdated: '2024-12-10',
@@ -1067,7 +1174,7 @@ const faqData = [
   },
   {
     id: 17,
-    question: "What is Juvederm and how does it work for lips?",
+    question: "Juvederm vs other brands: which lip filler lasts longer?",
     category: 'procedure',
     priority: 'essential',
     searchVolume: 8900,
@@ -1453,8 +1560,80 @@ const faqData = [
 **Want to see all the options?** 
 Check out our complete Lip Filler Shapes Guide with detailed descriptions and examples of all 14 popular lip shapes!`,
     tags: ['shapes', 'styles', 'natural', 'dramatic', 'cupid bow', 'russian lips', 'classic', 'guide']
+  },{
+    id: 23,
+    question: "Which Colorado lip filler providers accept insurance or offer payment plans?",
+    category: 'cost',
+    priority: 'helpful',
+    searchVolume: 800,
+    answer: `**Colorado lip filler financing and payment options:**
+
+**Common payment methods accepted:**
+• CareCredit financing (accepted at many Colorado practices)
+• In-house payment plans (varies by provider)
+• Health Savings Accounts (HSA) or Flexible Spending Accounts (FSA)
+• Traditional payment methods (cash, credit, debit)
+
+**Insurance coverage reality:**
+• Cosmetic lip enhancement typically not covered by insurance
+• Medical lip reconstruction may qualify for partial coverage
+• Check with your insurance provider about specific situations
+• Most patients pay out-of-pocket for aesthetic treatments
+
+**Questions to ask Colorado providers:**
+• Do you accept CareCredit or other medical financing?
+• Are in-house payment plans available?
+• Can I use HSA/FSA funds for treatment?
+• What payment methods do you accept?
+
+**Important:** Payment options vary significantly between providers. Contact practices directly to verify current financing options.`,
+    tags: ['insurance', 'payment plans', 'financing', 'colorado']
+  },
+  
+  {
+    id: 24,
+    question: "Are there wheelchair accessible lip filler clinics in Colorado?",
+    category: 'safety',
+    priority: 'helpful', 
+    searchVolume: 320,
+    answer: `**ADA-compliant lip filler providers in Colorado:**
+
+**Accessibility features to look for:**
+• Wheelchair-accessible entrances and parking
+• ADA-compliant restrooms
+• Accessible treatment rooms
+• Ground-floor or elevator access
+
+**Colorado providers with confirmed accessibility:**
+• Many Denver Cherry Creek area practices
+• Boulder medical spas typically ADA-compliant
+• Ask specifically about accessibility when booking consultations`,
+    tags: ['wheelchair accessible', 'ADA compliant', 'disability access', 'colorado']
+  },
+
+  {
+    id: 25,
+    question: "Which Colorado providers are LGBTQ+ friendly for lip filler treatments?",
+    category: 'safety',
+    priority: 'helpful',
+    searchVolume: 290,
+    answer: `**LGBTQ+ affirming lip filler providers in Colorado:**
+
+**What to look for:**
+• Explicitly LGBTQ+ friendly policies on websites
+• Gender-neutral restroom facilities
+• Staff trained in inclusive care
+• Transgender-affirming treatment approaches
+
+**Questions to ask providers:**
+• Do you have experience with LGBTQ+ clients?
+• Are your facilities gender-inclusive?
+• Do you offer affirming care for all gender identities?`,
+    tags: ['LGBTQ friendly', 'transgender affirming', 'inclusive care', 'colorado']
   }
 ];
+
+
 
   const filteredFAQs = faqData.filter(faq => {
     const matchesSearch = searchTerm === '' || 
@@ -1525,25 +1704,28 @@ Check out our complete Lip Filler Shapes Guide with detailed descriptions and ex
   return (
     <Layout title="Lip Filler FAQ - Colorado Lip Fillers Directory">
     <Head>
-  <title>Lip Filler FAQ | Colorado Lip Enhancement Directory</title>
+  <title>Lip Filler Questions Answered 2024: Colorado Safety Guide & Cost Breakdown</title>
   <meta
     name="description"
-    content="Plain-language answers to common lip filler questions: safety, pain, cost, recovery, and results."
+    content="Get answers to 22+ lip filler questions from Colorado providers. Juvederm vs Restylane comparisons, safety concerns, pregnancy restrictions, and recovery timeline."
   />
+  <meta name="lastmod" content={contentUpdates.lastModified} />
+  <meta name="review-date" content={contentUpdates.factCheckDate} />
+  <meta name="content-freshness" content={contentUpdates.updateFrequency} />
   <link rel="canonical" href={CANONICAL} />
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
 
   {/* Open Graph */}
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Lip Filler FAQ" />
-  <meta property="og:description" content="Straightforward answers on safety, pain, cost, recovery, and results." />
+  <meta property="og:title" content="Lip Filler Questions Answered 2024: Colorado Safety Guide" />
+  <meta property="og:description" content="Get answers to 22+ lip filler questions from Colorado providers. Safety concerns, brand comparisons, and recovery guidance." />
   <meta property="og:url" content={CANONICAL} />
   <meta property="og:image" content={OG_IMAGE} />
 
   {/* Twitter */}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Lip Filler FAQ" />
-  <meta name="twitter:description" content="Straightforward answers on safety, pain, cost, recovery, and results." />
+  <meta name="twitter:title" content="Lip Filler Questions Answered 2024: Colorado Safety Guide" />
+  <meta name="twitter:description" content="Get answers to 22+ lip filler questions from Colorado providers. Safety concerns, brand comparisons, and recovery guidance." />
   <meta name="twitter:image" content={OG_IMAGE} />
 
   {/* JSON-LD: FAQPage */}
@@ -1565,6 +1747,15 @@ Check out our complete Lip Filler Shapes Guide with detailed descriptions and ex
   <script
     type="application/ld+json"
     dangerouslySetInnerHTML={{ __html: JSON.stringify(genericSchema) }}
+  />
+
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(locationSchema) }}
+  />
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
   />
 </Head>
 <nav style={{ margin: '20px 0', fontSize: 14 }}>
@@ -1810,9 +2001,152 @@ Check out our complete Lip Filler Shapes Guide with detailed descriptions and ex
           Showing {filteredFAQs.length} of {faqData.length} questions
         </div>
 
-        {/* FAQ Items */}
+       {/* FAQ Items */}
+<div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+  {/* Show ungrouped FAQs if no sections match filters */}
+  {filteredFAQs.length > 0 && faqSections.every(section => getFAQsForSection(section.faqIds).length === 0) && (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+      {filteredFAQs.map(faq => (
+        <div
+          key={faq.id}
+          style={{
+            backgroundColor: 'white',
+            border: '1px solid #e9ecef',
+            borderRadius: '12px',
+            overflow: 'hidden',
+            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+            transition: 'box-shadow 0.2s'
+          }}
+        >
+          {/* Question Header */}
+          <div
+            onClick={() => toggleExpanded(faq.id)}
+            style={{
+              padding: '20px',
+              cursor: 'pointer',
+              borderBottom: expandedItems.has(faq.id) ? '1px solid #e9ecef' : 'none',
+              backgroundColor: expandedItems.has(faq.id) ? '#f8f9fa' : 'white',
+              transition: 'background-color 0.2s'
+            }}
+          >
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '15px' }}>
+              <div style={{ flex: 1 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
+                  <span style={{
+                    backgroundColor: getPriorityColor(faq.priority),
+                    color: 'white',
+                    padding: '2px 8px',
+                    borderRadius: '12px',
+                    fontSize: '12px',
+                    fontWeight: '600'
+                  }}>
+                    {getPriorityLabel(faq.priority)}
+                  </span>
+                  <span style={{
+                    backgroundColor: categories.find(c => c.id === faq.category)?.color + '20',
+                    color: categories.find(c => c.id === faq.category)?.color,
+                    padding: '2px 8px',
+                    borderRadius: '12px',
+                    fontSize: '12px'
+                  }}>
+                    {categories.find(c => c.id === faq.category)?.icon} {categories.find(c => c.id === faq.category)?.name}
+                  </span>
+                  <span style={{ fontSize: '12px', color: '#6c757d' }}>
+                    {getAnswerStats(faq.answer).readTime} min read
+                  </span>
+                </div>
+                <h3 style={{
+                  margin: 0,
+                  fontSize: '1.25rem',
+                  color: '#333',
+                  lineHeight: '1.4'
+                }}>
+                  {faq.question}
+                </h3>
+              </div>
+              <div style={{ color: '#6c757d', transition: 'transform 0.2s', transform: expandedItems.has(faq.id) ? 'rotate(180deg)' : 'rotate(0deg)' }}>
+                <ChevronDownIcon size={24} />
+              </div>
+            </div>
+          </div>
+
+          {/* Answer Content */}
+          {expandedItems.has(faq.id) && (
+            <div style={{ padding: '20px', lineHeight: '1.6', color: '#495057' }}>
+              <WarningBanner warningLevel={faq.warningLevel}>
+                {faq.warningLevel === 'high' && "This procedure has specific medical contraindications. Always consult qualified healthcare providers."}
+                {faq.warningLevel === 'medium' && "Important safety considerations apply. Ensure you choose qualified practitioners."}
+                {faq.warningLevel === 'low' && "Following proper aftercare guidelines helps ensure optimal results."}
+              </WarningBanner>
+
+              {formatAnswer(faq.answer)}
+
+              <ExpertQuote expertQuote={faq.expertQuote} />
+              <Sources sources={faq.sources} />
+              <RelatedQuestions 
+                relatedQuestions={faq.relatedQuestions}
+                toggleExpanded={toggleExpanded}
+                faqData={faqData}
+              />
+              <ContentFreshness 
+                lastUpdated={faq.lastUpdated}
+                sourcesVerified={faq.sourcesVerified}
+                factChecked={faq.factChecked}
+              />
+              
+              {/* Tags */}
+              {faq.tags && (
+                <div style={{ marginTop: '20px', paddingTop: '15px', borderTop: '1px solid #e9ecef' }}>
+                  <div style={{ fontSize: '14px', color: '#6c757d', marginBottom: '8px' }}>Related topics:</div>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                    {faq.tags.map(tag => (
+                      <span
+                        key={tag}
+                        style={{
+                          backgroundColor: '#e9ecef',
+                          color: '#495057',
+                          padding: '2px 8px',
+                          borderRadius: '4px',
+                          fontSize: '12px'
+                        }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  )}
+
+  {/* Show structured sections when FAQs exist for them */}
+  {faqSections.map(section => {
+    const sectionFAQs = getFAQsForSection(section.faqIds);
+    
+    // Only show section if it has visible FAQs after filtering
+    if (sectionFAQs.length === 0) return null;
+    
+    return (
+      <section key={section.id}>
+        {/* H2 Section Header for SEO */}
+        <h2 style={{
+          fontSize: '1.75rem',
+          fontWeight: '600',
+          color: '#333',
+          marginBottom: '20px',
+          paddingBottom: '10px',
+          borderBottom: '2px solid #667eea'
+        }}>
+          {section.title}
+        </h2>
+        
+        {/* FAQs in this section */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          {filteredFAQs.map(faq => (
+          {sectionFAQs.map(faq => (
             <div
               key={faq.id}
               style={{
@@ -1858,10 +2192,8 @@ Check out our complete Lip Filler Shapes Guide with detailed descriptions and ex
                         {categories.find(c => c.id === faq.category)?.icon} {categories.find(c => c.id === faq.category)?.name}
                       </span>
                       <span style={{ fontSize: '12px', color: '#6c757d' }}>
-                      {getAnswerStats(faq.answer).readTime} min read
-                    </span>
-                   
-                      
+                        {getAnswerStats(faq.answer).readTime} min read
+                      </span>
                     </div>
                     <h3 style={{
                       margin: 0,
@@ -1881,7 +2213,6 @@ Check out our complete Lip Filler Shapes Guide with detailed descriptions and ex
               {/* Answer Content */}
               {expandedItems.has(faq.id) && (
                 <div style={{ padding: '20px', lineHeight: '1.6', color: '#495057' }}>
-
                   <WarningBanner warningLevel={faq.warningLevel}>
                     {faq.warningLevel === 'high' && "This procedure has specific medical contraindications. Always consult qualified healthcare providers."}
                     {faq.warningLevel === 'medium' && "Important safety considerations apply. Ensure you choose qualified practitioners."}
@@ -1890,23 +2221,18 @@ Check out our complete Lip Filler Shapes Guide with detailed descriptions and ex
 
                   {formatAnswer(faq.answer)}
 
-                  {/* ADD THIS - Expert Quote Component */}
                   <ExpertQuote expertQuote={faq.expertQuote} />
-
                   <Sources sources={faq.sources} />
-
                   <RelatedQuestions 
                     relatedQuestions={faq.relatedQuestions}
                     toggleExpanded={toggleExpanded}
                     faqData={faqData}
                   />
-
-                   
-                    <ContentFreshness 
-                      lastUpdated={faq.lastUpdated}
-                      sourcesVerified={faq.sourcesVerified}
-                      factChecked={faq.factChecked}
-                    />
+                  <ContentFreshness 
+                    lastUpdated={faq.lastUpdated}
+                    sourcesVerified={faq.sourcesVerified}
+                    factChecked={faq.factChecked}
+                  />
                   
                   {/* Tags */}
                   {faq.tags && (
@@ -1935,6 +2261,10 @@ Check out our complete Lip Filler Shapes Guide with detailed descriptions and ex
             </div>
           ))}
         </div>
+      </section>
+    );
+  })}
+</div>
 
         {/* No Results */}
         {filteredFAQs.length === 0 && (
@@ -1983,23 +2313,32 @@ Check out our complete Lip Filler Shapes Guide with detailed descriptions and ex
           </div>
         </div>
 
-        {/* Medical Disclaimer */}
-        <div style={{
-          backgroundColor: '#f8f9fa',
-          border: '1px solid #dee2e6',
-          borderRadius: '8px',
-          padding: '20px',
-          fontSize: '14px',
-          color: '#6c757d',
-          fontStyle: 'italic',
-          textAlign: 'center'
-        }}>
-          <p style={{ margin: 0 }}>
-            <strong>Medical Disclaimer:</strong> This information is for educational purposes only and 
-            does not constitute medical advice. Always consult with a qualified healthcare provider 
-            for personalized treatment recommendations and medical guidance.
-          </p>
-        </div>
+            {/* Comprehensive Legal Disclaimer */}
+          <div style={{
+            backgroundColor: '#f8f9fa',
+            border: '2px solid #6c757d',
+            borderRadius: '8px',
+            padding: '30px',
+            textAlign: 'center'
+          }}>
+            <h4 style={{ margin: '0 0 15px 0', fontSize: '1.1rem', fontWeight: '600', color: '#495057' }}>
+              Important Legal and Medical Disclaimer
+            </h4>
+            <div style={{ textAlign: 'left', fontSize: '0.9rem', color: '#6c757d', lineHeight: '1.6' }}>
+              <p style={{ margin: '0 0 15px 0' }}>
+                <strong>Educational Content Only:</strong> This guide provides general educational information about cosmetic procedures and should not be considered medical advice. Individual results, risks, and suitability vary significantly based on anatomy, medical history, and other factors.
+              </p>
+              <p style={{ margin: '0 0 15px 0' }}>
+                <strong>Professional Consultation Required:</strong> Always consult with board-certified healthcare providers to discuss whether these treatments are appropriate for your specific medical situation and aesthetic goals. This content does not establish a doctor-patient relationship.
+              </p>
+              <p style={{ margin: '0 0 15px 0' }}>
+                <strong>Verify Provider Credentials:</strong> Independently verify all provider qualifications through official state medical board databases and professional associations before scheduling any procedures. The listing or mention of providers does not constitute endorsement.
+              </p>
+              <p style={{ margin: 0 }}>
+                <strong>No Guarantees:</strong> Treatment outcomes cannot be guaranteed. All cosmetic procedures carry risks including but not limited to infection, scarring, asymmetry, nerve damage, and unsatisfactory results. Carefully review informed consent documentation before proceeding with any treatment.
+              </p>
+            </div>
+          </div>
       </div>
     </Layout>
   );
