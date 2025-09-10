@@ -46,7 +46,17 @@
 "metaDescription": "Xanadu Med Spa in Fort Collins offers lip filler with Juvéderm and Revanesse. Accessible clinic with online scheduling and memberships. Book a consult.",
  "about": "Xanadu Med Spa in Fort Collins specializes in conservative lip enhancement and medical aesthetics with a client-first philosophy since 2015. Our expert team uses premium hyaluronic acid fillers including Juvéderm and Revanesse, delivering natural-looking results that last 12-24 months. What sets us apart is our 'listen first, plan together, treat conservatively' approach—ensuring every lip augmentation meets your unique goals and facial anatomy.\n\nLocated at 2105 Bighorn Drive, our inclusive, fully accessible spa features wheelchair-friendly entrances, gender-neutral restrooms, convenient online scheduling, and flexible membership options. During your personalized consultation, we discuss realistic expectations, aftercare protocols, and maintenance schedules. Immediate improvements are typical, with longevity varying by product choice and individual metabolism.\n\nWe encourage clients to verify our Colorado DORA credentials and ask detailed questions about safety protocols. Our reversible filler options provide peace of mind, while our experienced practitioners ensure comfortable, welcoming treatment for all. Call (970) 482-1889 to schedule your consultation and discover why Fort Collins trusts Xanadu for thoughtful aesthetic enhancement.",
 "description": "Lip fillers available: Juvéderm Volbella XC, Juvéderm Ultra XC, Revanesse Lips+.",
-"brandsProof": ["https://www.xanadumedspa.com/service/fillers-in-fort-collins/"]
+"brandsProof": ["https://www.xanadumedspa.com/service/fillers-in-fort-collins/"],
+"serviceArea": ["Collindale", "Warren Lake", "Midtown", "Southridge Greens"],
+"specialties": [
+  "Conservative lip enhancement approach",
+  "Client-first philosophy since 2015", 
+  "Listen first, plan together methodology",
+  "Natural-looking results lasting 12-24 months",
+  "Fully accessible and inclusive facility",
+  "Reversible filler options available",
+  "Personalized consultation process"
+]
 },
 {
 "id": 2,
@@ -85,7 +95,18 @@
  "metaDescription": "The Luxe Room in Fort Collins offers nurse-led injectables—Juvéderm & Restylane—for natural results. Women-owned, LGBTQ+ friendly. Appointment required.",
   "shortDescription": "Women-owned med spa specializing in natural-looking injectable treatments by highly skilled RN/NP injectors and licensed estheticians. LGBTQ+ friendly and wheelchair accessible; membership available. Appointments recommended.",
  "about": "The Luxe Room Fort Collins stands as one of the top premier women-owned, nurse-led medical spa specializing in natural lip enhancement and facial aesthetics. Our board-certified RN and NP injectors collaborate with licensed medical estheticians, utilizing advanced in-house techniques to deliver refined, balanced results without the overdone appearance. We expertly administer premium hyaluronic acid fillers including Juvéderm and Restylane, carefully selected for their smooth integration and proven longevity.\n\nOur comprehensive consultation process begins with active listening to understand your aesthetic goals, followed by detailed treatment planning and conservative approach recommendations. Clients typically experience immediate improvements, with results lasting 6-18 months depending on product selection, precise placement, and individual metabolic factors. We provide thorough aftercare guidance and maintenance scheduling to optimize your investment.\n\nThe Luxe Room prioritizes inclusivity and accessibility with wheelchair-accessible entrances, dedicated parking, and ADA-compliant restrooms. As a proudly LGBTQ+ friendly practice, we maintain a transgender-affirming environment where all clients feel welcomed and respected. Our amenities include flexible membership programs, comfortable recovery areas, and comprehensive skincare services for complete aesthetic wellness.\n\nAppointments are required to ensure personalized attention and adequate consultation time. We actively encourage clients to verify our Colorado medical credentials through official DORA resources and ask detailed questions about product safety, injection techniques, and expected outcomes. Whether you're exploring injectables for the first time or refining existing treatments, our precision-focused team delivers exceptional care with medical expertise and artistic vision.",
-"brandsProof": ["https://www.luxeroomcosmetic.com/lip-filler-denver-boulder/"]
+"brandsProof": ["https://www.luxeroomcosmetic.com/lip-filler-denver-boulder/"],
+"serviceArea": ["Harmony Commons", "Fossil Creek", "Rigden Farm", "Timnath"],
+"specialties": [
+  "Women-owned, nurse-led medical spa",
+  "Board-certified RN and NP injectors",
+  "Natural lip enhancement without overdone appearance",
+  "Conservative approach with detailed treatment planning",
+  "LGBTQ+ friendly and transgender-affirming",
+  "Wheelchair accessible and ADA-compliant facility",
+  "Comprehensive consultation with active listening",
+  "Flexible membership programs available"
+]
 },
 {
 "id": 3,
@@ -132,7 +153,17 @@
 "shortDescription": "Boulder cosmetic dermatology practice specializing in natural lip augmentation and facial rejuvenation with Juvéderm, Restylane, Versa, and RHA. Safety-first consultations cover goals, longevity, and aftercare. Wheelchair-accessible and LGBTQ+ friendly. Appointments recommended.",
  "about": "Rinnova Skin & Body serves as Boulder's leading cosmetic dermatology and medical aesthetics practice, delivering Harvard-trained expertise throughout the Front Range. Led by Dr. Todd Becker, MD, PhD—a dual Harvard and Emory University graduate with UCLA dermatology residency and Mohs surgery fellowship—our practice merges clinical precision with artistic vision for natural facial rejuvenation and expert lip enhancement.\n\nOur comprehensive injectable collection features premium hyaluronic acid fillers including Juvéderm and Volbella® with Vycross® technology, Restylane® family with XpresHAn™ innovation. This extensive selection enables precise facial line correction, cheek volume restoration, and subtle lip augmentation customized to individual anatomy and aesthetic objectives. Each consultation includes thorough product education, realistic expectation setting, and personalized aftercare protocols.\n\nBeyond injectables, we provide advanced laser and light-based treatments targeting sun damage, redness, texture irregularities, and aging signs, with tailored protocols for diverse skin types and lifestyles. Our Boulder facility prioritizes inclusivity and accessibility, featuring wheelchair-accessible entrances, dedicated parking, ADA-compliant restrooms, and gender-neutral facilities. As a proudly LGBTQ+ friendly practice, we maintain a transgender-affirming environment where every patient feels respected and welcomed.\n\nAppointments are recommended to ensure thorough evaluation and comprehensive treatment planning. Whether exploring your first cosmetic procedure or advancing an established rejuvenation journey, Rinnova combines cutting-edge technology with compassionate care, helping you achieve refreshed, authentic results that enhance your natural beauty.",
 
-"brandsProof": ["https://www.rinnovaskinandbody.com/services/botox-and-dermal-fillers"]
+"brandsProof": ["https://www.rinnovaskinandbody.com/services/botox-and-dermal-fillers"],
+"serviceArea": ["29th Street", "Foothills", "Central Boulder", "Palo Park"],
+"specialties": [
+  "Harvard-trained dermatology expertise",
+  "MD, PhD dual Harvard and Emory graduate",
+  "UCLA dermatology residency and Mohs surgery fellowship",
+  "Clinical precision with artistic vision approach",
+  "Advanced Vycross® and XpresHAn™ filler technology",
+  "LGBTQ+ friendly and transgender-affirming",
+  "Wheelchair accessible with ADA-compliant facilities"
+]
 },
 {
 "id": 4,
@@ -175,7 +206,19 @@
   "metaDescription": "RESTOR Medical Spa in Boulder offers natural-looking lip fillers with personalized care by RN injectors. Women-owned, LGBTQ+ friendly.",
   "shortDescription": "Personalized lip filler and aesthetic care in Boulder, delivered by experienced RN injectors. Women-owned, inclusive, and accessibility-minded.",
   "about": "RESTOR Medical Spa has transformed Boulder's aesthetic landscape since 2011 with a revolutionary philosophy: making aging feel optional. This women-owned, inclusive clinic welcomes clients from all backgrounds in a thoughtfully designed space prioritizing comfort, accessibility, and exceptional care. Our experienced Registered Nurse injectors specialize in medical-grade treatments, customizing every approach to your unique facial anatomy, aesthetic goals, and lifestyle preferences.\n\nOur lip enhancement expertise centers on premium hyaluronic acid fillers selected for their natural movement, soft texture, and clinical reversibility when appropriate. We feature Restylane Kysse® alongside cutting-edge HA formulations that expertly refine lip definition, balance facial proportions, and add subtle volume with minimal recovery time. Each consultation follows our signature RESTOR Method, emphasizing conservative dosing, precise technique, and transparent communication for naturally refreshed results.\n\nLocated at 2088 Broadway, our Boulder facility champions accessibility with wheelchair-friendly entrances, dedicated parking, and ADA-compliant restrooms. As a proudly LGBTQ+ friendly practice, we maintain a transgender-affirming environment where every client feels respected and valued. Appointments are required to ensure personalized attention and comprehensive treatment planning.\n\nBeyond aesthetic excellence, RESTOR actively supports local initiatives and women-led causes through charitable partnerships and community events. We believe informed decisions create superior outcomes, encouraging clients to ask detailed questions about product selection, injection techniques, and safety protocols. Please verify our Colorado DORA credentials and consult with our providers for personalized aesthetic guidance.",
-"brandsProof": ["https://www.restormedicalspa.com/service/injectables/restylane-collection/"]
+"brandsProof": ["https://www.restormedicalspa.com/service/injectables/restylane-collection/"],
+"serviceArea": ["Whittier", "Mapleton Hill", "University Hill", "Goss-Grove"],
+"specialties": [
+  "Women-owned clinic since 2011",
+  "Making aging feel optional philosophy",
+  "Experienced Registered Nurse injectors",
+  "Signature RESTOR Method approach",
+  "Conservative dosing with precise technique",
+  "Premium Restylane Kysse® expertise",
+  "LGBTQ+ friendly and transgender-affirming",
+  "Wheelchair accessible with ADA-compliant facilities",
+  "Community partnerships and charitable involvement"
+]
 },
 {
 "id": 5,
@@ -218,7 +261,16 @@
 "metaDescription": "Broomfield lip fillers by Dr. Phil Hong Nguyen, MD—Allergan national speaker. Fast results with tailored Juvéderm Ultra and Restylane Kysse.",
   "shortDescription": "National Allergan speaker Dr. Phil Hong Nguyen offers fast, natural lip enhancement in Broomfield using Juvéderm Ultra and Restylane Kysse in an accessible clinic.",
  "about": "Dr. Phil Hong Nguyen, MD, changes the Denver-Broomfield aesthetic landscape through Happy Clinic, bringing over two decades of specialized injection expertise to lip enhancement and facial aesthetics. As a distinguished national speaker for Allergan—creators of Juvéderm. Dr. Nguyen educates physicians nationwide on cutting-edge, patient-centered injection methodologies. His impressive credentials include Colorado medical licensure for 20 years, plus Indiana and California licenses, with his medical degree earned from Indiana University School of Medicine in 1998 and internship completed at University of Colorado Swedish Medical Center.\n\nDr. Nguyen's unique fine arts background in drawing, painting, and sculpture elevates his approach to facial harmony and lip aesthetics, creating naturally balanced results through artistic precision. At Happy Clinic, personalized lip augmentation plans utilize carefully curated hyaluronic acid fillers, primarily Juvéderm Ultra and Restylane Kysse, to expertly refine definition, restore facial proportion, and deliver soft, natural-looking volume enhancement. Most clients experience immediate visible improvements, with minor settling occurring as post-treatment swelling naturally resolves.\n\nLocated at 413 Summit Boulevard, Suite 104, Broomfield, our practice champions accessibility with wheelchair-friendly entrances, dedicated parking, and ADA-compliant restrooms. We prioritize kindness, respect, and transparent communication throughout every patient journey. Comprehensive consultations address treatment options, realistic expectations, aftercare protocols, and maintenance scheduling. Appointments are required to ensure dedicated provider attention and optimal treatment outcomes. We encourage clients to verify Colorado DORA credentials and ask detailed questions about product selection, injection techniques, and safety protocols.",
-"brandsProof": ["https://www.happyclinicboulder.com/juvederm"]
+"brandsProof": ["https://www.happyclinicboulder.com/juvederm"],
+"serviceArea": ["Westminister", "Superior", "Louisville", "Broomfield - Old Town"],
+"specialties": [
+  "Over 20 years specialized injection expertise",
+  "National speaker for Allergan Juvéderm",
+  "Multi-state medical licensure (Colorado, Indiana, California)",
+  "Artistic precision approach to facial harmony",
+  "Patient-centered injection methodologies",
+  "Wheelchair accessible with ADA-compliant facilities"
+]
 },
 {
 "id": 6,
@@ -271,7 +323,17 @@
   "shortDescription": "Women-owned med spa led by Dr. Anne Bode, offering injectables, medical-grade facials, peels, PDO threads, and laser treatments in Colorado Springs.",
 "about": "Blush & Grey Medical Spa revolutionizes Colorado Springs aesthetic medicine through collaborative excellence, clinical innovation, and unwavering transparency. Founded under board-certified physician Anne Bode, MD's expert leadership, our practice specializes in advanced cosmetic injectables and comprehensive skin rejuvenation, featuring medical-grade facials, precision chemical peels, PDO thread lifts, and cutting-edge laser treatments. Our skilled injectors masterfully blend scientific precision with artistic vision, utilizing premium products including Juvéderm, and Restylane to achieve naturally refreshed, confidence-enhancing results.\n\nOur distinctive \"Blush\" identity celebrates the healthy radiance of optimal skin health—a daily commitment to treatments that amplify your inherent beauty. From our inception, we've prioritized treatment effectiveness, innovative methodologies, and transparent community service. Education forms our mission's cornerstone: we invest comprehensive time explaining treatment options, establishing realistic expectations, and designing personalized care plans perfectly aligned with your unique anatomy, lifestyle timeline, and aesthetic objectives.\n\nDr. Bode contributes over a decade of aesthetic medicine expertise, seamlessly combining evidence-based techniques with her signature gentle, patient-centered philosophy. We actively welcome client feedback and continuously refine our methodologies to consistently deliver sophisticated, confidence-building transformations. As a proud women-owned practice located at 1715 N Weber St., Suite 360, Colorado Springs, we maintain full wheelchair accessibility including entrances, dedicated parking, and ADA-compliant restrooms. Our inclusive environment ensures every client receives exceptional care and attention.",
 "brandsNote": "",
-"brandsProof": ["https://www.blushandgreymedspa.com/treatment/juvederm-fillers/", "https://www.blushandgreymedspa.com/treatment/restylane-portfolio/"]
+"brandsProof": ["https://www.blushandgreymedspa.com/treatment/juvederm-fillers/", "https://www.blushandgreymedspa.com/treatment/restylane-portfolio/"],
+"serviceArea": ["Old North End", "Bonnyville", "Middle Shooks Run", "Roswell"],
+"specialties": [
+  "Board-certified physician Anne Bode, MD leadership",
+  "Over a decade of aesthetic medicine expertise",
+  "Collaborative excellence and clinical innovation",
+  "Advanced cosmetic injectables specialization",
+  "Evidence-based techniques with gentle philosophy",
+  "Women-owned practice with inclusive environment",
+  "Wheelchair accessible with ADA-compliant facilities"
+]
 },
 {
 "id": 7,
@@ -314,7 +376,18 @@
   "shortDescription": "Family-owned medi spa serving Colorado Springs, Monument, and Black Forest for 16+ years—lip filler specialists with a gentle RN injector, plus facials, microneedling, fat-freezing, and skin tightening.",
   "about": "Fountain of Youth Medi Spa has served Colorado Springs, Monument, and Black Forest communities for over 16 years with unwavering family values since 2008. This beloved family-owned practice was founded on three core principles: treating clients with genuine kindness, actively listening to individual needs, and delivering naturally beautiful results through meticulous attention to detail. Owner-operator leadership ensures personalized care remains central to every client experience.\n\nAndy, RN, brings exceptional expertise as our renowned cosmetic injector, combining 10+ years of pediatric nursing experience with an artist's precision. His extraordinarily gentle technique and sculptor's aesthetic eye have earned him recognition as a true \"lip master\" among our devoted clientele. Our signature lip enhancement service utilizes Revanesse Lips, delivering stunning results lasting 6-8 months depending on individual metabolism and lifestyle factors.\n\nOur comprehensive treatment menu includes; medical-grade facials procedures. Every personalized treatment plan prioritizes client comfort, respects unique facial anatomy, and aligns with individual aesthetic goals. We provide thorough education throughout your journey, from initial consultation through complete aftercare protocols.\n\nAs a proud women-owned practice, we maintain full wheelchair accessibility including entrances, dedicated parking, and ADA-compliant restrooms. Our warm, family-run culture ensures thoughtful, conservative enhancements that celebrate your natural features while delivering refreshed confidence you'll love.",
 "brandsNote": "",
-"brandsProof": ["https://www.fountainofyouthskincarebytina.com/botox-dysport-xeomin-lip-filler"]
+"brandsProof": ["https://www.fountainofyouthskincarebytina.com/botox-dysport-xeomin-lip-filler"],
+"serviceArea": ["Monument", "Flying Horse", "Gleneagle", "Briargate (North)"],
+"specialties": [
+  "Family-owned practice serving community 16+ years since 2008",
+  "Andy, RN with 10+ years pediatric nursing experience",
+  "Gentle injection technique with sculptor's aesthetic eye",
+  "Recognized 'lip master' among clientele",
+  "Revanesse Lips specialization with 6-8 month results",
+  "Serving Colorado Springs, Monument, and Black Forest",
+  "Women-owned practice with family values",
+  "Wheelchair accessible with ADA-compliant facilities"
+]
 },
 {
 "id": 8,
@@ -358,7 +431,18 @@
   "shortDescription": "Natural-looking lip and facial fillers under on-site plastic-surgery oversight—Restylane, Juvéderm, and Radiesse with conservative, artful technique.",
  "about": "Premier MediSpa Colorado Springs delivers exceptional injectable artistry under comprehensive medical oversight, specializing in naturally elegant facial rejuvenation. Led by Gertrudes (Gerty) R. Bland, RN-BSN—a distinguished nurse expert in non-invasive and minimally invasive aesthetic treatments—our practice extends the renowned Center for Plastic Surgery's excellence. Under the medical direction of her husband, Gregory F. Bland, MD, PharmD, our team benefits from his board-certified plastic surgery expertise, UCSF general and plastic surgery training, and dual doctorate credentials, ensuring unparalleled clinical perspective for every treatment protocol.\n\nOur curated injectable portfolio features premium fillers meticulously selected for optimal movement, exceptional longevity, and superior tactile feel. Restylane Kysse with XpresHAn™ Technology delivers flexible, naturally kissable lip volume, while the comprehensive Restylane family—including Silk—addresses precise definition and expression-friendly smoothing. Juvéderm Vollure and Volbella expertly refine facial folds and delicate perioral details, complemented by versatile Ultra and Ultra Plus formulations. For structural enhancement, calcium-based Radiesse provides deeper fold correction and architectural lift when clinically appropriate.\n\nTreatment sessions typically require 15-30 minutes, featuring comfort amenities including topical numbing and advanced cooling techniques. Expect mild settling swelling over several days as products integrate naturally. Whether pursuing subtle lip definition or comprehensive facial rejuvenation, our conservative dosing philosophy, precise placement techniques, and transparent guidance ensure refreshed results that authentically enhance your natural beauty through RN-led artistry and board-certified surgical oversight.",
 "brandsNote": "",
-"brandsProof": ["https://premedspa.com/medical_services/soft-tissue-fillers/"]
+"brandsProof": ["https://premedspa.com/medical_services/soft-tissue-fillers/"],
+"serviceArea": ["Cragmor", "Patty Jewett", "Palmer Park West", "Garden Ranch"],
+"specialties": [
+  "Board-certified plastic surgery medical oversight",
+  "Gregory F. Bland, MD, PharmD dual doctorate credentials",
+  "UCSF general training",
+  "Gertrudes Bland, RN-BSN aesthetic expertise",
+  "XpresHAn™ Technology Restylane Kysse specialization",
+  "Comprehensive Restylane and Juvéderm portfolio",
+  "Calcium-based Radiesse structural enhancement",
+  "Conservative dosing philosophy with precise placement"
+]
 },
 {
 "id": 9,
@@ -403,7 +487,18 @@
  "about": "Refine Aesthetics transforms Denver's cosmetic injection landscape through precision-driven, safety-first treatments that deliver naturally refreshed results. Founded by a 20-year Botox patient who envisioned superior aesthetic care, our practice combines cutting-edge technology with compassionate, detail-oriented service. We specialize in sophisticated injection techniques that enhance your natural beauty without artificial overdone appearances.\n\nOur innovative approach utilizes AccuVein vascular visualization technology to identify superficial blood vessels and strategically mark avoidance zones, significantly minimizing bruising risks during treatment. For advanced filler placement, Clarius ultrasound imaging confirms precise depth and anatomical location, ensuring safer outcomes around high-risk facial areas while delivering consistently symmetrical, beautiful results. While complete bruise prevention cannot be guaranteed, our advanced protocols substantially reduce complications through transparent pre-treatment communication.\n\nOur evidence-based injectable menu features premium Juvéderm Volbella XC for line smoothing and soft facial contouring, plus specialized Juvéderm Volbella XC for refined lip enhancement and delicate perioral line correction. Every personalized treatment plan considers your unique facial anatomy, natural expression patterns, and specific aesthetic objectives. We invest extensively in continuous advanced education because aesthetic medicine evolves rapidly, ensuring our patients receive the latest, safest industry best practices.\n\nFrom comprehensive consultation through dedicated follow-up care, experience our transparent, trust-building approach designed to deliver results that authentically represent you—simply more rested, beautifully defined, and genuinely confident in your enhanced natural appearance.",
 
 "brandsNote": "",
-"brandsProof": ["https://www.refineaestheticsllc.com/injectables/#"]
+"brandsProof": ["https://www.refineaestheticsllc.com/injectables/#"],
+"serviceArea": ["Pulpit Rock", "Briargate", "Rockrimmon", "Vista Grande"],
+"specialties": [
+  "Founded by 20-year Botox patient with patient perspective",
+  "AccuVein vascular visualization technology",
+  "Clarius ultrasound imaging for precise filler placement",
+  "Advanced protocols to minimize bruising risks",
+  "Juvéderm Volbella XC specialization",
+  "Evidence-based injectable menu",
+  "Continuous advanced education commitment",
+  "Safety-first precision-driven treatments"
+]
 },
 {
 "id": 10,
@@ -447,7 +542,18 @@
   "shortDescription": "Personalized injectables by Allergan-trained experts. Juvéderm & Restylane fillers with a tailored plan at our Castle Rock clinic.",
   "about": "Aurora Medical Spa has inspired confidence and empowered individuals through exceptional aesthetic experiences since 2006, now bringing our elevated personalized approach to Castle Rock. As consistently recognized Top 10 Allergan providers nationwide, our prestigious medical team includes three Allergan National Trainers, demonstrating our unwavering commitment to advanced education, patient safety, and cutting-edge injection techniques. We deliver comprehensive treatments from premium hyaluronic acid dermal fillers—including Juvéderm and Restylane—to innovative skin rejuvenation and body contouring solutions.\n\nOur meticulous treatment process begins with thorough consultations addressing your aesthetic goals, comprehensive medical history review, and customized planning for naturally balanced facial proportions. Prior to injections, practitioners conduct detailed facial movement assessments—observing smiles, frowns, and expressions—before placing precise temporary markings that guide optimal product placement. This methodical, evidence-based approach ensures refined, consistent results while prioritizing patient comfort throughout every procedure.\n\nAs a proudly LGBTQ+ friendly practice, we welcome all clients in our fully accessible Castle Rock facility, featuring wheelchair-accessible entrances, dedicated parking, and ADA-compliant restrooms. Our inclusive environment ensures every individual receives respectful, professional care regardless of background or identity.\n\nWhether restoring facial volume, softening expression lines, or enhancing lip definition, our combination of nationally recognized training expertise and individualized treatment planning delivers authentic results that reflect your refreshed, confident, naturally beautiful self while maintaining your unique facial characteristics and personal aesthetic vision.",
 "brandsNote": "",
-"brandsProof": ["https://www.auroramedicalspa.com/treatments/dermal-fillers/"]
+"brandsProof": ["https://www.auroramedicalspa.com/treatments/dermal-fillers/"],
+"serviceArea": ["Castle Rock", "Castle Pines", "The Meadows", "Sedailia"],
+"specialties": [
+  "Top 10 Allergan provider nationwide since 2006",
+  "Three Allergan National Trainers on medical team",
+  "Nationally recognized training expertise",
+  "Detailed facial movement assessment methodology",
+  "Evidence-based approach with precise temporary markings",
+  "Comprehensive medical history review process",
+  "LGBTQ+ friendly and inclusive practice",
+  "Wheelchair accessible with ADA-compliant facilities"
+]
 },
 {
 "id": 11,
@@ -490,7 +596,17 @@
   "shortDescription": "Personalized Juvéderm Ultra & Ultra Plus treatments for natural-looking lips, restored volume, and smoother skin.",
  "about": "Always Beautiful Medspa transmutes aesthetic dreams into reality through personalized care tailored to your unique vision—whether pursuing lasting makeup artistry, silky smooth skin texture, naturally fuller lips, or a refreshed, luminous complexion. Every transformative journey begins with comprehensive consultations where we dedicate substantial time to understanding your concerns, establishing realistic expectations, and curating treatments designed for balanced, authentically natural outcomes.\n\nOur expert injectors specialize in premium hyaluronic acid dermal fillers from the renowned Juvéderm family, featuring Juvéderm Ultra and Ultra Plus formulations. These advanced smooth HA gel technologies excel at restoring youthful facial volume, enhancing lip definition, and softening common expression lines including smile lines, marionette lines, nasolabial folds, and delicate vertical lip lines. Most clients experience immediate enhancement in facial definition and hydration, with impressive longevity extending up to 12-18 months depending on individual metabolism, strategic product selection, and precise anatomical placement.\n\nOur philosophy emphasizes that exceptional outcomes result from meticulous precision planning, thoughtful conservative dosing when clinically appropriate, and transparent communication throughout your aesthetic journey. You'll receive detailed aftercare guidance, realistic swelling expectations, and optimal touch-up timing to ensure results appear refined while feeling authentically you.\n\nFor ultimate comfort and accessibility, our welcoming facility features comprehensive wheelchair-accessible parking, entrances, and ADA-compliant restrooms. Whether exploring sophisticated lip enhancement or comprehensive facial rejuvenation, our dedicated team expertly guides you toward confident, naturally beautiful transformations.",
 "brandsNote": "",
-"brandsProof": ["https://www.alwaysbeautiful.net/juvederm-denver/"]
+"brandsProof": ["https://www.alwaysbeautiful.net/juvederm-denver/"],
+"serviceArea": ["Southlands", "Smoky Hill", "Aurora", "Seven Hills"],
+"specialties": [
+  "Lasting makeup artistry services",
+  "Premium Juvéderm family specialization",
+  "Juvéderm Ultra and Ultra Plus formulations",
+  "Advanced smooth HA gel technologies",
+  "Conservative dosing with meticulous precision planning",
+  "Comprehensive consultation process",
+  "Wheelchair accessible with ADA-compliant facilities"
+]
 },
 {
 "id": 12,
@@ -534,7 +650,18 @@
   "shortDescription": "Evergreen’s personalized Juvéderm lip and facial filler care from an experienced NP-led team.",
    "about": "For Medical Aesthetics, LLC transforms Evergreen, Colorado's aesthetic landscape through expertly tailored, non-invasive and minimally invasive treatments. Led by distinguished Family Nurse Practitioner Holly Vali, who brings 20+ years of comprehensive patient care experience across all life stages, our clinic prioritizes meaningful connections, practical guidance, and authentically refreshed results that enhance your natural confidence. Holly's preventive healthcare mindset and collaborative treatment philosophy empowers patients to achieve their aesthetic goals at a comfortable, personalized pace.\n\nOur carefully curated hyaluronic acid filler menu features the premium Juvéderm family collection. Juvéderm Volbella XC, Juvéderm Ultra and Ultra Plus restore youthful volume to lips and cheeks while addressing prominent parentheses lines. Specialized Juvéderm Volbella refines delicate lip definition and smooths perioral lipstick lines with precision. Every customized treatment plan considers your unique facial features, lifestyle downtime requirements, and personal preferences, with transparent expectations regarding post-treatment swelling, comprehensive aftercare protocols, and optimal maintenance scheduling.\n\nComprehensive appointments begin with thorough consultations reviewing medical history, aesthetic priorities, and available treatment options. You'll receive honest, evidence-based recommendations featuring our signature conservative, stepwise approach ensuring balanced outcomes and naturally beautiful finishes. Our welcoming clinic provides convenient wheelchair-accessible parking, entrances, and ADA-compliant restrooms. Whether pursuing subtle lip enhancement or comprehensive facial rejuvenation, For Medical Aesthetics, LLC combines clinical excellence with warm, patient-centered care that new and returning patients consistently appreciate.",
 "brandsNote": "",
-"brandsProof": ["https://www.medicalaestheticsllc.com/injectables/juvederm/"]
+"brandsProof": ["https://www.medicalaestheticsllc.com/injectables/juvederm/"],
+"serviceArea": ["Evergreen", "Conifer", "Indian Hills", "Kittredge"],
+"specialties": [
+  "Family Nurse Practitioner Holly Vali with 20+ years experience",
+  "Comprehensive patient care across all life stages",
+  "Preventive healthcare mindset approach",
+  "Premium Juvéderm family collection specialization",
+  "Juvéderm Volbella XC precision lip definition",
+  "Conservative stepwise treatment approach",
+  "Evidence-based recommendations with clinical excellence",
+  "Wheelchair accessible parking and ADA-compliant facilities"
+]
 },
 {
 "id": 13,
@@ -577,7 +704,18 @@
   "shortDescription": "Broomfield’s boutique med spa for natural, non-surgical rejuvenation and lip fillers—complimentary, educational consults.",
   "about": "Sonata Aesthetics has evolved Colorado's non-surgical aesthetic landscape since 2004, helping Broomfield clients \"reflect their best\" through advanced treatments delivering soft, naturally beautiful results with minimal downtime. Every transformative journey begins with complimentary educational consultations led by Dr. Janowski's expert team, where your unique goals, specific concerns, and aesthetic preferences guide personalized treatment planning. Many clients bring cherished photos capturing their ideal appearance—this collaborative approach perfectly aligns expectations while informing precise, customized recommendations.\n\nMedical Director Dr. Janowski brings exceptional credentials, graduating from prestigious Robert Wood Johnson Medical School in 1999, completing Internal Medicine residency at Mount Sinai Hospital New York City in 2002, and practicing Colorado aesthetic medicine since 2005. His philosophy emphasizes patient safety, artistic precision, and comprehensive long-term care, utilizing proven injection techniques that enhance natural features while preserving authentic facial expressions. Our comprehensive treatment menu includes premium dermal fillers and targeted injectables, featuring specialized Restylane® Silk for delicate lip enhancement and fine line correction when clinically appropriate.\n\nOur welcoming Broomfield facility provides convenient wheelchair-accessible entrances, dedicated parking, and ADA-compliant restrooms, ensuring comfortable access for all clients. Whether pursuing subtle lip definition or comprehensive facial rejuvenation, Sonata Aesthetics combines experienced injector expertise with thoughtful, step-by-step treatment approaches designed around your busy lifestyle and specific downtime requirements. Schedule your consultation today to explore personalized options, review realistic timelines, and craft your ideal aesthetic transformation plan.",
 "brandsNote": "",
-"brandsProof": ["https://www.sonataskinandbody.com/fillers/"]
+"brandsProof": ["https://www.sonataskinandbody.com/fillers/"],
+"serviceArea": ["Broomfield", "Westminister", "Northglenn", "Thornton"],
+"specialties": [
+  "Colorado aesthetic medicine practice since 2004",
+  "Dr. Janowski Robert Wood Johnson Medical School graduate",
+  "Mount Sinai Hospital NYC Internal Medicine residency",
+  "Colorado aesthetic medicine practice since 2005",
+  "Complimentary educational consultations",
+  "Specialized Restylane® Silk for lip enhancement",
+  "Photo-guided collaborative treatment planning",
+  "Wheelchair accessible with ADA-compliant facilities"
+]
 },
 {
 "id": 14,
@@ -622,7 +760,18 @@
   "shortDescription": "Denver med spa near Cherry Creek for injectables, skincare, lasers & award-winning permanent makeup—tailored yearly beauty plans.",
  "about": "Dream Medspa revolutionizes Denver's aesthetic care through thoughtfully combined therapies and comprehensive year-round beauty planning. Since 2017, our expert team has crafted personalized treatment strategies blending cosmetic injectables, medical-grade skincare, advanced laser protocols, and award-winning permanent makeup artistry. Every customized plan is delivered by highly trained professionals following rigorous clinical standards that prioritize patient safety, treatment consistency, and authentically natural outcomes.\n\nConveniently positioned on Expo Colorado's third floor—moments from Cherry Creek Mall—our welcoming med spa provides complimentary parking and seamless experiences from arrival to departure. Medical oversight by Dr. Case ensures every treatment pathway aligns with evidence-based protocols and results-driven injection techniques. For facial volume restoration, precise definition, and soft lip enhancement, we expertly utilize the premium JUVÉDERM® Collection of Fillers and specialized Restylane Kysse™ when clinically appropriate, carefully selected to complement your unique anatomy, aesthetic goals, and lifestyle downtime requirements.\n\nWe proudly operate as a women- and Latino-owned practice, maintaining an LGBTQ+ friendly environment committed to inclusive care for all guests. Our comprehensive accessibility features include wheelchair-accessible entrances, dedicated parking, ADA-compliant restrooms, and comfortable seating areas. Whether refreshing skin texture, refining delicate lip contours, or developing comprehensive year-round aesthetic plans, Dream Medspa combines expert clinical care with genuinely warm service, empowering you to wake up feeling beautiful, confident, and authentically radiant every single day.",
 "brandsNote": "",
-"brandsProof": ["https://denverdreammedspa.com/dermalfillers"]
+"brandsProof": ["https://denverdreammedspa.com/dermalfillers"],
+"serviceArea": ["Glendale", "Cherry Creek", "Belcaro", "Virginia Village", "Hilltop"],
+"specialties": [
+  "Comprehensive year-round beauty planning since 2017",
+  "Award-winning permanent makeup artistry",
+  "Medical oversight by Dr. Case",
+  "JUVÉDERM® Collection and Restylane Kysse™ specialization",
+  "Cherry Creek Mall area location with complimentary parking",
+  "Women- and Latino-owned practice",
+  "LGBTQ+ friendly inclusive environment",
+  "Wheelchair accessible with ADA-compliant facilities"
+]
 },
 {
 "id": 15,
@@ -665,7 +814,17 @@
   "shortDescription": "Advanced injectables, skincare, and body treatments by certified specialists—tailored plans for natural, confident results.",
   "about": "Facial Aesthetics delivers comprehensive advanced injectable treatments, medical-grade skincare, and body enhancement therapies designed to refresh your natural features while celebrating your unique beauty. Our distinguished team of Certified Aesthetic Nurse Specialists (CANS) and experienced Physician Assistants provides meticulously personalized care plans prioritizing patient safety, optimal comfort, and exceptional results. From expertly softening fine expression lines with precision Botox injections to masterfully restoring facial volume and contour using premium dermal fillers, every treatment is thoughtfully selected to harmonize with your individual facial anatomy.\n\nWe specialize in the complete Juvéderm family portfolio—including Ultra, Ultra Plus, Volbella, and comprehensive Restylane collection, enabling targeted aesthetic solutions for lip enhancement, cheek augmentation, jawline definition, under-eye support, and overall skin hydration improvement. Utilizing cutting-edge injection techniques and FDA-approved products exclusively, our skilled providers customize each treatment plan according to your specific goals, busy lifestyle requirements, and downtime tolerance to achieve naturally beautiful, long-lasting outcomes.\n\nOur welcoming clinics champion inclusivity, featuring comprehensive wheelchair-accessible entrances, dedicated parking, ADA-compliant restrooms, and comfortable seating areas. As a proudly women-owned, LGBTQ+ friendly practice, we maintain a supportive, respectful environment for all clients. Whether beginning preventative aesthetic care or refining your signature look, Facial Aesthetics combines clinical excellence with compassionate service, helping you discover the confidence that accompanies radiant, youthfully refreshed skin.",
 "brandsNote": "",
-"brandsProof": ["https://facialaestheticsinc.com/services/injectables/dermal-fillers/"]
+"brandsProof": ["https://facialaestheticsinc.com/services/injectables/dermal-fillers/"],
+"serviceArea": ["Congress Park", "Cherry Creek", "Belcaro", "Country Club"],
+"specialties": [
+  "Certified Aesthetic Nurse Specialists (CANS) team",
+  "Experienced Physician Assistants on staff",
+  "Complete Juvéderm family portfolio specialization",
+  "Comprehensive Restylane collection expertise",
+  "Cutting-edge injection techniques with FDA-approved products",
+  "Women-owned, LGBTQ+ friendly practice",
+  "Wheelchair accessible with ADA-compliant facilities"
+]
 },
 {
 "id": 16,
@@ -710,7 +869,17 @@
   "shortDescription": "Board-certified dermatologists in Denver providing personalized lip fillers and cosmetic dermatology for natural, healthy-looking results.",
   "about": "AboutSkin Dermatology & DermSurgery elevates aesthetic medicine by seamlessly integrating beauty enhancement with comprehensive skin health optimization. Under the expert leadership of practice director Joel Cohen, MD—a nationally acclaimed speaker, published researcher, and distinguished medical instructor—our team of board-certified dermatologists delivers advanced medical and cosmetic treatments utilizing rigorous safety protocols and precision injection techniques. We believe exceptional outcomes begin with active listening, ensuring every visit starts with thorough consultations and customized treatment plans tailored to your unique goals, facial anatomy, and lifestyle timeline.\n\nOur lip enhancement expertise utilizes premium hyaluronic acid fillers from the renowned Juvéderm and Restylane families, featuring specialized lip formulations including Restylane Kysse and Restylane Silk. These advanced soft gel technologies integrate naturally to restore youthful volume, refine lip shape, and smooth delicate perioral lines with remarkable precision. Patient comfort remains paramount through topical anesthetic application, while treatments can be strategically paired with complementary laser procedures to optimize perioral skin texture when clinically appropriate. Our dermatology-led methodology ensures beautifully balanced, natural-looking results while maintaining optimal skin health.\n\nWhether addressing age-related facial volume loss or seeking subtle definition for naturally petite lips, AboutSkin provides evidence-based injection techniques and comprehensive aftercare guidance. Our inclusive, welcoming clinics feature complete wheelchair accessibility including entrances, parking, and ADA-compliant restrooms. Experience expert cosmetic dermatology firmly grounded in medical excellence, helping your lips and surrounding skin achieve their healthiest, most beautiful potential.",
 "brandsNote": "",
-"brandsProof": ["https://www.aboutskinderm.com/fillers/restylane/", "https://www.aboutskinderm.com/cosmetic-services/juvederm-r/"]
+"brandsProof": ["https://www.aboutskinderm.com/fillers/restylane/", "https://www.aboutskinderm.com/cosmetic-services/juvederm-r/"],
+"serviceArea": ["Greenwood Village", "Denver", "Centennial", "Cherry Hills Village", "Aurora"],
+"specialties": [
+  "Joel Cohen, MD nationally acclaimed speaker and researcher",
+  "Board-certified dermatologists team",
+  "Medical instructor and published researcher credentials",
+  "Restylane Kysse and Restylane Silk specialization",
+  "Advanced soft gel technologies expertise",
+  "Dermatology-led methodology approach",
+  "Wheelchair accessible with ADA-compliant facilities"
+]
 },
 {
 "id": 17,
@@ -753,7 +922,18 @@
  "metaDescription": "At The Luxe Room in Denver, RN/NP injectors deliver natural lip filler results with Juvéderm Ultra XC, Volbella XC, and Restylane Kysse. Women-owned and LGBTQ+ friendly.",
   "shortDescription": "Women-owned Denver med spa specializing in natural injectable treatments by RN/NP injectors, featuring Juvéderm and Restylane Kysse.",
   "about": "The Luxe Room is a women-owned medical aesthetics studio in Denver dedicated to refined, natural results. Our team of highly trained RN/NP nurse injectors and licensed medical estheticians focuses on safe technique, individualized planning, and subtle enhancements that fit your features—not trends. Every visit begins with a thoughtful consultation where we discuss goals, review product options, and outline a plan that prioritizes balance and longevity.\n\nFor lip enhancement, we offer hyaluronic-acid fillers including Juvéderm Ultra XC, Juvéderm Volbella XC, and Restylane Kysse. These modern formulas integrate smoothly to refine shape, restore soft volume, and soften fine lines while keeping movement natural. Comfort and safety are central to our approach, with careful injection mapping, conservative dosing when appropriate, and clear guidance on aftercare and maintenance.\n\nOur studio is inclusive and accessible, with wheelchair-friendly entrance, parking, and restrooms, as well as a gender-neutral restroom. We welcome clients from across Denver who want results that look polished yet understated. Whether you’re seeking a first-time lip refresh or a maintenance plan, The Luxe Room pairs advanced technique with attentive care so you leave looking like you—simply elevated.",
-"brandsProof": ["https://www.luxeroomcosmetic.com/dermal-filler/"]
+"brandsProof": ["https://www.luxeroomcosmetic.com/dermal-filler/"],
+"serviceArea": ["Cory-Merrill", "Belcaro", "Washington Park", "University Park", "Virginia Village"],
+"specialties": [
+  "Women-owned medical aesthetics studio",
+  "Highly trained RN/NP nurse injectors team",
+  "Licensed medical estheticians on staff",
+  "Juvéderm Ultra XC, Volbella XC, and Restylane Kysse",
+  "Conservative dosing with careful injection mapping",
+  "Individualized planning focused on natural results",
+  "Gender-neutral restroom available",
+  "Wheelchair-friendly entrance, parking, and restrooms"
+]
 }
 ],
 "metadata": {

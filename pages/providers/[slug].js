@@ -38,12 +38,12 @@ export default function ProviderPage({ provider, siteUrl }) {
   const citySlug = slugifyCity(provider.address?.city || '');
   const cityName = toCityName(citySlug);
   const url = `${siteUrl}/providers/${provider.slug}`;
-  const title = `${provider.name} – Lip Filler Provider in ${cityName} | Colorado Directory`;
+  const title = `${provider.name} - Lip Fillers in ${cityName}, Colorado | Directory`;
   const metaDescription =
     (provider.metaDescription && provider.metaDescription.slice(0, 160)) ||
     buildMetaDescription(provider);
 
-  // -------- JSON-LD: LocalBusiness --------
+  // -------- JSON-LD: LocalBusiness (CORRECTED) --------
   const localBusinessJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
@@ -77,7 +77,20 @@ export default function ProviderPage({ provider, siteUrl }) {
     ...(provider.openingHoursSpecification
       ? { openingHoursSpecification: provider.openingHoursSpecification }
       : {}),
-    description: provider?.shortDescription || buildMetaDescription(provider)
+    description: provider?.shortDescription || buildMetaDescription(provider),
+    additionalType: 'https://schema.org/BeautySalon',
+    knowsAbout: ['Cosmetic Procedures', 'Aesthetic Treatments'],
+    // Add service area for local SEO
+    ...(provider.serviceArea ? {
+      areaServed: provider.serviceArea.map(area => ({
+        '@type': 'City',
+        name: area,
+        containedInPlace: {
+          '@type': 'State',
+          name: 'Colorado'
+        }
+      }))
+    } : {})
   };
 
   // -------- JSON-LD: BreadcrumbList --------
@@ -110,6 +123,20 @@ export default function ProviderPage({ provider, siteUrl }) {
     ]
   };
 
+  // -------- JSON-LD: FAQ Schema (if FAQs exist) --------
+  const faqJsonLd = provider.faqs?.length ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: provider.faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer
+      }
+    }))
+  } : null;
+
   const ogImage =
     provider.ogImage ||
     provider.image ||
@@ -138,7 +165,7 @@ export default function ProviderPage({ provider, siteUrl }) {
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content={ogImage} />
 
-        {/* JSON-LD */}
+        {/* JSON-LD Schemas */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
@@ -147,6 +174,12 @@ export default function ProviderPage({ provider, siteUrl }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
         />
+        {faqJsonLd && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          />
+        )}
       </Head>
 
       {/* BREADCRUMBS */}
@@ -180,13 +213,11 @@ export default function ProviderPage({ provider, siteUrl }) {
         }}
       >
         <h1 style={{ margin: 0, fontSize: '1.8rem', lineHeight: 1.25 }}>
-          {provider.name}
+          {provider.name} - Lip Fillers in {cityName}, Colorado
         </h1>
         <p style={{ opacity: 0.95, marginTop: 6 }}>
           {provider.shortDescription ||
-            `Learn more about ${provider.name}${
-              cityName ? ` in ${cityName}` : ''
-            }.`}
+            `Learn more about ${provider.name} in ${cityName}.`}
         </p>
       </section>
 
@@ -200,7 +231,7 @@ export default function ProviderPage({ provider, siteUrl }) {
       >
         {/* LEFT: VISIBLE UNIQUE CONTENT */}
         <div>
-          {/* UNIQUE ABOUT COPY (add ~150–300 words per provider in providers.json) */}
+          {/* UNIQUE ABOUT COPY */}
           {provider.about && (
             <section
               style={{
@@ -217,6 +248,56 @@ export default function ProviderPage({ provider, siteUrl }) {
               <div style={{ whiteSpace: 'pre-line', lineHeight: 1.6, color: '#444' }}>
                 {provider.about}
               </div>
+            </section>
+          )}
+
+          {/* PRICING INFORMATION */}
+          {provider.pricing && (
+            <section
+              style={{
+                background: '#e8f4f8',
+                border: '1px solid #bee5eb',
+                borderRadius: 8,
+                padding: 16,
+                marginBottom: 16
+              }}
+            >
+              <h3 style={{ margin: '0 0 8px 0', fontSize: '1rem' }}>
+                Pricing Information
+              </h3>
+              <p style={{ margin: 0, fontSize: '14px', lineHeight: 1.6 }}>
+                {provider.pricing}
+              </p>
+            </section>
+          )}
+
+          {/* FAQ SECTION */}
+          {provider.faqs?.length && (
+            <section style={{
+              background: '#f8f9fa',
+              border: '1px solid #e9ecef',
+              borderRadius: 8,
+              padding: 20,
+              marginBottom: 16
+            }}>
+              <h2 style={{ marginTop: 0, fontSize: '1.2rem', marginBottom: 16 }}>
+                Frequently Asked Questions
+              </h2>
+              {provider.faqs.map((faq, index) => (
+                <details key={index} style={{ marginBottom: 12 }}>
+                  <summary style={{ 
+                    cursor: 'pointer', 
+                    fontWeight: '600',
+                    padding: '8px 0',
+                    borderBottom: '1px solid #dee2e6'
+                  }}>
+                    {faq.question}
+                  </summary>
+                  <div style={{ padding: '12px 0', lineHeight: 1.6 }}>
+                    {faq.answer}
+                  </div>
+                </details>
+              ))}
             </section>
           )}
 
@@ -398,6 +479,22 @@ export default function ProviderPage({ provider, siteUrl }) {
                   </a>
                 </div>
               ) : null}
+            </section>
+          )}
+
+          {/* Service Areas */}
+          {provider.serviceArea && (
+            <section style={{
+              background: '#ffffff',
+              border: '1px solid #e9ecef',
+              borderRadius: 8,
+              padding: 16,
+              marginBottom: 16
+            }}>
+              <h2 style={{ marginTop: 0, fontSize: '1.05rem' }}>Service Areas</h2>
+              <p style={{ margin: 0, fontSize: '14px', lineHeight: 1.6 }}>
+                Serving {provider.serviceArea.join(', ')} and surrounding areas.
+              </p>
             </section>
           )}
 
