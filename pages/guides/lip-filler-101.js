@@ -11,8 +11,8 @@ export default function LipFiller101() {
     <>
       <Head>
 
-        <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Lip Filler Cost & Recovery Guide 2025: What to Expect in Colorado</title>
         <meta name="description" content="Complete lip filler guide covering cost factors, recovery timeline, and how to find qualified providers in Colorado. Learn what to expect during your appointment." />
         <meta name="keywords" content="lip filler cost Colorado 2025, lip filler recovery timeline, lip injection swelling how long, best lip filler provider Denver, hyaluronic acid lip filler before after, lip enhancement Colorado Springs" />
