@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 
 const SITE = (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000').replace(/\/$/, '');
-const CANONICAL = `${SITE}/lip-filler-faq`;
+const CANONICAL = `${SITE}/guides/lip-filler-faq`;
 const OG_IMAGE = `${SITE}/images/og/faq.jpg`;
 
 /* ------------------------ Utilities & Schema Helpers ----------------------- */

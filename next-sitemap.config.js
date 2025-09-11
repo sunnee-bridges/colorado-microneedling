@@ -7,13 +7,18 @@ module.exports = {
   additionalSitemaps: [],
     // Add this section to manually include static pages
   additionalPaths: async (config) => [
-    '/faq',
-    '/lip-filler-faq',
-    '/shapes',
-    '/guides',
-     '/about',
-    '/contact',
-  ],
+  '/faq',
+  '/lip-filler-faq',
+  '/shapes',
+  '/guides',
+  '/guides/lip-filler-101',           
+  '/guides/lip-filler-recovery-timeline',  
+  '/guides/lip-filler-vs-lip-flip',   
+  '/guides/lip-filler-cost-pricing',
+  '/guides/cannula-vs-needle',
+  '/about',
+  '/contact',
+],
   transform: async (config, path) => {
     const isHome            = path === '/';
     const isFAQ             = path === '/lip-filler-faq' || path === '/faq';

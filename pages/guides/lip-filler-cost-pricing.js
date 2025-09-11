@@ -13,7 +13,6 @@ export default function LipFillerCosts() {
       <Head>
         <title>Lip Filler Costs: Simple Guide to Prices & How Pricing Works</title>
         <meta name="description" content="Easy guide to lip filler costs—how providers price, what affects the price, questions to ask, and ways to save. Get the full picture before you book." />
-        <link rel="canonical" href={CANON} />
         <meta name="robots" content="index,follow" />
 
         {/* Open Graph */}
