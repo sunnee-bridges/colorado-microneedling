@@ -2,10 +2,6 @@
 User-agent: *
 Allow: /
 
-# *
-User-agent: *
-Disallow: /contact/thanks
-
 # Host
 Host: http://localhost:3000
 

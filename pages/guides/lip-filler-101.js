@@ -373,7 +373,7 @@ export default function LipFiller101() {
               <h4 style={{ color: '#856404', marginBottom: '15px' }}>Questions to Ask About Pricing:</h4>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '15px' }}>
                 <ul style={{ fontSize: '0.95rem', lineHeight: '1.6', paddingLeft: '20px', margin: 0, color: '#856404' }}>
-                  <li style={{ marginBottom: '6px' }}>What's included in the total price?</li>
+                  <li style={{ marginBottom: '6px' }}>What&apos;s included in the total price?</li>
                   <li style={{ marginBottom: '6px' }}>Are touch-ups within 2 weeks included?</li>
                   <li style={{ marginBottom: '6px' }}>What brand of filler do you recommend?</li>
                   <li>Do you offer package deals for maintenance?</li>
@@ -382,7 +382,7 @@ export default function LipFiller101() {
                   <li style={{ marginBottom: '6px' }}>Are there additional fees (consultation, numbing)?</li>
                   <li style={{ marginBottom: '6px' }}>What payment methods do you accept?</li>
                   <li style={{ marginBottom: '6px' }}>Do you offer financing options?</li>
-                  <li>What's your policy if I'm not satisfied?</li>
+                  <li>What&apos;s your policy if I&apos;m not satisfied?</li>
                 </ul>
               </div>
               
@@ -427,7 +427,7 @@ export default function LipFiller101() {
                 margin: '0 0 15px 0',
                 color: '#004085'
               }}>
-                Lip filler swelling follows a predictable pattern. Your lips will appear 20-60% larger than your final result initially, then gradually reduce over 1-2 weeks. Here's exactly what to expect each day:
+                Lip filler swelling follows a predictable pattern. Your lips will appear 20-60% larger than your final result initially, then gradually reduce over 1-2 weeks. Here&apos;s exactly what to expect each day:
               </p>
             </div>
 
@@ -523,7 +523,7 @@ export default function LipFiller101() {
             }}>
               <h4 style={{ color: '#667eea', marginBottom: '15px' }}>Colorado Altitude & Climate Recovery Considerations</h4>
               <p style={{ margin: '0 0 15px 0', fontSize: '0.95rem', color: '#333' }}>
-                Colorado's high altitude (5,000+ feet) and dry climate can affect your lip filler recovery:
+                Colorado&apos;s high altitude (5,000+ feet) and dry climate can affect your lip filler recovery:
               </p>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '15px' }}>
                 <div>
@@ -573,7 +573,7 @@ export default function LipFiller101() {
                 margin: '0 0 20px 0',
                 color: '#333'
               }}>
-                Both treatments enhance your lips, but work completely differently. Here's how to choose the right option:
+                Both treatments enhance your lips, but work completely differently. Here&apos;s how to choose the right option:
               </p>
               
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '25px' }}>
@@ -668,7 +668,7 @@ export default function LipFiller101() {
             }}>
               <h3 style={{ color: '#667eea', marginBottom: '15px', fontSize: '1.3rem' }}>Colorado State Requirements for Lip Injections</h3>
               <p style={{ margin: '0 0 15px 0', fontSize: '1rem', color: '#333' }}>
-                In Colorado, lip fillers must be administered by licensed medical professionals. Here's how to verify credentials and ensure safety:
+                In Colorado, lip fillers must be administered by licensed medical professionals. Here&apos;s how to verify credentials and ensure safety:
               </p>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
                 <div>
@@ -736,7 +736,7 @@ export default function LipFiller101() {
               }}>
                 <h4 style={{ color: '#155724', marginBottom: '8px' }}>Red Flags to Avoid</h4>
                 <p style={{ margin: 0, fontSize: '0.9rem', color: '#155724' }}>
-                  Avoid providers who: offer extremely low prices, pressure you to decide immediately, can't show recent before/after photos, aren't willing to discuss complications, or operate out of non-medical facilities like salons or spas.
+                  Avoid providers who: offer extremely low prices, pressure you to decide immediately, can&apos;t show recent before/after photos, aren&apos;t willing to discuss complications, or operate out of non-medical facilities like salons or spas.
                 </p>
               </div>
             </div>
@@ -849,7 +849,7 @@ export default function LipFiller101() {
                   <li style={{ marginBottom: '8px' }}>Want fuller, more balanced, or defined lips</li>
                   <li style={{ marginBottom: '8px' }}>Have realistic expectations about results</li>
                   <li style={{ marginBottom: '8px' }}>Are in good overall physical health</li>
-                  <li style={{ marginBottom: '8px' }}>Don't have active cold sores or lip infections</li>
+                  <li style={{ marginBottom: '8px' }}>Don&apos;t have active cold sores or lip infections</li>
                   <li style={{ marginBottom: '8px' }}>Are not pregnant or breastfeeding</li>
                   <li style={{ marginBottom: '8px' }}>Can afford ongoing maintenance treatments</li>
                   <li>Are 18+ years old (some providers prefer 21+)</li>
