@@ -1,0 +1,17 @@
+[[redirects]]
+  from = "https://www.findlipfillers.com/*"
+  to = "https://findlipfillers.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.findlipfillers.com/*"
+  to = "https://findlipfillers.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://findlipfillers.com/*"
+  to = "https://findlipfillers.com/:splat"
+  status = 301
+  force = true
