@@ -11,10 +11,11 @@ export default function LipFiller101() {
     <>
       <Head>
 
-        <meta charset="UTF-8"/>
+        
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Lip Filler Cost & Recovery Guide 2025: What to Expect in Colorado</title>
         <meta name="description" content="Complete lip filler guide covering cost factors, recovery timeline, and how to find qualified providers in Colorado. Learn what to expect during your appointment." />
+        <link rel="canonical" href={CANONICAL} />
         <meta name="keywords" content="lip filler cost Colorado 2025, lip filler recovery timeline, lip injection swelling how long, best lip filler provider Denver, hyaluronic acid lip filler before after, lip enhancement Colorado Springs" />
         <meta name="robots" content="index,follow" />
 
@@ -28,6 +29,7 @@ export default function LipFiller101() {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={CANONICAL} />
         <meta name="twitter:title" content="Lip Filler Cost & Recovery Guide 2025: What to Expect in Colorado" />
         <meta name="twitter:description" content="Complete lip filler guide covering cost factors, recovery timeline, and how to find qualified providers in Colorado." />
       
@@ -66,53 +68,95 @@ export default function LipFiller101() {
 
         {/* Enhanced FAQ Schema */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "How long do lip fillers last?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Most lip fillers last 6-12 months. How long yours last depends on your body, the type of filler used, and how much you get. Juvéderm typically lasts 9-12 months, while Restylane lasts 6-9 months."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How much do lip fillers hurt on a scale of 1-10?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Most people rate lip filler pain as 3-6 out of 10. Your provider will use numbing cream or injections to minimize discomfort."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How long does lip filler swelling last day by day?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Day 1: 40-60% larger than final result. Days 2-3: 30-40% larger. Days 4-7: 15-25% larger. Week 2: 5-10% larger. Weeks 2-4: Final results visible."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Can lip fillers be removed if I don't like them?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes, hyaluronic acid fillers can be dissolved with hyaluronidase injections if you don't like the results. The dissolution process takes 24-48 hours."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How much do lip fillers cost in Colorado?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Lip filler costs in Colorado vary significantly based on location, provider experience, filler brand, and individual needs. Always request detailed quotes from licensed providers for accurate pricing."
-                }
-              }
-            ]
-          })
-        }}/>
+  __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "Lip Filler Cost & Recovery Guide 2025: Frequently Asked Questions",
+    "description": "Comprehensive FAQ about lip filler costs, recovery timeline, and providers in Colorado",
+    "url": CANONICAL,
+    "datePublished": "2025-08-20",
+    "dateModified": "2025-08-20",
+    "author": {
+      "@type": "Organization",
+      "name": "Colorado Lip Enhancement Directory"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Colorado Lip Enhancement Directory",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${SITE_URL.replace(/\/$/,'')}/images/logo-600x60.png`
+      }
+    },
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long do lip fillers last?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most lip fillers last 6-12 months. How long yours last depends on your body, the type of filler used, and how much you get. Juvéderm typically lasts 9-12 months, while Restylane lasts 6-9 months.",
+          "dateCreated": "2025-08-20",
+          "author": {
+            "@type": "Organization",
+            "name": "Colorado Lip Enhancement Directory"
+          }
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much do lip fillers hurt on a scale of 1-10?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most people rate lip filler pain as 3-6 out of 10. Your provider will use numbing cream or injections to minimize discomfort.",
+          "dateCreated": "2025-08-20",
+          "author": {
+            "@type": "Organization",
+            "name": "Colorado Lip Enhancement Directory"
+          }
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does lip filler swelling last day by day?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Day 1: 40-60% larger than final result. Days 2-3: 30-40% larger. Days 4-7: 15-25% larger. Week 2: 5-10% larger. Weeks 2-4: Final results visible.",
+          "dateCreated": "2025-08-20",
+          "author": {
+            "@type": "Organization",
+            "name": "Colorado Lip Enhancement Directory"
+          }
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can lip fillers be removed if I don't like them?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, hyaluronic acid fillers can be dissolved with hyaluronidase injections if you don't like the results. The dissolution process takes 24-48 hours.",
+          "dateCreated": "2025-08-20",
+          "author": {
+            "@type": "Organization",
+            "name": "Colorado Lip Enhancement Directory"
+          }
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much do lip fillers cost in Colorado?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lip filler costs in Colorado vary significantly based on location, provider experience, filler brand, and individual needs. Always request detailed quotes from licensed providers for accurate pricing.",
+          "dateCreated": "2025-08-20",
+          "author": {
+            "@type": "Organization",
+            "name": "Colorado Lip Enhancement Directory"
+          }
+        }
+      }
+    ]
+  })
+}}/>
 
         {/* HowTo Schema for Better Featured Snippets */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{
