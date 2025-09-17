@@ -97,6 +97,8 @@ export default function ProviderPage({ provider, siteUrl }) {
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    'name': '${provider.name} Location Breadcrumb', 
+    'description': 'Navigation path to ${provider.name} in ${cityName}', 
     itemListElement: [
       {
         '@type': 'ListItem',
