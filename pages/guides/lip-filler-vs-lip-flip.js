@@ -4,167 +4,146 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 export default function FillerVsLipFlip() {
-  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  const CANON = `${SITE_URL.replace(/\/$/,'')}/guides/lip-filler-vs-lip-flip`;
-  const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-vs-lip-flip-1200x630.jpg`;
+   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const BASE = SITE_URL.replace(/\/$/, '');
+  const CANON = `${BASE}/guides/lip-filler-vs-lip-flip`;
+  const OG_IMG = `${BASE}/images/lip-filler-vs-lip-flip-1200x630.jpg`;
+
+  const title = 'Lip Filler vs Lip Flip 2025: Which Treatment Lasts Longer? Complete Comparison';
+  const shortTitle = 'Lip Filler vs Lip Flip 2025: Which Treatment Lasts Longer?';
+  const description =
+    'Complete comparison of lip filler vs lip flip—duration, results, cost factors, and guidance on choosing the right treatment.';
+
+  const published = '2025-08-20';
+  const modified = '2025-09-10';
+
+  // JSON-LD objects (kept to ONE Article; plus Breadcrumbs, FAQ, HowTo)
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: `${shortTitle} Complete Comparison`,
+    description,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': CANON },
+    image: [OG_IMG],
+    author: { '@type': 'Organization', name: 'Colorado Lip Enhancement Directory' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Colorado Lip Enhancement Directory',
+      logo: { '@type': 'ImageObject', url: `${BASE}/images/logo-600x60.png` }
+    },
+    datePublished: published,
+    dateModified: modified
+  };
+
+  const breadcrumbsJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: BASE },
+      { '@type': 'ListItem', position: 2, name: 'Guides', item: `${BASE}/guides` },
+      { '@type': 'ListItem', position: 3, name: 'Filler vs Lip Flip', item: CANON }
+    ]
+  };
+
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How long does lip flip last vs filler?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'Lip flip results may last 2–4 months while lip filler results may last 6–12 months. Duration varies significantly between individuals based on metabolism, lifestyle, and treatment factors.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Which is better: lip filler or lip flip?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'Treatment selection depends on individual goals and anatomy. Consult with qualified healthcare providers to determine which option may be appropriate for your specific situation.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Can you do lip flip and filler together?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'Some providers may recommend combination treatments. This decision should be made in consultation with qualified medical professionals based on individual anatomy and goals.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Does a lip flip add volume?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'Lip flip treatments are intended to alter muscle function rather than add volume. The appearance of increased lip prominence may result from muscle relaxation effects.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Can lip filler be dissolved?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'Many hyaluronic acid-based fillers may be dissolved by qualified healthcare providers using appropriate enzymes. Discuss reversal options with your provider before treatment.'
+        }
+      }
+    ]
+  };
+
+  const howToJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to Choose Between Lip Filler and Lip Flip',
+    description: 'Step-by-step guide to comparing lip enhancement options',
+    step: [
+      { '@type': 'HowToStep', name: 'Assess Your Goals', text: 'Determine whether you seek volume enhancement or subtle lip border changes' },
+      { '@type': 'HowToStep', name: 'Research Qualified Providers', text: 'Verify provider credentials through official medical boards' },
+      { '@type': 'HowToStep', name: 'Schedule Consultations', text: 'Consult with board-certified providers to discuss your specific anatomy and goals' },
+      { '@type': 'HowToStep', name: 'Review Informed Consent', text: 'Understand all risks, benefits, and alternatives before making treatment decisions' }
+    ]
+  };
   
   return (
     <>
       <Head>
-        <title>Lip Filler vs Lip Flip 2025: Which Treatment Lasts Longer? Complete Comparison</title>
-        <meta name="description" content="Compare lip filler vs lip flip treatments - duration, results, cost factors, and which is better for your goals. Learn how long each lasts and if you can combine them." />
+        {/* Primary */}
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="keywords" content="lip filler vs lip flip, how long does lip flip last, lip flip vs filler which is better, can you do lip flip and filler together, lip filler vs botox lip flip, which lasts longer lip filler or lip flip" />
-        
-        {/* Open Graph */}
+        <link rel="canonical" href={CANON} />
+        {/* FIXED: lowercase 'l' in hreflang */}
+        <link rel="alternate" hreflang="en-US" href={CANON} />
+
+        {/* Open Graph (single, consistent block) */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Lip Filler vs Lip Flip 2025: Which Treatment Lasts Longer?" />
-        <meta property="og:description" content="Complete comparison of lip filler vs lip flip - duration, results, cost factors, and expert guidance on choosing the right treatment." />
+        <meta property="og:site_name" content="Colorado Lip Fillers Directory" />
+        <meta property="og:title" content={shortTitle} />
+        <meta property="og:description" content={description} />
         <meta property="og:url" content={CANON} />
         <meta property="og:image" content={OG_IMG} />
-        <meta property="article:published_time" content="2025-08-20" />
-        <meta property="article:modified_time" content="2025-09-10" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="article:published_time" content={published} />
+        <meta property="article:modified_time" content={modified} />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Lip Filler vs Lip Flip: Which Lasts Longer?" />
-        <meta name="twitter:description" content="Complete comparison guide to help you choose between lip filler and lip flip treatments." />
+        <meta name="twitter:title" content={shortTitle} />
+        <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={OG_IMG} />
-        <link rel="canonical" href={CANON} />
-        
-        {/* Article Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Lip Filler vs Lip Flip 2025: Which Treatment Lasts Longer? Complete Comparison",
-            "description": "Complete comparison of lip filler vs lip flip treatments including duration, results, and guidance on choosing the right option.",
-            "mainEntityOfPage": { "@type": "WebPage", "@id": CANON },
-            "image": [ OG_IMG ],
-            "author": { "@type": "Organization", "name": "Colorado Lip Enhancement Directory" },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Colorado Lip Enhancement Directory",
-              "logo": { "@type": "ImageObject", "url": `${SITE_URL}/images/logo-600x60.png` }
-            },
-            "datePublished": "2025-08-20",
-            "dateModified": "2025-09-10"
-          })
-        }}/>
 
-        {/* Breadcrumbs Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type":"ListItem", "position":1, "name":"Home", "item": SITE_URL },
-              { "@type":"ListItem", "position":2, "name":"Guides", "item": `${SITE_URL}/guides` },
-              { "@type":"ListItem", "position":3, "name":"Filler vs Lip Flip", "item": CANON }
-            ]
-          })
-        }}/>
-
-        {/* Comparison Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "about": [
-              {
-                "@type": "MedicalProcedure",
-                "name": "Lip Filler Treatment",
-                "description": "Cosmetic procedure involving injection of dermal fillers to enhance lip volume"
-              },
-              {
-                "@type": "MedicalProcedure", 
-                "name": "Lip Flip Treatment",
-                "description": "Cosmetic procedure using muscle relaxers to alter lip appearance"
-              }
-            ]
-          })
-        }}/>
-
-        {/* Enhanced FAQ Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "How long does lip flip last vs filler?",
-                "acceptedAnswer": { 
-                  "@type": "Answer", 
-                  "text": "Lip flip results may last 2-4 months while lip filler results may last 6-12 months. Duration varies significantly between individuals based on metabolism, lifestyle, and treatment factors." 
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Which is better: lip filler or lip flip?",
-                "acceptedAnswer": { 
-                  "@type": "Answer", 
-                  "text": "Treatment selection depends on individual goals and anatomy. Consult with qualified healthcare providers to determine which option may be appropriate for your specific situation." 
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Can you do lip flip and filler together?",
-                "acceptedAnswer": { 
-                  "@type": "Answer", 
-                  "text": "Some providers may recommend combination treatments. This decision should be made in consultation with qualified medical professionals based on individual anatomy and goals." 
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Does a lip flip add volume?",
-                "acceptedAnswer": { 
-                  "@type": "Answer", 
-                  "text": "Lip flip treatments are intended to alter muscle function rather than add volume. The appearance of increased lip prominence may result from muscle relaxation effects." 
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Can lip filler be dissolved?",
-                "acceptedAnswer": { 
-                  "@type": "Answer", 
-                  "text": "Many hyaluronic acid-based fillers may be dissolved by qualified healthcare providers using appropriate enzymes. Discuss reversal options with your provider before treatment." 
-                }
-              }
-            ]
-          })
-        }}/>
-
-        {/* HowTo Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HowTo",
-            "name": "How to Choose Between Lip Filler and Lip Flip",
-            "description": "Step-by-step guide to comparing lip enhancement options",
-            "step": [
-              {
-                "@type": "HowToStep",
-                "name": "Assess Your Goals",
-                "text": "Determine whether you seek volume enhancement or subtle lip border changes"
-              },
-              {
-                "@type": "HowToStep",
-                "name": "Research Qualified Providers",
-                "text": "Verify provider credentials through official medical boards"
-              },
-              {
-                "@type": "HowToStep",
-                "name": "Schedule Consultations",
-                "text": "Consult with board-certified providers to discuss your specific anatomy and goals"
-              },
-              {
-                "@type": "HowToStep",
-                "name": "Review Informed Consent",
-                "text": "Understand all risks, benefits, and alternatives before making treatment decisions"
-              }
-            ]
-          })
-        }}/>
+        {/* JSON-LD (ONE Article; keep Breadcrumb + FAQ + HowTo) */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }} />
       </Head>
       
       <Layout title="Lip Filler vs Lip Flip Complete Comparison 2025 | Colorado Directory">
