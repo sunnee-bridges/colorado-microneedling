@@ -7,3 +7,9 @@
 
 [build.environment]
   NODE_VERSION = "18"
+
+[[redirects]]
+  from = "https://findlipfillers.com/*"
+  to = "https://www.findlipfillers.com/:splat"
+  status = 301
+  force = true
