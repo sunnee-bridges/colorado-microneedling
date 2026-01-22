@@ -220,6 +220,18 @@ export default function Layout({ children, title = "Colorado Lip Filler Provider
                   display: 'none',
                   marginTop: '2px'
                 }} className="guides-dropdown">
+                  <Link href="/quiz" className="dropdown-link" style={{
+                    display: 'block',
+                    padding: '10px 15px',
+                    color: pathname === '/quiz' ? '#28a745' : '#333',
+                    textDecoration: 'none',
+                    fontSize: '0.9rem',
+                    borderBottom: '1px solid #f0f0f0',
+                    background: pathname === '/quiz' ? '#f8f9fa' : 'transparent',
+                    fontWeight: pathname === '/quiz' ? 'bold' : 'normal'
+                  }}>
+                    Lip Shape Finder Quiz
+                  </Link>
                   <Link href="/guides/lip-filler-101" className="dropdown-link" style={{
                     display: 'block',
                     padding: '10px 15px',

@@ -1,0 +1,413 @@
+/* components/LipShapeQuiz.module.css */
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Quiz Container */
+.quizContainer {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 40px 30px;
+  animation: slideIn 0.6s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Progress Bar */
+.progressSection {
+  margin-bottom: 40px;
+}
+
+.progressBar {
+  height: 8px;
+  background: #e0d5e8;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #d946a0 0%, #c026d3 100%);
+  transition: width 0.4s ease;
+  border-radius: 4px;
+}
+
+.progressText {
+  font-size: 0.85rem;
+  color: #6b4c7a;
+  text-align: center;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Question Section */
+.questionSection {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.question {
+  font-size: 1.5rem;
+  color: #2d1b3d;
+  margin: 0 0 30px 0;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.optionsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.optionButton {
+  padding: 16px 20px;
+  border: 2px solid #e0d5e8;
+  background: white;
+  color: #2d1b3d;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.optionButton:hover {
+  border-color: #d946a0;
+  background: linear-gradient(135deg, rgba(217, 70, 160, 0.05) 0%, rgba(192, 38, 211, 0.05) 100%);
+  transform: translateX(4px);
+}
+
+.optionButton:active {
+  transform: translateX(2px);
+  border-color: #c026d3;
+  background: linear-gradient(135deg, #d946a0 0%, #c026d3 100%);
+  color: white;
+}
+
+/* Results Container */
+.resultsContainer {
+  animation: slideIn 0.6s ease-out;
+}
+
+.resultsCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.resultHeader {
+  background: linear-gradient(135deg, #d946a0 0%, #c026d3 100%);
+  color: white;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.resultTitle {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.resultSubtitle {
+  margin: 0 0 5px 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.resultSecondary {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.resultDescription {
+  padding: 30px;
+  background: linear-gradient(135deg, #fef3f8 0%, #f5e6f0 100%);
+  border-bottom: 1px solid #e0d5e8;
+}
+
+.resultDescription p {
+  margin: 0;
+  color: #6b4c7a;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Volume Box */
+.volumeBox {
+  padding: 30px;
+  background: white;
+  border-bottom: 1px solid #e0d5e8;
+}
+
+.volumeBox h3 {
+  margin: 0 0 12px 0;
+  color: #2d1b3d;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.volumeRange {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #d946a0;
+  font-weight: 700;
+}
+
+.volumeNote {
+  margin: 8px 0 0 0;
+  font-size: 0.8rem;
+  color: #999;
+  font-style: italic;
+}
+
+/* Characteristics Box */
+.characteristicsBox {
+  padding: 30px;
+  background: white;
+  border-bottom: 1px solid #e0d5e8;
+}
+
+.characteristicsBox h3 {
+  margin: 0 0 15px 0;
+  color: #2d1b3d;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.characteristicsList {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.characteristicsList li {
+  color: #6b4c7a;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Talking Points Box */
+.talkingPointsBox {
+  padding: 30px;
+  background: linear-gradient(135deg, rgba(217, 70, 160, 0.05) 0%, rgba(192, 38, 211, 0.05) 100%);
+  border-bottom: 1px solid #e0d5e8;
+}
+
+.talkingPointsBox h3 {
+  margin: 0 0 8px 0;
+  color: #2d1b3d;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.talkingPointsSubtext {
+  margin: 0 0 15px 0;
+  color: #6b4c7a;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.talkingPointsList {
+  margin: 0;
+  padding-left: 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.talkingPointsList li {
+  color: #2d1b3d;
+  font-size: 0.95rem;
+  font-weight: 500;
+  position: relative;
+  padding-left: 8px;
+}
+
+.talkingPointsList li:before {
+  content: '"';
+  position: absolute;
+  left: -8px;
+  color: #d946a0;
+  font-weight: bold;
+}
+
+/* Action Buttons */
+.actionButtons {
+  padding: 30px;
+  background: white;
+  border-bottom: 1px solid #e0d5e8;
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btnShare {
+  background: linear-gradient(135deg, #d946a0 0%, #c026d3 100%);
+  color: white;
+}
+
+.btnShare:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(217, 70, 160, 0.4);
+}
+
+.btnRetake {
+  background: #f5f5f5;
+  color: #2d1b3d;
+  border: 2px solid #e0d5e8;
+}
+
+.btnRetake:hover {
+  background: #e0d5e8;
+  transform: translateY(-2px);
+}
+
+/* Provider CTA */
+.providerCTA {
+  padding: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.providerCTA h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.providerCTA p {
+  margin: 0 0 20px 0;
+  font-size: 0.95rem;
+  opacity: 0.95;
+  line-height: 1.5;
+}
+
+.btnPrimary {
+  display: inline-block;
+  padding: 12px 30px;
+  background: white;
+  color: #667eea;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .quizContainer {
+    padding: 30px 20px;
+  }
+
+  .question {
+    font-size: 1.3rem;
+    margin-bottom: 24px;
+  }
+
+  .optionButton {
+    padding: 14px 16px;
+    font-size: 0.95rem;
+  }
+
+  .resultHeader {
+    padding: 30px 20px;
+  }
+
+  .resultSubtitle {
+    font-size: 1.7rem;
+  }
+
+  .resultDescription,
+  .volumeBox,
+  .characteristicsBox,
+  .talkingPointsBox,
+  .actionButtons,
+  .providerCTA {
+    padding: 24px 20px;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .quizContainer {
+    padding: 24px 16px;
+  }
+
+  .question {
+    font-size: 1.2rem;
+  }
+
+  .resultSubtitle {
+    font-size: 1.5rem;
+  }
+
+  .volumeRange {
+    font-size: 1.1rem;
+  }
+
+  .characteristicsList li,
+  .talkingPointsList li {
+    font-size: 0.9rem;
+  }
+}
