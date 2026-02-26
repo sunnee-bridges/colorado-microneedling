@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import styles from './LipShapeQuiz.module.css';
 
 const quizQuestions = [
@@ -476,8 +477,8 @@ export default function LipShapeQuiz() {
             {/* Provider CTA */}
             <div className={styles.providerCTA}>
               <h3>Ready to Find Your Provider?</h3>
-              <p>Browse Colorado providers and discuss your "{result.primaryStyle}" style preferences</p>
-              <a href="/providers" className={styles.btnPrimary}>
+              <p>Browse Colorado providers and discuss your &quot;{result.primaryStyle}&quot; style preferences</p>
+              <Link href="/providers" className={styles.btnPrimary}>
                 Browse Providers
               </a>
             </div>
