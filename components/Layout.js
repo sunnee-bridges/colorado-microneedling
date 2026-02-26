@@ -290,6 +290,28 @@ export default function Layout({ children, title = "Colorado Lip Filler Provider
                   }}>
                     Cannula vs Needle
                   </Link>
+                  <Link href="/guides/lip-filler-cold-sores" className="dropdown-link" style={{
+                    display: 'block',
+                    padding: '10px 15px',
+                    color: pathname === '/guides/lip-filler-cold-sores' ? '#28a745' : '#333',
+                    textDecoration: 'none',
+                    fontSize: '0.9rem',
+                    background: pathname === '/guides/lip-filler-cold-sores' ? '#f8f9fa' : 'transparent',
+                    fontWeight: pathname === '/guides/lip-filler-cold-sores' ? 'bold' : 'normal'
+                  }}>
+                    Lip Filler and Cold Sores
+                  </Link>
+                  <Link href="/guides/lip-filler-dissolution" className="dropdown-link" style={{
+                    display: 'block',
+                    padding: '10px 15px',
+                    color: pathname === '/guides/lip-filler-dissolution' ? '#28a745' : '#333',
+                    textDecoration: 'none',
+                    fontSize: '0.9rem',
+                    background: pathname === '/guides/lip-filler-dissolution' ? '#f8f9fa' : 'transparent',
+                    fontWeight: pathname === '/guides/lip-filler-dissolution' ? 'bold' : 'normal'
+                  }}>
+                    How to Dissolve Lip Filler
+                  </Link>
                 </div>
               </div>
 

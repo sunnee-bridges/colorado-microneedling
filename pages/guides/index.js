@@ -11,6 +11,8 @@ export default function GuidesIndex() {
     { href: '/guides/lip-filler-recovery-timeline',title: 'Recovery Timeline Guide' },
     { href: '/guides/lip-filler-cost-pricing',     title: 'Cost Breakdown Guide' },
     { href: '/guides/cannula-vs-needle',           title: 'Cannula vs Needle' },
+    { href: '/guides/lip-filler-dissolution',      title: 'How to Dissolve Lip Filler' },
+    { href: '/guides/lip-filler-cold-sores',       title: 'Lip Filler and Cold Sores' },
   ];
 
   return (
