@@ -480,7 +480,7 @@ export default function LipShapeQuiz() {
               <p>Browse Colorado providers and discuss your &quot;{result.primaryStyle}&quot; style preferences</p>
               <Link href="/providers" className={styles.btnPrimary}>
                 Browse Providers
-              </a>
+              </Link>
             </div>
           </div>
         </div>
