@@ -13,6 +13,7 @@ export default function GuidesIndex() {
     { href: '/guides/cannula-vs-needle',           title: 'Cannula vs Needle' },
     { href: '/guides/lip-filler-dissolution',      title: 'How to Dissolve Lip Filler' },
     { href: '/guides/lip-filler-cold-sores',       title: 'Lip Filler and Cold Sores' },
+    { href: '/guides/lip-filler-cultural-appropriation',  title: 'Lip Filler and Cultural Appropriation' },
   ];
 
   return (

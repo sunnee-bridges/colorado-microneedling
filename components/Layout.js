@@ -312,6 +312,17 @@ export default function Layout({ children, title = "Colorado Lip Filler Provider
                   }}>
                     How to Dissolve Lip Filler
                   </Link>
+                  <Link href="/guides/lip-filler-cultural-appropriation" className="dropdown-link" style={{
+                    display: 'block',
+                    padding: '10px 15px',
+                    color: pathname === '/guides/lip-filler-cultural-appropriation' ? '#28a745' : '#333',
+                    textDecoration: 'none',
+                    fontSize: '0.9rem',
+                    background: pathname === '/guides/lip-filler-cultural-appropriation' ? '#f8f9fa' : 'transparent',
+                    fontWeight: pathname === '/guides/lip-filler-cultural-appropriation' ? 'bold' : 'normal'
+                  }}>
+                    Lip Filler and Cultural Appropriation
+                  </Link>
                 </div>
               </div>
 
