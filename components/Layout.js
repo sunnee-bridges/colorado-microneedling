@@ -323,6 +323,17 @@ export default function Layout({ children, title = "Colorado Lip Filler Provider
                   }}>
                     Lip Filler and Cultural Appropriation
                   </Link>
+                  <Link href="/guides/lip-cell-visualizer" className="dropdown-link" style={{
+                    display: 'block',
+                    padding: '10px 15px',
+                    color: pathname === '/guides/lip-cell-visualizer' ? '#28a745' : '#333',
+                    textDecoration: 'none',
+                    fontSize: '0.9rem',
+                    background: pathname === '/guides/lip-cell-visualizer' ? '#f8f9fa' : 'transparent',
+                    fontWeight: pathname === '/guides/lip-cell-visualizer' ? 'bold' : 'normal'
+                  }}>
+                    How Lip Filler Works
+                  </Link>
                 </div>
               </div>
 
