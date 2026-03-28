@@ -246,7 +246,7 @@ export default function LipFillerColdSores() {
               <div style={{ backgroundColor: '#f8d7da', border: '2px solid #dc3545', borderRadius: '8px', padding: '20px' }}>
                 <h4 style={{ color: '#721c24', marginBottom: '10px' }}>Do not self-prescribe or self-medicate</h4>
                 <p style={{ margin: 0, fontSize: '0.95rem', color: '#721c24', lineHeight: '1.6' }}>
-                  Antiviral medications are prescription drugs. Taking any prescription medication without a physician's guidance is not appropriate. If antiviral coverage is relevant to your situation, a licensed physician is the only person who can assess that and prescribe accordingly.
+                  Antiviral medications are prescription drugs. Taking any prescription medication without a {"physician's"} guidance is not appropriate. If antiviral coverage is relevant to your situation, a licensed physician is the only person who can assess that and prescribe accordingly.
                 </p>
               </div>
             </div>
@@ -344,7 +344,7 @@ export default function LipFillerColdSores() {
               <div style={{ backgroundColor: '#fff3cd', border: '2px solid #ffc107', borderRadius: '8px', padding: '20px' }}>
                 <h4 style={{ color: '#856404', marginBottom: '10px' }}>If your provider mentions antiviral medication</h4>
                 <p style={{ margin: 0, fontSize: '0.95rem', color: '#856404', lineHeight: '1.7' }}>
-                  Ask them what they recommend discussing with your physician and whether they have a referral process or standard communication they use with a patient's doctor. Use that as the starting point for a conversation with your own physician rather than acting on it independently.
+                  Ask them what they recommend discussing with your physician and whether they have a referral process or standard communication they use with a {"patient's"} doctor. Use that as the starting point for a conversation with your own physician rather than acting on it independently.
                 </p>
               </div>
             </div>
@@ -467,7 +467,7 @@ export default function LipFillerColdSores() {
             </h4>
             <div style={{ textAlign: 'left', fontSize: '0.9rem', color: '#6c757d', lineHeight: '1.6' }}>
               <p style={{ margin: '0 0 15px 0' }}>
-                <strong>Educational Content Only:</strong> This guide provides general educational information and does not constitute medical advice. It does not address any individual's specific health situation and should not be used as the basis for any medical or treatment decision.
+                <strong>Educational Content Only:</strong> This guide provides general educational information and does not constitute medical advice. It does not address any {"individual's"} specific health situation and should not be used as the basis for any medical or treatment decision.
               </p>
               <p style={{ margin: '0 0 15px 0' }}>
                 <strong>Professional Consultation Required:</strong> Always speak with a licensed physician and a qualified cosmetic provider before making decisions about treatment. This content does not establish a doctor-patient relationship.
