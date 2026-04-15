@@ -5,32 +5,14 @@ import Head from 'next/head';
 
 export default function LipFillerCulturalAppropriation() {
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  const CANONICAL = `${SITE_URL.replace(/\/$/, '')}/guides/lip-filler-cultural-appropriation`;
+  const BASE = SITE_URL.replace(/\/$/, '');
+  const CANONICAL = `${BASE}/guides/lip-filler-cultural-appropriation`;
+  const OG_IMG = `${BASE}/images/lip-filler-cultural-appropriation-1200x630.jpg`;
 
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Is Lip Filler Cultural Appropriation? The Honest Conversation</title>
-        <meta name="description" content="The question of whether lip filler is cultural appropriation is more complicated than a yes or no answer. Here is the honest history and conversation behind it." />
-        <link rel="canonical" href={CANONICAL} />
-        <meta name="keywords" content="is lip filler cultural appropriation, lip filler race, lip augmentation cultural appropriation, Kylie Jenner lip filler appropriation, fuller lips beauty standards race" />
-        <meta name="robots" content="index,follow" />
-
-        {/* Open Graph */}
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="Is Lip Filler Cultural Appropriation? The Honest Conversation" />
-        <meta property="og:description" content="The honest history and conversation behind lip filler and cultural appropriation that most beauty sites avoid." />
-        <meta property="og:url" content={CANONICAL} />
-        <meta property="article:published_time" content="2025-08-20" />
-        <meta property="article:modified_time" content="2025-08-20" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={CANONICAL} />
-        <meta name="twitter:title" content="Is Lip Filler Cultural Appropriation? The Honest Conversation" />
-        <meta name="twitter:description" content="The honest history and conversation behind lip filler and cultural appropriation." />
-
+       
         {/* Article Schema */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -39,14 +21,15 @@ export default function LipFillerCulturalAppropriation() {
             "headline": "Is Lip Filler Cultural Appropriation? The Honest Conversation",
             "description": "The question of whether lip filler is cultural appropriation is more complicated than a yes or no answer. Here is the honest history and conversation behind it.",
             "mainEntityOfPage": { "@type": "WebPage", "@id": CANONICAL },
+            "iamge": [OG_IMG],
             "author": { "@type": "Organization", "name": "Find Lip Filler Directory" },
             "publisher": {
               "@type": "Organization",
               "name": "Find Lip Filler Directory",
-              "logo": { "@type": "ImageObject", "url": `${SITE_URL.replace(/\/$/,'')}/images/logo-600x60.png` }
+              "logo": { "@type": "ImageObject", "url": `${BASE}/images/logo-600x60.png` }
             },
             "datePublished": "2025-08-20",
-            "dateModified": "2025-08-20",
+            "dateModified": "2026-04-11",
             "articleSection": "Guides"
           })
         }} />
@@ -57,8 +40,8 @@ export default function LipFillerCulturalAppropriation() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
-              { "@type": "ListItem", "position": 2, "name": "Guides", "item": `${SITE_URL.replace(/\/$/,'')}/guides` },
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE },
+              { "@type": "ListItem", "position": 2, "name": "Guides", "item": `${BASE}/guides` },
               { "@type": "ListItem", "position": 3, "name": "Lip Filler and Cultural Appropriation", "item": CANONICAL }
             ]
           })
@@ -99,7 +82,14 @@ export default function LipFillerCulturalAppropriation() {
         }} />
       </Head>
 
-      <Layout title="Is Lip Filler Cultural Appropriation? | Find Lip Filler">
+      <Layout
+  title="Is Lip Filler Cultural Appropriation? The Honest Conversation"
+  metaDescription="The question of whether lip filler is cultural appropriation is more complicated than a yes or no answer. Here is the honest history and conversation behind it."
+  canonical={CANONICAL}
+  ogTitle="Is Lip Filler Cultural Appropriation? The Honest Conversation"
+  ogDescription="The honest history and conversation behind lip filler and cultural appropriation that most beauty sites avoid."
+  ogImage={OG_IMG}
+>
         {/* Breadcrumbs */}
         <nav style={{ margin: '20px 0', fontSize: '14px', color: '#6c757d' }}>
           <Link href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</Link>
@@ -166,7 +156,7 @@ export default function LipFillerCulturalAppropriation() {
             marginBottom: '30px'
           }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px', textAlign: 'center', fontSize: '14px' }}>
-              <div><strong>Last Updated:</strong><br />2025</div>
+              <div><strong>Last Updated:</strong><br />2026</div>
               <div><strong>Reading Time:</strong><br />8 to 10 minutes</div>
               <div><strong>Topic:</strong><br />Culture and Beauty</div>
             </div>

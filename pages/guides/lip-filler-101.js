@@ -5,50 +5,33 @@ import Head from 'next/head';
 
 export default function LipFiller101() {
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  const CANONICAL = `${SITE_URL.replace(/\/$/, '')}/guides/lip-filler-101`;
+  const BASE = SITE_URL.replace(/\/$/, '');
+const CANONICAL = `${BASE}/guides/lip-filler-101`;
+const OG_IMG = `${BASE}/images/lip-filler-101-1200x630.jpg`;
   
   return (
     <>
       <Head>
 
-        
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Lip Filler Cost & Recovery Guide 2025: What to Expect in Colorado</title>
-        <meta name="description" content="Complete lip filler guide covering cost factors, recovery timeline, and how to find qualified providers in Colorado. Learn what to expect during your appointment." />
-        <link rel="canonical" href={CANONICAL} />
-        <meta name="keywords" content="lip filler cost Colorado 2025, lip filler recovery timeline, lip injection swelling how long, best lip filler provider Denver, hyaluronic acid lip filler before after, lip enhancement Colorado Springs" />
-        <meta name="robots" content="index,follow" />
-
-         {/* Open Graph */}
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="Lip Filler Cost & Recovery Guide 2025: What to Expect in Colorado" />
-        <meta property="og:description" content="Complete lip filler guide covering cost factors, recovery timeline, and how to find qualified providers in Colorado." />
-        <meta property="og:url" content={CANONICAL} />
-        <meta property="article:published_time" content="2025-08-20" />
-        <meta property="article:modified_time" content="2025-08-20" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={CANONICAL} />
-        <meta name="twitter:title" content="Lip Filler Cost & Recovery Guide 2025: What to Expect in Colorado" />
-        <meta name="twitter:description" content="Complete lip filler guide covering cost factors, recovery timeline, and how to find qualified providers in Colorado." />
+      
       
         {/* Article Schema */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            "headline": "Lip Filler Cost & Recovery Guide 2025: What to Expect in Colorado",
+            "headline": "Lip Filler Cost & Recovery Guide 2026: What to Expect in Colorado",
             "description": "Complete lip filler guide covering cost factors, recovery timeline, and how to find qualified providers in Colorado.",
+            "image": [OG_IMG],
             "mainEntityOfPage": { "@type": "WebPage", "@id": CANONICAL },
             "author": { "@type": "Organization", "name": "Colorado Lip Enhancement Directory" },
             "publisher": {
               "@type": "Organization",
               "name": "Colorado Lip Enhancement Directory",
-              "logo": { "@type": "ImageObject", "url": `${SITE_URL.replace(/\/$/,'')}/images/logo-600x60.png` }
+              "logo": { "@type": "ImageObject", "url": `${BASE}/images/logo-600x60.png` }
             },
             "datePublished": "2025-08-20",
-            "dateModified": "2025-08-20",
+            "dateModified": "2026-04-11",
             "articleSection": "Guides"
           })
         }}/>
@@ -59,8 +42,8 @@ export default function LipFiller101() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type":"ListItem", "position":1, "name":"Home", "item": SITE_URL },
-              { "@type":"ListItem", "position":2, "name":"Guides", "item": `${SITE_URL.replace(/\/$/,'')}/guides` },
+              { "@type":"ListItem", "position":1, "name":"Home", "item": BASE },
+              { "@type":"ListItem", "position":2, "name":"Guides", "item": `${BASE}/guides` },
               { "@type":"ListItem", "position":3, "name":"Lip Filler Guide", "item": CANONICAL }
             ]
           })
@@ -71,11 +54,11 @@ export default function LipFiller101() {
   __html: JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "name": "Lip Filler Cost & Recovery Guide 2025: Frequently Asked Questions",
+    "name": "Lip Filler Cost & Recovery Guide 2026: Frequently Asked Questions",
     "description": "Comprehensive FAQ about lip filler costs, recovery timeline, and providers in Colorado",
     "url": CANONICAL,
     "datePublished": "2025-08-20",
-    "dateModified": "2025-08-20",
+    "dateModified": "2026-04-11",
     "author": {
       "@type": "Organization",
       "name": "Colorado Lip Enhancement Directory"
@@ -85,7 +68,7 @@ export default function LipFiller101() {
       "name": "Colorado Lip Enhancement Directory",
       "logo": {
         "@type": "ImageObject",
-        "url": `${SITE_URL.replace(/\/$/,'')}/images/logo-600x60.png`
+        "url": `${BASE}/images/logo-600x60.png`
       }
     },
     "mainEntity": [
@@ -191,14 +174,21 @@ export default function LipFiller101() {
         }}/>
       </Head>
       
-      <Layout title="Lip Filler Cost & Recovery Guide 2025: What to Expect in Colorado | Colorado Directory">
+      <Layout
+        title="Lip Filler Cost & Recovery Guide 2026: What to Expect in Colorado"
+        metaDescription="Complete lip filler guide covering cost factors, recovery timeline, and how to find qualified providers in Colorado."
+        canonical={CANONICAL}
+        ogTitle="Lip Filler Cost & Recovery Guide 2026: What to Expect in Colorado"
+        ogDescription="Complete lip filler guide covering cost factors, recovery timeline, and how to find qualified providers in Colorado."
+        ogImage={OG_IMG}
+      >
         {/* Breadcrumbs */}
         <nav style={{ margin: '20px 0', fontSize: '14px', color: '#6c757d' }}>
           <Link href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</Link>
           <span style={{ margin: '0 8px' }}>›</span>
           <Link href="/guides" style={{ color: '#667eea', textDecoration: 'none' }}>Guides</Link>
           <span style={{ margin: '0 8px' }}>›</span>
-          <span>Lip Filler Guide 2025</span>
+          <span>Lip Filler Guide 2026</span>
         </nav>
         
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
@@ -219,7 +209,7 @@ export default function LipFiller101() {
                 fontWeight: '700',
                 lineHeight: '1.2'
               }}>
-                Complete Lip Filler Guide 2025: Cost Factors, Recovery & Providers in Colorado
+                Complete Lip Filler Guide 2026: Cost Factors, Recovery & Providers in Colorado
               </h1>
               <p style={{ 
                 fontSize: '1.2rem', 
@@ -241,7 +231,7 @@ export default function LipFiller101() {
             marginBottom: '30px'
           }}>
             <h3 style={{ color: '#17a2b8', marginBottom: '15px', fontSize: '1.3rem' }}>
-              Quick Answer: Lip Filler Cost Factors in Colorado 2025
+              Quick Answer: Lip Filler Cost Factors in Colorado 2026
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '15px' }}>
               <div>
@@ -277,7 +267,7 @@ export default function LipFiller101() {
           }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px', textAlign: 'center', fontSize: '14px' }}>
               <div>
-                <strong>Last Updated:</strong><br />September 10, 2025
+                <strong>Last Updated:</strong><br />April 10, 2026
               </div>
               <div>
                 <strong>Reading Time:</strong><br />8-10 minutes
@@ -345,7 +335,7 @@ export default function LipFiller101() {
               fontSize: '1.8rem',
               marginBottom: '25px'
             }}>
-              Understanding Lip Filler Costs in Colorado 2025
+              Understanding Lip Filler Costs in Colorado 2026
             </h2>
             
             {/* Cost Factors */}

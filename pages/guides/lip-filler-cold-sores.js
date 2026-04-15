@@ -5,119 +5,136 @@ import Head from 'next/head';
 
 export default function LipFillerColdSores() {
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  const CANONICAL = `${SITE_URL.replace(/\/$/, '')}/guides/lip-filler-cold-sores`;
+  const BASE = SITE_URL.replace(/\/$/, '');
+  const CANONICAL = `${BASE}/guides/lip-filler-cold-sores`;
+  const OG_IMG = `${BASE}/images/lip-filler-cold-sores-1200x630.jpg`;
 
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Lip Filler and Cold Sores: Questions to Ask Before You Book</title>
-        <meta name="description" content="What is the connection between lip filler and cold sores? Learn what questions to ask your provider and physician before booking your appointment." />
-        <link rel="canonical" href={CANONICAL} />
-        <meta name="keywords" content="lip filler cold sores, lip injections cold sore risk, lip filler HSV, cold sore outbreak after lip filler, lip filler antiviral, antiviral before lip filler, how long to wait after cold sore for lip filler, lip filler trigger cold sore, valacyclovir lip filler" />
-        <meta name="robots" content="index,follow" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "headline": "Lip Filler and Cold Sores: Questions to Ask Before You Book",
+              "description": "Educational overview of the relationship between lip filler and cold sores, including questions to discuss with your provider and physician before treatment.",
+              "mainEntityOfPage": { "@type": "WebPage", "@id": CANONICAL },
+              "image": [OG_IMG],
+              "author": { "@type": "Organization", "name": "Find Lip Filler Directory" },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Find Lip Filler Directory",
+                "logo": { "@type": "ImageObject", "url": `${BASE}/images/logo-600x60.png` }
+              },
+              "datePublished": "2025-08-20",
+              "dateModified": "2026-04-11",
+              "articleSection": "Guides"
+            })
+          }}
+        />
 
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="Lip Filler and Cold Sores: Questions to Ask Before You Book" />
-        <meta property="og:description" content="What is the connection between lip filler and cold sores? Questions to ask your provider and physician before booking." />
-        <meta property="og:url" content={CANONICAL} />
-        <meta property="article:published_time" content="2025-08-20" />
-        <meta property="article:modified_time" content="2025-08-20" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={CANONICAL} />
-        <meta name="twitter:title" content="Lip Filler and Cold Sores: Questions to Ask Before You Book" />
-        <meta name="twitter:description" content="What is the connection between lip filler and cold sores? Questions to ask your provider and physician before booking." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE },
+                { "@type": "ListItem", "position": 2, "name": "Guides", "item": `${BASE}/guides` },
+                { "@type": "ListItem", "position": 3, "name": "Lip Filler and Cold Sores", "item": CANONICAL }
+              ]
+            })
+          }}
+        />
 
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Lip Filler and Cold Sores: Questions to Ask Before You Book",
-            "description": "Educational overview of the relationship between lip filler and cold sores, including questions to discuss with your provider and physician before treatment.",
-            "mainEntityOfPage": { "@type": "WebPage", "@id": CANONICAL },
-            "author": { "@type": "Organization", "name": "Find Lip Filler Directory" },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Find Lip Filler Directory",
-              "logo": { "@type": "ImageObject", "url": `${SITE_URL.replace(/\/$/,'')}/images/logo-600x60.png` }
-            },
-            "datePublished": "2025-08-20",
-            "dateModified": "2025-08-20",
-            "articleSection": "Guides"
-          })
-        }} />
-
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
-              { "@type": "ListItem", "position": 2, "name": "Guides", "item": `${SITE_URL.replace(/\/$/,'')}/guides` },
-              { "@type": "ListItem", "position": 3, "name": "Lip Filler and Cold Sores", "item": CANONICAL }
-            ]
-          })
-        }} />
-
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Can you get lip filler if you get cold sores?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Many people with a history of cold sores do get lip filler. Whether it is appropriate for your specific situation depends on your health history. This is a conversation to have with your provider and a licensed physician before booking."
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Can you get lip filler if you get cold sores?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Many people with a history of cold sores do get lip filler. Whether it is appropriate for your specific situation depends on your health history and circumstances. This is a conversation to have with your provider and a licensed physician before booking, not a decision to make based on general information alone."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do I need to tell my provider about my cold sore history?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Your full health history is relevant to your provider before any cosmetic procedure. A qualified provider will ask about it. Sharing this information allows them to factor it into their approach and advise you on whether to speak with a physician beforehand."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can lip filler trigger a cold sore outbreak?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Physical trauma to the lip area is a recognized factor in HSV-1 activity for people who carry the virus. Whether lip filler injections would affect you personally, and how to approach that, is something to discuss with your provider and physician before treatment."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What should I do if I notice something unexpected after lip filler?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Contact your provider promptly and speak with your physician. Do not attempt to self-diagnose or self-treat. Your care team is the right source of guidance for any post-treatment concerns."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is valacyclovir and why is it mentioned in relation to lip filler?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Valacyclovir is a prescription antiviral medication. Some providers mention it in the context of consultations for patients with a cold sore history. If this comes up in your consultation, discuss it with your own physician, who can determine what is right for your individual situation."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long should I wait after a cold sore before getting lip filler?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Timing after a cold sore is a medical question that depends on your individual circumstances. Discuss this directly with your provider and physician before booking rather than relying on general guidance."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What if I have never had a cold sore?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "If you have no history of cold sores, mention this to your provider as part of your standard health history intake. They can advise based on your individual circumstances and let you know whether any further conversation with a physician is warranted."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I get a lip flip instead to avoid this concern?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A lip flip also involves injections in or near the lip area. Whether it presents different considerations for someone with a cold sore history is something to raise with your provider and physician. Do not assume a different procedure automatically changes the picture without getting professional input."
+                  }
                 }
-              },
-              {
-                "@type": "Question",
-                "name": "Can lip filler trigger a cold sore outbreak?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Physical trauma to the lip area is a recognized factor in HSV-1 activity for people who carry the virus. Whether lip filler injections would affect you personally is something to discuss with your provider and physician before treatment."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What should I ask my provider about cold sores and lip filler?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Ask your provider what their protocol is for patients with a history of cold sores, whether they recommend speaking with a physician beforehand, and what their post-treatment guidance is if any unexpected symptoms appear after the procedure."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What should I do if I notice something unexpected after lip filler?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Contact your provider promptly and speak with your physician. Do not attempt to self-diagnose or self-treat. Your care team is the right source of guidance for any post-treatment concerns."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What is valacyclovir and why is it mentioned in relation to lip filler?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Valacyclovir is a prescription antiviral medication. Some providers mention it in the context of consultations for patients with a cold sore history. If this comes up, discuss it with your own physician, who can determine what is right for your individual situation."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How long should I wait after a cold sore before getting lip filler?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Timing after a cold sore is a medical question that depends on your individual circumstances. Discuss this directly with your provider and physician before booking."
-                }
-              }
-            ]
-          })
-        }} />
+              ]
+            })
+          }}
+        />
       </Head>
 
-      <Layout title="Lip Filler and Cold Sores: Questions to Ask Before You Book | Find Lip Filler">
+      <Layout
+        title="Lip Filler and Cold Sores: Questions to Ask Before You Book"
+        metaDescription="What is the connection between lip filler and cold sores? Learn what questions to ask your provider and physician before booking your appointment."
+        canonical={CANONICAL}
+        ogTitle="Lip Filler and Cold Sores: Questions to Ask Before You Book"
+        ogDescription="What is the connection between lip filler and cold sores? Questions to ask your provider and physician before booking."
+        ogImage={OG_IMG}
+      >
         <nav style={{ margin: '20px 0', fontSize: '14px', color: '#6c757d' }}>
           <Link href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</Link>
           <span style={{ margin: '0 8px' }}>›</span>
@@ -164,7 +181,7 @@ export default function LipFillerColdSores() {
             borderRadius: '8px', padding: '20px', marginBottom: '30px'
           }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px', textAlign: 'center', fontSize: '14px' }}>
-              <div><strong>Last Updated:</strong><br />2025</div>
+              <div><strong>Last Updated:</strong><br />2026</div>
               <div><strong>Reading Time:</strong><br />7 to 9 minutes</div>
               <div><strong>Purpose:</strong><br />General Education Only</div>
             </div>

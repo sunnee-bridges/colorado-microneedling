@@ -21,18 +21,17 @@ export default function Layout({ children, title = "Colorado Lip Filler Provider
   const pathname = cleanPath;
 
   const desc = metaDescription || defaultDesc;
+  const finalCanonical = canonical || url;
   const ogT = ogTitle || title;
   const ogD = ogDescription || desc;
   const ogI = ogImage || defaultOgImage;
 
   return (
     <>
-      <Head>
-        {/* Title */}
+       <Head>
         <title>{title}</title>
 
-        {/* Canonical + Robots */}
-        <link rel="canonical" href={canonical || url} />
+        <link rel="canonical" href={finalCanonical} />
         <meta
           name="robots"
           content={
@@ -42,16 +41,11 @@ export default function Layout({ children, title = "Colorado Lip Filler Provider
           }
         />
 
-        {/* Meta basics */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* Only one description per page; use as fallback */}
-        {!metaDescription && <meta name="description" content={defaultDesc} />}
-        {/* Remove keywords: largely ignored by modern search engines */}
+        <meta name="description" content={desc} />
 
-        {/* Hreflang (single locale example) */}
-        <link rel="alternate" hrefLang="en-US" href={url} />
+        <link rel="alternate" hrefLang="en-US" href={finalCanonical} />
 
-        {/* Favicons (example) */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -59,12 +53,11 @@ export default function Layout({ children, title = "Colorado Lip Filler Provider
         <link rel="android-chrome-512x512" href="/android-chrome-512x512.png" />
         <link rel="manifest" href="/site.webmanifest" />
 
-        {/* Open Graph / Twitter defaults */}
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Colorado Lip Fillers Directory" />
         <meta property="og:title" content={ogT} />
         <meta property="og:description" content={ogD} />
-        <meta property="og:url" content={url} />
+        <meta property="og:url" content={finalCanonical} />
         <meta property="og:image" content={ogI} />
         <meta property="og:locale" content="en_US" />
 
@@ -73,7 +66,6 @@ export default function Layout({ children, title = "Colorado Lip Filler Provider
         <meta name="twitter:description" content={ogD} />
         <meta name="twitter:image" content={ogI} />
 
-        {/* JSON-LD: WebSite + Organization (+ optional SiteNavigationElement) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -85,9 +77,9 @@ export default function Layout({ children, title = "Colorado Lip Filler Provider
               potentialAction: {
                 '@type': 'SearchAction',
                 target: `${siteUrl}/search?q={search_term_string}`,
-                'query-input': 'required name=search_term_string'
-              }
-            })
+                'query-input': 'required name=search_term_string',
+              },
+            }),
           }}
         />
         <script
@@ -100,28 +92,8 @@ export default function Layout({ children, title = "Colorado Lip Filler Provider
               url: siteUrl,
               logo: `${siteUrl}/logo.svg`,
               areaServed: 'US-CO',
-              sameAs: [
-                // add your real profiles; leave empty array if none
-              ]
-            })
-          }}
-        />
-        {/* Optional: SiteNavigationElement for top nav */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify([
-              {
-                '@context': 'https://schema.org',
-                '@type': 'SiteNavigationElement',
-                name: 'Guides',
-                url: `${siteUrl}/guides`
-              },
-              { '@context': 'https://schema.org', '@type': 'SiteNavigationElement', name: 'Shapes', url: `${siteUrl}/shapes` },
-              { '@context': 'https://schema.org', '@type': 'SiteNavigationElement', name: 'FAQ', url: `${siteUrl}/lip-filler-faq` },
-              { '@context': 'https://schema.org', '@type': 'SiteNavigationElement', name: 'About', url: `${siteUrl}/about` },
-              { '@context': 'https://schema.org', '@type': 'SiteNavigationElement', name: 'Contact', url: `${siteUrl}/contact` }
-            ])
+              sameAs: [],
+            }),
           }}
         />
       </Head>
@@ -239,7 +211,7 @@ export default function Layout({ children, title = "Colorado Lip Filler Provider
                     textDecoration: 'none',
                     fontSize: '0.9rem',
                     borderBottom: '1px solid #f0f0f0',
-                    background: pathname === 'guides/lip-filler-101' ? '#f8f9fa' : 'transparent',
+                    background: pathname === '/guides/lip-filler-101' ? '#f8f9fa' : 'transparent',
                     fontWeight: pathname === '/guides/lip-filler-101' ? 'bold' : 'normal'
                   }}>
                     Lip Filler 101: Complete Guide

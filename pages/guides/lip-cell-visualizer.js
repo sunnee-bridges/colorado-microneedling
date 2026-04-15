@@ -275,26 +275,14 @@ export default function LipCellVisualizer() {
   }, []);
 
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  const CANONICAL = `${SITE_URL.replace(/\/$/, '')}/guides/lip-cell-visualizer`;
+const BASE = SITE_URL.replace(/\/$/, '');
+const CANONICAL = `${BASE}/guides/lip-cell-visualizer`;
+const OG_IMG = `${BASE}/images/lip-cell-visualizer-1200x630.jpg`;
 
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>How Does Lip Filler Work? Interactive Cell Visualizer</title>
-        <meta name="description" content="See exactly how lip filler adds volume at a cellular level. Interactive visualizer shows what hyaluronic acid does inside your lips. Press arrow keys to watch cells swell with filler." />
-        <link rel="canonical" href={CANONICAL} />
-        <meta name="keywords" content="how does lip filler work, how does lip filler add volume, what does lip filler do to your lips, how does hyaluronic acid filler work, what happens to your lips when you get filler, how lip filler works inside your lip" />
-        <meta name="robots" content="index,follow" />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="How Does Lip Filler Work? Interactive Cell Visualizer" />
-        <meta property="og:description" content="See exactly how lip filler adds volume at a cellular level. Watch hyaluronic acid fill and swell lip cells in real time." />
-        <meta property="og:url" content={CANONICAL} />
-        <meta property="article:published_time" content="2025-08-20" />
-        <meta property="article:modified_time" content="2025-08-20" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="How Does Lip Filler Work? Interactive Cell Visualizer" />
-        <meta name="twitter:description" content="See exactly how lip filler adds volume at a cellular level." />
+
 
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -307,12 +295,27 @@ export default function LipCellVisualizer() {
             "publisher": {
               "@type": "Organization",
               "name": "Find Lip Filler Directory",
-              "logo": { "@type": "ImageObject", "url": `${SITE_URL.replace(/\/$/,'')}/images/logo-600x60.png` }
+              "logo": { "@type": "ImageObject", "url": `${BASE}/images/logo-600x60.png` }
             },
             "datePublished": "2025-08-20",
             "dateModified": "2025-08-20"
           })
         }} />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE },
+                { "@type": "ListItem", "position": 2, "name": "Guides", "item": `${BASE}/guides` },
+                { "@type": "ListItem", "position": 3, "name": "How Lip Filler Works", "item": CANONICAL }
+              ]
+            })
+          }}
+        />
 
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -372,7 +375,14 @@ export default function LipCellVisualizer() {
         }} />
       </Head>
 
-      <Layout title="How Lip Filler Works: Interactive Visualizer | Find Lip Filler">
+      <Layout 
+          title="How Does Lip Filler Work? Interactive Cell Visualizer"
+  metaDescription="See exactly how lip filler adds volume at a cellular level. Interactive visualizer shows what hyaluronic acid does inside your lips. Press arrow keys to watch cells swell with filler."
+  canonical={CANONICAL}
+  ogTitle="How Does Lip Filler Work? Interactive Cell Visualizer"
+  ogDescription="See exactly how lip filler adds volume at a cellular level. Watch hyaluronic acid fill and swell lip cells in real time."
+  ogImage={OG_IMG}
+>
 
         {/* Breadcrumbs */}
         <nav style={{ margin: '20px 0', fontSize: '14px', color: '#6c757d' }}>

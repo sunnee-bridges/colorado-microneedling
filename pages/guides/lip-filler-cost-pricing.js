@@ -5,31 +5,14 @@ import Head from 'next/head';
 
 export default function LipFillerCosts() {
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  const CANON = `${SITE_URL.replace(/\/$/,'')}/guides/cost-breakdown`;
-  const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-costs-1200x630.jpg`; // add this image
+const BASE = SITE_URL.replace(/\/$/, '');
+const CANON = `${BASE}/guides/cost-breakdown`;
+const OG_IMG = `${BASE}/images/lip-filler-costs-1200x630.jpg`;
   
   return (
     <>
       <Head>
-        <title>Lip Filler Costs: Simple Guide to Prices & How Pricing Works</title>
-        <meta name="description" content="Easy guide to lip filler costs—how providers price, what affects the price, questions to ask, and ways to save. Get the full picture before you book." />
-        <meta name="robots" content="index,follow" />
-
-        {/* Open Graph */}
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="Lip Filler Costs: Simple Guide to Prices & How Pricing Works" />
-        <meta property="og:description" content="Understand lip filler pricing: what affects cost, what to ask, and ways to save safely." />
-        <meta property="og:url" content={CANON} />
-        <meta property="og:image" content={OG_IMG} />
-        <meta property="article:published_time" content="2025-08-20" />
-        <meta property="article:modified_time" content="2025-08-20" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Lip Filler Costs: Simple Guide to Prices & How Pricing Works" />
-        <meta name="twitter:description" content="Easy breakdown of lip filler pricing with FAQs and a simple cost worksheet." />
-        <meta name="twitter:image" content={OG_IMG} />
-        
+           
         {/* Article */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -43,7 +26,7 @@ export default function LipFillerCosts() {
             "publisher": {
               "@type": "Organization",
               "name": "Colorado Lip Enhancement Directory",
-              "logo": { "@type": "ImageObject", "url": `${SITE_URL}/images/logo-600x60.png` }
+              "logo": { "@type": "ImageObject", "url": `${BASE}/images/logo-600x60.png` }
             },
             "datePublished": "2025-08-20",
             "dateModified": "2025-08-20",
@@ -57,8 +40,8 @@ export default function LipFillerCosts() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type":"ListItem", "position":1, "name":"Home", "item": SITE_URL },
-              { "@type":"ListItem", "position":2, "name":"Guides", "item": `${SITE_URL}/guides` },
+              { "@type":"ListItem", "position":1, "name":"Home", "item": BASE },
+              { "@type":"ListItem", "position":2, "name":"Guides", "item": `${BASE}/guides` },
               { "@type":"ListItem", "position":3, "name":"Lip Filler Costs", "item": CANON }
             ]
           })
@@ -81,7 +64,14 @@ export default function LipFillerCosts() {
         }} />
       </Head>
       
-      <Layout title="Lip Filler Costs: Simple Pricing Guide | Colorado Directory">
+      <Layout
+        title="Lip Filler Costs: Simple Guide to Prices & How Pricing Works"
+        metaDescription="Easy guide to lip filler costs—how providers price, what affects the price, questions to ask, and ways to save. Get the full picture before you book."
+        canonical={CANON}
+        ogTitle="Lip Filler Costs: Simple Guide to Prices & How Pricing Works"
+        ogDescription="Understand lip filler pricing: what affects cost, what to ask, and ways to save safely."
+        ogImage={OG_IMG}
+      >
         {/* Breadcrumbs */}
         <nav style={{ margin: '20px 0', fontSize: '14px', color: '#6c757d' }}>
           <Link href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</Link>

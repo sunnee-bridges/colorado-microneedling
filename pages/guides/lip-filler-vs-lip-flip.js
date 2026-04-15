@@ -9,13 +9,13 @@ export default function FillerVsLipFlip() {
   const CANON = `${BASE}/guides/lip-filler-vs-lip-flip`;
   const OG_IMG = `${BASE}/images/lip-filler-vs-lip-flip-1200x630.jpg`;
 
-  const title = 'Lip Filler vs Lip Flip 2025: Which Treatment Lasts Longer? Complete Comparison';
-  const shortTitle = 'Lip Filler vs Lip Flip 2025: Which Treatment Lasts Longer?';
+  const title = 'Lip Filler vs Lip Flip 2026: Which Treatment Lasts Longer? Complete Comparison';
+  const shortTitle = 'Lip Filler vs Lip Flip 2026: Which Treatment Lasts Longer?';
   const description =
     'Complete comparison of lip filler vs lip flip—duration, results, cost factors, and guidance on choosing the right treatment.';
 
   const published = '2025-08-20';
-  const modified = '2025-09-10';
+  const modified = '2026-04-14';
 
   // JSON-LD objects (kept to ONE Article; plus Breadcrumbs, FAQ, HowTo)
   const articleJsonLd = {
@@ -146,7 +146,14 @@ export default function FillerVsLipFlip() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }} />
       </Head>
       
-      <Layout title="Lip Filler vs Lip Flip Complete Comparison 2025 | Colorado Directory">
+      <Layout
+          title={title}
+          metaDescription={description}
+          canonical={CANON}
+          ogTitle={shortTitle}
+          ogDescription={description}
+          ogImage={OG_IMG}
+        >
         {/* Medical Disclaimer Banner */}
         <div style={{
           backgroundColor: '#fff3cd',
@@ -190,7 +197,7 @@ export default function FillerVsLipFlip() {
                 fontWeight: '700',
                 lineHeight: '1.2'
               }}>
-                Lip Filler vs Lip Flip 2025: Which Treatment Lasts Longer?
+                Lip Filler vs Lip Flip 2026: Which Treatment Lasts Longer?
               </h1>
               <p style={{ 
                 fontSize: '1.2rem', 
@@ -959,7 +966,7 @@ export default function FillerVsLipFlip() {
                 display: 'block',
                 textAlign: 'center'
               }}>
-                Complete Lip Filler Guide 2025
+                Complete Lip Filler Guide 2026
               </Link>
             {/* 
               <Link href="/guides/choosing-qualified-providers" style={{

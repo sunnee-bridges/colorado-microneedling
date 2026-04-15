@@ -5,31 +5,13 @@ import Head from 'next/head';
 
 export default function LipFillerRecoveryTimeline() {
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  const CANON = `${SITE_URL.replace(/\/$/,'')}/guides/lip-filler-recovery-timeline`;
-  const OG_IMG = `${SITE_URL.replace(/\/$/,'')}/images/lip-filler-recovery-1200x630.jpg`; // add this file
+const BASE = SITE_URL.replace(/\/$/, '');
+const CANON = `${BASE}/guides/lip-filler-recovery-timeline`;
+const OG_IMG = `${BASE}/images/lip-filler-recovery-1200x630.jpg`;
   
   return (
     <>
       <Head>
-        <title>Lip Filler Recovery Timeline: Day-by-Day Swelling & Aftercare</title>
-        <meta name="description" content="Easy day-by-day lip filler recovery guide: swelling, bruises, aftercare, and when to call your provider. Know what to expect each day." />
-        <link rel="canonical" href={CANON} />
-        <meta name="robots" content="index,follow" />
-
-        {/* Open Graph */}
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="Lip Filler Recovery Timeline: Day-by-Day Swelling & Aftercare" />
-        <meta property="og:description" content="Day-by-day lip filler recovery guide: swelling, bruising, aftercare, and when to call your provider." />
-        <meta property="og:url" content={CANON} />
-        <meta property="og:image" content={OG_IMG} />
-        <meta property="article:published_time" content="2025-08-20" />
-        <meta property="article:modified_time" content="2025-08-20" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Lip Filler Recovery Timeline: Day-by-Day Swelling & Aftercare" />
-        <meta name="twitter:description" content="What to expect each day after lip fillers—simple recovery timeline and aftercare tips." />
-        <meta name="twitter:image" content={OG_IMG} />
         
         {/* Article */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{
@@ -39,15 +21,15 @@ export default function LipFillerRecoveryTimeline() {
             "headline": "Lip Filler Recovery Timeline: Day-by-Day Guide",
             "description": "A plain-language, day-by-day lip filler recovery guide covering swelling, bruising, aftercare, and when to call your provider.",
             "mainEntityOfPage": { "@type": "WebPage", "@id": CANON },
-            "image": [ `${SITE_URL}/images/lip-filler-recovery-1200x630.jpg` ],
+            "image": [ `${BASE}/images/lip-filler-recovery-1200x630.jpg` ],
             "author": { "@type": "Organization", "name": "Colorado Lip Enhancement Directory" },
             "publisher": {
               "@type": "Organization",
               "name": "Colorado Lip Enhancement Directory",
-              "logo": { "@type": "ImageObject", "url": `${SITE_URL}/images/logo-600x60.png` }
+              "logo": { "@type": "ImageObject", "url": `${BASE}/images/logo-600x60.png` }
             },
             "datePublished": "2025-08-20",
-            "dateModified": "2025-08-20",
+            "dateModified": "2026-04-14",
             "articleSection": "Guides"
           })
         }} />
@@ -58,8 +40,8 @@ export default function LipFillerRecoveryTimeline() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type":"ListItem", "position":1, "name":"Home", "item": SITE_URL },
-              { "@type":"ListItem", "position":2, "name":"Guides", "item": `${SITE_URL}/guides` },
+              { "@type":"ListItem", "position":1, "name":"Home", "item": BASE },
+              { "@type":"ListItem", "position":2, "name":"Guides", "item": `${BASE}/guides` },
               { "@type":"ListItem", "position":3, "name":"Lip Filler Recovery Timeline", "item": CANON }
             ]
           })
@@ -91,7 +73,14 @@ export default function LipFillerRecoveryTimeline() {
         }} />
       </Head>
       
-      <Layout title="Lip Filler Recovery Timeline: Day-by-Day Guide | Colorado Directory">
+      <Layout
+        title="Lip Filler Recovery Timeline: Day-by-Day Swelling & Aftercare"
+        metaDescription="Easy day-by-day lip filler recovery guide: swelling, bruises, aftercare, and when to call your provider. Know what to expect each day."
+        canonical={CANON}
+        ogTitle="Lip Filler Recovery Timeline: Day-by-Day Swelling & Aftercare"
+        ogDescription="Day-by-day lip filler recovery guide: swelling, bruising, aftercare, and when to call your provider."
+        ogImage={OG_IMG}
+      >
         {/* Breadcrumbs */}
         <nav style={{ margin: '20px 0', fontSize: '14px', color: '#6c757d' }}>
           <Link href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</Link>

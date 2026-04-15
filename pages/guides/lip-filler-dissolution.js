@@ -5,117 +5,120 @@ import Head from 'next/head';
 
 export default function LipFillerDissolution() {
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  const CANONICAL = `${SITE_URL.replace(/\/$/, '')}/guides/lip-filler-dissolution`;
+  const BASE = SITE_URL.replace(/\/$/, '');
+  const CANONICAL = `${BASE}/guides/lip-filler-dissolution`;
+  const OG_IMG = `${BASE}/images/lip-filler-dissolution-1200x630.jpg`;
 
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>How to Dissolve Lip Filler: Cost, Process & What to Expect in 2025</title>
-        <meta name="description" content="Everything you need to know about dissolving lip filler with hyaluronidase — what the process involves, how much it costs, whether your lips return to normal, and how to find a provider in Colorado." />
-        <link rel="canonical" href={CANONICAL} />
-        <meta name="keywords" content="dissolve lip filler, lip filler dissolution Colorado, hyaluronidase lip filler, remove lip filler Denver, lip filler reversal cost, bad lip filler fix" />
-        <meta name="robots" content="index,follow" />
-
-        {/* Open Graph */}
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="How to Dissolve Lip Filler: Cost, Process & What to Expect in 2025" />
-        <meta property="og:description" content="Everything you need to know about dissolving lip filler — process, cost, and recovery." />
-        <meta property="og:url" content={CANONICAL} />
-        <meta property="article:published_time" content="2025-08-20" />
-        <meta property="article:modified_time" content="2025-08-20" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={CANONICAL} />
-        <meta name="twitter:title" content="How to Dissolve Lip Filler: Cost, Process & What to Expect in 2025" />
-        <meta name="twitter:description" content="Everything you need to know about dissolving lip filler — process, cost, and recovery." />
-
-        {/* Article Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "How to Dissolve Lip Filler: Cost, Process & What to Expect in 2025",
-            "description": "Everything you need to know about dissolving lip filler with hyaluronidase.",
-            "mainEntityOfPage": { "@type": "WebPage", "@id": CANONICAL },
-            "author": { "@type": "Organization", "name": "Find Lip Filler Directory" },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Find Lip Filler Directory",
-              "logo": { "@type": "ImageObject", "url": `${SITE_URL.replace(/\/$/,'')}/images/logo-600x60.png` }
-            },
-            "datePublished": "2025-08-20",
-            "dateModified": "2025-08-20",
-            "articleSection": "Guides"
-          })
-        }} />
-
-        {/* Breadcrumbs Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
-              { "@type": "ListItem", "position": 2, "name": "Guides", "item": `${SITE_URL.replace(/\/$/,'')}/guides` },
-              { "@type": "ListItem", "position": 3, "name": "Dissolve Lip Filler Guide", "item": CANONICAL }
-            ]
-          })
-        }} />
-
-        {/* FAQ Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Can lip filler be completely dissolved?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. Hyaluronic acid lip fillers can be dissolved using hyaluronidase injections. The enzyme breaks down the filler within 24-72 hours. Results vary depending on how long the filler has been in place and how much was originally injected."
-                }
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "headline": "How to Dissolve Lip Filler: Cost, Process & What to Expect in 2026",
+              "description": "Everything you need to know about dissolving lip filler with hyaluronidase.",
+              "mainEntityOfPage": { "@type": "WebPage", "@id": CANONICAL },
+              "image": [OG_IMG],
+              "author": { "@type": "Organization", "name": "Find Lip Filler Directory" },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Find Lip Filler Directory",
+                "logo": { "@type": "ImageObject", "url": `${BASE}/images/logo-600x60.png` }
               },
-              {
-                "@type": "Question",
-                "name": "Does dissolving lip filler hurt?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Most people rate the discomfort as similar to the original filler injections — around 3-5 out of 10. Providers typically apply numbing cream beforehand. Expect some swelling and tenderness for 1-3 days after."
+              "datePublished": "2025-08-20",
+              "dateModified": "2026-04-14",
+              "articleSection": "Guides"
+            })
+          }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE },
+                { "@type": "ListItem", "position": 2, "name": "Guides", "item": `${BASE}/guides` },
+                { "@type": "ListItem", "position": 3, "name": "Dissolve Lip Filler Guide", "item": CANONICAL }
+              ]
+            })
+          }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Can lip filler be completely dissolved?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, for most patients. HA fillers break down fully with hyaluronidase, though filler that has been in place for many years may require more than one session. Very old or heavily built-up filler is harder to dissolve completely in a single treatment."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long do I have to wait before getting filler again?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most providers recommend waiting at least 2-4 weeks after dissolution before getting new filler. This gives the hyaluronidase time to clear your system and allows your tissue to fully settle, so the new result is more predictable."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will dissolving filler make my lips look worse than before I ever had filler?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For most people, no. Your lips generally return to their natural shape. The temporary deflated look in the first few days can be alarming, but it resolves. Long-term patients who have had years of filler may notice some minor tissue changes, but these are usually subtle."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I dissolve just part of my lip filler?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Skilled providers can dissolve filler in specific areas — for example, just the border of the lip if that’s where migration occurred, or just the upper lip if the lower looks fine. Partial dissolution requires an experienced injector who knows how to target placement precisely."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What if the dissolution doesn’t work fully?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A second round of hyaluronidase can be done if the first session didn’t fully dissolve the filler. Older filler is often more resistant. A good provider will follow up at 2 weeks and assess whether more treatment is needed. Always clarify before booking whether additional rounds are included in the price."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is it safe to dissolve lip filler at home?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Hyaluronidase is a prescription medication in the US and cannot be legally obtained or administered outside a licensed medical setting. DIY attempts are dangerous and not effective. Only go to a licensed medical professional for dissolution."
+                  }
                 }
-              },
-              {
-                "@type": "Question",
-                "name": "Will my lips go back to normal after dissolving filler?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "For most people, yes. Your lips typically return to their natural shape within 1-2 weeks. However, if you have had filler for many years, there may be minor changes to how the lip tissue sits. Most patients are happy with how their natural lips look after dissolution."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How long does it take for dissolved lip filler to settle?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "The hyaluronidase works within 24-72 hours, but your lips may look slightly swollen or uneven for up to 2 weeks while tissue settles. Most providers recommend waiting at least 2 weeks before assessing the final result or considering re-filling."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How much does it cost to dissolve lip filler in Colorado?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Based on publicly available information, dissolution treatments in Colorado typically range from $100-$400 depending on the provider and how much hyaluronidase is needed. Always confirm pricing directly with your provider."
-                }
-              }
-            ]
-          })
-        }} />
+              ]
+            })
+          }}
+        />
       </Head>
 
-      <Layout title="How to Dissolve Lip Filler: Cost, Process & What to Expect in 2025 | Find Lip Filler">
+      <Layout
+        title="How to Dissolve Lip Filler: Cost, Process & What to Expect in 2026"
+        metaDescription="Everything you need to know about dissolving lip filler with hyaluronidase."
+        canonical={CANONICAL}
+        ogTitle="How to Dissolve Lip Filler: Cost, Process & What to Expect in 2026"
+        ogDescription="Everything you need to know about dissolving lip filler with hyaluronidase."
+        ogImage={OG_IMG}
+      >
         {/* Breadcrumbs */}
         <nav style={{ margin: '20px 0', fontSize: '14px', color: '#6c757d' }}>
           <Link href="/" style={{ color: '#667eea', textDecoration: 'none' }}>Home</Link>
@@ -208,7 +211,7 @@ export default function LipFillerDissolution() {
             marginBottom: '30px'
           }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px', textAlign: 'center', fontSize: '14px' }}>
-              <div><strong>Last Updated:</strong><br />2025</div>
+              <div><strong>Last Updated:</strong><br />2026</div>
               <div><strong>Reading Time:</strong><br />8-10 minutes</div>
               <div><strong>Expertise:</strong><br />Medical Research Based</div>
             </div>

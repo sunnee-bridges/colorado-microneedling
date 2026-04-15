@@ -229,7 +229,7 @@ export default function Terms() {
         </div>
 
         <p style={{ fontSize: '0.9rem', color: '#666', fontStyle: 'italic', textAlign: 'center', marginTop: '40px' }}>
-          Last updated: August 16, 2025
+          Last updated: April 11, 2025
         </p>
       </div>
     </Layout>
