@@ -6,7 +6,7 @@ import Head from 'next/head';
 export default function LipFillerCosts() {
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 const BASE = SITE_URL.replace(/\/$/, '');
-const CANON = `${BASE}/guides/cost-breakdown`;
+const CANON = `${BASE}/guides/lip-filler-cost-pricing`;
 const OG_IMG = `${BASE}/images/lip-filler-costs-1200x630.jpg`;
   
   return (

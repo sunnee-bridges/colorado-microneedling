@@ -43,26 +43,14 @@ export default function CityPage({ cityName, citySlug, providers, canonicalUrl, 
   const nearby = nearbyByCity[citySlug] || [];
 
   return (
-    <Layout title={pageTitle}>
+    <Layout
+  title={pageTitle}
+  metaDescription={pageDesc}
+  canonical={canonicalUrl}
+  ogTitle={pageTitle}
+  ogDescription={pageDesc}
+>
       <Head>
-        <link rel="canonical" href={canonicalUrl} />
-        <meta name="robots" content={robots} />
-        <meta name="description" content={pageDesc} />
-
-        {/* Nice-to-have OG tags */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDesc} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:site_name" content="Colorado Lip Enhancement Directory" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:image" content={`${normalizeUrl(siteUrl)}/og/city-default.jpg`} />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={pageDesc} />
-        <meta name="twitter:image" content={`${normalizeUrl(siteUrl)}/og/city-default.jpg`} />
 
         {/* Breadcrumb JSON-LD */}
         <script
@@ -449,17 +437,22 @@ export default function CityPage({ cityName, citySlug, providers, canonicalUrl, 
 }
 
 export async function getStaticPaths() {
-  // Build unique city list from nested address field
-  const cities = Array.from(
-    new Set(
-      (providersData.providers || [])
-        .map(p => p.address?.city || p.city) // fallback if any legacy
-        .filter(Boolean)
-    )
-  );
+  const providers = providersData.providers || [];
+  const citySet = new Set();
 
-  const paths = cities.map(city => ({
-    params: { city: slugifyCity(city) }
+  providers.forEach(p => {
+    // Add address.city
+    const addrCity = p.address?.city || p.city;
+    if (addrCity) citySet.add(slugifyCity(addrCity));
+
+    // Add serviceArea cities
+    (p.serviceArea || []).forEach(area => {
+      if (area) citySet.add(slugifyCity(area));
+    });
+  });
+
+  const paths = Array.from(citySet).map(city => ({
+    params: { city }
   }));
 
   return { paths, fallback: false };
@@ -470,10 +463,13 @@ export async function getStaticProps({ params }) {
   const citySlug = params.city;
   const cityName = humanizeSlug(citySlug);
 
-  // Filter by matching the slug of the provider's city
   const providers = (providersData.providers || []).filter(p => {
-    const c = p.address?.city || p.city || '';
-    return slugifyCity(c) === citySlug;
+    // Match on address.city
+    const addrCity = p.address?.city || p.city || '';
+    if (slugifyCity(addrCity) === citySlug) return true;
+
+    // Match on serviceArea
+    return (p.serviceArea || []).some(area => slugifyCity(area) === citySlug);
   });
 
   const canonicalUrl = `${siteUrl}/cities/${citySlug}`;

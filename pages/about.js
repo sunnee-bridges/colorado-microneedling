@@ -7,28 +7,14 @@ const CANONICAL = `${SITE.replace(/\/$/, '')}/about`;
 
 export default function About() {
   return (
-    <Layout title="About Colorado Lip Fillers Directory">
+    <Layout
+      title="About Colorado Lip Fillers Directory"
+      metaDescription="About the Colorado Lip Fillers Directory—what we provide, how to use the directory, and key questions to ask when researching providers."
+      canonical={CANONICAL}
+      ogTitle="About Colorado Lip Fillers Directory"
+      ogDescription="Learn what the directory offers and how to research providers safely and effectively."
+    >
      <Head>
-        <link rel="canonical" href={CANONICAL} />
-        <meta name="robots" content="index,follow" />
-        <meta
-          name="description"
-          content="About the Colorado Lip Fillers Directory—what we provide, how to use the directory, and key questions to ask when researching providers."
-        />
-
-        {/* Open Graph */}
-        <meta property="og:title" content="About Colorado Lip Fillers Directory" />
-        <meta property="og:description" content="Learn what the directory offers and how to research providers safely and effectively." />
-        <meta property="og:url" content={CANONICAL} />
-        <meta property="og:type" content="website" />
-        {/* Optional when you have one: */}
-        {/* <meta property="og:image" content={`${SITE}/og/about-og.jpg`} /> */}
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Colorado Lip Fillers Directory" />
-        <meta name="twitter:description" content="What we provide and how to use the directory to research providers." />
-        {/* <meta name="twitter:image" content={`${SITE}/og/about-og.jpg`} /> */}
 
         {/* JSON-LD: AboutPage */}
         <script

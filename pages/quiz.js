@@ -8,14 +8,14 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://findlipfillers.com
 export default function QuizPage() {
   return (
     <Layout 
-      title="Lip Shape Finder Quiz | Find Your Perfect Lip Style"
-      metaDescription="Take our 60-second Lip Shape Finder quiz to discover your ideal lip filler style, volume recommendations, and talking points for your consultation."
-      ogTitle="What's Your Lip Shape?"
-      ogDescription="Take the Lip Shape Finder quiz in 60 seconds. Get personalized style recommendations, volume ranges, and consultation talking points."
-      ogImage={`${SITE_URL}/og/quiz-og.jpg`}
-    >
+  title="Lip Shape Finder Quiz | Find Your Perfect Lip Style"
+  metaDescription="Take our 60-second Lip Shape Finder quiz to discover your ideal lip filler style, volume recommendations, and talking points for your consultation."
+  canonical={`${SITE_URL}/quiz`}
+  ogTitle="What's Your Lip Shape?"
+  ogDescription="Take the Lip Shape Finder quiz in 60 seconds. Get personalized style recommendations, volume ranges, and consultation talking points."
+  ogImage={`${SITE_URL}/og/quiz-og.jpg`}
+>
       <Head>
-        <link rel="canonical" href={`${SITE_URL}/quiz`} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

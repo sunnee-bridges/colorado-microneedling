@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 
 const SITE = (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000').replace(/\/$/, '');
-const CANONICAL = `${SITE}/guides/lip-filler-faq`;
+const CANONICAL = `${SITE}/lip-filler-faq`;
 const OG_IMAGE = `${SITE}/images/og/faq.jpg`;
 
 /* ------------------------ Utilities & Schema Helpers ----------------------- */
@@ -722,35 +722,17 @@ export default function LipFillerFAQPage() {
   const schemaFaqs = pickFaqsForSchema(faqData);
 
   return (
-    <Layout>
+    return (
+  <Layout
+    title="Lip Filler FAQ | Colorado Lip Enhancement Directory"
+    metaDescription="Plain-language answers to common lip filler questions: safety, pain, cost, recovery, and results."
+    canonical={CANONICAL}
+    ogTitle="Lip Filler FAQ - Colorado Lip Fillers Directory"
+    ogDescription="Straightforward answers on safety, pain, cost, recovery, and results."
+    ogImage={OG_IMAGE}
+  >
       <Head>
-        {/* If your Layout also sets <title>/<canonical>, remove duplicates there or here. */}
-        <title>Lip Filler FAQ | Colorado Lip Enhancement Directory</title>
-        <meta
-          name="description"
-          content="Plain-language answers to common lip filler questions: safety, pain, cost, recovery, and results."
-        />
-        <link rel="canonical" href={CANONICAL} />
-        <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
-
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Lip Filler FAQ - Colorado Lip Fillers Directory" />
-        <meta
-          property="og:description"
-          content="Straightforward answers on safety, pain, cost, recovery, and results."
-        />
-        <meta property="og:url" content={CANONICAL} />
-        <meta property="og:image" content={OG_IMAGE} />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Lip Filler FAQ" />
-        <meta
-          name="twitter:description"
-          content="Straightforward answers on safety, pain, cost, recovery, and results."
-        />
-        <meta name="twitter:image" content={OG_IMAGE} />
+       
 
         {/* JSON-LD */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }} />

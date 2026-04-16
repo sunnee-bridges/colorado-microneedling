@@ -77,25 +77,14 @@ export default function Contact() {
 };
 
   return (
-    <Layout title="Contact Us - Colorado Lip Fillers Directory">
+    <Layout
+    title="Contact Us - Colorado Lip Fillers Directory"
+    metaDescription="Contact the Colorado Lip Fillers Directory team for questions, provider listings, corrections, or general inquiries. We respond within 1-2 business days."
+    canonical={CANONICAL}
+    ogTitle="Contact Us - Colorado Lip Fillers Directory"
+    ogDescription="Get in touch with our team for questions about providers, listings, or general inquiries."
+  >
       <Head>
-        <link rel="canonical" href={CANONICAL} />
-        <meta name="robots" content="index,follow" />
-        <meta
-          name="description"
-          content="Contact the Colorado Lip Fillers Directory team for questions, provider listings, corrections, or general inquiries. We respond within 1-2 business days."
-        />
-
-        {/* Open Graph */}
-        <meta property="og:title" content="Contact Us - Colorado Lip Fillers Directory" />
-        <meta property="og:description" content="Get in touch with our team for questions about providers, listings, or general inquiries." />
-        <meta property="og:url" content={CANONICAL} />
-        <meta property="og:type" content="website" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Contact Us - Colorado Lip Fillers Directory" />
-        <meta name="twitter:description" content="Contact our team for questions, provider listings, or general inquiries." />
 
         {/* JSON-LD: ContactPage */}
         <script
