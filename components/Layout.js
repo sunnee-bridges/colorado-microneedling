@@ -107,9 +107,9 @@ export default function Layout({ children, title = "Colorado Lip Filler Provider
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
             <div>
-              <h1 style={{ margin: '0 0 5px 0', fontSize: '1.8rem' }}>
+              <div style={{ margin: '0 0 5px 0', fontSize: '1.8rem' }}>
                 Colorado Lip Fillers Directory
-              </h1>
+              </div>
               <div style={{
                 background: 'rgba(255,255,255,0.2)',
                 backdropFilter: 'blur(10px)',

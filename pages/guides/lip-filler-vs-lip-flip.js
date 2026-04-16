@@ -9,7 +9,7 @@ export default function FillerVsLipFlip() {
   const CANON = `${BASE}/guides/lip-filler-vs-lip-flip`;
   const OG_IMG = `${BASE}/images/lip-filler-vs-lip-flip-1200x630.jpg`;
 
-  const title = 'Lip Filler vs Lip Flip 2026: Which Treatment Lasts Longer? Complete Comparison';
+  const title = 'Lip Filler vs Lip Flip: Which Lasts Longer? (2026)';
   const shortTitle = 'Lip Filler vs Lip Flip 2026: Which Treatment Lasts Longer?';
   const description =
     'Complete comparison of lip filler vs lip flip—duration, results, cost factors, and guidance on choosing the right treatment.';
@@ -21,7 +21,7 @@ export default function FillerVsLipFlip() {
   const articleJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: `${shortTitle} Complete Comparison`,
+    headline: title,
     description,
     mainEntityOfPage: { '@type': 'WebPage', '@id': CANON },
     image: [OG_IMG],
@@ -113,31 +113,7 @@ export default function FillerVsLipFlip() {
   return (
     <>
       <Head>
-        {/* Primary */}
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <meta name="keywords" content="lip filler vs lip flip, how long does lip flip last, lip flip vs filler which is better, can you do lip flip and filler together, lip filler vs botox lip flip, which lasts longer lip filler or lip flip" />
-        <link rel="canonical" href={CANON} />
-        {/* FIXED: lowercase 'l' in hreflang */}
-        <link rel="alternate" hreflang="en-US" href={CANON} />
-
-        {/* Open Graph (single, consistent block) */}
-        <meta property="og:type" content="article" />
-        <meta property="og:site_name" content="Colorado Lip Fillers Directory" />
-        <meta property="og:title" content={shortTitle} />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content={CANON} />
-        <meta property="og:image" content={OG_IMG} />
-        <meta property="og:locale" content="en_US" />
-        <meta property="article:published_time" content={published} />
-        <meta property="article:modified_time" content={modified} />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={shortTitle} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={OG_IMG} />
+    
 
         {/* JSON-LD (ONE Article; keep Breadcrumb + FAQ + HowTo) */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
@@ -147,13 +123,13 @@ export default function FillerVsLipFlip() {
       </Head>
       
       <Layout
-          title={title}
-          metaDescription={description}
-          canonical={CANON}
-          ogTitle={shortTitle}
-          ogDescription={description}
-          ogImage={OG_IMG}
-        >
+        title={title}
+        metaDescription={description}
+        canonical={CANON}
+        ogTitle={title}
+        ogDescription={description}
+        ogImage={OG_IMG}
+      >
         {/* Medical Disclaimer Banner */}
         <div style={{
           backgroundColor: '#fff3cd',

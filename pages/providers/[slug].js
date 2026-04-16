@@ -38,7 +38,8 @@ export default function ProviderPage({ provider, siteUrl }) {
   const citySlug = slugifyCity(provider.address?.city || '');
   const cityName = toCityName(citySlug);
   const url = `${siteUrl}/providers/${provider.slug}`;
-  const title = `${provider.name} - Lip Fillers in ${cityName}, Colorado | Directory`;
+const displayName = provider.seoName || provider.name;
+const title = `${displayName} - Lip Fillers in ${cityName}, CO`;
   const metaDescription =
     (provider.metaDescription && provider.metaDescription.slice(0, 160)) ||
     buildMetaDescription(provider);
