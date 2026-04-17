@@ -74,7 +74,6 @@ const webpageJsonLd = {
 
 /** Choose a tight set of Q&As for FAQPage JSON-LD (Google prefers smaller sets). */
 const pickFaqsForSchema = (all) => {
-  // Prefer essential/important, then cap to ~12
   const priorityOrder = { essential: 0, important: 1, helpful: 2 };
   return [...all]
     .sort((a, b) => (priorityOrder[a.priority] ?? 9) - (priorityOrder[b.priority] ?? 9))
@@ -185,7 +184,9 @@ const ExpertQuote = ({ expertQuote }) => {
       }}
     >
       <p style={{ margin: '0 0 8px 0', fontSize: 14, lineHeight: 1.5 }}>&ldquo;{expertQuote.text}&rdquo;</p>
-      <cite style={{ fontSize: 12, color: '#6c757d', fontStyle: 'normal', fontWeight: 600 }}>— {expertQuote.source}</cite>
+      <cite style={{ fontSize: 12, color: '#6c757d', fontStyle: 'normal', fontWeight: 600 }}>
+        — {expertQuote.source}
+      </cite>
     </blockquote>
   );
 };
@@ -245,7 +246,6 @@ const RelatedQuestions = ({ relatedQuestions, faqData }) => {
 
 /* ------------------------------ Data Model -------------------------------- */
 
-// Categories & priorities
 const categories = [
   { id: 'all', name: 'All Categories', icon: '📋', color: '#6c757d' },
   { id: 'pain-comfort', name: 'Pain & Comfort', icon: '💉', color: '#dc3545' },
@@ -263,8 +263,6 @@ const priorities = [
   { id: 'helpful', name: 'Good to Know', color: '#28a745' },
 ];
 
-// NOTE: This is your original FAQ dataset (trim/expand as you like).
-// I kept the structure; you can keep all 20+ items. JSON-LD will only include the top 12.
 const faqData = [
   {
     id: 1,
@@ -295,7 +293,7 @@ const faqData = [
 
 **What to expect:**
 • Before injection: Topical numbing cream applied 15-20 minutes prior
-• During injection: Brief sharp sensation, followed by pressure  
+• During injection: Brief sharp sensation, followed by pressure
 • Pain level: Most rate it 3-4 out of 10 on pain scale
 • Duration: Each injection takes 2-3 seconds, total procedure under 30 minutes
 
@@ -328,19 +326,19 @@ const faqData = [
     ],
     relatedQuestions: [9, 10, 22],
     answer: `**Juvederm options:**
-• Ultra XC: 9–12 months  
-• Volbella XC: 12–18 months  
+• Ultra XC: 9–12 months
+• Volbella XC: 12–18 months
 
 **Restylane options:**
-• Kysse: 6–12 months  
+• Kysse: 6–12 months
 • Silk: 6–9 months
 
 **Longevity factors:**
 • Metabolism, amount injected, lifestyle (sun, smoking), age
 
 **Typical timeline:**
-• 2 weeks: Final results after swelling  
-• 6–9 months: Gradual volume loss begins  
+• 2 weeks: Final results after swelling
+• 6–9 months: Gradual volume loss begins
 • 9–18 months: Touch-up often needed`,
     tags: ['duration', 'longevity', 'results', 'timeline'],
   },
@@ -368,12 +366,12 @@ const faqData = [
     answer: `❌ **Not recommended during pregnancy or breastfeeding**
 
 **Why:**
-• No safety studies on pregnant/breastfeeding patients  
-• Unknown effects on baby  
+• No safety studies on pregnant/breastfeeding patients
+• Unknown effects on baby
 • Hormonal changes can affect healing/results
 
 **Practical guidance:**
-• Wait until breastfeeding is complete  
+• Wait until breastfeeding is complete
 • Existing HA filler is generally safe; discuss concerns with your OB/GYN`,
     tags: ['pregnancy', 'breastfeeding', 'safety', 'contraindications'],
   },
@@ -401,7 +399,7 @@ const faqData = [
     answer: `✅ **Yes, after 4–6 hours**
 
 **Use:**
-• First 24h: Only gentle, fragrance-free balm / petroleum jelly  
+• First 24h: Only gentle, fragrance-free balm / petroleum jelly
 **Avoid (first week):**
 • Menthol/camphor, strong fragrance, retinol/actives, exfoliants`,
     tags: ['aftercare', 'lip balm', 'products', 'healing'],
@@ -417,16 +415,14 @@ const faqData = [
     factChecked: true,
     warningLevel: 'none',
     relatedQuestions: [2],
-    sources: [
-      { title: 'ASPS Cosmetic Surgery Statistics', url: 'https://www.plasticsurgery.org/news/plastic-surgery-statistics' },
-    ],
+    sources: [{ title: 'ASPS Cosmetic Surgery Statistics', url: 'https://www.plasticsurgery.org/news/plastic-surgery-statistics' }],
     expertQuote: {
       text: 'Cost varies based on provider expertise, product, and location',
       source: 'American Society of Plastic Surgeons',
     },
     answer: `**Typical 2024 ranges (per syringe):**
-• Denver/Cherry Creek: $700–$1,100  
-• Suburbs / Springs / Fort Collins: $550–$950  
+• Denver/Cherry Creek: $700–$1,100
+• Suburbs / Springs / Fort Collins: $550–$950
 • Boulder: $700–$1,100
 
 **Drivers:** experience, brand, amount, clinic overhead`,
@@ -469,10 +465,10 @@ const faqData = [
       text: 'Peak swelling within 24–48h; most resolves by 10–14 days',
       source: 'Clinical Aesthetic Dermatology',
     },
-    answer: `**Day 1–2:** peak swelling 🔴  
-**Day 3–5:** decreasing 🟡  
-**Day 6–10:** mostly resolved 🔵  
-**Day 11–14:** near final 🟢  
+    answer: `**Day 1–2:** peak swelling 🔴
+**Day 3–5:** decreasing 🟡
+**Day 6–10:** mostly resolved 🔵
+**Day 11–14:** near final 🟢
 **Week 3–4:** final result ✅`,
     tags: ['swelling', 'recovery', 'timeline', 'healing'],
   },
@@ -492,7 +488,7 @@ const faqData = [
       text: 'Avoid pursing motions 24–48h to allow optimal integration',
       source: 'IAPAM',
     },
-    answer: `⏱️ **Avoid for 24–48h** (pursing/suction can shift filler)  
+    answer: `⏱️ **Avoid for 24–48h** (pursing/suction can shift filler)
 Use wide-mouth cups; keep lips relaxed.`,
     tags: ['straws', 'drinking', 'aftercare', 'restrictions'],
   },
@@ -514,7 +510,7 @@ Use wide-mouth cups; keep lips relaxed.`,
     },
     answer: `❌ **No**
 
-**Why it looks fake (sometimes):** overfilling, wrong product, poor technique  
+**Why it looks fake (sometimes):** overfilling, wrong product, poor technique
 **Natural results:** skilled injector, conservative build, match anatomy`,
     tags: ['natural', 'fake', 'results', 'myths', 'appearance'],
   },
@@ -557,7 +553,7 @@ Use wide-mouth cups; keep lips relaxed.`,
     },
     answer: `✅ **Generally safe with qualified providers**
 
-**Risks (rare):** infection, asymmetry, vascular events  
+**Risks (rare):** infection, asymmetry, vascular events
 **Mitigation:** credentials, sterile setting, proper aftercare`,
     tags: ['safety', 'risks', 'complications'],
   },
@@ -577,8 +573,8 @@ Use wide-mouth cups; keep lips relaxed.`,
       text: 'Different rheology/cross-linking → different feel, movement, duration',
       source: 'Dermatologic Surgery Research',
     },
-    answer: `**Juvederm (Ultra, Volbella, etc.):** smooth, natural volume  
-**Restylane (Kysse, Silk, etc.):** flexible, natural movement  
+    answer: `**Juvederm (Ultra, Volbella, etc.):** smooth, natural volume
+**Restylane (Kysse, Silk, etc.):** flexible, natural movement
 **Pick by:** goals, anatomy, injector experience`,
     tags: ['types', 'brands', 'differences', 'juvederm', 'restylane'],
   },
@@ -640,12 +636,12 @@ Hyaluronidase dissolves HA in 24–48h; reserve for corrections/complications. N
       text: 'Harmonious results follow facial proportion principles',
       source: 'ISAPS',
     },
-    answer: `**Natural Enhancement:** classic, subtle volume  
-**Defined:** cupid’s bow, border definition  
-**Volume:** plump, Russian, doll  
+    answer: `**Natural Enhancement:** classic, subtle volume
+**Defined:** cupid’s bow, border definition
+**Volume:** plump, Russian, doll
 **Corrective:** asymmetry, lip-flip effect, smoker’s lines
 
-**Want details?** Check our <Link href="/shapes" style={{ color: '#007bff', textDecoration: 'none', fontWeight: 600 }}>Lip Filler Shapes Guide</Link>.`,
+Want details? Check our Lip Filler Shapes Guide.`,
     tags: ['shapes', 'styles', 'guide'],
   },
 ];
@@ -664,6 +660,7 @@ const getPriorityColor = (priority) => {
       return '#6c757d';
   }
 };
+
 const getPriorityLabel = (priority) => {
   switch (priority) {
     case 'essential':
@@ -686,12 +683,17 @@ const formatAnswer = (answer) => {
         </h4>
       );
     }
+
     if (line.startsWith('• ')) {
-      return <li key={index} style={{ marginBottom: 4 }}>{line.slice(2)}</li>;
+      return (
+        <li key={index} style={{ marginBottom: 4 }}>
+          {line.slice(2)}
+        </li>
+      );
     }
+
     if (line.trim() === '') return <br key={index} />;
 
-    // Special inline link already included where needed
     return (
       <p key={index} style={{ marginBottom: 8 }}>
         {line}
@@ -714,27 +716,25 @@ export default function LipFillerFAQPage() {
       faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       faq.answer.toLowerCase().includes(searchTerm.toLowerCase()) ||
       (faq.tags || []).some((t) => t.toLowerCase().includes(searchTerm.toLowerCase()));
+
     const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
     const matchesPriority = selectedPriority === 'all' || faq.priority === selectedPriority;
+
     return matchesSearch && matchesCategory && matchesPriority;
   });
 
   const schemaFaqs = pickFaqsForSchema(faqData);
 
   return (
-    return (
-  <Layout
-    title="Lip Filler FAQ | Colorado Lip Enhancement Directory"
-    metaDescription="Plain-language answers to common lip filler questions: safety, pain, cost, recovery, and results."
-    canonical={CANONICAL}
-    ogTitle="Lip Filler FAQ - Colorado Lip Fillers Directory"
-    ogDescription="Straightforward answers on safety, pain, cost, recovery, and results."
-    ogImage={OG_IMAGE}
-  >
+    <Layout
+      title="Lip Filler FAQ | Colorado Lip Enhancement Directory"
+      metaDescription="Plain-language answers to common lip filler questions: safety, pain, cost, recovery, and results."
+      canonical={CANONICAL}
+      ogTitle="Lip Filler FAQ - Colorado Lip Fillers Directory"
+      ogDescription="Straightforward answers on safety, pain, cost, recovery, and results."
+      ogImage={OG_IMAGE}
+    >
       <Head>
-       
-
-        {/* JSON-LD */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageJsonLd) }} />
         <script
@@ -752,7 +752,6 @@ export default function LipFillerFAQPage() {
       </nav>
 
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: 20 }}>
-        {/* Hero */}
         <section
           style={{
             background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -776,7 +775,6 @@ export default function LipFillerFAQPage() {
           </div>
         </section>
 
-        {/* Disclaimer */}
         <div
           style={{
             background: 'linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%)',
@@ -795,7 +793,6 @@ export default function LipFillerFAQPage() {
           </p>
         </div>
 
-        {/* Emergency Warning */}
         <div
           style={{
             backgroundColor: '#fff3cd',
@@ -823,9 +820,7 @@ export default function LipFillerFAQPage() {
           </div>
         </div>
 
-        {/* Search & Filters */}
         <div style={{ backgroundColor: '#f8f9fa', padding: 25, borderRadius: 12, marginBottom: 20, border: '1px solid #e9ecef' }}>
-          {/* Search */}
           <div style={{ marginBottom: 20 }}>
             <label style={{ display: 'block', marginBottom: 8, fontWeight: 600, color: '#495057' }}>Search Questions</label>
             <div style={{ position: 'relative' }}>
@@ -848,7 +843,6 @@ export default function LipFillerFAQPage() {
             </div>
           </div>
 
-          {/* Toggle */}
           <button
             onClick={() => setShowFilters((s) => !s)}
             style={{
@@ -870,7 +864,6 @@ export default function LipFillerFAQPage() {
             {showFilters ? <ChevronUpIcon size={16} /> : <ChevronDownIcon size={16} />}
           </button>
 
-          {/* Filters */}
           {showFilters && (
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 20 }}>
               <div>
@@ -887,6 +880,7 @@ export default function LipFillerFAQPage() {
                   ))}
                 </select>
               </div>
+
               <div>
                 <label style={{ display: 'block', marginBottom: 8, fontWeight: 600, color: '#495057' }}>Priority</label>
                 <select
@@ -904,7 +898,6 @@ export default function LipFillerFAQPage() {
             </div>
           )}
 
-          {/* Active filter chips */}
           {(selectedCategory !== 'all' || selectedPriority !== 'all' || searchTerm) && (
             <div style={{ marginTop: 15, display: 'flex', flexWrap: 'wrap', gap: 8 }}>
               {searchTerm && (
@@ -926,16 +919,15 @@ export default function LipFillerFAQPage() {
           )}
         </div>
 
-        {/* Results Count */}
         <div style={{ marginBottom: 16, color: '#6c757d' }}>
           Showing {filteredFAQs.length} of {faqData.length} questions
         </div>
 
-        {/* FAQ list: use <details> so answers are in the DOM (crawlable) */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
           {filteredFAQs.map((faq) => {
             const category = categories.find((c) => c.id === faq.category);
             const stats = getAnswerStats(faq.answer);
+
             return (
               <details
                 id={`faq-${faq.id}`}
@@ -971,6 +963,7 @@ export default function LipFillerFAQPage() {
                   >
                     {getPriorityLabel(faq.priority)}
                   </span>
+
                   {category && (
                     <span
                       style={{
@@ -984,6 +977,7 @@ export default function LipFillerFAQPage() {
                       {category.icon} {category.name}
                     </span>
                   )}
+
                   <span style={{ fontSize: 12, color: '#6c757d' }}>{stats.readTime} min read</span>
                   <span style={{ marginLeft: 'auto', color: '#6c757d' }}>
                     <ChevronDownIcon size={18} />
@@ -998,6 +992,18 @@ export default function LipFillerFAQPage() {
                   </WarningBanner>
 
                   {formatAnswer(faq.answer)}
+
+                  {faq.id === 22 && (
+                    <p style={{ marginBottom: 8 }}>
+                      <Link
+                        href="/shapes"
+                        style={{ color: '#007bff', textDecoration: 'none', fontWeight: 600 }}
+                      >
+                        View the Lip Filler Shapes Guide
+                      </Link>
+                    </p>
+                  )}
+
                   <ExpertQuote expertQuote={faq.expertQuote} />
                   <Sources sources={faq.sources} />
                   <RelatedQuestions relatedQuestions={faq.relatedQuestions} faqData={faqData} />
@@ -1034,7 +1040,6 @@ export default function LipFillerFAQPage() {
           })}
         </div>
 
-        {/* No results */}
         {filteredFAQs.length === 0 && (
           <div style={{ textAlign: 'center', padding: '60px 20px', color: '#6c757d' }}>
             <div style={{ marginBottom: 20, opacity: 0.5 }}>
@@ -1045,7 +1050,6 @@ export default function LipFillerFAQPage() {
           </div>
         )}
 
-        {/* CTA */}
         <div
           style={{
             background: 'linear-gradient(135deg, #667eea, #764ba2)',
@@ -1079,7 +1083,6 @@ export default function LipFillerFAQPage() {
           </div>
         </div>
 
-        {/* Legal Disclaimer */}
         <div
           style={{
             backgroundColor: '#f8f9fa',
