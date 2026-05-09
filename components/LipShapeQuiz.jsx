@@ -50,17 +50,6 @@ const quizQuestions = [
     ]
   },
   {
-    id: 'skinTone',
-    question: 'What\'s your skin tone?',
-    options: [
-      { value: 'fair', label: 'Fair' },
-      { value: 'light-medium', label: 'Light to Medium' },
-      { value: 'medium', label: 'Medium' },
-      { value: 'medium-deep', label: 'Medium to Deep' },
-      { value: 'deep', label: 'Deep' }
-    ]
-  },
-  {
     id: 'vibe',
     question: 'What\'s your overall style vibe?',
     options: [
@@ -99,163 +88,17 @@ const quizQuestions = [
   }
 ];
 
-const lipStyleResults = {
-  'natural-subtle-balanced': {
-    primaryStyle: 'Natural Hydration',
-    secondaryStyle: 'Subtle Enhancement',
-    description: 'Light enhancement to add moisture and subtle fullness while maintaining your natural lip appearance. Focus on hydration and definition rather than dramatic volume.',
-    characteristics: ['Barely noticeable change', 'Hydrated & soft appearance', 'Natural lip line preserved', 'Enhanced texture'],
-    talkingPoints: [
-      'I want my lips to look naturally fuller, not obviously enhanced',
-      'Focus on hydration and definition',
-      'Keep my natural lip shape and identity',
-      'I prefer a subtle, undetectable enhancement',
-      'I\'d like my lips to feel softer and more hydrated'
-    ]
-  },
-  'natural-subtle-thin-bottom': {
-    primaryStyle: 'Subtle Balance',
-    secondaryStyle: 'Lower Lip Definition',
-    description: 'Gently enhance the lower lip to create better proportion with your upper lip. This is about balance and symmetry, not volume.',
-    characteristics: ['Lower lip focused', 'Better lip proportion', 'Subtle definition', 'Natural correction'],
-    talkingPoints: [
-      'My lower lip is thinner - I want better balance',
-      'Focus on correcting proportion without obvious change',
-      'Keep it looking natural, like my own evolved lips',
-      'I want a subtle but noticeable improvement',
-      'What technique works best for evening out lips naturally?'
-    ]
-  },
-  'natural-moderate-balanced': {
-    primaryStyle: 'Natural Definition',
-    secondaryStyle: 'Soft Fullness',
-    description: 'Enhance definition and subtle fullness while maintaining a naturally beautiful appearance. The goal is to look like an improved version of yourself.',
-    characteristics: ['Naturally fuller appearance', 'Enhanced lip definition', 'Balanced proportions', 'Youthful but authentic'],
-    talkingPoints: [
-      'I want fuller lips but still look like me',
-      'Enhance my natural shape, don\'t change it',
-      'Focus on lip line definition for structure',
-      'I like a natural, hydrated finish',
-      'Show me how much enhancement will look proportionate'
-    ]
-  },
-  'natural-pronounced-balanced': {
-    primaryStyle: 'Enhanced Definition',
-    secondaryStyle: 'Cupid\'s Bow Focus',
-    description: 'With your pronounced cupid\'s bow, enhancement focuses on definition and emphasizing that beautiful natural feature while adding subtle fullness.',
-    characteristics: ['Cupid\'s bow enhanced', 'Strong definition', 'Natural proportions', 'Feature-flattering'],
-    talkingPoints: [
-      'I love my cupid\'s bow - I want to emphasize it',
-      'Focus on definition and subtle enhancement',
-      'Keep my natural lip character and identity',
-      'I want a polished, defined look',
-      'How do you enhance pronounced lips naturally?'
-    ]
-  },
-  'balanced-subtle-balanced': {
-    primaryStyle: 'Subtle Balanced',
-    secondaryStyle: 'Gentle Definition',
-    description: 'A subtle approach that brings gentle definition to both lips. Creates a refined appearance with understated enhancement.',
-    characteristics: ['Subtle both lips', 'Gentle definition', 'Refined appearance', 'Polished not obvious'],
-    talkingPoints: [
-      'I want subtle enhancement to both lips equally',
-      'Create gentle definition and shape',
-      'I prefer understated, refined results',
-      'What\'s a subtle amount for natural-looking lips?',
-      'I\'d like gradual, conservative improvement'
-    ]
-  },
-  'balanced-moderate-balanced': {
-    primaryStyle: 'Balanced Volume',
-    secondaryStyle: 'Sculptural Definition',
-    description: 'Fuller lips with clean definition for a polished, curated look. More noticeable than natural but still harmonious with your features.',
-    characteristics: ['Noticeably fuller', 'Defined lip line', 'Balanced both lips', 'Intentional appearance'],
-    talkingPoints: [
-      'I want people to notice my lips are fuller',
-      'Create clean lip lines and definition',
-      'Balance and enhance both lips equally',
-      'I want a polished, intentional look',
-      'Can we build this gradually over time?'
-    ]
-  },
-  'balanced-pronounced-balanced': {
-    primaryStyle: 'Sculpted Definition',
-    secondaryStyle: 'Cupid\'s Bow Emphasis',
-    description: 'With a prominent cupid\'s bow, enhancement focuses on strategic definition to create sculpted, fashionable lips. Noticeable but intentional.',
-    characteristics: ['Cupid\'s bow emphasized', 'Sculpted definition', 'Strong lip line', 'Fashion-forward'],
-    talkingPoints: [
-      'I want to enhance my natural cupid\'s bow',
-      'Create a sculpted, defined lip line',
-      'Make my lips more of a statement',
-      'I want my lips to photograph beautifully',
-      'What technique best emphasizes the cupid\'s bow?'
-    ]
-  },
-  'glam-subtle-balanced': {
-    primaryStyle: 'Refined Glamour',
-    secondaryStyle: 'Subtle Definition',
-    description: 'A glamorous vibe with subtle enhancement - creates definition and structure while keeping a refined, sophisticated appearance.',
-    characteristics: ['Refined glamour', 'Subtle definition', 'Sophisticated appearance', 'Elegant look'],
-    talkingPoints: [
-      'I like glamour but want to keep it subtle',
-      'Create clean lines and definition',
-      'Keep a sophisticated, refined appearance',
-      'I want intentional but understated results',
-      'Show me elegant, glamorous looks'
-    ]
-  },
-  'glam-moderate-balanced': {
-    primaryStyle: 'Modern Glamour',
-    secondaryStyle: 'Polished Definition',
-    description: 'Well-defined lips with a polished glamorous appearance. Noticeable and intentional enhancement that makes a statement.',
-    characteristics: ['Polished definition', 'Glamorous appearance', 'Intentional enhancement', 'Photogenic'],
-    talkingPoints: [
-      'I love a glamorous aesthetic',
-      'Create strong definition and clean lines',
-      'Make my lips a statement feature',
-      'Perfect for photos and special occasions',
-      'I want a high-fashion, curated look'
-    ]
-  },
-  'glam-moderate-full': {
-    primaryStyle: 'Bold Glamour',
-    secondaryStyle: 'Maximum Fullness',
-    description: 'Fuller, well-defined lips with dramatic definition. A curated, high-impact lip look that\'s unmistakably enhanced and fashionable.',
-    characteristics: ['Maximum fullness emphasis', 'Strong definition', 'Sculpted appearance', 'High-impact'],
-    talkingPoints: [
-      'I want bold, glamorous lips',
-      'Create that sculpted, defined look',
-      'Fuller lips are important to me',
-      'I\'m confident with obvious enhancement',
-      'Show me your most glamorous full-lip results'
-    ]
-  },
-  'glam-pronounced-balanced': {
-    primaryStyle: 'Sculpted Glamour',
-    secondaryStyle: 'Cupid\'s Bow Emphasis',
-    description: 'Enhanced definition of your pronounced cupid\'s bow with sculpted glamour. A bold, fashion-forward statement look.',
-    characteristics: ['Bold cupid\'s bow', 'Sculpted edges', 'Glamorous definition', 'Statement-making'],
-    talkingPoints: [
-      'I want to maximize my cupid\'s bow',
-      'Create a sculpted, bold lip line',
-      'Make a glamorous statement',
-      'I prefer obvious, intentional enhancement',
-      'What\'s your most dramatic sculpting technique?'
-    ]
-  },
-  'glam-pronounced-full': {
-    primaryStyle: 'Maximum Glamour',
-    secondaryStyle: 'Bold Sculpting',
-    description: 'Maximum impact with dramatic enhancement and definition. A high-fashion lip look that\'s unmistakably curated, bold, and glamorous.',
-    characteristics: ['Maximum fullness', 'Dramatic definition', 'Pronounced cupid\'s bow', 'Show-stopping'],
-    talkingPoints: [
-      'I want bold, dramatic lips',
-      'Create maximum definition and emphasis',
-      'I love the sculpted lip trend',
-      'I\'m very confident with obvious enhancement',
-      'Show me your most dramatic results'
-    ]
-  }
+// Style headline — driven by vibe + Cupid's bow (9 distinct combinations)
+const styleHeadlines = {
+  'natural-subtle':    { primary: 'Natural Hydration',    secondary: 'Gentle Enhancement' },
+  'natural-moderate':  { primary: 'Natural Definition',   secondary: 'Soft Fullness' },
+  'natural-pronounced':{ primary: 'Enhanced Definition',  secondary: "Cupid's Bow Focus" },
+  'balanced-subtle':   { primary: 'Subtle Refinement',    secondary: 'Gentle Definition' },
+  'balanced-moderate': { primary: 'Balanced Volume',      secondary: 'Sculptural Definition' },
+  'balanced-pronounced':{ primary: 'Sculpted Definition', secondary: "Cupid's Bow Emphasis" },
+  'glam-subtle':       { primary: 'Refined Glamour',      secondary: 'Understated Drama' },
+  'glam-moderate':     { primary: 'Modern Glamour',       secondary: 'Polished Definition' },
+  'glam-pronounced':   { primary: 'Sculpted Glamour',     secondary: "Cupid's Bow Statement" },
 };
 
 export default function LipShapeQuiz() {
@@ -280,87 +123,173 @@ export default function LipShapeQuiz() {
   };
 
   const getResults = () => {
-    const vibe = answers.vibe || 'balanced';
-    const bowShape = answers.cupidsBow || 'moderate';
-    const balance = answers.lipBalance || 'balanced';
+    const vibe      = answers.vibe        || 'balanced';
+    const bowShape  = answers.cupidsBow   || 'moderate';
+    const balance   = answers.lipBalance  || 'balanced';
     const experience = answers.experience || 'first-time';
-    const goal = answers.goal || 'definition';
+    const goal      = answers.goal        || 'definition';
     const maintenance = answers.maintenance || 'moderate';
-    const symmetry = answers.lipSymmetry || 'symmetrical';
+    const symmetry  = answers.lipSymmetry || 'symmetrical';
     const cornerDrop = answers.cornerDrop || 'neutral';
+    const faceShape = answers.faceShape   || 'oval';
 
-    // Build result key: `${vibe}-${bowShape}-${balance}`
-    let resultKey = `${vibe}-${bowShape}-${balance}`;
+    // --- HEADLINE (vibe × Cupid's bow) ---
+    const headline = styleHeadlines[`${vibe}-${bowShape}`] || styleHeadlines['balanced-moderate'];
 
-    // 1. VERY EXPERIENCED users - escalate results
-    if (experience === 'very-experienced') {
-      if (vibe === 'glam') {
-        resultKey = 'glam-pronounced-full';
-      } else if (vibe === 'balanced') {
-        resultKey = 'balanced-pronounced-balanced';
-      } else if (vibe === 'natural') {
-        resultKey = 'balanced-moderate-balanced';
-      }
-    }
+    // --- DESCRIPTION ---
+    // Opener from vibe
+    const vibeOpener = {
+      natural:  'A naturally-focused enhancement designed to let your own beauty shine through.',
+      balanced: 'A polished, intentional enhancement that makes a curated statement without going over the top.',
+      glam:     'A bold, high-impact look that turns your lips into a genuine standout feature.',
+    }[vibe];
 
-    // 2. FULLNESS GOAL - shift towards fuller
-    if (goal === 'fullness') {
-      if (vibe === 'glam') {
-        resultKey = 'glam-moderate-full';
-      } else if (vibe === 'balanced') {
-        resultKey = 'balanced-moderate-balanced';
-      } else if (vibe === 'natural' && balance !== 'thin-bottom') {
-        resultKey = 'natural-moderate-balanced';
-      }
-    }
+    // Goal sentence
+    const goalSentence = {
+      definition:   ' The main focus is clean structure and lip line definition.',
+      fullness:     ' Volume and fullness are the priority — more is the point.',
+      balance:      ' Correcting asymmetry and evening out proportion comes first.',
+      'natural-glow': ' Hydration and a youthful, healthy appearance take center stage.',
+    }[goal];
 
-    // 3. BALANCE GOAL with ASYMMETRY - fix lower lip
-    if (goal === 'balance' && symmetry === 'very-asymmetrical') {
-      resultKey = 'natural-subtle-thin-bottom';
-    }
+    // Experience framing
+    const experienceSentence = {
+      'first-time':       ' Starting conservatively is the right call — results can always be built on.',
+      experienced:        ' Your familiarity with fillers means we can dial in exactly what works for you.',
+      'very-experienced': ' With your experience, you know your aesthetic — this look leans fully into it.',
+    }[experience];
 
-    // 4. NATURAL GLOW GOAL - hydration focus
-    if (goal === 'natural-glow') {
-      if (vibe === 'natural') {
-        resultKey = 'natural-subtle-balanced';
-      } else if (vibe === 'balanced') {
-        resultKey = 'natural-moderate-balanced';
-      }
-    }
+    // Lip balance note
+    const balanceSentence = {
+      'thin-bottom': ' Lower lip proportion will be a key consideration throughout.',
+      balanced:      '',
+      'full-bottom': ' Your naturally fuller lower lip gives you a great foundation to build on.',
+    }[balance];
 
-    // 5. DOWNTURNED CORNERS (non-natural vibe) - need uplift
-    if (cornerDrop === 'downturned' && vibe !== 'natural') {
-      if (vibe === 'glam') {
-        resultKey = 'glam-pronounced-balanced';
-      } else if (vibe === 'balanced') {
-        resultKey = 'balanced-pronounced-balanced';
-      }
-    }
+    // Corner note (only if relevant)
+    const cornerSentence = cornerDrop === 'downturned'
+      ? ' A corner-lift technique may also be worth discussing.'
+      : cornerDrop === 'upturned'
+      ? ' Your naturally lifted corners are an asset — we\'ll work to preserve them.'
+      : '';
 
-    // 6. PRONOUNCED BOW + GLAM - emphasize it
-    if (bowShape === 'pronounced' && vibe === 'glam') {
-      if (balance === 'full-bottom') {
-        resultKey = 'glam-pronounced-full';
-      } else {
-        resultKey = 'glam-pronounced-balanced';
-      }
-    }
+    const description = vibeOpener + goalSentence + experienceSentence + balanceSentence + cornerSentence;
 
-    // 7. FIRST TIME + NATURAL - conservative
-    if (experience === 'first-time' && vibe === 'natural') {
-      resultKey = 'natural-subtle-balanced';
-    }
+    // --- CHARACTERISTICS (built from 5 answers) ---
+    const characteristics = [];
 
-    // 8. MINIMAL MAINTENANCE + FULLNESS - dial back
-    if (maintenance === 'minimal' && goal === 'fullness') {
-      if (vibe === 'glam') {
-        resultKey = 'balanced-moderate-balanced';
-      } else if (vibe === 'balanced') {
-        resultKey = 'natural-moderate-balanced';
-      }
-    }
+    // Vibe
+    const vibeChar = { natural: 'Naturally enhanced', balanced: 'Intentionally polished', glam: 'Bold & statement-making' }[vibe];
+    characteristics.push(vibeChar);
 
-    return lipStyleResults[resultKey] || lipStyleResults['natural-subtle-balanced'];
+    // Goal
+    const goalChar = {
+      definition:     'Shape & structure focused',
+      fullness:       'Volume & fullness focused',
+      balance:        'Proportion & symmetry focused',
+      'natural-glow': 'Hydration & glow focused',
+    }[goal];
+    characteristics.push(goalChar);
+
+    // Cupid's bow
+    const bowChar = {
+      subtle:     'Soft lip line, relaxed bow',
+      moderate:   'Natural bow gently enhanced',
+      pronounced: "Cupid's bow emphasized",
+    }[bowShape];
+    characteristics.push(bowChar);
+
+    // Lip balance
+    const balanceChar = {
+      'thin-bottom': 'Lower lip proportion corrected',
+      balanced:      'Symmetrical volume distribution',
+      'full-bottom': 'Lower lip fullness preserved',
+    }[balance];
+    characteristics.push(balanceChar);
+
+    // Experience
+    const experienceChar = {
+      'first-time':       'Conservative starting point',
+      experienced:        'Refined & dialled-in',
+      'very-experienced': 'Full aesthetic confidence',
+    }[experience];
+    characteristics.push(experienceChar);
+
+    // --- TALKING POINTS (one per answer — all 9 used) ---
+    const talkingPoints = [];
+
+    // Goal
+    talkingPoints.push({
+      definition:     "My main goal is better lip definition and shape — clean, structured lines matter most to me",
+      fullness:       "More fullness and volume is my priority — I want noticeably fuller lips",
+      balance:        "I'd like to correct the asymmetry in my lips — that's my main focus",
+      'natural-glow': "I'm more focused on hydration and a youthful glow than dramatic volume",
+    }[goal]);
+
+    // Vibe
+    talkingPoints.push({
+      natural:  "I want results that look like my own lips, just better — nothing that screams 'filler'",
+      balanced: "I want people to notice my lips look great — intentionally enhanced but not overdone",
+      glam:     "I love a bold, glamorous aesthetic — I'm fully comfortable with an obvious, curated look",
+    }[vibe]);
+
+    // Face shape
+    talkingPoints.push({
+      oval:   "My face is oval-shaped — I understand most styles work, but I'd love your specific recommendation",
+      round:  "I have a round face — I'd prefer styles that add vertical definition rather than horizontal width",
+      square: "I have a square, angular face — softer, rounder lip shapes tend to flatter me most",
+      heart:  "I have a heart-shaped face — I want balanced upper and lower volume so my lips don't look top-heavy",
+    }[faceShape]);
+
+    // Cupid's bow
+    talkingPoints.push({
+      subtle:     "My Cupid's bow is pretty subtle — I'm open to softly defining it, or keeping it relaxed",
+      moderate:   "I have a natural Cupid's bow — I'd like to enhance it without making it look artificial",
+      pronounced: "I have a very pronounced Cupid's bow and I love it — any work should honor and emphasize it",
+    }[bowShape]);
+
+    // Lip balance
+    talkingPoints.push({
+      'thin-bottom': "My lower lip is thinner than my upper — better proportion between the two is important to me",
+      balanced:      "My upper and lower lips are fairly balanced — I'd like to keep that symmetry while we enhance",
+      'full-bottom': "My lower lip is naturally fuller — I want to work with that, not fight it",
+    }[balance]);
+
+    // Symmetry
+    talkingPoints.push({
+      'very-asymmetrical':    "One side of my lips is noticeably fuller — correcting that asymmetry matters a lot to me",
+      'slightly-asymmetrical': "My lips are slightly uneven — I'd appreciate any correction you can make without overdoing it",
+      symmetrical:             "My lips are fairly symmetrical — I want to maintain that while we enhance",
+    }[symmetry]);
+
+    // Corner drop
+    talkingPoints.push({
+      downturned: "My lip corners droop slightly — if there's a technique to give them a subtle lift, I'm interested",
+      neutral:    "My lip corners sit at a neutral level — I'd like to keep that balanced look",
+      upturned:   "My corners naturally lift a little — I'd love to preserve and even enhance that",
+    }[cornerDrop]);
+
+    // Experience
+    talkingPoints.push({
+      'first-time':       "This is my first time — I'd like to start conservatively and build from there if I love it",
+      experienced:        "I've had fillers before and know what I like — I want to refine, not start over",
+      'very-experienced': "I've had multiple rounds and have a clear sense of my aesthetic — let's build on what's worked",
+    }[experience]);
+
+    // Maintenance
+    talkingPoints.push({
+      minimal:  "I only want to come in once or twice a year — I'd like a result that holds up with minimal upkeep",
+      moderate: "Every 6–9 months feels right for me — I want results that look great over that window",
+      frequent: "I'm happy to come in every 3–6 months to keep things looking fresh and refined",
+    }[maintenance]);
+
+    return {
+      primaryStyle:   headline.primary,
+      secondaryStyle: headline.secondary,
+      description,
+      characteristics,
+      talkingPoints,
+    };
   };
 
   const handleReset = () => {
@@ -386,9 +315,9 @@ export default function LipShapeQuiz() {
     return null;
   }
 
-  const progress = ((currentQuestion + 1) / quizQuestions.length) * 100;
+  const TOTAL_QUESTIONS = quizQuestions.length;
+  const progress = ((currentQuestion + 1) / TOTAL_QUESTIONS) * 100;
   const result = getResults();
-  const TOTAL_QUESTIONS = 10;
 
   return (
     <div className={styles.container}>
