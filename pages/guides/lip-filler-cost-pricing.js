@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import Head from 'next/head';
+import ShareButtons from '../../components/ShareButtons';
 
 export default function LipFillerCosts() {
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
@@ -111,6 +112,8 @@ const OG_IMG = `${BASE}/images/lip-filler-costs-1200x630.jpg`;
               </p>
             </div>
           </section>
+
+          <ShareButtons url={CANON} title="Lip Filler Costs: Simple Guide to Prices & How Pricing Works" />
 
           {/* Quick Summary */}
           <div style={{

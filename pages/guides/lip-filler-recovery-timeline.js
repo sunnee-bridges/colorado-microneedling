@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import Head from 'next/head';
+import ShareButtons from '../../components/ShareButtons';
 
 export default function LipFillerRecoveryTimeline() {
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
@@ -120,6 +121,8 @@ const OG_IMG = `${BASE}/images/lip-filler-recovery-1200x630.jpg`;
               </p>
             </div>
           </section>
+
+          <ShareButtons url={CANON} title="Lip Filler Recovery Timeline: Day-by-Day Swelling & Aftercare" />
 
           {/* Quick Summary */}
           <div style={{

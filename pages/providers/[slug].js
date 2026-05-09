@@ -6,6 +6,7 @@ import Layout from '../../components/Layout';
 import ProviderCard from '../../components/ProviderCard';
 import data from '../../data/providers.json';
 import { providerSlug } from '../../lib/slug';
+import ShareButtons from '../../components/ShareButtons';
 
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000').replace(/\/$/, '');
 
@@ -213,6 +214,8 @@ const title = `${displayName} - Lip Fillers in ${cityName}, CO`;
             `Learn more about ${provider.name} in ${cityName}.`}
         </p>
       </section>
+
+      <ShareButtons url={url} title={title} />
 
       <div
         style={{

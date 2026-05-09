@@ -1,0 +1,84 @@
+.shareBar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  margin: 1.5rem 0;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.shareLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #6b7280;
+  margin-right: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.shareBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.4rem 0.875rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+  color: #fff;
+  line-height: 1;
+}
+
+.shareBtn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.shareBtn:active {
+  transform: translateY(0);
+}
+
+.shareBtn svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.facebook {
+  background-color: #1877f2;
+}
+
+.pinterest {
+  background-color: #e60023;
+}
+
+.pinterest svg {
+  fill: currentColor;
+  stroke: none;
+}
+
+.twitter {
+  background-color: #000;
+}
+
+.twitter svg {
+  fill: currentColor;
+  stroke: none;
+}
+
+.copy {
+  background-color: #667eea;
+}
+
+.copied {
+  background-color: #28a745;
+}

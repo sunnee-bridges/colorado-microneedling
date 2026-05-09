@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import Head from 'next/head';
 import Link from 'next/link';
+import ShareButtons from '../../components/ShareButtons';
 
 export default function FillerVsLipFlip() {
    const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
@@ -185,6 +186,8 @@ export default function FillerVsLipFlip() {
               </p>
             </div>
           </section>
+
+          <ShareButtons url={CANON} title={title} />
 
           {/* Quick Answer for Featured Snippets */}
           <div style={{

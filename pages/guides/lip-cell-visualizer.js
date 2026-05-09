@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import Head from 'next/head';
+import ShareButtons from '../../components/ShareButtons';
 
 export default function LipCellVisualizer() {
   const svgRef = useRef(null);
@@ -414,6 +415,8 @@ const OG_IMG = `${BASE}/images/lip-cell-visualizer-1200x630.jpg`;
               </p>
             </div>
           </section>
+
+          <ShareButtons url={CANONICAL} title="How Does Lip Filler Work? Interactive Cell Visualizer" />
 
           {/* Visualizer Card */}
           <div style={{

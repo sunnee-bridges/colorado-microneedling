@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import Head from 'next/head';
+import ShareButtons from '../../components/ShareButtons';
 
 export default function LipFillerColdSores() {
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
@@ -161,6 +162,8 @@ export default function LipFillerColdSores() {
               </p>
             </div>
           </section>
+
+          <ShareButtons url={CANONICAL} title="Lip Filler and Cold Sores: Questions to Ask Before You Book" />
 
           {/* Important Notice */}
           <div style={{

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import Head from 'next/head';
+import ShareButtons from '../../components/ShareButtons';
 
 export default function LipFillerDissolution() {
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
@@ -159,6 +160,8 @@ export default function LipFillerDissolution() {
               </p>
             </div>
           </section>
+
+          <ShareButtons url={CANONICAL} title="How to Dissolve Lip Filler: Cost, Process & What to Expect in 2026" />
 
           {/* Quick Answer Box */}
           <div style={{

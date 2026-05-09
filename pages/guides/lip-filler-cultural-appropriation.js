@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import Head from 'next/head';
+import ShareButtons from '../../components/ShareButtons';
 
 export default function LipFillerCulturalAppropriation() {
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
@@ -130,6 +131,8 @@ export default function LipFillerCulturalAppropriation() {
               </p>
             </div>
           </section>
+
+          <ShareButtons url={CANONICAL} title="Is Lip Filler Cultural Appropriation? The Honest Conversation" />
 
           {/* Content Note */}
           <div style={{

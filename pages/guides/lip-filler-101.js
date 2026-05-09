@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import Head from 'next/head';
+import ShareButtons from '../../components/ShareButtons';
 
 export default function LipFiller101() {
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
@@ -221,6 +222,8 @@ const OG_IMG = `${BASE}/images/lip-filler-101-1200x630.jpg`;
               </p>
             </div>
           </section>
+
+          <ShareButtons url={CANONICAL} title="Lip Filler Cost & Recovery Guide 2026: What to Expect in Colorado" />
 
           {/* Quick Answer Box for Featured Snippets */}
           <div style={{
