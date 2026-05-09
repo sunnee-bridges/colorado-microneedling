@@ -90,8 +90,7 @@ const slugifyCity = (s = '') =>
   return (
     <Layout title="Colorado Lip Enhancement Provider Directory">
       <Head>
-        <link rel="canonical" href={`${SITE_URL}/`} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
       </Head>
       <div>
         {/* Streamlined Hero Section */}

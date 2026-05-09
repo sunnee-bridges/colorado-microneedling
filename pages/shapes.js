@@ -235,7 +235,6 @@ const LipFillerShapesGuide = () => {
       <Head>
   <title>Lip Filler Shapes Guide: 14 Popular Styles</title>
   <meta name="description" content="Explore 14 popular lip filler shapes—from natural to dramatic—with what each suits best." />
-  <link rel="canonical" href={CANON} />
   <meta name="robots" content="index,follow" />
 
   {/* Open Graph */}
